@@ -72,7 +72,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 margin-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="index.php" aria-expanded="false">
+                        <a class="nav-link" href="index" aria-expanded="false">
                             HOME
                         </a>
                     </li>
@@ -82,24 +82,24 @@
                             About Us
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="about.php">About Us</a>
-                            <a class="dropdown-item" href="services.php">Services</a>
-                            <a class="dropdown-item" href="contact.php">Contact</a>
-                            <a class="dropdown-item" href="team.php">Team</a>
+                            <a class="dropdown-item" href="about">About Us</a>
+                            <a class="dropdown-item" href="services">Services</a>
+                            <a class="dropdown-item" href="contact">Contact</a>
+                            <a class="dropdown-item" href="team">Team</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="properties.php">
+                        <a class="nav-link" href="properties">
                             Property Management
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="services.php">
+                        <a class="nav-link" href="services">
                             Health & Safety
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="farms.php">
+                        <a class="nav-link" href="farms">
                             Taymac Farms
                         </a>
                     </li>
