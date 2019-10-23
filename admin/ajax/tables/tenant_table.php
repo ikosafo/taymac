@@ -45,7 +45,10 @@ $query = $mysqli->query("select * from tenants ORDER BY tenantname DESC");
                             ?></b> <br/>
                         Property: <b>
                             <?php
-                            echo $res['tenantproperty'];
+                            $propertyid = $res['tenantproperty'];
+                            $getname = $mysqli->query("select * from properties where id = '$propertyid'");
+                            $resname = $getname->fetch_assoc();
+                            echo $propertyname = $resname['propertyname'];
                             ?></b> <br/>
                         Telephone: <b>
                             <?php

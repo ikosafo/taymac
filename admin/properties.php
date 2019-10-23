@@ -26,10 +26,10 @@ if (!isset($_SESSION['username'])) {
             <!--START PAGE CONTENT -->
             <section class="page-content container-fluid">
                 <div class="row">
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <div id="property_form_div"></div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-8">
                         <div id="property_table_div"></div>
                     </div>
                 </div>

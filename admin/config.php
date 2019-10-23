@@ -2,7 +2,9 @@
 
 date_default_timezone_set('UTC');
 
-$mysqli= new mysqli('localhost:3308','root','root','taymac');
+//$mysqli= new mysqli('localhost:3308','root','root','taymac');
+
+$mysqli= new mysqli('localhost','Is0205737464','u349494272_root','u349494272_taymac');
 if($mysqli->connect_errno){
     echo"cannot connect MYSQLI error no{$mysqli->connect_errno}:{$mysqli->connect_errno}";
     exit();

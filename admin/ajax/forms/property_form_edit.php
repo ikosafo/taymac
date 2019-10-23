@@ -52,7 +52,7 @@ $resdetails = $getdetails->fetch_assoc();
             </div>
 
             <button type="button" id="editpropertybtn"
-                    class="btn btn-primary">Edit Property
+                    class="btn btn-danger">Edit Property
             </button>
         </form>
     </div>
