@@ -1,5 +1,6 @@
 <script src="assets/vendor/modernizr/modernizr.custom.js"></script>
 <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="assets/js/popper.js"></script>
 <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/js-storage/js.storage.js"></script>
 <script src="assets/vendor/js-cookie/src/js.cookie.js"></script>
@@ -42,6 +43,8 @@
 <script src="assets/js/countrySelect.js"></script>
 <script src="assets/js/select2.min.js"></script>
 <script src="assets/uploadify/jquery.uploadifive.js"></script>
+<script src="assets/js/bootbox.min.js"></script>
+<script src="assets/js/bootbox.locales.min.js"></script>
 
 
 

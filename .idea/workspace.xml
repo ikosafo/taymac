@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c81353f-96aa-4d75-b43d-2358f9233347" name="Default" comment="" />
+    <list default="true" id="4c81353f-96aa-4d75-b43d-2358f9233347" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/property_form.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/property_form.php" />
+      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/property_form_edit.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/property_form_edit.php" />
+      <change beforePath="$PROJECT_DIR$/admin/ajax/tables/property_table.php" afterPath="$PROJECT_DIR$/admin/ajax/tables/property_table.php" />
+      <change beforePath="$PROJECT_DIR$/admin/includes/scripts.php" afterPath="$PROJECT_DIR$/admin/includes/scripts.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,13 +16,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="property_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/property_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1571823137996" expanded="true" signature="3213:3232" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="property_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/property_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="167" column="11" lean-forward="true" selection-start-line="167" selection-start-column="11" selection-end-line="167" selection-end-column="11" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#3825#4861#0#HTML" expanded="false" />
+                <marker date="1571829038061" expanded="true" signature="62:113" ph="select * fro... properties" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tenants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/tenants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="40" />
+              <folding>
+                <marker date="1571829906945" expanded="true" signature="1559:1578" ph="..." />
+                <marker date="1571829906945" expanded="true" signature="2081:2100" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tenant_form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/tenant_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="143" column="41" lean-forward="false" selection-start-line="143" selection-start-column="41" selection-end-line="143" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1571833508246" expanded="true" signature="848:894" ph="select * fro... properties" />
+                <marker date="1571833508246" expanded="true" signature="3344:3972" ph="..." />
+                <marker date="1571833508246" expanded="true" signature="5807:5826" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tenant_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/tenant_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-125">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#button#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1571833508389" expanded="true" signature="62:108" ph="select * fro... tenants" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addtenant.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addtenant.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+              <folding>
+                <marker date="1571832644760" expanded="true" signature="765:1308" ph="INSERT INTO `properties`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addproperty.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addproperty.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+              <folding>
+                <marker date="1571763194285" expanded="true" signature="525:899" ph="INSERT INTO `mis_users`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="properties.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/properties.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="74" column="57" lean-forward="false" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
+            <state relative-caret-position="665">
+              <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
               <folding>
-                <marker date="1571762261841" expanded="true" signature="145:197" ph="..." />
                 <marker date="1571762261841" expanded="true" signature="204:240" ph="..." />
                 <marker date="1571762261841" expanded="true" signature="1565:1584" ph="..." />
                 <marker date="1571762261841" expanded="true" signature="2091:2110" ph="..." />
@@ -29,113 +128,20 @@
       <file leaf-file-name="scripts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/includes/scripts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="648">
+              <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/includes/styles.php">
+      <file leaf-file-name="deleteproperty.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/deleteproperty.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="property_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/property_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="79" column="54" lean-forward="true" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
+            <state relative-caret-position="189">
+              <caret line="7" column="91" lean-forward="false" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
               <folding>
-                <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1571821652856" expanded="true" signature="3160:3179" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addproperty.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addproperty.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-              <folding>
-                <marker date="1571763194285" expanded="true" signature="525:899" ph="INSERT INTO `mis_users`... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="property_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/property_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1571821488702" expanded="true" signature="62:113" ph="select * fro... properties" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="property_form_edit.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/property_form_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="83" column="35" lean-forward="false" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1571821652715" expanded="true" signature="98:144" ph="select * fro... properties" />
-                <marker date="1571821652715" expanded="true" signature="2401:2409" ph="..." />
-                <marker date="1571821652715" expanded="true" signature="3512:3531" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="42" column="73" lean-forward="false" selection-start-line="42" selection-start-column="73" selection-end-line="42" selection-end-column="73" />
-              <folding>
-                <marker date="1571820960311" expanded="true" signature="1615:1639" ph="select * fro... properties" />
-                <marker date="1571820960311" expanded="true" signature="2570:2591" ph="select * fro... tenants" />
-                <marker date="1571820960311" expanded="true" signature="3513:3527" ph="select * fro... properties" />
-                <marker date="1571820960311" expanded="true" signature="3513:3532" ph="select * fro... staff" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="date_config_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../ahpc/mis/ajax/tables/date_config_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="76" column="8" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
-              <folding>
-                <marker date="1559865594424" expanded="true" signature="65:117" ph="select * fro... date_config" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/user_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-486">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1553073904325" expanded="true" signature="5373:5392" ph="..." />
-                <marker date="1553073904325" expanded="true" signature="6067:6086" ph="..." />
-                <marker date="1553073904325" expanded="true" signature="6904:6923" ph="..." />
+                <marker date="1571828608619" expanded="true" signature="83:125" ph="delete from properties... " />
               </folding>
             </state>
           </provider>
@@ -145,9 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>src=&quot;</find>
-      <find>&quot;img</find>
-      <find>assets/</find>
       <find>samarslider</find>
       <find>#f63</find>
       <find>footer</find>
@@ -175,6 +178,9 @@
       <find>== &quot;/</find>
       <find>examination</find>
       <find>dateconfig</find>
+      <find>property_</find>
+      <find>Property</find>
+      <find>property</find>
     </findStrings>
     <replaceStrings>
       <replace>#50346b</replace>
@@ -190,7 +196,13 @@
       <replace>taymac.net</replace>
       <replace>== &quot;/$reg_root/</replace>
       <replace>property</replace>
+      <replace>tenant_</replace>
+      <replace>tenant</replace>
+      <replace>Tenant</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -223,13 +235,21 @@
         <option value="$PROJECT_DIR$/admin/ajax/forms/cp_form.php" />
         <option value="$PROJECT_DIR$/admin/includes/navbar.php" />
         <option value="$PROJECT_DIR$/admin/includes/styles.php" />
-        <option value="$PROJECT_DIR$/admin/includes/scripts.php" />
         <option value="$PROJECT_DIR$/admin/properties.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/addproperty.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/property_table.php" />
+        <option value="$PROJECT_DIR$/../ahpc/mis/ajax/forms/date_config_form_edit.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/editproperty.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/property_form_edit.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/property_form.php" />
+        <option value="$PROJECT_DIR$/admin/includes/scripts.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/deleteproperty.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/property_table.php" />
+        <option value="$PROJECT_DIR$/admin/tenants.php" />
+        <option value="$PROJECT_DIR$/../ahpc/r/ajax/forms/provisional_form_new.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/addtenant.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/tenant_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/forms/tenant_form.php" />
       </list>
     </option>
   </component>
@@ -246,6 +266,7 @@
     <option name="width" value="1938" />
     <option name="height" value="1042" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -285,14 +306,13 @@
               <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="forms" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="tables" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="taymac" type="b2602c69:ProjectViewProjectNode" />
               <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tables" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -340,24 +360,24 @@
       <workItem from="1571188050907" duration="1419000" />
       <workItem from="1571723783916" duration="1272000" />
       <workItem from="1571739257092" duration="711000" />
-      <workItem from="1571755409942" duration="10544000" />
+      <workItem from="1571755409942" duration="21107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109214000" />
+    <option name="totallyTimeSpent" value="119777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29322916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -402,57 +422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/site/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom.css" />
-    <entry file="file://$PROJECT_DIR$/css/samar.css" />
-    <entry file="file://$PROJECT_DIR$/site/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="413" column="37" lean-forward="true" selection-start-line="413" selection-start-column="37" selection-end-line="413" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/property-single-gallery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="254" column="24" lean-forward="true" selection-start-line="202" selection-start-column="18" selection-end-line="254" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/property-single-slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10665">
-          <caret line="509" column="24" lean-forward="false" selection-start-line="509" selection-start-column="24" selection-end-line="509" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="257" column="92" lean-forward="false" selection-start-line="257" selection-start-column="92" selection-end-line="257" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="150" column="74" lean-forward="false" selection-start-line="150" selection-start-column="74" selection-end-line="150" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/properties-grid.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7587">
@@ -660,14 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ahpc/mis/ajax/forms/date_config_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -687,19 +648,6 @@
             <marker date="1553073904325" expanded="true" signature="5373:5392" ph="..." />
             <marker date="1553073904325" expanded="true" signature="6067:6086" ph="..." />
             <marker date="1553073904325" expanded="true" signature="6904:6923" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/properties.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="74" column="57" lean-forward="false" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
-          <folding>
-            <marker date="1571762261841" expanded="true" signature="145:197" ph="..." />
-            <marker date="1571762261841" expanded="true" signature="204:240" ph="..." />
-            <marker date="1571762261841" expanded="true" signature="1565:1584" ph="..." />
-            <marker date="1571762261841" expanded="true" signature="2091:2110" ph="..." />
           </folding>
         </state>
       </provider>
@@ -725,16 +673,6 @@
         <state relative-caret-position="-243">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addproperty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding>
-            <marker date="1571763194285" expanded="true" signature="525:899" ph="INSERT INTO `mis_users`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,38 +715,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/property_table.php">
+    <entry file="file://$PROJECT_DIR$/../ahpc/mis/ajax/forms/date_config_form_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
+        <state relative-caret-position="432">
+          <caret line="22" column="106" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="106" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1571821488702" expanded="true" signature="62:113" ph="select * fro... properties" />
+            <marker date="1552488229212" expanded="true" signature="88:130" ph="select * fro... date_config" />
+            <marker date="1552488229212" expanded="true" signature="3877:3896" ph="..." />
+            <marker date="1552488229212" expanded="true" signature="4033:4052" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/property_form.php">
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editproperty.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="79" column="54" lean-forward="true" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
+        <state relative-caret-position="675">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1571821652856" expanded="true" signature="3160:3179" ph="..." />
+            <marker date="1571822497226" expanded="true" signature="592:847" ph="INSERT INTO `properties`... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/forms/property_form_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="83" column="35" lean-forward="false" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="35" />
+        <state relative-caret-position="297">
+          <caret line="110" column="50" lean-forward="true" selection-start-line="110" selection-start-column="50" selection-end-line="110" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1571821652715" expanded="true" signature="98:144" ph="select * fro... properties" />
-            <marker date="1571821652715" expanded="true" signature="2401:2409" ph="..." />
-            <marker date="1571821652715" expanded="true" signature="3512:3531" ph="..." />
+            <marker date="1571823137886" expanded="true" signature="98:144" ph="select * fro... properties" />
+            <marker date="1571823137886" expanded="true" signature="2684:2692" ph="..." />
+            <marker date="1571823137886" expanded="true" signature="3838:3857" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ahpc/mis/ajax/queries/delete_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1552488229235" expanded="true" signature="116:154" ph="delete from mis_users... " />
+            <marker date="1552488229235" expanded="true" signature="207:256" ph="delete from permission... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/deleteproperty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="91" lean-forward="false" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
+          <folding>
+            <marker date="1571828608619" expanded="true" signature="83:125" ph="delete from properties... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/properties.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="78" column="18" lean-forward="false" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+          <folding>
+            <marker date="1571762261841" expanded="true" signature="204:240" ph="..." />
+            <marker date="1571762261841" expanded="true" signature="1565:1584" ph="..." />
+            <marker date="1571762261841" expanded="true" signature="2091:2110" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/tenants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="40" />
+          <folding>
+            <marker date="1571829906945" expanded="true" signature="1559:1578" ph="..." />
+            <marker date="1571829906945" expanded="true" signature="2081:2100" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/property_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1571823137996" expanded="true" signature="3213:3232" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ahpc/r/ajax/forms/provisional_form_new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="1160" column="39" lean-forward="true" selection-start-line="1160" selection-start-column="39" selection-end-line="1160" selection-end-column="39" />
+          <folding>
+            <marker date="1566974296386" expanded="true" signature="660:722" ph="select * fro... provisional" />
+            <marker date="1566974296386" expanded="true" signature="18977:19059" ph="select distr... district" />
+            <marker date="1566974296386" expanded="true" signature="24495:24544" ph="select * fro... professions" />
+            <marker date="1566974296386" expanded="true" signature="25363:25453" ph="select * fro... applicant_images" />
+            <marker date="1566974296386" expanded="true" signature="42866:42948" ph="select distr... district" />
+            <marker date="1566974296386" expanded="true" signature="48699:48789" ph="select * fro... applicant_images" />
+            <marker date="1566974296386" expanded="true" signature="65036:65118" ph="select distr... district" />
+            <marker date="1566974296386" expanded="true" signature="70726:70775" ph="select * fro... professions" />
+            <marker date="1566974296386" expanded="true" signature="71642:71732" ph="select * fro... applicant_images" />
+            <marker date="1566974296386" expanded="true" signature="82401:82420" ph="..." />
+            <marker date="1566974296386" expanded="true" signature="82565:82584" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addproperty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <marker date="1571763194285" expanded="true" signature="525:899" ph="INSERT INTO `mis_users`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addtenant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <marker date="1571832644760" expanded="true" signature="765:1308" ph="INSERT INTO `properties`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/property_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="167" column="11" lean-forward="true" selection-start-line="167" selection-start-column="11" selection-end-line="167" selection-end-column="11" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#3825#4861#0#HTML" expanded="false" />
+            <marker date="1571829038061" expanded="true" signature="62:113" ph="select * fro... properties" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/tenant_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1571833508389" expanded="true" signature="62:108" ph="select * fro... tenants" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/tenant_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="143" column="41" lean-forward="false" selection-start-line="143" selection-start-column="41" selection-end-line="143" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1571833508246" expanded="true" signature="848:894" ph="select * fro... properties" />
+            <marker date="1571833508246" expanded="true" signature="3344:3972" ph="..." />
+            <marker date="1571833508246" expanded="true" signature="5807:5826" ph="..." />
           </folding>
         </state>
       </provider>

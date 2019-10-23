@@ -31,6 +31,7 @@ include ('../../config.php');
                     <option value="Shop">Shop</option>
                     <option value="Apartment">Apartment</option>
                     <option value="House">House</option>
+                    <option value="Office">Office</option>
                 </select>
             </div>
             <div class="form-group">
@@ -88,7 +89,7 @@ include ('../../config.php');
                 url: "ajax/queries/addproperty.php",
                 beforeSend: function () {
                     $.blockUI({
-                        message: '<img src="../../assets/img/wait.gif" style="border:0 !important"/>'
+                        message: '<img src="assets/img/wait.gif" style="border:0 !important"/>'
                     });
                 },
                 data: {

@@ -32,9 +32,10 @@ $resdetails = $getdetails->fetch_assoc();
                 <label for="propertytype">Type *</label>
                 <select id="propertytype">
                     <option value="">Select Property Type</option>
-                    <option value="Shop">Shop</option>
-                    <option value="Apartment">Apartment</option>
-                    <option value="House">House</option>
+                    <option <?php if (@$resdetails['propertytype'] == "Shop") echo "selected" ?>>Shop</option>
+                    <option <?php if (@$resdetails['propertytype'] == "Apartment") echo "selected" ?>>Apartment</option>
+                    <option <?php if (@$resdetails['propertytype'] == "House") echo "selected" ?>>House</option>
+                    <option <?php if (@$resdetails['propertytype'] == "Office") echo "selected" ?>>Office</option>
                 </select>
             </div>
             <div class="form-group">
@@ -70,6 +71,7 @@ $resdetails = $getdetails->fetch_assoc();
         var propertytype = $("#propertytype").val();
         var propertyaddress = $("#propertyaddress").val();
         var propertydescription = $("#propertydescription").val();
+        var i_index = '<?php echo $i_index ?>';
         var error = '';
 
         if (propertyname == "") {
@@ -89,10 +91,10 @@ $resdetails = $getdetails->fetch_assoc();
 
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/addproperty.php",
+                url: "ajax/queries/editproperty.php",
                 beforeSend: function () {
                     $.blockUI({
-                        message: '<img src="../../assets/img/wait.gif" style="border:0 !important"/>'
+                        message: '<img src="assets/img/wait.gif" style="border:0 !important"/>'
                     });
                 },
                 data: {
@@ -100,7 +102,8 @@ $resdetails = $getdetails->fetch_assoc();
                     propertylocation: propertylocation,
                     propertytype: propertytype,
                     propertyaddress: propertyaddress,
-                    propertydescription: propertydescription
+                    propertydescription: propertydescription,
+                    i_index:i_index
                 },
                 success: function (text) {
                     $.ajax({

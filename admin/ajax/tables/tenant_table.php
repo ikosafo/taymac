@@ -1,6 +1,6 @@
 <?php include ('../../config.php');
 
-$query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
+$query = $mysqli->query("select * from tenants ORDER BY tenantname DESC");
 
 ?>
 
@@ -20,7 +20,7 @@ $query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
 
 
 <div class="card">
-    <div class="card-body" id="property-table">
+    <div class="card-body" id="tenant-table">
 
         <table id="bs4-table" class="table table-bordered"
                style="width:100% !important;">
@@ -39,42 +39,53 @@ $query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
                 ?>
                 <tr>
                     <td>
-                        Property Name: <b>
+                        Tenant Name: <b>
                             <?php
-                            echo $res['propertyname']
+                            echo $res['tenantname']
                             ?></b> <br/>
-                        Location: <b>
+                        Property: <b>
                             <?php
-                            echo $res['propertylocation'];
+                            echo $res['tenantproperty'];
                             ?></b> <br/>
-                        Type: <b>
+                        Telephone: <b>
                             <?php
-                            echo $res['propertytype'];
+                            echo $res['tenanttelephone'];
                             ?></b> <br/>
-                        Address: <b>
+                        Email: <b>
                             <?php
-                            echo $res['propertyaddress'];
+                            echo $res['tenantemail'];
                             ?></b> <br/>
-
+                        Date Commenced: <b>
+                            <?php
+                            echo $res['tenantdatecommenced'];
+                            ?></b> <br/>
+                        Date Completed: <b>
+                            <?php
+                            echo $res['tenantdatecompleted'];
+                            ?></b> <br/>
+                        Rates: <b>
+                            <?php
+                            echo $res['tenantrates'];
+                            ?></b> <br/>
 
                     </td>
 
                     <td>
                         <?php
-                        echo $res['propertydescription'];
+                        echo $res['tenantdescription'];
                         ?>
 
                     </td>
 
                     <td align="center">
                         <button type="button"
-                                class="btn btn-info btn-sm edit_property"
+                                class="btn btn-info btn-sm edit_tenant"
                                 i_index="<?php echo $res['id']; ?>"
                                 title="Edit"><i
                                 class="icon-pencil" style="color:#fff !important;"></i>
                         </button>
                         <button type="button"
-                                class="btn btn-danger btn-sm delete_property"
+                                class="btn btn-danger btn-sm delete_tenant"
                                 i_index="<?php echo $res['id']; ?>"
                                 title="Delete">
                             <i class="icon-trash" style="color:#fff !important;"></i>
@@ -107,17 +118,17 @@ $query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
 
     $('#bs4-table').DataTable();
 
-    $(document).on('click', '.edit_property', function () {
+    $(document).on('click', '.edit_tenant', function () {
         var i_index = $(this).attr('i_index');
         //alert(i_index);
         $.ajax({
             type: "POST",
-            url: "ajax/forms/property_form_edit.php",
+            url: "ajax/forms/tenant_form_edit.php",
             data: {
                 i_index: i_index
             },
             success: function (text) {
-                $('#property_form_div').html(text);
+                $('#tenant_form_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);
@@ -126,11 +137,11 @@ $query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
     });
 
 
-    $(document).on('click', '.delete_property', function () {
+    $(document).on('click', '.delete_tenant', function () {
         var i_index = $(this).attr('i_index');
         bootbox.confirm({
-            title: "Delete Property",
-            message: "Do you want to delete this property? <br/>This cannot be undone.",
+            title: "Delete Tenant",
+            message: "Do you want to delete this tenant? <br/>This cannot be undone.",
             buttons: {
                 cancel: {
                     label: '<i class="icon-times"></i> Cancel'
@@ -143,16 +154,16 @@ $query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
                 if (result) {
                     $.ajax({
                         type: "POST",
-                        url: "ajax/queries/deleteproperty.php",
+                        url: "ajax/queries/deletetenant.php",
                         data: {
                             i_index: i_index
                         },
                         success: function (text) {
                             //alert('Deleted Successfully!');
                             $.ajax({
-                                url: "ajax/tables/property_table.php",
+                                url: "ajax/tables/tenant_table.php",
                                 success: function (text) {
-                                    $('#property_table_div').html(text);
+                                    $('#tenant_table_div').html(text);
                                 },
                                 error: function (xhr, ajaxOptions, thrownError) {
                                     alert(xhr.status + " " + thrownError);
