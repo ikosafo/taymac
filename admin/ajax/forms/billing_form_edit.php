@@ -2,11 +2,16 @@
 
 include ('../../config.php');
 
+$i_index = $_POST['i_index'];
+$getdetails = $mysqli->query("select * from billing where id = '$i_index'");
+$resdetails = $getdetails->fetch_assoc();
+
 //$user_id = $_SESSION['user_id'];
 ?>
 
+
 <div class="card">
-    <h5 class="card-header">Add New Billing <br/>
+    <h5 class="card-header">Edit Billing <br/>
         <small style="color: red">Field Marked * are required</small>
     </h5>
 
@@ -16,14 +21,14 @@ include ('../../config.php');
                 <label for="billingtype">Billing Type *</label>
                 <select id="billingtype">
                     <option value="">Select Billing Type</option>
-                    <option value="Rent">Rent</option>
-                    <option value="CAM Fees">CAM Fees</option>
-                    <option value="Reimburse Bills">Reimburse Bills</option>
-                    <option value="Other">Other</option>
+                    <option <?php if (@$resdetails['billingtype'] == "Rent") echo "selected" ?>>Rent</option>
+                    <option <?php if (@$resdetails['billingtype'] == "CAM Fees") echo "selected" ?>>CAM Fees</option>
+                    <option <?php if (@$resdetails['billingtype'] == "Reimburse Bills") echo "selected" ?>>Reimburse Bills</option>
+                    <option <?php if (@$resdetails['billingtype'] == "Other") echo "selected" ?>>Other</option>
                 </select>
                 <label for="billingtypeother">If Other, Specify </label>
                 <input type="text" id="billingtypeother"
-                       class="form-control"
+                       class="form-control" value="<?php echo $resdetails['billingtypeother'] ?>"
                        placeholder="Enter Other Type">
             </div>
             <hr class="dashed">
@@ -32,9 +37,14 @@ include ('../../config.php');
                 <select id="billingtenant">
                     <option value="">Select Tenant</option>
                     <?php
+                    $tenantid = $resdetails['billingtenant'];
+                    $getname = $mysqli->query("select * from tenants where id = '$tenantid'");
+                    $resname = $getname->fetch_assoc();
+                    $tenantname = $resname['tenantname'];
+
                     $query = $mysqli->query("select * from tenants ORDER BY tenantname");
                     while ($result = $query->fetch_assoc()) { ?>
-                        <option value="<?php echo $result['id'] ?>">
+                        <option <?php if (@$tenantname == @$result['tenantname']) echo "Selected" ?>>
                             <?php echo $result['tenantname'] ?></option>
                     <?php } ?>
                 </select>
@@ -42,25 +52,25 @@ include ('../../config.php');
             <div class="form-group">
                 <label for="billingfor">Bill For *</label>
                 <input type="text" id="billingfor"
-                       class="form-control"
+                       class="form-control" value="<?php echo $resdetails['billingfor'] ?>"
                        placeholder="Select Month and Year">
             </div>
             <div class="form-group">
                 <label for="billingamount">Amount Per Month *</label>
                 <input type="text" id="billingamount"
-                       class="form-control"
+                       class="form-control" value="<?php echo $resdetails['billingamount'] ?>"
                        placeholder="Enter Amount">
             </div>
             <div class="form-group">
                 <label for="billingmonthnumber">Number of Month *</label>
                 <input type="text" id="billingmonthnumber"
-                       class="form-control"
+                       class="form-control" value="<?php echo $resdetails['billingmonthnumber'] ?>"
                        placeholder="Enter Number">
             </div>
             <div class="form-group">
                 <label for="billingdate">Date *</label>
                 <input type="text" id="billingdate"
-                       class="form-control"
+                       class="form-control" value="<?php echo $resdetails['billingdate'] ?>"
                        placeholder="Select Date">
             </div>
 
@@ -70,13 +80,13 @@ include ('../../config.php');
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" id="customRadioInline1"
                            name="billdelivered" value="Yes"
-                           class="custom-control-input">
+                           class="custom-control-input" <?php if (@$resdetails['billdelivered'] == "Yes") echo "checked" ?>>
                     <label class="custom-control-label" for="customRadioInline1">Yes</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" id="customRadioInline2"
                            name="billdelivered" value="No"
-                           class="custom-control-input">
+                           class="custom-control-input" <?php if (@$resdetails['billdelivered'] == "No") echo "checked" ?>>
                     <label class="custom-control-label" for="customRadioInline2">No</label>
                 </div>
             </div>
@@ -85,11 +95,11 @@ include ('../../config.php');
                 <label for="billingdescription">Description</label>
                 <textarea class="form-control"
                           id="billingdescription"
-                          placeholder="Enter description"></textarea>
+                          placeholder="Enter description"><?php echo $resdetails['billingdescription'] ?></textarea>
             </div>
 
-            <button type="button" id="addbillingbtn"
-                    class="btn btn-primary">Add billing
+            <button type="button" id="editbillingbtn"
+                    class="btn btn-warning">Edit billing
             </button>
         </form>
     </div>
@@ -126,7 +136,7 @@ include ('../../config.php');
     });
 
 
-    $("#addbillingbtn").click(function () {
+    $("#editbillingbtn").click(function () {
 
         var billingtype = $("#billingtype").val();
         var billingtypeother = $("#billingtypeother").val();
@@ -137,6 +147,7 @@ include ('../../config.php');
         var billingdate = $("#billingdate").val();
         var billingdescription = $("#billingdescription").val();
         var billdelivered = $('input[name=billdelivered]:checked').val();
+        var i_index = '<?php echo $i_index ?>';
         var error = '';
 
 
@@ -185,7 +196,7 @@ include ('../../config.php');
 
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/addbilling.php",
+                url: "ajax/queries/editbilling.php",
                 beforeSend: function () {
                     $.blockUI({
                         message: '<img src="assets/img/wait.gif" style="border:0 !important"/>'
@@ -200,7 +211,8 @@ include ('../../config.php');
                     billingmonthnumber: billingmonthnumber,
                     billingdate: billingdate,
                     billdelivered: billdelivered,
-                    billingdescription: billingdescription
+                    billingdescription: billingdescription,
+                    i_index:i_index
                 },
                 success: function (text) {
                     $.ajax({

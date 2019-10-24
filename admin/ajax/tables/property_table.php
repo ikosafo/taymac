@@ -126,46 +126,67 @@ $query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
     });
 
 
-    $(document).on('click', '.delete_property', function () {
+    $(document).off('click', '.delete_property').on('click', '.delete_property', function () {
         var i_index = $(this).attr('i_index');
-        bootbox.confirm({
-            title: "Delete Property",
-            message: "Do you want to delete this property? <br/>This cannot be undone.",
+        $.confirm({
+            title: 'Delete Property!',
+            content: 'Are you sure to continue?',
             buttons: {
-                cancel: {
-                    label: '<i class="icon-times"></i> Cancel'
+                no: {
+                    text: 'No',
+                    keys: ['enter', 'shift'],
+                    backdrop: 'static',
+                    keyboard: false,
+                    action: function () {
+                        $.alert('Data is safe');
+                        $.ajax({
+                            url: "ajax/tables/property_table.php",
+                            success: function (text) {
+                                $('#property_table_div').html(text);
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                alert(xhr.status + " " + thrownError);
+                            },
+                        });
+                    }
+
                 },
-                confirm: {
-                    label: '<i class="icon-check"></i> Confirm'
-                }
-            },
-            callback: function (result) {
-                if (result) {
-                    $.ajax({
-                        type: "POST",
-                        url: "ajax/queries/deleteproperty.php",
-                        data: {
-                            i_index: i_index
-                        },
-                        success: function (text) {
-                            //alert('Deleted Successfully!');
-                            $.ajax({
-                                url: "ajax/tables/property_table.php",
-                                success: function (text) {
-                                    $('#property_table_div').html(text);
-                                },
-                                error: function (xhr, ajaxOptions, thrownError) {
-                                    alert(xhr.status + " " + thrownError);
-                                },
-                            });
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status + " " + thrownError);
-                        },
-                    });
+                yes: {
+                    text: 'Yes, Delete it!',
+                    btnClass: 'btn-blue',
+                    action: function () {
+                        $.ajax({
+                            type: "POST",
+                            url: "ajax/queries/deleteproperty.php",
+                            data: {
+                                i_index: i_index
+                            },
+                            dataType: "html",
+                            success: function (text) {
+                                $.alert('Data is deleted!');
+                                $.ajax({
+                                    url: "ajax/tables/property_table.php",
+                                    success: function (text) {
+                                        $('#property_table_div').html(text);
+                                    },
+                                    error: function (xhr, ajaxOptions, thrownError) {
+                                        alert(xhr.status + " " + thrownError);
+                                    },
+                                });
+                            },
+                            complete: function () {
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                alert(xhr.status + " " + thrownError);
+                            }
+                        });
+                    }
                 }
             }
         });
+
+        
     });
+    
 
 </script>

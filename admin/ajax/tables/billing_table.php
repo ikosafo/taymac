@@ -50,7 +50,10 @@ $query = $mysqli->query("select * from billing ORDER BY id DESC");
                     <td>
                         Tenant Name: <b>
                             <?php
-                            echo $res['billingtenant']
+                            $tenantid = $res['billingtenant'];
+                            $getname = $mysqli->query("select * from tenants where id = '$tenantid'");
+                            $resname = $getname->fetch_assoc();
+                            echo $tenantname = $resname['tenantname'];
                             ?></b> <br/>
                         Billing For: <b>
                             <?php
@@ -81,7 +84,7 @@ $query = $mysqli->query("select * from billing ORDER BY id DESC");
                         ?>
 
                     </td>
-                    
+
 
                     <td align="center">
                         <button type="button"
@@ -148,47 +151,67 @@ $query = $mysqli->query("select * from billing ORDER BY id DESC");
         });
     });
 
-
-    $(document).on('click', '.delete_billing', function () {
+    $(document).off('click', '.delete_billing').on('click', '.delete_billing', function () {
         var i_index = $(this).attr('i_index');
-        bootbox.confirm({
-            title: "Delete billing",
-            message: "Do you want to delete this billing? <br/>This cannot be undone.",
+        $.confirm({
+            title: 'Delete Billing Record!',
+            content: 'Are you sure to continue?',
             buttons: {
-                cancel: {
-                    label: '<i class="icon-times"></i> Cancel'
+                no: {
+                    text: 'No',
+                    keys: ['enter', 'shift'],
+                    backdrop: 'static',
+                    keyboard: false,
+                    action: function () {
+                        $.alert('Data is safe');
+                        $.ajax({
+                            url: "ajax/tables/billing_table.php",
+                            success: function (text) {
+                                $('#billing_table_div').html(text);
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                alert(xhr.status + " " + thrownError);
+                            },
+                        });
+                    }
+
                 },
-                confirm: {
-                    label: '<i class="icon-check"></i> Confirm'
-                }
-            },
-            callback: function (result) {
-                if (result) {
-                    $.ajax({
-                        type: "POST",
-                        url: "ajax/queries/deletebilling.php",
-                        data: {
-                            i_index: i_index
-                        },
-                        success: function (text) {
-                            //alert('Deleted Successfully!');
-                            $.ajax({
-                                url: "ajax/tables/billing_table.php",
-                                success: function (text) {
-                                    $('#billing_table_div').html(text);
-                                },
-                                error: function (xhr, ajaxOptions, thrownError) {
-                                    alert(xhr.status + " " + thrownError);
-                                },
-                            });
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                            alert(xhr.status + " " + thrownError);
-                        },
-                    });
+                yes: {
+                    text: 'Yes, Delete it!',
+                    btnClass: 'btn-blue',
+                    action: function () {
+                        $.ajax({
+                            type: "POST",
+                            url: "ajax/queries/deletebilling.php",
+                            data: {
+                                i_index: i_index
+                            },
+                            dataType: "html",
+                            success: function (text) {
+                                $.alert('Data is deleted!');
+                                $.ajax({
+                                    url: "ajax/tables/billing_table.php",
+                                    success: function (text) {
+                                        $('#billing_table_div').html(text);
+                                    },
+                                    error: function (xhr, ajaxOptions, thrownError) {
+                                        alert(xhr.status + " " + thrownError);
+                                    },
+                                });
+                            },
+                            complete: function () {
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                alert(xhr.status + " " + thrownError);
+                            }
+                        });
+                    }
                 }
             }
         });
+
+
     });
+
 
 </script>

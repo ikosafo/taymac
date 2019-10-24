@@ -39,3 +39,4 @@
 <link rel="stylesheet" href="assets/uploadify/uploadifive.css">
 <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="assets/vendor/bootstrap-daterangepicker/daterangepicker.css">
+<link rel="stylesheet" href="assets/jquery-confirm/css/jquery-confirm.css">

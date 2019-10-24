@@ -45,6 +45,8 @@
 <script src="assets/uploadify/jquery.uploadifive.js"></script>
 <script src="assets/js/bootbox.min.js"></script>
 <script src="assets/js/bootbox.locales.min.js"></script>
+<script src="assets/jquery-confirm/js/jquery-confirm.js"></script>
+<script src="assets/js/confirm-init.js"></script>
 
 
 
