@@ -25,13 +25,13 @@ if (!isset($_SESSION['username'])) {
             <!--END PAGE HEADER -->
             <!--START PAGE CONTENT -->
             <section class="page-content container-fluid">
-                <h6>PROPERTY</h6>
+                <h6>BILLINGS</h6>
                 <div class="row">
                     <div class="col-md-4">
-                        <div id="property_form_div"></div>
+                        <div id="billing_form_div"></div>
                     </div>
                     <div class="col-md-8">
-                        <div id="property_table_div"></div>
+                        <div id="billing_table_div"></div>
                     </div>
                 </div>
             </section>
@@ -46,14 +46,14 @@ if (!isset($_SESSION['username'])) {
 <?php include('includes/scripts.php') ?>
 <script>
     $.ajax({
-        url: "ajax/forms/property_form.php",
+        url: "ajax/forms/billing_form.php",
         beforeSend: function () {
             $.blockUI({
                 message: '<img src="assets/img/wait.gif" style="border:0 !important"/>'
             });
         },
         success: function (text) {
-            $('#property_form_div').html(text);
+            $('#billing_form_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -64,14 +64,14 @@ if (!isset($_SESSION['username'])) {
     });
 
     $.ajax({
-        url: "ajax/tables/property_table.php",
+        url: "ajax/tables/billing_table.php",
         beforeSend: function () {
             $.blockUI({
                 message: '<img src="assets/img/wait.gif" style="border:0 !important"/>'
             });
         },
         success: function (text) {
-            $('#property_table_div').html(text);
+            $('#billing_table_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);

@@ -77,13 +77,13 @@
                         <img class="align-self-center mr-3 w-40 rounded-circle"
                              src="img/logo/ahpc_logo.png" alt="Logo">
                         <div class="media-body">
-                            <h5 class="mt-0 mb-0" style="text-transform: uppercase"><?php echo $_SESSION['full_name']; ?></h5>
-                            <span><?php echo $_SESSION['user_type']; ?></span>
+                            <h5 class="mt-0 mb-0" style="text-transform: uppercase"><?php echo $_SESSION['fullname']; ?></h5>
+                            <span>Administrator</span>
                         </div>
                     </div>
                 </div>
                 <div style="margin-right: 400px">
-                    <a class="dropdown-item" href="login.php"><i class="icon dripicons-lock-open"></i> Sign Out</a>
+                    <a class="dropdown-item" href="login"><i class="icon dripicons-lock-open"></i> Sign Out</a>
                 </div>
 
 

@@ -33,7 +33,6 @@ session_destroy();
                 <a href="#." class="brand text-center d-block m-b-20">
                     <img src="../assets/img/logo.jpeg" alt="Taymac Logo" style="width: 50%"/>
                 </a>
-                <h5 class="sign-in-heading text-center m-b-20">Sign in to MIS</h5>
                 <div class="form-group">
                     <label for="inputPassword" class="sr-only">Username</label>
                     <input type="text" id="username" class="form-control" placeholder="Username" required="">
@@ -87,7 +86,7 @@ session_destroy();
                 success: function (text) {
                     //alert(text)
                     if (text == 1) {
-                        window.location.href = "index.php";
+                        window.location.href = "index";
                     }
                     else {
                         $('#error_loc').notify("Username or password does not exist", "error");

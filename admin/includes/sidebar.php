@@ -43,10 +43,9 @@
                 </li>
 
                     <li class="nav-dropdown <?php echo(
-                    $_SERVER['PHP_SELF'] == "/$reg_root/properties" ||
-                    $_SERVER['PHP_SELF'] == "/$reg_root/tenants" ||
-                    $_SERVER['PHP_SELF'] == "/$reg_root/addnewbill" ||
-                    $_SERVER['PHP_SELF'] == "/$reg_root/viewbills" ||
+                    $_SERVER['PHP_SELF'] == "/$reg_root/properties.php" ||
+                    $_SERVER['PHP_SELF'] == "/$reg_root/tenants.php" ||
+                    $_SERVER['PHP_SELF'] == "/$reg_root/billing.php" ||
                     $_SERVER['PHP_SELF'] == "/$reg_root/addnewservice" ||
                     $_SERVER['PHP_SELF'] == "/$reg_root/viewservice" ||
                     $_SERVER['PHP_SELF'] == "/$reg_root/propertysearch"
@@ -55,36 +54,19 @@
                                     class="icon dripicons-home"></i><span>Property Management</span></a>
                         <ul class="collapse nav-sub" aria-expanded="false">
                             <li class="<?php echo(
-                            $_SERVER['PHP_SELF'] == "/$reg_root/properties"
+                            $_SERVER['PHP_SELF'] == "/$reg_root/properties.php"
                                 ? "side_active" : ""); ?>"><a
-                                        href="properties"><span>Properties</span></a>
+                                        href="properties"><span>Property</span></a>
                             </li>
                             <li class="<?php echo(
-                            $_SERVER['PHP_SELF'] == "/$reg_root/tenants"
+                            $_SERVER['PHP_SELF'] == "/$reg_root/tenants.php"
                                 ? "side_active" : ""); ?>"><a
                                         href="tenants"><span>Tenants</span></a>
                             </li>
-                            <li class="nav-dropdown <?php echo(
-                            $_SERVER['PHP_SELF'] == "/$reg_root/addnewbill" ||
-                            $_SERVER['PHP_SELF'] == "/$reg_root/viewbills"
-                                ? "active" : ""); ?>">
-                                <a class="has-arrow" href="#" aria-expanded="false">
-                                    Billing
-                                </a>
-                                <ul class="collapse nav-sub" aria-expanded="false">
-                                    <li class="<?php echo(
-                                    $_SERVER['PHP_SELF'] == "/$reg_root/addnewbill"
-                                        ? "side_active" : ""); ?>"><a
-                                                href="addnewbill">
-                                            <span>Add New Bill</span></a>
-                                    </li>
-                                    <li class="<?php echo(
-                                    $_SERVER['PHP_SELF'] == "/$reg_root/viewbills"
-                                        ? "side_active" : ""); ?>"><a
-                                                href="viewbills">
-                                            <span>View Bills</span></a>
-                                    </li>
-                                </ul>
+                            <li class="<?php echo(
+                            $_SERVER['PHP_SELF'] == "/$reg_root/billing.php"
+                                ? "side_active" : ""); ?>"><a
+                                        href="billing"><span>Billing</span></a>
                             </li>
                             <li class="nav-dropdown <?php echo(
                             $_SERVER['PHP_SELF'] == "/$reg_root/addnewservice" ||

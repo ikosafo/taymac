@@ -1,6 +1,6 @@
 <?php include('config.php');
 if (!isset($_SESSION['username'])) {
-    header("location:login.php");
+    header("location:login");
 }
 
 ?>
@@ -25,6 +25,7 @@ if (!isset($_SESSION['username'])) {
             <!--END PAGE HEADER -->
             <!--START PAGE CONTENT -->
             <section class="page-content container-fluid">
+                <h6>TENANTS</h6>
                 <div class="row">
                     <div class="col-md-4">
                         <div id="tenant_form_div"></div>

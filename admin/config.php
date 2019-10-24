@@ -13,6 +13,8 @@ session_start();
 
 $reg_root = 'taymac/admin';
 
+//$reg_root = 'taymac.net/admin';
+
 
 function lock($item){
 
