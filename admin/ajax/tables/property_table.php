@@ -163,7 +163,7 @@ $query = $mysqli->query("select * from properties ORDER BY propertyname DESC");
                             },
                             dataType: "html",
                             success: function (text) {
-                                $.alert('Data is deleted!');
+                                $.alert('Property is deleted!');
                                 $.ajax({
                                     url: "ajax/tables/property_table.php",
                                     success: function (text) {

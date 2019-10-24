@@ -188,7 +188,7 @@ $query = $mysqli->query("select * from billing ORDER BY id DESC");
                             },
                             dataType: "html",
                             success: function (text) {
-                                $.alert('Data is deleted!');
+                                $.alert('Bill is deleted!');
                                 $.ajax({
                                     url: "ajax/tables/billing_table.php",
                                     success: function (text) {

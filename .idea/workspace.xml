@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c81353f-96aa-4d75-b43d-2358f9233347" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/billing_form.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/billing_form.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/tables/billing_table.php" afterPath="$PROJECT_DIR$/admin/ajax/tables/billing_table.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/tables/property_table.php" afterPath="$PROJECT_DIR$/admin/ajax/tables/property_table.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/tables/tenant_table.php" afterPath="$PROJECT_DIR$/admin/ajax/tables/tenant_table.php" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/bootbox.all.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/bootbox.all.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/bootbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/bootbox.locales.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/bootbox.locales.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/bootbox.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/popper.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/scripts.php" afterPath="$PROJECT_DIR$/admin/includes/scripts.php" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/styles.php" afterPath="$PROJECT_DIR$/admin/includes/styles.php" />
-    </list>
+    <list default="true" id="4c81353f-96aa-4d75-b43d-2358f9233347" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +41,8 @@
       <file leaf-file-name="property_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/ajax/tables/property_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="172" column="53" lean-forward="true" selection-start-line="172" selection-start-column="53" selection-end-line="172" selection-end-column="53" />
+            <state relative-caret-position="183">
+              <caret line="162" column="28" lean-forward="false" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
               <folding>
                 <marker date="1571919207770" expanded="true" signature="62:113" ph="select * fro... properties" />
               </folding>
@@ -69,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/tables/tenant_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
-              <caret line="179" column="60" lean-forward="true" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="60" />
+              <caret line="179" column="60" lean-forward="false" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="60" />
               <folding>
                 <marker date="1571919207864" expanded="true" signature="62:108" ph="select * fro... tenants" />
                 <marker date="1571919207864" expanded="true" signature="1139:1188" ph="select * fro... properties" />
@@ -82,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/admin/assets/jquery-confirm/css/jquery-confirm.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
-              <caret line="360" column="1" lean-forward="true" selection-start-line="360" selection-start-column="1" selection-end-line="360" selection-end-column="1" />
+              <caret line="360" column="1" lean-forward="false" selection-start-line="360" selection-start-column="1" selection-end-line="360" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -102,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editbilling.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
-              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <marker date="1571914223591" expanded="true" signature="843:900" ph="select * fro... tenants" />
                 <marker date="1571914223591" expanded="true" signature="1042:1438" ph="INSERT INTO `billing`... " />
@@ -127,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/admin/includes/scripts.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="702">
-              <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+              <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -137,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/admin/includes/styles.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="694">
-              <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+              <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -266,10 +251,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="2" />
-    <option name="width" value="1938" />
-    <option name="height" value="1042" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -299,26 +284,6 @@
               <item name="taymac" type="b2602c69:ProjectViewProjectNode" />
               <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="taymac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="taymac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="queries" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="taymac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tables" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -366,18 +331,18 @@
       <workItem from="1571188050907" duration="1419000" />
       <workItem from="1571723783916" duration="1272000" />
       <workItem from="1571739257092" duration="711000" />
-      <workItem from="1571755409942" duration="45980000" />
+      <workItem from="1571755409942" duration="46772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144650000" />
+    <option name="totallyTimeSpent" value="145442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21675676" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -386,7 +351,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -878,7 +843,7 @@
     <entry file="file://$PROJECT_DIR$/admin/includes/scripts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -886,7 +851,7 @@
     <entry file="file://$PROJECT_DIR$/admin/includes/styles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="694">
-          <caret line="41" column="29" lean-forward="true" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <caret line="41" column="29" lean-forward="false" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -894,7 +859,7 @@
     <entry file="file://$PROJECT_DIR$/admin/assets/jquery-confirm/css/jquery-confirm.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="360" column="1" lean-forward="true" selection-start-line="360" selection-start-column="1" selection-end-line="360" selection-end-column="1" />
+          <caret line="360" column="1" lean-forward="false" selection-start-line="360" selection-start-column="1" selection-end-line="360" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -910,7 +875,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editbilling.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <marker date="1571914223591" expanded="true" signature="843:900" ph="select * fro... tenants" />
             <marker date="1571914223591" expanded="true" signature="1042:1438" ph="INSERT INTO `billing`... " />
@@ -921,7 +886,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/tables/tenant_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="179" column="60" lean-forward="true" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="60" />
+          <caret line="179" column="60" lean-forward="false" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="60" />
           <folding>
             <marker date="1571919207864" expanded="true" signature="62:108" ph="select * fro... tenants" />
             <marker date="1571919207864" expanded="true" signature="1139:1188" ph="select * fro... properties" />
@@ -943,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/tables/property_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="172" column="53" lean-forward="true" selection-start-line="172" selection-start-column="53" selection-end-line="172" selection-end-column="53" />
+        <state relative-caret-position="183">
+          <caret line="162" column="28" lean-forward="false" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
           <folding>
             <marker date="1571919207770" expanded="true" signature="62:113" ph="select * fro... properties" />
           </folding>

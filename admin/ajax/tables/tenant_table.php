@@ -177,7 +177,7 @@ $query = $mysqli->query("select * from tenants ORDER BY tenantname DESC");
                             },
                             dataType: "html",
                             success: function (text) {
-                                $.alert('Data is deleted!');
+                                $.alert('Tenant is deleted!');
                                 $.ajax({
                                     url: "ajax/tables/tenant_table.php",
                                     success: function (text) {
