@@ -33,7 +33,7 @@ include ('../../config.php');
             <div class="form-group">
                 <label for="tenanttelephone">Telephone *</label>
                 <input type="text" class="form-control"
-                       id="tenanttelephone"
+                       id="tenanttelephone" onkeypress="return isNumber(event)"
                        placeholder="Enter telephone of tenant">
             </div>
             <div class="form-group">

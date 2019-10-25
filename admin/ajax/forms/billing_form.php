@@ -59,7 +59,7 @@ include ('../../config.php');
             <div class="form-group">
                 <label for="billingamount">Amount Per Month *</label>
                 <input type="text" id="billingamount"
-                       class="form-control"
+                       class="form-control" onkeypress="return isNumber(event)" autocomplete="off"
                        placeholder="Enter Amount">
             </div>
             <div class="form-group">
@@ -175,10 +175,6 @@ include ('../../config.php');
         }
         if (billingamount == "") {
             error += 'Please enter amount \n';
-            $("#billingamount").focus();
-        }
-        if (billingamount != "" && !billingamount.match(/^[-+]?[0-9]+\.[0-9]+$/)) {
-            error += 'Please enter valid amount \n';
             $("#billingamount").focus();
         }
         if (billingmonthnumber == "") {

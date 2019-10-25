@@ -3,7 +3,7 @@
 include ('../../config.php');
 
 $i_index = $_POST['i_index'];
-$getdetails = $mysqli->query("select * from billing where id = '$i_index'");
+$getdetails = $mysqli->query("select * from service where id = '$i_index'");
 $resdetails = $getdetails->fetch_assoc();
 
 //$user_id = $_SESSION['user_id'];
@@ -48,7 +48,7 @@ $resdetails = $getdetails->fetch_assoc();
 <br/>
 
 <div class="row" id="print_this">
-<div class="col-md-12">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-body">
                 <div class="invoice-header border-bottom">
@@ -61,14 +61,14 @@ $resdetails = $getdetails->fetch_assoc();
                                 GROUND FLOOR, LE PIERRE, 14 SENCHI STREET, AIRPORT RESIDENTIAL AREA, ACCRA - GHANA</h4>
                             <h6>TEL: 0302-789-025 / 0266-107-130</h6>
                             <hr class="dashed">
-                            INVOICE
+                            SERVICE AND MAINTENANCE
                             <hr class="dashed">
                         </div>
 
                     </div>
                     <div class="invoice-summary">
                         <div class="row">
-                            <div class="col-md-6" style="font-size: small">
+                            <div class="col-md-5" style="font-size: small">
                                 <i class="icon-user"></i> <span style="font-weight: bold">TAYMAC</span>  <br/>
                                 <i class="icon-location-pin"></i> GROUND FLOOR, LE PIERRE, 14 SENCHI STREET, AIRPORT RESIDENTIAL AREA <br/>
                                 ACCRA - GHANA <br/>
@@ -76,21 +76,21 @@ $resdetails = $getdetails->fetch_assoc();
                                 <i class="icon-envelope"></i> josh.kpakpah@taymac.net
                             </div>
 
-                            <div class="col-md-6" style="font-size: small;text-transform: uppercase">
+                            <div class="col-md-7" style="font-size: small;text-transform: uppercase">
                                 <i class="icon-people"></i> PREPARED FOR: <span style="font-weight: bold">
                                     <?php
-                                    $tenantid = $resdetails['billingtenant'];
+                                    $tenantid = $resdetails['servicetenant'];
                                     $getname = $mysqli->query("select * from tenants where id = '$tenantid'");
                                     $resname = $getname->fetch_assoc();
                                     echo $tenantname = $resname['tenantname'];
                                     ?>
                                 </span>  <br/>
                                 <i class="icon-pencil"></i> CUSTOMER REF: <?php
-                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/'.$resdetails['id'].'/'.date('dmy',strtotime($resdetails['billingdate']));
+                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/'.$resdetails['id'].'/'.date('dmy',strtotime($resdetails['servicedate']));
                                 ?><br/>
                                 <i class="icon-user"></i> ATTENTION: <?php echo $tenantname ?> <br/>
                                 <i class="icon-note"></i> INVOICE No. : <?php
-                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/TAYMAC/'.$resdetails['id'].'/'.date('Y',strtotime($resdetails['billingdate']));
+                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/TAYMAC/'.$resdetails['id'].'/'.date('Y',strtotime($resdetails['servicedate']));
                                 ?> <br/>
                                 <i class="icon-user"></i> FROM: <?php echo "TAYMAC" ?> <br/>
                                 <i class="icon-calendar"></i> DATE: <?php echo date('Y-m-d') ?> <br/>
@@ -112,20 +112,20 @@ $resdetails = $getdetails->fetch_assoc();
                                     <td>1</td>
                                     <td>
                                         <?php
-                                        echo $billing_type = $resdetails['billingtype'];
-                                        if ($billing_type == 'Other') {
-                                            echo ",".$resdetails['billingtypeother'];
+                                        echo $service_type = $resdetails['servicetype'];
+                                        if ($service_type == 'Other') {
+                                            echo ",".$resdetails['servicetypeother'];
                                         }
                                         ?>
                                     </td>
                                     <td>
                                         <?php
-                                        echo $resdetails['billingdescription'];
+                                        echo $resdetails['servicedescription'];
                                         ?>
                                     </td>
                                     <td>
                                         <?php
-                                        echo $resdetails['billingamount'];
+                                        echo $resdetails['servicecost'];
                                         ?>
                                     </td>
                                 </tr>
@@ -136,23 +136,7 @@ $resdetails = $getdetails->fetch_assoc();
                                     <td colspan="2"></td>
                                     <td><span style="font-weight: bold;font-size: small !important;">
                                              <?php
-                                             $currency = $resdetails['billingcurrency'];
-                                             if ($currency == 'US Dollars') {
-                                                 $sign = "&dollar;";
-                                             }
-                                             else if ($currency == 'GH Cedis') {
-                                                 $sign = "GHS";
-                                             }
-                                             else if ($currency == 'GB Pounds') {
-                                                 $sign = "&pound;";
-                                             }
-                                             else if ($currency == 'Eu Euros') {
-                                                 $sign = "&euro;";
-                                             }
-                                             else {
-                                                 $sign = '';
-                                             }
-                                             echo $sign.' '.number_format($resdetails['billingamount'],2);
+                                             echo number_format($resdetails['servicecost'],2);
                                              ?>
                                          </span>
                                     </td>
@@ -164,13 +148,12 @@ $resdetails = $getdetails->fetch_assoc();
                             For & Behalf of Taymac </p>
                         <br/>
                         <br/>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<div class="col-md-12">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-body">
                 <div class="invoice-header border-bottom">
@@ -183,14 +166,14 @@ $resdetails = $getdetails->fetch_assoc();
                                 GROUND FLOOR, LE PIERRE, 14 SENCHI STREET, AIRPORT RESIDENTIAL AREA, ACCRA - GHANA</h4>
                             <h6>TEL: 0302-789-025 / 0266-107-130</h6>
                             <hr class="dashed">
-                            INVOICE
+                            SERVICE AND MAINTENANCE
                             <hr class="dashed">
                         </div>
 
                     </div>
                     <div class="invoice-summary">
                         <div class="row">
-                            <div class="col-md-6" style="font-size: small">
+                            <div class="col-md-5" style="font-size: small">
                                 <i class="icon-user"></i> <span style="font-weight: bold">TAYMAC</span>  <br/>
                                 <i class="icon-location-pin"></i> GROUND FLOOR, LE PIERRE, 14 SENCHI STREET, AIRPORT RESIDENTIAL AREA <br/>
                                 ACCRA - GHANA <br/>
@@ -198,21 +181,21 @@ $resdetails = $getdetails->fetch_assoc();
                                 <i class="icon-envelope"></i> josh.kpakpah@taymac.net
                             </div>
 
-                            <div class="col-md-6" style="font-size: small;text-transform: uppercase">
+                            <div class="col-md-7" style="font-size: small;text-transform: uppercase">
                                 <i class="icon-people"></i> PREPARED FOR: <span style="font-weight: bold">
                                     <?php
-                                    $tenantid = $resdetails['billingtenant'];
+                                    $tenantid = $resdetails['servicetenant'];
                                     $getname = $mysqli->query("select * from tenants where id = '$tenantid'");
                                     $resname = $getname->fetch_assoc();
                                     echo $tenantname = $resname['tenantname'];
                                     ?>
                                 </span>  <br/>
                                 <i class="icon-pencil"></i> CUSTOMER REF: <?php
-                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/'.$resdetails['id'].'/'.date('dmy',strtotime($resdetails['billingdate']));
+                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/'.$resdetails['id'].'/'.date('dmy',strtotime($resdetails['servicedate']));
                                 ?><br/>
                                 <i class="icon-user"></i> ATTENTION: <?php echo $tenantname ?> <br/>
                                 <i class="icon-note"></i> INVOICE No. : <?php
-                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/TAYMAC/'.$resdetails['id'].'/'.date('Y',strtotime($resdetails['billingdate']));
+                                echo preg_replace('/\b(\w)|./', '$1', $tenantname).'/TAYMAC/'.$resdetails['id'].'/'.date('Y',strtotime($resdetails['servicedate']));
                                 ?> <br/>
                                 <i class="icon-user"></i> FROM: <?php echo "TAYMAC" ?> <br/>
                                 <i class="icon-calendar"></i> DATE: <?php echo date('Y-m-d') ?> <br/>
@@ -234,20 +217,20 @@ $resdetails = $getdetails->fetch_assoc();
                                     <td>1</td>
                                     <td>
                                         <?php
-                                        echo $billing_type = $resdetails['billingtype'];
-                                        if ($billing_type == 'Other') {
-                                            echo ",".$resdetails['billingtypeother'];
+                                        echo $service_type = $resdetails['servicetype'];
+                                        if ($service_type == 'Other') {
+                                            echo ",".$resdetails['servicetypeother'];
                                         }
                                         ?>
                                     </td>
                                     <td>
                                         <?php
-                                        echo $resdetails['billingdescription'];
+                                        echo $resdetails['servicedescription'];
                                         ?>
                                     </td>
                                     <td>
                                         <?php
-                                        echo $resdetails['billingamount'];
+                                        echo $resdetails['servicecost'];
                                         ?>
                                     </td>
                                 </tr>
@@ -258,23 +241,7 @@ $resdetails = $getdetails->fetch_assoc();
                                     <td colspan="2"></td>
                                     <td><span style="font-weight: bold;font-size: small !important;">
                                              <?php
-                                             $currency = $resdetails['billingcurrency'];
-                                             if ($currency == 'US Dollars') {
-                                                 $sign = "&dollar;";
-                                             }
-                                             else if ($currency == 'GH Cedis') {
-                                                 $sign = "GHS";
-                                             }
-                                             else if ($currency == 'GB Pounds') {
-                                                 $sign = "&pound;";
-                                             }
-                                             else if ($currency == 'Eu Euros') {
-                                                 $sign = "&euro;";
-                                             }
-                                             else {
-                                                 $sign = '';
-                                             }
-                                             echo $sign.' '.number_format($resdetails['billingamount'],2);
+                                             echo number_format($resdetails['servicecost'],2);
                                              ?>
                                          </span>
                                     </td>
@@ -286,7 +253,6 @@ $resdetails = $getdetails->fetch_assoc();
                             For & Behalf of Taymac </p>
                         <br/>
                         <br/>
-
                     </div>
                 </div>
             </div>

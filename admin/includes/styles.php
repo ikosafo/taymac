@@ -40,3 +40,16 @@
 <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="assets/vendor/bootstrap-daterangepicker/daterangepicker.css">
 <link rel="stylesheet" href="assets/jquery-confirm/css/jquery-confirm.css">
+<!--<link rel="stylesheet" href="assets/css/print.min.css">-->
+
+<script>
+    function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
+</script>

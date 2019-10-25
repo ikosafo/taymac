@@ -44,6 +44,7 @@
 <script src="assets/uploadify/jquery.uploadifive.js"></script>
 <script src="assets/jquery-confirm/js/jquery-confirm.js"></script>
 <script src="assets/js/confirm-init.js"></script>
+<script src="assets/js/print.min.js"></script>
 
 
 

@@ -26,7 +26,7 @@ if (!isset($_SESSION['username'])) {
             <!--START PAGE CONTENT -->
             <section class="page-content container-fluid">
                 <h6>Service and Maintenance</h6>
-                <div class="row">
+                <div class="row" id="service_row">
                     <div class="col-md-4">
                         <div id="service_form_div"></div>
                     </div>

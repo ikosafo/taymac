@@ -2,11 +2,15 @@
 
 include ('../../config.php');
 
+$i_index = $_POST['i_index'];
+$getdetails = $mysqli->query("select * from service where id = '$i_index'");
+$resdetails = $getdetails->fetch_assoc();
+
 //$user_id = $_SESSION['user_id'];
 ?>
 
 <div class="card">
-    <h5 class="card-header">Add New service and Maintenance<br/>
+    <h5 class="card-header">Edit Service and Maintenance<br/>
         <small style="color: red">Field Marked * are required</small>
     </h5>
 
@@ -17,9 +21,14 @@ include ('../../config.php');
                 <select id="servicetenant">
                     <option value="">Select Tenant</option>
                     <?php
+                    $tenantid = $resdetails['servicetenant'];
+                    $getname = $mysqli->query("select * from tenants where id = '$tenantid'");
+                    $resname = $getname->fetch_assoc();
+                    $tenantname = $resname['tenantname'];
+
                     $query = $mysqli->query("select * from tenants ORDER BY tenantname");
                     while ($result = $query->fetch_assoc()) { ?>
-                        <option value="<?php echo $result['id'] ?>">
+                        <option <?php if (@$tenantname == @$result['tenantname']) echo "Selected" ?>>
                             <?php echo $result['tenantname'] ?></option>
                     <?php } ?>
                 </select>
@@ -28,40 +37,40 @@ include ('../../config.php');
                 <label for="servicetype">Service & Maintenance Type *</label>
                 <select id="servicetype">
                     <option value="">Select service Type</option>
-                    <option value="Cleaning">Cleaning</option>
-                    <option value="Air Conditioning">Air Conditioning</option>
-                    <option value="Generators">Generators</option>
-                    <option value="Electricals">Electricals</option>
-                    <option value="Swimming Pool">Swimming Pool</option>
-                    <option value="Other">Other</option>
+                    <option <?php if (@$resdetails['servicetype'] == "Cleaning") echo "selected" ?>>Cleaning</option>
+                    <option <?php if (@$resdetails['servicetype'] == "Air Conditioning") echo "selected" ?>>Air Conditioning</option>
+                    <option <?php if (@$resdetails['servicetype'] == "Generators") echo "selected" ?>>Generators</option>
+                    <option <?php if (@$resdetails['servicetype'] == "Electricals") echo "selected" ?>>Electricals</option>
+                    <option <?php if (@$resdetails['servicetype'] == "Swimming Pool") echo "selected" ?>>Swimming Pool</option>
+                    <option <?php if (@$resdetails['servicetype'] == "Other") echo "selected" ?>>Other</option>
                 </select>
                 <label for="servicetypeother">If Other, Specify </label>
                 <input type="text" id="servicetypeother"
-                       class="form-control"
+                       class="form-control"  value="<?php echo $resdetails['servicetypeother'] ?>"
                        placeholder="Enter Other Type">
             </div>
             <hr class="dashed">
             <div class="form-group">
                 <label for="servicecost">Cost *</label>
-                <input type="text" id="servicecost"
+                <input type="text" id="servicecost" value="<?php echo $resdetails['servicecost'] ?>"
                        class="form-control" onkeypress="return isNumber(event)" autocomplete="off"
                        placeholder="Enter cost">
             </div>
             <div class="form-group">
                 <label for="servicedate">Date *</label>
                 <input type="text" id="servicedate"
-                       class="form-control"
+                       class="form-control"  value="<?php echo $resdetails['servicedate'] ?>"
                        placeholder="Select Date">
             </div>
             <div class="form-group">
                 <label for="servicedescription">Description</label>
                 <textarea class="form-control"
                           id="servicedescription"
-                          placeholder="Enter description"></textarea>
+                          placeholder="Enter description"><?php echo $resdetails['servicedescription'] ?></textarea>
             </div>
 
-            <button type="button" id="addservicebtn"
-                    class="btn btn-primary">Add Service and Maintenance
+            <button type="button" id="editservicebtn"
+                    class="btn btn-warning">Edit Service and Maintenance
             </button>
         </form>
     </div>
@@ -86,7 +95,7 @@ include ('../../config.php');
     });
 
 
-    $("#addservicebtn").click(function () {
+    $("#editservicebtn").click(function () {
 
         var servicetenant = $("#servicetenant").val();
         var servicetype = $("#servicetype").val();
@@ -94,6 +103,7 @@ include ('../../config.php');
         var servicecost = $("#servicecost").val();
         var servicedate = $("#servicedate").val();
         var servicedescription = $("#servicedescription").val();
+        var i_index = '<?php echo $i_index ?>';
 
         var error = '';
 
@@ -125,7 +135,7 @@ include ('../../config.php');
 
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/addservice.php",
+                url: "ajax/queries/editservice.php",
                 beforeSend: function () {
                     $.blockUI({
                         message: '<img src="assets/img/wait.gif" style="border:0 !important"/>'
@@ -137,10 +147,11 @@ include ('../../config.php');
                     servicetypeother: servicetypeother,
                     servicecost: servicecost,
                     servicedate: servicedate,
-                    servicedescription: servicedescription
+                    servicedescription: servicedescription,
+                    i_index:i_index
                 },
                 success: function (text) {
-                    $.alert('Service and Maintenance is added!');
+                    $.alert('Service and Maintenance is edited!');
                     $.ajax({
                         url: "ajax/forms/service_form.php",
                         success: function (text) {

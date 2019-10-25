@@ -46,8 +46,7 @@
                     $_SERVER['PHP_SELF'] == "/$reg_root/properties.php" ||
                     $_SERVER['PHP_SELF'] == "/$reg_root/tenants.php" ||
                     $_SERVER['PHP_SELF'] == "/$reg_root/billing.php" ||
-                    $_SERVER['PHP_SELF'] == "/$reg_root/addnewservice" ||
-                    $_SERVER['PHP_SELF'] == "/$reg_root/viewservice" ||
+                    $_SERVER['PHP_SELF'] == "/$reg_root/service.php" ||
                     $_SERVER['PHP_SELF'] == "/$reg_root/propertysearch"
                         ? "active" : ""); ?>">
                         <a class="has-arrow" href="#" aria-expanded="false"><i

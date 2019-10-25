@@ -70,6 +70,7 @@ $resdetails = $getdetails->fetch_assoc();
                 <label for="billingamount">Amount Per Month *</label>
                 <input type="text" id="billingamount"
                        class="form-control" value="<?php echo $resdetails['billingamount'] ?>"
+                       onkeypress="return isNumber(event)" autocomplete="off"
                        placeholder="Enter Amount">
             </div>
             <div class="form-group">
