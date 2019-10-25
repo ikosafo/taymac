@@ -56,6 +56,17 @@ $resdetails = $getdetails->fetch_assoc();
                        placeholder="Select Month and Year">
             </div>
             <div class="form-group">
+                <label for="billingcurrency">Currency *</label>
+                <select id="billingcurrency">
+                    <option value="">Select Currency</option>
+                    <option <?php if (@$resdetails['billingcurrency'] == "US Dollars") echo "selected" ?>>US Dollars</option>
+                    <option <?php if (@$resdetails['billingcurrency'] == "GH Cedis") echo "selected" ?>>GH Cedis</option>
+                    <option <?php if (@$resdetails['billingcurrency'] == "GB Pounds") echo "selected" ?>>GB Pounds</option>
+                    <option <?php if (@$resdetails['billingcurrency'] == "Eu Euros") echo "selected" ?>>Eu Euros</option>
+                    <option <?php if (@$resdetails['billingcurrency'] == "Other") echo "selected" ?>>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="billingamount">Amount Per Month *</label>
                 <input type="text" id="billingamount"
                        class="form-control" value="<?php echo $resdetails['billingamount'] ?>"
@@ -113,6 +124,8 @@ $resdetails = $getdetails->fetch_assoc();
 
     $("#billingtenant").selectize();
 
+    $("#billingcurrency").selectize();
+
     $('#billingdate').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
@@ -143,6 +156,7 @@ $resdetails = $getdetails->fetch_assoc();
         var billingtenant = $("#billingtenant").val();
         var billingfor = $("#billingfor").val();
         var billingamount = $("#billingamount").val();
+        var billingcurrency = $("#billingcurrency").val();
         var billingmonthnumber = $("#billingmonthnumber").val();
         var billingdate = $("#billingdate").val();
         var billingdescription = $("#billingdescription").val();
@@ -165,6 +179,10 @@ $resdetails = $getdetails->fetch_assoc();
         if (billingtenant == "") {
             error += 'Please select Tenant \n';
             $("#billingtenant").focus();
+        }
+        if (billingcurrency == "") {
+            error += 'Please select currency \n';
+            $("#billingcurrency").focus();
         }
         if (billingamount == "") {
             error += 'Please enter amount \n';
@@ -207,6 +225,7 @@ $resdetails = $getdetails->fetch_assoc();
                     billingtypeother: billingtypeother,
                     billingtenant: billingtenant,
                     billingfor: billingfor,
+                    billingcurrency: billingcurrency,
                     billingamount: billingamount,
                     billingmonthnumber: billingmonthnumber,
                     billingdate: billingdate,
@@ -215,6 +234,7 @@ $resdetails = $getdetails->fetch_assoc();
                     i_index:i_index
                 },
                 success: function (text) {
+                    $.alert('Bill is edited!');
                     $.ajax({
                         url: "ajax/forms/billing_form.php",
                         success: function (text) {

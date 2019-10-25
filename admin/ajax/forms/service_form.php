@@ -46,17 +46,6 @@ include ('../../config.php');
                        placeholder="Select Month and Year">
             </div>
             <div class="form-group">
-                <label for="billingcurrency">Currency *</label>
-                <select id="billingcurrency">
-                    <option value="">Select Currency</option>
-                    <option value="US Dollars">US Dollars</option>
-                    <option value="GH Cedis">GH Cedis</option>
-                    <option value="GB Pounds">GB Pounds</option>
-                    <option value="Eu Euros">Eu Euros</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
                 <label for="billingamount">Amount Per Month *</label>
                 <input type="text" id="billingamount"
                        class="form-control"
@@ -114,8 +103,6 @@ include ('../../config.php');
 
     $("#billingtenant").selectize();
 
-    $("#billingcurrency").selectize();
-
     $('#billingdate').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
@@ -145,7 +132,6 @@ include ('../../config.php');
         var billingtypeother = $("#billingtypeother").val();
         var billingtenant = $("#billingtenant").val();
         var billingfor = $("#billingfor").val();
-        var billingcurrency = $("#billingcurrency").val();
         var billingamount = $("#billingamount").val();
         var billingmonthnumber = $("#billingmonthnumber").val();
         var billingdate = $("#billingdate").val();
@@ -168,10 +154,6 @@ include ('../../config.php');
         if (billingtenant == "") {
             error += 'Please select Tenant \n';
             $("#billingtenant").focus();
-        }
-        if (billingcurrency == "") {
-            error += 'Please select currency \n';
-            $("#billingcurrency").focus();
         }
         if (billingamount == "") {
             error += 'Please enter amount \n';
@@ -215,14 +197,12 @@ include ('../../config.php');
                     billingtenant: billingtenant,
                     billingfor: billingfor,
                     billingamount: billingamount,
-                    billingcurrency: billingcurrency,
                     billingmonthnumber: billingmonthnumber,
                     billingdate: billingdate,
                     billdelivered: billdelivered,
                     billingdescription: billingdescription
                 },
                 success: function (text) {
-                    $.alert('Bill is added!');
                     $.ajax({
                         url: "ajax/forms/billing_form.php",
                         success: function (text) {

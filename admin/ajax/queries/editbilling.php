@@ -7,6 +7,7 @@ $billingtypeother = mysqli_real_escape_string($mysqli, $_POST['billingtypeother'
 $billingtenant = mysqli_real_escape_string($mysqli, $_POST['billingtenant']);
 $billingfor = mysqli_real_escape_string($mysqli, $_POST['billingfor']);
 $billingamount = mysqli_real_escape_string($mysqli, $_POST['billingamount']);
+$billingcurrency = mysqli_real_escape_string($mysqli, $_POST['billingcurrency']);
 $billingmonthnumber = mysqli_real_escape_string($mysqli, $_POST['billingmonthnumber']);
 $billingdate = mysqli_real_escape_string($mysqli, $_POST['billingdate']);
 $billdelivered = mysqli_real_escape_string($mysqli, $_POST['billdelivered']);
@@ -30,6 +31,7 @@ SET
   `billingtenant` = '$tenantid',
   `billingfor` = '$billingfor',
   `billingamount` = '$billingamount',
+  `billingcurrency` = '$billingcurrency',
   `billingmonthnumber` = '$billingmonthnumber',
   `billingdate` = '$billingdate',
   `billdelivered` = '$billdelivered',

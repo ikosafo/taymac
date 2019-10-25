@@ -68,27 +68,10 @@
                                 ? "side_active" : ""); ?>"><a
                                         href="billing"><span>Billing</span></a>
                             </li>
-                            <li class="nav-dropdown <?php echo(
-                            $_SERVER['PHP_SELF'] == "/$reg_root/addnewservice" ||
-                            $_SERVER['PHP_SELF'] == "/$reg_root/viewservice"
-                                ? "active" : ""); ?>">
-                                <a class="has-arrow" href="#" aria-expanded="false">
-                                    Service and <br/>Maintenance
-                                </a>
-                                <ul class="collapse nav-sub" aria-expanded="false">
-                                    <li class="<?php echo(
-                                    $_SERVER['PHP_SELF'] == "/$reg_root/addnewservice"
-                                        ? "side_active" : ""); ?>"><a
-                                                href="addnewservice">
-                                            <span>Add New </span></a>
-                                    </li>
-                                    <li class="<?php echo(
-                                    $_SERVER['PHP_SELF'] == "/$reg_root/viewservice"
-                                        ? "side_active" : ""); ?>"><a
-                                                href="viewservice">
-                                            <span>View </span></a>
-                                    </li>
-                                </ul>
+                            <li class="<?php echo(
+                            $_SERVER['PHP_SELF'] == "/$reg_root/service.php"
+                                ? "side_active" : ""); ?>"><a
+                                        href="service"><span>Service and <br/>Maintenance</span></a>
                             </li>
                             <li class="<?php echo(
                             $_SERVER['PHP_SELF'] == "/$reg_root/propertysearch"

@@ -100,6 +100,7 @@ include ('../../config.php');
                     propertydescription: propertydescription
                 },
                 success: function (text) {
+                    $.alert('Property is added!');
                     $.ajax({
                         url: "ajax/forms/property_form.php",
                         success: function (text) {

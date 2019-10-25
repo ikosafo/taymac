@@ -169,6 +169,7 @@ include ('../../config.php');
                     tenantdescription: tenantdescription
                 },
                 success: function (text) {
+                    $.alert('Tenant is added!');
                     $.ajax({
                         url: "ajax/forms/tenant_form.php",
                         success: function (text) {

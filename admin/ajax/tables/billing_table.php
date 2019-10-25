@@ -59,6 +59,10 @@ $query = $mysqli->query("select * from billing ORDER BY id DESC");
                             <?php
                             echo $res['billingfor'];
                             ?></b> <br/>
+                        Currency: <b>
+                            <?php
+                            echo $res['billingcurrency'];
+                            ?></b> <br/>
                         Amount Per Month: <b>
                             <?php
                             echo $res['billingamount'];
@@ -102,7 +106,7 @@ $query = $mysqli->query("select * from billing ORDER BY id DESC");
                         <button type="button"
                                 class="btn btn-warning btn-sm print_billing"
                                 i_index="<?php echo $res['id']; ?>"
-                                title="Delete">
+                                title="Print">
                             <i class="icon-printer" style="color:#fff !important;"></i>
                         </button>
 
@@ -150,6 +154,26 @@ $query = $mysqli->query("select * from billing ORDER BY id DESC");
             },
         });
     });
+
+
+    $(document).on('click', '.print_billing', function () {
+        var i_index = $(this).attr('i_index');
+        //alert(i_index);
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/print_bills.php",
+            data: {
+                i_index: i_index
+            },
+            success: function (text) {
+                $('#billing_row').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+        });
+    });
+
 
     $(document).off('click', '.delete_billing').on('click', '.delete_billing', function () {
         var i_index = $(this).attr('i_index');
