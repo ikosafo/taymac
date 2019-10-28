@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4c81353f-96aa-4d75-b43d-2358f9233347" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/billing_form.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/billing_form.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/billing_form_edit.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/billing_form_edit.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/print_bills.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/print_bills.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/service_form.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/service_form.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/forms/tenant_form.php" afterPath="$PROJECT_DIR$/admin/ajax/forms/tenant_form.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/queries/deletebilling.php" afterPath="$PROJECT_DIR$/admin/ajax/queries/deletebilling.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/tables/service_table.php" afterPath="$PROJECT_DIR$/admin/ajax/tables/service_table.php" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/scripts.php" afterPath="$PROJECT_DIR$/admin/includes/scripts.php" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/sidebar.php" afterPath="$PROJECT_DIR$/admin/includes/sidebar.php" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/styles.php" afterPath="$PROJECT_DIR$/admin/includes/styles.php" />
-      <change beforePath="$PROJECT_DIR$/admin/service.php" afterPath="$PROJECT_DIR$/admin/service.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/tables/service_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="538">
-              <caret line="157" column="7" lean-forward="true" selection-start-line="157" selection-start-column="7" selection-end-line="157" selection-end-column="7" />
+              <caret line="157" column="7" lean-forward="false" selection-start-line="157" selection-start-column="7" selection-end-line="157" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#button#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -45,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/admin/service.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
               <folding>
                 <marker date="1572022198150" expanded="true" signature="1624:1643" ph="..." />
                 <marker date="1572022198150" expanded="true" signature="2148:2167" ph="..." />
@@ -58,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/forms/print_servicebills.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="543">
-              <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+              <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -88,37 +77,6 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="print_bills.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/print_bills.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1572023359574" expanded="true" signature="98:141" ph="select * fro... billing" />
-                <marker date="1572023359574" expanded="true" signature="2746:2790" ph="select * fro... tenants" />
-                <marker date="1572023359574" expanded="true" signature="9510:9554" ph="select * fro... tenants" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="billing_form_edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/billing_form_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="159" column="58" lean-forward="true" selection-start-line="159" selection-start-column="58" selection-end-line="159" selection-end-column="58" />
-              <folding>
-                <marker date="1572018959225" expanded="true" signature="98:141" ph="select * fro... billing" />
-                <marker date="1572018959225" expanded="true" signature="1801:1845" ph="select * fro... tenants" />
-                <marker date="1572018959225" expanded="true" signature="2009:2050" ph="select * fro... tenants" />
-                <marker date="1572018959225" expanded="true" signature="9660:9679" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -157,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editbilling.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
               <folding>
                 <marker date="1572003835896" expanded="true" signature="925:982" ph="select * fro... tenants" />
                 <marker date="1572003835896" expanded="true" signature="1124:1562" ph="INSERT INTO `billing`... " />
@@ -170,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addservice.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <marker date="1572017656701" expanded="true" signature="589:1001" ph="INSERT INTO `service`... " />
                 <marker date="1572017656701" expanded="true" signature="999:1001" ph="INSERT INTO `service`... " />
@@ -305,11 +263,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="y" value="2" />
+    <option name="width" value="1938" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -345,6 +303,13 @@
               <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="taymac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="taymac" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="forms" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -392,16 +357,15 @@
       <workItem from="1571188050907" duration="1419000" />
       <workItem from="1571723783916" duration="1272000" />
       <workItem from="1571739257092" duration="711000" />
-      <workItem from="1571755409942" duration="73816000" />
+      <workItem from="1571755409942" duration="77109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172486000" />
+    <option name="totallyTimeSpent" value="175779000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1056" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20810811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -431,8 +395,8 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21675676" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20810811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -456,47 +420,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ahpc/mis/ajax/queries/delete_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1552488229235" expanded="true" signature="116:154" ph="delete from mis_users... " />
-            <marker date="1552488229235" expanded="true" signature="207:256" ph="delete from permission... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ahpc/r/ajax/forms/provisional_form_new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="1049" column="90" lean-forward="true" selection-start-line="1049" selection-start-column="90" selection-end-line="1049" selection-end-column="90" />
-          <folding>
-            <marker date="1566974296386" expanded="true" signature="660:722" ph="select * fro... provisional" />
-            <marker date="1566974296386" expanded="true" signature="18977:19059" ph="select distr... district" />
-            <marker date="1566974296386" expanded="true" signature="24495:24544" ph="select * fro... professions" />
-            <marker date="1566974296386" expanded="true" signature="25363:25453" ph="select * fro... applicant_images" />
-            <marker date="1566974296386" expanded="true" signature="42866:42948" ph="select distr... district" />
-            <marker date="1566974296386" expanded="true" signature="48699:48789" ph="select * fro... applicant_images" />
-            <marker date="1566974296386" expanded="true" signature="65036:65118" ph="select distr... district" />
-            <marker date="1566974296386" expanded="true" signature="70726:70775" ph="select * fro... professions" />
-            <marker date="1566974296386" expanded="true" signature="71642:71732" ph="select * fro... applicant_images" />
-            <marker date="1566974296386" expanded="true" signature="82401:82420" ph="..." />
-            <marker date="1566974296386" expanded="true" signature="82565:82584" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addtenant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <marker date="1571832644760" expanded="true" signature="765:1308" ph="INSERT INTO `properties`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/deletetenant.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -885,7 +808,7 @@
         <state relative-caret-position="168">
           <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
           <folding>
-            <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#h5#0;n#div#0;n#!!top" expanded="false" />
             <marker date="1572019527776" expanded="true" signature="563:604" ph="select * fro... tenants" />
             <marker date="1572019527776" expanded="true" signature="4703:4722" ph="..." />
           </folding>
@@ -908,7 +831,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/addservice.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <marker date="1572017656701" expanded="true" signature="589:1001" ph="INSERT INTO `service`... " />
             <marker date="1572017656701" expanded="true" signature="999:1001" ph="INSERT INTO `service`... " />
@@ -934,7 +857,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editbilling.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding>
             <marker date="1572003835896" expanded="true" signature="925:982" ph="select * fro... tenants" />
             <marker date="1572003835896" expanded="true" signature="1124:1562" ph="INSERT INTO `billing`... " />
@@ -956,7 +879,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/tables/service_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
-          <caret line="157" column="7" lean-forward="true" selection-start-line="157" selection-start-column="7" selection-end-line="157" selection-end-column="7" />
+          <caret line="157" column="7" lean-forward="false" selection-start-line="157" selection-start-column="7" selection-end-line="157" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -971,7 +894,7 @@
     <entry file="file://$PROJECT_DIR$/admin/service.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
             <marker date="1572022198150" expanded="true" signature="1624:1643" ph="..." />
             <marker date="1572022198150" expanded="true" signature="2148:2167" ph="..." />
@@ -984,8 +907,8 @@
         <state relative-caret-position="218">
           <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <marker date="1572023359574" expanded="true" signature="98:141" ph="select * fro... billing" />
             <marker date="1572023359574" expanded="true" signature="2746:2790" ph="select * fro... tenants" />
             <marker date="1572023359574" expanded="true" signature="9510:9554" ph="select * fro... tenants" />
@@ -996,7 +919,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/forms/print_servicebills.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="543">
-          <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+          <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1015,6 +938,40 @@
             <marker date="1572023389825" expanded="true" signature="98:141" ph="select * fro... service" />
             <marker date="1572023389825" expanded="true" signature="2766:2810" ph="select * fro... tenants" />
             <marker date="1572023389825" expanded="true" signature="8508:8552" ph="select * fro... tenants" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/personal/ike/allied/allied/mis/cpd_details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/personal/ike/110619ahpc/ahpc/mis/ajax/forms/cp_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <marker date="1553073461135" expanded="true" signature="2419:2438" ph="..." />
+            <marker date="1553073461135" expanded="true" signature="2575:2594" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Compressed/jTable-PHP-Samples/jTable-PHP-Samples/Codes/PersonActionsPagedSorted.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="80" column="38" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+          <folding>
+            <marker date="1325624066000" expanded="true" signature="240:282" ph="SELECT COUNT... people" />
+            <marker date="1325624066000" expanded="true" signature="418:511" ph="SELECT * FRO... people" />
+            <marker date="1325624066000" expanded="true" signature="1025:1128" ph="INSERT INTO people... " />
+            <marker date="1325624066000" expanded="true" signature="1212:1266" ph="SELECT * FRO... people" />
+            <marker date="1325624066000" expanded="true" signature="1603:1699" ph="UPDATE people... " />
+            <marker date="1325624066000" expanded="true" signature="1986:2022" ph="DELETE FROM people... " />
           </folding>
         </state>
       </provider>
