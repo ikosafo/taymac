@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from taymac_aboutus ORDER BY id DESC");
+$pinq = $mysqli->query("select * from taymac_story ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,7 +25,7 @@ $pinq = $mysqli->query("select * from taymac_aboutus ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>About Us Text</th>
+                    <th>Project Methodology Text</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -35,11 +35,11 @@ $pinq = $mysqli->query("select * from taymac_aboutus ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['aboutus']; ?></td>
+                        <td><?php echo $fetch['story_text']; ?></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-primary edit_aboutus"
+                                    class="btn btn-primary edit_story"
                                     i_index="<?php echo $fetch['id'] ?>"
                                     title="Edit">
                                 <i class="flaticon2-edit ml-2" style="color:#fff !important;"></i>
@@ -63,13 +63,13 @@ $pinq = $mysqli->query("select * from taymac_aboutus ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.edit_aboutus').on('click', '.edit_aboutus', function () {
+    $(document).off('click', '.edit_story').on('click', '.edit_story', function () {
         var theindex = $(this).attr('i_index');
 
         //alert(theindex);
         $.ajax({
             type: "POST",
-            url: "ajax/forms/addaboutus_formedit.php",
+            url: "ajax/forms/addstory_formedit.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -82,7 +82,7 @@ $pinq = $mysqli->query("select * from taymac_aboutus ORDER BY id DESC");
                 theindex: theindex
             },
             success: function (text) {
-                $('#aboutusform_div').html(text);
+                $('#storyform_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);

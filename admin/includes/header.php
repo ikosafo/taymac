@@ -133,7 +133,13 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/admin/website_featuredproperties.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_realtors.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
-                                $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php"
+                                $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_pm.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_story.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_team.php"
+
+
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -212,7 +218,12 @@ background-size: 100% 350px;"
 
 
                                                 <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_pm.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_story.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_team.php"
+
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
@@ -232,33 +243,33 @@ background-size: 100% 350px;"
                                                                         class="kt-menu__link-text">About Taymac</span></a>
                                                             </li>
                                                             <li class="kt-menu__item   <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/super_renewal.php"
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_pm.php"
                                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="super_renewal"
+                                                                    href="website_pm"
                                                                     class="kt-menu__link "><i
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                         class="kt-menu__link-text">Project Methodology</span></a>
                                                             </li>
                                                             <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/export_renewal.php"
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_story.php"
                                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="export_renewal"
+                                                                    href="website_story"
                                                                     class="kt-menu__link "><i
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                         class="kt-menu__link-text">Our Story</span></a>
                                                             </li>
                                                             <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/cpd_list.php"
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php"
                                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="cpd_list"
+                                                                    href="website_ppclients"
                                                                     class="kt-menu__link "><i
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                         class="kt-menu__link-text">Present and Past Clients</span></a>
                                                             </li>
                                                             <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/cpd_list.php"
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_team.php"
                                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="cpd_list"
+                                                                    href="website_team"
                                                                     class="kt-menu__link "><i
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                         class="kt-menu__link-text">Team</span></a>
