@@ -1,109 +1,168 @@
-<?php require('inc/header.php'); ?>
-    <!-- Main Slider With Form -->
-    <section class="samar-slider slider-h-auto content">
-        <div id="samarslider" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#samarslider" data-slide-to="0" class="active"></li>
-                <li data-target="#samarslider" data-slide-to="1"></li>
-                <li data-target="#samarslider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active fslider-one">
-                    <div class="overlay"></div>
-                    <div class="section-padding">
-                        <div class="container banner-list" style="margin: 0 auto;text-align: center !important;">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <h1 class="mt-5 mb-4 text-white ml-5"
-                                        style="font-weight: bold !important;">TAYMAC FARMS
-                                    </h1>
-                                    <h6 class="mb-5 text-white">YOUR FRESH VEGETABLE HUB</h6>
+<?php include "includes/header.php"; ?>
+
+    <div class="home10-mainslider">
+        <div class="container-fluid p0">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-banner-wrapper home10">
+                        <div class="banner-style-one owl-theme owl-carousel">
+                            <div class="slide slide-one" style="background-image: url(assets/images/home/7.jpg);height: 620px;">
+                                <div class="container">
+                                    <div class="row home-content">
+                                        <div class="col-lg-12 text-center p0">
+                                            <h2 class="banner_top_title">TAYMAC FARMS</h2>
+                                            <h3 class="banner-title">We Produce Fresh Green House Grown Vegetables For Shops,
+                                                Restaurants, Hotels and Individuals.</h3>
+                                            <div class="btn"><a href="#" class="banner-btn">Learn More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide slide-one" style="background-image: url(assets/images/home/2.jpg);height: 620px;">
+                                <div class="container">
+                                    <div class="row home-content">
+                                        <div class="col-lg-12 text-center p0">
+                                            <h2 class="banner_top_title">$13,000<small>/mo</small></h2>
+                                            <h3 class="banner-title">Gorgeous Villa Bay View</h3>
+                                            <p>Beds: 3,  Baths: 4</p>
+                                            <div class="btn"><a href="#" class="banner-btn">Learn More</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide slide-one" style="background-image: url(assets/images/home/1.jpg);height: 620px;">
+                                <div class="container">
+                                    <div class="row home-content">
+                                        <div class="col-lg-12 text-center p0">
+                                            <h2 class="banner_top_title">$13,000<small>/mo</small></h2>
+                                            <h3 class="banner-title">Gorgeous Villa Bay View</h3>
+                                            <p>Beds: 3,  Baths: 4</p>
+                                            <div class="btn"><a href="#" class="banner-btn">Learn More</a></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="carousel-btn-block banner-carousel-btn">
+                            <span class="carousel-btn left-btn"><i class="flaticon-left-arrow-1 left"></i></span>
+                            <span class="carousel-btn right-btn"><i class="flaticon-right-arrow right"></i></span>
+                        </div><!-- /.carousel-btn-block banner-carousel-btn -->
+                    </div><!-- /.main-banner-wrapper -->
                 </div>
-                <div class="carousel-item fslider-two">
-                    <div class="overlay"></div>
-                    <div class="section-padding">
-                        <div class="container banner-list" style="margin: 0 auto;text-align: center !important;">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <h1 class="mt-5 mb-4 text-white ml-5"
-                                        style="font-weight: bold !important;">WHAT WE DO
-                                    </h1>
-                                    <h6 class="mb-5 text-white">WE PRODUCE FRESH GREEN HOUSE GROWN
-                                        VEGETABLES FOR SHOPS, RESTAURANTS, HOTELS AND INDIVIDUALS.</h6>
-                                </div>
-                            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Property Cities -->
+    <section id="property-city" class="property-city">
+        <div class="container">
+            <div class="row features_row">
+                <div class="col-sm-6 col-lg-3 col-xl-3 p0">
+                    <div class="why_chose_us home6">
+                        <div class="icon">
+                            <span class="flaticon-house-1"></span>
+                        </div>
+                        <div class="details">
+                            <h4>Modern Villa</h4>
+                            <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna.</p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item fslider-three">
-                    <div class="overlay"></div>
-                    <div class="section-padding">
-                        <div class="container banner-list" style="margin: 0 auto;text-align: center !important;">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <h1 class="mt-5 mb-4 text-white ml-5"
-                                        style="font-weight: bold !important;">VISIT OUR FARM
-                                    </h1>
-                                    <h6 class="mb-5 text-white">OUR FARM IS OPEN TO CUSTOMERS 24/7. COME TAKE A LOOK AT GHANA'S COOLEST FARM.</h6>
-                                </div>
-                            </div>
+                <div class="col-sm-6 col-lg-3 col-xl-3 p0">
+                    <div class="why_chose_us home6">
+                        <div class="icon">
+                            <span class="flaticon-house"></span>
+                        </div>
+                        <div class="details">
+                            <h4>Family House</h4>
+                            <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 col-xl-3 p0">
+                    <div class="why_chose_us home6">
+                        <div class="icon">
+                            <span class="flaticon-house-2"></span>
+                        </div>
+                        <div class="details">
+                            <h4>Town House</h4>
+                            <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 col-xl-3 p0">
+                    <div class="why_chose_us home6 bdrrn">
+                        <div class="icon">
+                            <span class="flaticon-building"></span>
+                        </div>
+                        <div class="details">
+                            <h4>Apartment</h4>
+                            <p>Aliquam dictum elit vitae mauris facilisis, at dictum urna.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#samarslider" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#samarslider" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
     </section>
-    <!-- End Main Slider With Form -->
 
-    <!-- Properties List -->
-    <section class="section-padding">
-        <div class="section-title text-center mb-5">
-            <h2>Greenhouse Farming</h2>
-            <div class="line mb-2"></div>
-        </div>
+    <!-- About Text Content -->
+    <section class="about-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card padding-card property-single-slider">
-                        <div class="card-body">
-
-                            <p>With one of our core values being, providing our cherished customers and with best possible in quality, safe products and services, TCL has established a Greenhouse Farm right here on the outskirts of Accra producing fresh quality organic vegetables using the best technology and practices in organic vegetable production!</p>
-
-                            <p>We Grow</p>
-                            <ul>
-                                <li><i class="mdi mdi-chevron-right"></i> Cucumbers</li>
-                                <li><i class="mdi mdi-chevron-right"></i> Tomatoes</li>
-                                <li><i class="mdi mdi-chevron-right"></i> Pepper</li>
-                                <li><i class="mdi mdi-chevron-right"></i> Carrot</li>
-                            </ul>
-                            <p class="mt-2">We Sell To</p>
-                            <ul>
-                                <li><i class="mdi mdi-chevron-right"></i> Shops</li>
-                                <li><i class="mdi mdi-chevron-right"></i> Restaurants</li>
-                                <li><i class="mdi mdi-chevron-right"></i> Hotels</li>
-                                <li><i class="mdi mdi-chevron-right"></i> Institutions</li>
-                                <li><i class="mdi mdi-chevron-right"></i> Individuals</li>
-                            </ul>
-
-                        </div>
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="main-title text-center">
+                        <h2 class="mt0">TAYMAC Farms</h2>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12 col-xl-12 col-md-12">
+                    <div class="about_content">
+
+                        <p>
+                            With one of our core values being, providing our cherished customers and with best possible in quality, safe
+                            products and services, TCL has established a Greenhouse Farm right here on the outskirts of Accra producing
+                            fresh quality organic vegetables using the best technology and practices in organic vegetable production!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-6 col-md-6">
+                    <div class="about_content">
+
+                        <h5 class="card-title mb-3">
+                            WE GROW:
+                        </h5>
+
+                        <p>
+                            <i class="fa fa-angle-right"></i> Cucumbers <br/>
+                            <i class="fa fa-angle-right"></i> Tomatoes <br/>
+                            <i class="fa fa-angle-right"></i> Pepper <br/>
+                            <i class="fa fa-angle-right"></i> Carrot
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-xl-6 col-md-6">
+                    <div class="about_content">
+
+                        <h5 class="card-title mb-3">
+                            WE SELL TO:
+                        </h5>
+
+                        <p>
+                            <i class="fa fa-angle-right"></i> Shops <br/>
+                            <i class="fa fa-angle-right"></i> Restaurants <br/>
+                            <i class="fa fa-angle-right"></i> Hotels <br/>
+                            <i class="fa fa-angle-right"></i> Institutions <br/>
+                            <i class="fa fa-angle-right"></i> Individuals
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
-    <!-- End Properties List -->
 
 
-<?php require('inc/footer.php') ?>
+<?php include "includes/footer.php"; ?>

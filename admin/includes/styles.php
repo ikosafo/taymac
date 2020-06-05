@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Taymac Admin System </title>
+<title>Allied Health Professions Council | Ghana</title>
 <!-- ================== GOOGLE FONTS ==================-->
 <!--<link href="https@fonts.googleapis.com/css@family=Poppins_3A300,400,500" rel="stylesheet">-->
 
@@ -32,24 +32,50 @@
 <!-- ======================= THEME COLOR STYLES ===========================-->
 <link rel="stylesheet" href="assets/css/layouts/vertical/themes/theme-j.css">
 <link rel="stylesheet" href="assets/css/selectize.css">
-<link rel="stylesheet" href="assets/css/jquery-ui.css">
-<link rel="stylesheet" href="assets/css/custom.css">
-<link rel="stylesheet" href="assets/css/select2.min.css">
 <link rel="stylesheet" href="assets/css/countrySelect.css">
 <link rel="stylesheet" href="assets/uploadify/uploadifive.css">
 <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.css">
 <link rel="stylesheet" href="assets/vendor/bootstrap-daterangepicker/daterangepicker.css">
-<link rel="stylesheet" href="assets/jquery-confirm/css/jquery-confirm.css">
-<!--<link rel="stylesheet" href="assets/css/print.min.css">-->
+<link rel="stylesheet" href="assets/css/select2.min.css">
 
-<script>
-    function isNumber(evt) {
-        evt = (evt) ? evt : window.event;
-        var charCode = (evt.which) ? evt.which : evt.keyCode;
-        if (charCode != 46 && charCode > 31
-            && (charCode < 48 || charCode > 57)) {
-            return false;
-        }
-        return true;
+<!-- SmartMenus jQuery Bootstrap 4 Addon CSS -->
+<!--<link href="assets/css/jquery.smartmenus.bootstrap-4.css" rel="stylesheet">-->
+
+
+<style>
+
+    .nav .nav-item .nav-link {
+        color:#ffffff !important;
     }
-</script>
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .notifyjs-bootstrap-base {
+        font-weight: lighter !important;
+        font-size: small;
+    }
+
+    .zmdi.main {
+        color: #ffffff !important;
+        font-size: 16px !important;
+    }
+
+
+</style>

@@ -40,12 +40,17 @@
 <script src="assets/js/cards/bounce-rate-chart.js"></script>
 <script src="assets/js/cards/session-duration-chart.js"></script>
 <script src="assets/js/countrySelect.js"></script>
-<script src="assets/js/select2.min.js"></script>
 <script src="assets/uploadify/jquery.uploadifive.js"></script>
-<script src="assets/jquery-confirm/js/jquery-confirm.js"></script>
-<script src="assets/js/confirm-init.js"></script>
-<script src="assets/js/print.min.js"></script>
+<script src="assets/js/jquery.smartmenus.js"></script>
+<script src="assets/js/jquery.smartmenus.bootstrap-4.js"></script>
+<script src="assets/js/select2.min.js"></script>
 
 
+<!--<script>
+    $(".toggle_sidebar").click(function(){
+        $(".sidebar").toggle();
+    })
+</script>
+-->
 
 
