@@ -12,7 +12,7 @@
                 <div class="kt-footer__logo">
                     <div class="kt-footer__copyright">
                         <?php echo date('Y') ?>&nbsp;&copy;&nbsp;
-                        <a href="https://ahpc.gov.gh" target="_blank">Allied Health Professions Council</a>
+                        <a href="https://taymac.net" target="_blank">Taymac</a>
                     </div>
                 </div>
                 <div class="kt-footer__menu">

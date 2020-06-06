@@ -42,11 +42,15 @@ $pinq = $mysqli->query("select * from admin_taymac_tenant ORDER BY id DESC");
                     ?>
                     <tr>
                         <td><?php echo $fetch['tenant_name']; ?></td>
-                        <td><?php echo $fetch['tenant_property']; ?></td>
-                        <td><?php echo $fetch['date_started'].' - '.$fetch['date_completed'] ?></td>
+                        <td><?php $propertyid = $fetch['tenant_property'];
+                            $getname = $mysqli->query("select * from admin_taymac_property where id = '$propertyid'");
+                            $resname = $getname->fetch_assoc();
+                            echo $resname['property_name']
+                            ?></td>
+                        <td><?php echo $fetch['date_started'].' to '.$fetch['date_completed'] ?></td>
                         <td><?php echo $fetch['payment_rate'] ?></td>
-                        <td><?php echo $fetch['payment_telephone'] ?></td>
-                        <td><?php echo $fetch['payment_email'] ?></td>
+                        <td><?php echo $fetch['tenant_telephone'] ?></td>
+                        <td><?php echo $fetch['tenant_email'] ?></td>
                         <td><?php echo $fetch['tenant_description']; ?></td>
                         <td>
                             <button type="button"
@@ -86,7 +90,7 @@ $pinq = $mysqli->query("select * from admin_taymac_tenant ORDER BY id DESC");
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete tenant!',
+            title: 'Delete Tenant!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {

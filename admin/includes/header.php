@@ -110,19 +110,10 @@ background-size: 100% 350px;"
 
 
                                 <li class="kt-menu__item kt-menu__item--rel <?php echo(
-                                $_SERVER['PHP_SELF'] == "/index.php"
+                                $_SERVER['PHP_SELF'] == "/admin/index.php"
                                     ? "kt-menu__item--here" : ""); ?>">
                                     <a href="/" class="kt-menu__link"><span
                                             class="kt-menu__link-text">Dashboard</span>
-                                    </a>
-                                </li>
-
-
-                                <li class="kt-menu__item kt-menu__item--rel  <?php echo(
-                                $_SERVER['PHP_SELF'] == "/useraccounts.php"
-                                    ? "kt-menu__item--here" : ""); ?>">
-                                    <a href="useraccounts" class="kt-menu__link"><span
-                                            class="kt-menu__link-text">User Accounts</span>
                                     </a>
                                 </li>
 
@@ -341,7 +332,9 @@ background-size: 100% 350px;"
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                     $_SERVER['PHP_SELF'] == "/admin/admin_property.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php"
+                                    $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/admin_billing.php"
+
                                     ? "kt-menu__item--here" : ""); ?>"
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -364,8 +357,6 @@ background-size: 100% 350px;"
                                                             <span></span></i><span
                                                             class="kt-menu__link-text">Property</span></a>
                                                 </li>
-
-
                                                 <li class="kt-menu__item   <?php echo(
                                                 $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php"
                                                     ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
@@ -373,6 +364,14 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link "><i
                                                             class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                             class="kt-menu__link-text">Tenant</span></a>
+                                                </li>
+                                                <li class="kt-menu__item   <?php echo(
+                                                $_SERVER['PHP_SELF'] == "/admin/admin_billing.php"
+                                                    ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                        href="admin_billing"
+                                                        class="kt-menu__link "><i
+                                                            class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                            class="kt-menu__link-text">Billing</span></a>
                                                 </li>
                                                 <li class="kt-menu__item" aria-haspopup="true"><a
                                                         href="https://admin.ahpcgh.org/ticket" target="_blank"
