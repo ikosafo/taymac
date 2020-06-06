@@ -107,17 +107,14 @@ $random = rand(1,10000).date("Ymd");
                     })
                 },
                 data: {
-                    header_text: header_text,
-                    team_text: team_text,
-                    property_status: property_status,
-                    property_type: property_type,
-                    property_location:property_location,
-                    imageid:imageid
+                    member_name: member_name,
+                    member_position: member_position,
+                    member_mobile: member_mobile,
+                    member_email: member_email,
+                    member_description:member_description
                 },
                 success: function (text) {
                     //alert(text);
-
-                    $('#team_image').uploadifive('upload');
                     $.ajax({
                         type: "POST",
                         url: "ajax/forms/addteam_form.php",

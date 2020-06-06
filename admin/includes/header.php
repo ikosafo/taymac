@@ -137,7 +137,8 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/admin/website_pm.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_story.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
-                                $_SERVER['PHP_SELF'] == "/admin/website_team.php"
+                                $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_property.php"
 
 
 
@@ -159,7 +160,9 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/website_featuredproperties.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_realtors.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_clients.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
+
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
                                                         href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
@@ -281,20 +284,11 @@ background-size: 100% 350px;"
                                                 </li>
 
 
-                                            <?php //RENEWAL
-                                            $query = $mysqli->query("select * from permission where user_id = '$user_id'
-                                            AND (permission = 'Permanent Renewal (CPD)' OR permission = 'All Permissions')");
-                                            $count = mysqli_num_rows($query);
-                                            if ($count == '1') {
-                                                ?>
-
                                                 <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/mis_renewal.php" ||
-                                                $_SERVER['PHP_SELF'] == "/super_renewal.php" ||
-                                                $_SERVER['PHP_SELF'] == "/export_renewal.php" ||
-                                                $_SERVER['PHP_SELF'] == "/cpd_list.php" ||
-                                                $_SERVER['PHP_SELF'] == "/renewal_specialcases.php" ||
-                                                $_SERVER['PHP_SELF'] == "/renewal_search.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/website_property.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_health.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
+
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
                                                         href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -306,27 +300,27 @@ background-size: 100% 350px;"
                                                         <ul class="kt-menu__subnav">
 
                                                             <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/mis_renewal.php"
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_property.php"
                                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="mis_renewal"
+                                                                    href="website_property"
                                                                     class="kt-menu__link "><i
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                                         <span></span></i><span
                                                                         class="kt-menu__link-text">Property Management</span></a>
                                                             </li>
                                                             <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/mis_renewal.php"
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_health.php"
                                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="mis_renewal"
+                                                                    href="website_health"
                                                                     class="kt-menu__link "><i
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                                         <span></span></i><span
                                                                         class="kt-menu__link-text">Health and Safety</span></a>
                                                             </li>
                                                             <li class="kt-menu__item   <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/super_renewal.php"
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
                                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="super_renewal"
+                                                                    href="website_farms"
                                                                     class="kt-menu__link "><i
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                                         <span></span></i><span
@@ -336,15 +330,11 @@ background-size: 100% 350px;"
                                                         </ul>
                                                     </div>
 
-
                                                 </li>
-                                            <?php } ?>
-                                            <!-- End of Renewal -->
 
                                         </ul>
                                     </div>
                                 </li>
-
 
 
 
@@ -381,7 +371,7 @@ background-size: 100% 350px;"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                     <a href="javascript:;"
                                        class="kt-menu__link kt-menu__toggle"><span
-                                            class="kt-menu__link-text">Registrations <i
+                                            class="kt-menu__link-text">Property Management <i
                                                 class="fa fa-caret-down ml-2"></i> </span><i
                                             class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
@@ -398,17 +388,11 @@ background-size: 100% 350px;"
 
 
                                             <li class="kt-menu__item  kt-menu__item--submenu <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/mis_permanent.php" ||
-                                            $_SERVER['PHP_SELF'] == "/super_permanent.php" ||
-                                            $_SERVER['PHP_SELF'] == "/export_permanent.php" ||
-                                            $_SERVER['PHP_SELF'] == "/permanent_regeneratepin.php" ||
-                                            $_SERVER['PHP_SELF'] == "/permanent_specialcases.php" ||
-                                            $_SERVER['PHP_SELF'] == "/permanent_pinupdates.php" ||
-                                            $_SERVER['PHP_SELF'] == "/permanent_search.php"
+                                            $_SERVER['PHP_SELF'] == "/admin_property.php"
                                                 ? "kt-menu__item--here" : ""); ?>"
                                                 data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
                                                     href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
-                                                        class="kt-menu__link-text">Permanent</span><i
+                                                        class="kt-menu__link-text">Property</span><i
                                                         class="kt-menu__hor-arrow la la-angle-right"></i><i
                                                         class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
