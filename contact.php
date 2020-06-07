@@ -63,21 +63,34 @@
                     <div class="contact_localtion">
                         <h4>Contact Us</h4>
 
+                        <?php $getcontact = $mysqli->query("select * from taymac_contact LIMIT 1");
+                              $rescontact = $getcontact->fetch_assoc();
+                        ?>
+
                         <div class="content_list">
                             <h5><i class="fa fa-map-marker"></i> Address</h5>
-                            <p>Ground Floor Le Pierre, <br/>14 Choice Close Off Senchi Street <br/>Airport Residential Area, Accra</p>
+                            <p>
+                                <?php echo $rescontact['address'] ?>
+                            </p>
                         </div>
                         <div class="content_list">
                             <h5><i class="fa fa-phone"></i> Phone</h5>
-                            <p>+233 (0) 245-710-614</p>
+                            <p>
+                                <?php echo $rescontact['phone'] ?>
+                            </p>
                         </div>
                         <div class="content_list">
                             <h5><i class="fa fa-mobile-phone"></i> Mobile</h5>
-                            <p>+233 (0) 302-789-025</p>
+                            <p>
+                                <?php echo $rescontact['mobile'] ?>
+                            </p>
                         </div>
                         <div class="content_list">
                             <h5><i class="fa fa-envelope-open-o"></i> Mail</h5>
-                            <p><a href="#">info@taymac.net</a></p>
+                            <p><a href="#">
+                                    <?php echo $rescontact['email'] ?>
+                                </a>
+                            </p>
                         </div>
                         <div class="content_list">
                             <h5><i class="fa fa-globe"></i> Website</h5>

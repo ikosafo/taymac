@@ -131,8 +131,8 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_property.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_contact.php" ||
-                                  $_SERVER['PHP_SELF'] == "/admin/website_service.php"
-
+                                  $_SERVER['PHP_SELF'] == "/admin/website_service.php" ||
+                                  $_SERVER['PHP_SELF'] == "/admin/website_health.php"
 
 
                                     ? "kt-menu__item--here" : ""); ?>"
@@ -146,7 +146,6 @@ background-size: 100% 350px;"
                                     <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                         <ul class="kt-menu__subnav">
 
-
                                                 <li class="kt-menu__item  kt-menu__item--submenu <?php echo(
                                                 $_SERVER['PHP_SELF'] == "/admin/website_slider.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_officeinstallations.php" ||
@@ -155,7 +154,6 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/website_realtors.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
-
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
@@ -221,7 +219,6 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_contact.php"
-
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a

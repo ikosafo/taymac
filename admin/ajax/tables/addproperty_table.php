@@ -80,7 +80,7 @@ $pinq = $mysqli->query("select * from taymac_property ORDER BY id DESC");
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete property!',
+            title: 'Delete Property!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {

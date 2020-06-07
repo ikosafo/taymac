@@ -81,20 +81,30 @@
                 <div class="col-md-12 col-lg-6">
 
                     <div class="row">
+
+                        <?php $getproperty = $mysqli->query("select * from taymac_property p JOIN taymac_image_property i
+                                                             ON p.imageid = i.imageid LIMIT 6");
+                        while ($resproperty = $getproperty->fetch_assoc()) {
+                        ?>
+
                         <div class="col-md-6 col-lg-6">
                             <div class="properti_city home6">
                                 <div class="thumb">
                                     <img class="img-fluid w100" src="assets/images/property/fp21.jpg" alt="fp21.jpg">
                                     <div class="thmb_cntnt">
                                         <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <?php echo $resproperty['property_status'] ?>
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="overlay">
                                     <div class="details">
                                         <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4>Renovated Apartment</h4>
+                                        <h4><?php echo $resproperty['property_type'] ?></h4>
                                         <ul class="prop_details mb0">
                                             <li class="list-inline-item"><a href="#">Beds: 4</a></li>
                                             <li class="list-inline-item"><a href="#">Baths: 2</a></li>
@@ -104,126 +114,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6">
-                            <div class="properti_city home6">
-                                <div class="thumb">
-                                    <img class="img-fluid w100" src="assets/images/property/fp22.jpg" alt="fp22.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="overlay">
-                                    <div class="details">
-                                        <a class="fp_price" href="#">$48,000<small>/mo</small></a>
-                                        <h4>Gorgeous Villa Bay View</h4>
-                                        <ul class="prop_details mb0">
-                                            <li class="list-inline-item"><a href="#">Beds: 4</a></li>
-                                            <li class="list-inline-item"><a href="#">Baths: 2</a></li>
-                                            <li class="list-inline-item"><a href="#">Sq Ft: 5280</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6">
-                            <div class="properti_city home6">
-                                <div class="thumb">
-                                    <img class="img-fluid w100" src="assets/images/property/fp23.jpg" alt="fp23.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="overlay">
-                                    <div class="details">
-                                        <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4>Renovated Apartment</h4>
-                                        <ul class="prop_details mb0">
-                                            <li class="list-inline-item"><a href="#">Beds: 4</a></li>
-                                            <li class="list-inline-item"><a href="#">Baths: 2</a></li>
-                                            <li class="list-inline-item"><a href="#">Sq Ft: 5280</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6">
-                            <div class="properti_city home6">
-                                <div class="thumb">
-                                    <img class="img-fluid w100" src="assets/images/property/fp24.jpg" alt="fp24.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="overlay">
-                                    <div class="details">
-                                        <a class="fp_price" href="#">$48,000<small>/mo</small></a>
-                                        <h4>Gorgeous Villa Bay View</h4>
-                                        <ul class="prop_details mb0">
-                                            <li class="list-inline-item"><a href="#">Beds: 4</a></li>
-                                            <li class="list-inline-item"><a href="#">Baths: 2</a></li>
-                                            <li class="list-inline-item"><a href="#">Sq Ft: 5280</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6">
-                            <div class="properti_city home6">
-                                <div class="thumb">
-                                    <img class="img-fluid w100" src="assets/images/property/fp25.jpg" alt="fp25.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="overlay">
-                                    <div class="details">
-                                        <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4>Renovated Apartment</h4>
-                                        <ul class="prop_details mb0">
-                                            <li class="list-inline-item"><a href="#">Beds: 4</a></li>
-                                            <li class="list-inline-item"><a href="#">Baths: 2</a></li>
-                                            <li class="list-inline-item"><a href="#">Sq Ft: 5280</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-6">
-                            <div class="properti_city home6">
-                                <div class="thumb">
-                                    <img class="img-fluid w100" src="assets/images/property/fp26.jpg" alt="fp26.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                           
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="overlay">
-                                    <div class="details">
-                                        <a class="fp_price" href="#">$48,000<small>/mo</small></a>
-                                        <h4>Gorgeous Villa Bay View</h4>
-                                        <ul class="prop_details mb0">
-                                            <li class="list-inline-item"><a href="#">Beds: 4</a></li>
-                                            <li class="list-inline-item"><a href="#">Baths: 2</a></li>
-                                            <li class="list-inline-item"><a href="#">Sq Ft: 5280</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                            <?php } ?>
+
                         <div class="col-lg-12 mt20">
                             <div class="mbp_pagination">
                                 <ul class="page_navigation">

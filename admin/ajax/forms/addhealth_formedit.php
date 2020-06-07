@@ -1,5 +1,10 @@
 <?php include ('../../../config.php');
 $random = rand(1,10000).date("Ymd");
+
+$id_index = $_POST['theindex'];
+$getabout = $mysqli->query("select * from `taymac_health` where id = '$id_index'");
+$resabout = $getabout->fetch_assoc();
+
 ?>
 <!--begin::Form-->
 
@@ -10,7 +15,7 @@ $random = rand(1,10000).date("Ymd");
             <div class="col-lg-12 col-md-12">
                 <label for="health_text">Health and Safety Text</label>
                 <textarea class="form-control summernote" id="health_text"
-                          placeholder="Enter Health and Safety Text"></textarea>
+                          placeholder="Enter Health and Safety Text"><?php echo $resabout['health_text'] ?></textarea>
             </div>
         </div>
 
@@ -18,7 +23,7 @@ $random = rand(1,10000).date("Ymd");
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
-            <button type="button" class="btn btn-primary" id="savehealth">Submit</button>
+            <button type="button" class="btn btn-primary" id="edithealth">Submit</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
     </div>
@@ -35,19 +40,20 @@ $random = rand(1,10000).date("Ymd");
         height: 300
     });
 
-    $("#savehealth").click(function () {
+    $("#edithealth").click(function () {
         var health_text = $("#health_text").val();
+        var id_index = '<?php echo $id_index ?>';
 
         var error = '';
         if (health_text == "") {
-            error += 'Please enter Health and Safety\n';
+            error += 'Please enter Health and Safety text\n';
             $("#health_text").focus();
         }
 
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_health.php",
+                url: "ajax/queries/editform_health.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -57,7 +63,8 @@ $random = rand(1,10000).date("Ymd");
                     })
                 },
                 data: {
-                    health_text: health_text
+                    health_text: health_text,
+                    id_index:id_index
                 },
                 success: function (text) {
                     //alert(text);
