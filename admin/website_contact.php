@@ -21,7 +21,7 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Website
-                                    <small>Health and Safety</small>
+                                    <small>Contact Us</small>
                                 </h3>
                             </div>
                         </div>
@@ -29,10 +29,10 @@
 
                         <div class="form-group row">
                             <div class="col-md-5 col-xs-12 col-sm-12">
-                                <div id="healthform_div"></div>
+                                <div id="contactform_div"></div>
                             </div>
                             <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="healthtable_div"></div>
+                                <div id="contacttable_div"></div>
                             </div>
                         </div>
 
@@ -53,7 +53,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/addhealth_form.php",
+        url: "ajax/forms/addcontact_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -63,7 +63,7 @@
             })
         },
         success: function (text) {
-            $('#healthform_div').html(text);
+            $('#contactform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -76,7 +76,7 @@
 
 
     $.ajax({
-        url: "ajax/tables/addhealth_table.php",
+        url: "ajax/tables/addcontact_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -86,7 +86,7 @@
             })
         },
         success: function (text) {
-            $('#healthtable_div').html(text);
+            $('#contacttable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -96,6 +96,7 @@
         },
 
     });
+
 
 </script>
 

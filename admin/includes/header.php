@@ -37,7 +37,7 @@ if (!isset($_SESSION['username'])) {
 
     <!--end::Global Theme Styles -->
 
-    <link rel="shortcut icon" href="newassets/img/ahpc_logo.png"/>
+    <link rel="shortcut icon" href="../assets/img/taymac.jpeg"/>
     <script src="newassets/js/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -129,7 +129,9 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/admin/website_story.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
-                                $_SERVER['PHP_SELF'] == "/admin/website_property.php"
+                                $_SERVER['PHP_SELF'] == "/admin/website_property.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_contact.php" ||
+                                  $_SERVER['PHP_SELF'] == "/admin/website_service.php"
 
 
 
@@ -153,6 +155,7 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/website_realtors.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
+
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
@@ -216,7 +219,8 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/website_pm.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_story.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_team.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_contact.php"
 
 
                                                     ? "kt-menu__item--here" : ""); ?>"
@@ -268,6 +272,14 @@ background-size: 100% 350px;"
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                                         class="kt-menu__link-text">Team</span></a>
                                                             </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_contact.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="website_contact"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                        class="kt-menu__link-text">Contact</span></a>
+                                                            </li>
                                                         </ul>
                                                     </div>
 
@@ -278,7 +290,8 @@ background-size: 100% 350px;"
                                                 <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
                                                 $_SERVER['PHP_SELF'] == "/admin/website_property.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_health.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/website_farms.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/website_service.php"
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
@@ -298,6 +311,15 @@ background-size: 100% 350px;"
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                                         <span></span></i><span
                                                                         class="kt-menu__link-text">Property Management</span></a>
+                                                            </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/website_service.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="website_service"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Add Service</span></a>
                                                             </li>
                                                             <li class="kt-menu__item  <?php echo(
                                                             $_SERVER['PHP_SELF'] == "/admin/website_health.php"

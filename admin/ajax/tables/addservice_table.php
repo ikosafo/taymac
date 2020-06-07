@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from taymac_ppclient ORDER BY id DESC");
+$pinq = $mysqli->query("select * from taymac_service ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,7 +25,7 @@ $pinq = $mysqli->query("select * from taymac_ppclient ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Client Name</th>
+                    <th>Service Name</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -35,12 +35,12 @@ $pinq = $mysqli->query("select * from taymac_ppclient ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['client_name']; ?></td>
+                        <td><?php echo $fetch['service_name']; ?></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_ppclient"
-                                    i_index="<?php echo $fetch['id']; ?>"
+                                    class="btn btn-danger delete_service"
+                                    i_index="<?php echo $fetch['id'] ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
                             </button>
@@ -63,11 +63,11 @@ $pinq = $mysqli->query("select * from taymac_ppclient ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_ppclient').on('click', '.delete_ppclient', function () {
+    $(document).off('click', '.delete_service').on('click', '.delete_service', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Client!',
+            title: 'Delete Service!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -85,14 +85,14 @@ $pinq = $mysqli->query("select * from taymac_ppclient ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_ppclient.php",
+                            url: "ajax/queries/delete_service.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/addppclient_table.php",
+                                    url: "ajax/tables/addservice_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -102,7 +102,7 @@ $pinq = $mysqli->query("select * from taymac_ppclient ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#ppclienttable_div').html(text);
+                                        $('#servicetable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);

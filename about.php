@@ -92,33 +92,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 col-xl-6">
-                    <div class="about_content">
-                        <p>
-                            <i class="fa fa-angle-right"></i> Cnergyasdas Ghana Limited <br/>
-                            <i class="fa fa-angle-right"></i> China Pipeline Petroleum, Ghana Office <br/>
-                            <i class="fa fa-angle-right"></i> Amec Foster Wheeler Ghana Office <br/>
-                            <i class="fa fa-angle-right"></i> Colgate Palmolive Ghana Limited <br/>
-                            <i class="fa fa-angle-right"></i> Novartis Pharma A.G. <br/>
-                        </p>
-                    </div>
-                </div>
 
-                <div class="col-lg-6 col-xl-6">
-                    <div class="about_content">
-                        <p>
-                            <i class="fa fa-angle-right"></i> Best Point Saving and Loans Company Limited <br/>
-                            <i class="fa fa-angle-right"></i> Best Assurance Company Limited <br/>
-                            <i class="fa fa-angle-right"></i> Best Pensions Limited <br/>
-                            <i class="fa fa-angle-right"></i> Louis Dreyfus Commodities - West Africa Office <br/>
-                            <i class="fa fa-angle-right"></i> Special Investment Company Limited <br/>
-                        </p>
+                <?php $getclients = $mysqli->query("select * from taymac_ppclient");
+                while ($resclient = $getclients->fetch_assoc()) { ?>
+                <div class="col-lg-4 col-xl-4">
+                        <i class="fa fa-angle-right"></i> <?php echo $resclient['client_name'] ?> <br/>
                     </div>
+                <?php } ?>
                 </div>
             </div>
-
-
-        </div>
     </section>
 
     <!-- Find Comfort Place -->
