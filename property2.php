@@ -83,38 +83,38 @@
                     <div class="row">
 
                         <?php $getproperty = $mysqli->query("select * from taymac_property p JOIN taymac_image_property i
-                                                             ON p.imageid = i.imageid LIMIT 6");
+                                                             ON p.imageid = i.imageid LIMIT 7,20");
                         while ($resproperty = $getproperty->fetch_assoc()) {
-                        ?>
+                            ?>
 
-                        <div class="col-md-6 col-lg-6">
-                            <div class="properti_city home6">
-                                <div class="thumb">
-                                    <img class=""
-                                         src="<?php echo 'admin/'.$resproperty['image_location']; ?>" width="270" height="260"
-                                         alt="Img">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item">
-                                                <a href="#">
-                                                    <?php echo $resproperty['property_status'] ?>
-                                                </a>
-                                            </li>
-                                        </ul>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="properti_city home6">
+                                    <div class="thumb">
+                                        <img class=""
+                                             src="<?php echo 'admin/'.$resproperty['image_location']; ?>" width="270" height="260"
+                                             alt="Img">
+                                        <div class="thmb_cntnt">
+                                            <ul class="tag mb0">
+                                                <li class="list-inline-item">
+                                                    <a href="#">
+                                                        <?php echo $resproperty['property_status'] ?>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="overlay">
-                                    <div class="details">
-                                        <h4><?php echo $resproperty['property_type'] ?></h4>
-                                       <p>
-                                           <i class="fa fa-map-marker"></i> <?php echo $resproperty['property_location'] ?>
-                                       </p>
+                                    <div class="overlay">
+                                        <div class="details">
+                                            <h4><?php echo $resproperty['property_type'] ?></h4>
+                                            <p>
+                                                <i class="fa fa-map-marker"></i> <?php echo $resproperty['property_location'] ?>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                            <?php } ?>
+                        <?php } ?>
 
                         <div class="col-lg-12 mt20">
                             <div class="mbp_pagination">
@@ -122,13 +122,13 @@
                                     <li class="page-item disabled">
                                         <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span class="flaticon-left-arrow"></span> Prev</a>
                                     </li>
-                                    <li class="page-item active" aria-current="page"><a class="page-link" href="/property">1 <span class="sr-only">(current)</span></a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="/property2">2</a>
+                                    <li class="page-item"><a class="page-link" href="/property">1</a></li>
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="/property2">2 <span class="sr-only">(current)</span></a>
                                     </li>
-                                   <!-- <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">29</a></li>-->
+                                    <!-- <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                     <li class="page-item"><a class="page-link" href="#">...</a></li>
+                                     <li class="page-item"><a class="page-link" href="#">29</a></li>-->
                                     <li class="page-item">
                                         <a class="page-link" href="#"><span class="flaticon-right-arrow"></span></a>
                                     </li>

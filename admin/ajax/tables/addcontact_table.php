@@ -30,6 +30,7 @@ $pinq = $mysqli->query("select * from taymac_contact ORDER BY id DESC");
                     <th>Mobile</th>
                     <th>Email</th>
                     <th>Website</th>
+                    <th>Box</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -44,7 +45,8 @@ $pinq = $mysqli->query("select * from taymac_contact ORDER BY id DESC");
                         <td><?php echo $fetch['mobile']; ?></td>
                         <td><?php echo $fetch['email']; ?></td>
                         <td><?php echo $fetch['website']; ?></td>
-                        
+                        <td><?php echo $fetch['postbox']; ?></td>
+
                         <td>
                             <button type="button"
                                     data-type="confirm"

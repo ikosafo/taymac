@@ -42,6 +42,13 @@ $random = rand(1,10000).date("Ymd");
                        placeholder="Enter URL Address">
             </div>
         </div>
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
+                <label for="contact_post">Post Office Box</label>
+                <input type="text" class="form-control" id="contact_post"
+                       placeholder="Enter Post Office Box">
+            </div>
+        </div>
 
     </div>
     <div class="kt-portlet__foot">
@@ -69,6 +76,7 @@ $random = rand(1,10000).date("Ymd");
         var contact_mobile = $("#contact_mobile").val();
         var contact_email = $("#contact_email").val();
         var contact_website = $("#contact_website").val();
+        var contact_post = $("#contact_post").val();
 
         var error = '';
         if (contact_address == "") {
@@ -91,6 +99,10 @@ $random = rand(1,10000).date("Ymd");
             error += 'Please enter URL address\n';
             $("#contact_website").focus();
         }
+        if (contact_post == "") {
+            error += 'Please enter post office box\n';
+            $("#contact_post").focus();
+        }
 
         if (error == "") {
             $.ajax({
@@ -109,7 +121,8 @@ $random = rand(1,10000).date("Ymd");
                     contact_phone: contact_phone,
                     contact_mobile: contact_mobile,
                     contact_email: contact_email,
-                    contact_website: contact_website
+                    contact_website: contact_website,
+                    contact_post:contact_post
                 },
                 success: function (text) {
                     //alert(text);

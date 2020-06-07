@@ -53,45 +53,6 @@
                                         <h4>(Risk Management)</h4>
                                     </div>
                                     <div class="fp_footer">
-                                       <i class="fa fa-check-square-o"></i>
-                                        <small>Accident Investigation</small>
-                                        <hr/>
-                                        <i class="fa fa-check-square-o"></i>
-                                        <small>Developing OF Safety Policies And Procedures</small>
-                                        <hr/>
-                                        <i class="fa fa-check-square-o"></i>
-                                        <small>Developing & Implementation OF Safety Management Plan(s)</small>
-                                        <hr/>
-                                        <a href="#">
-                                            <div class="fp_pdate float-right text-thm">
-                                                View All Services <i class="fa fa-angle-right"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4">
-                            <div class="feat_property home7 style4">
-                                <div class="thumb">
-                                    <div class="fp_single_item_slider">
-                                        <div class="item">
-                                            <img class="img-whp" src="assets/images/property/fp1.jpg" alt="fp1.jpg">
-                                        </div>
-                                        <div class="item">
-                                            <img class="img-whp" src="assets/images/property/fp2.jpg" alt="fp2.jpg">
-                                        </div>
-                                    </div>
-                                    <div class="thmb_cntnt style3">
-                                        <a class="fp_price" href="#"><small>Hover</small></a>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <div class="tc_content">
-                                        <p class="text-thm">Consulting Services</p>
-                                        <h4>(Risk Management)</h4>
-                                    </div>
-                                    <div class="fp_footer">
                                         <i class="fa fa-check-square-o"></i>
                                         <small>Accident Investigation</small>
                                         <hr/>
@@ -127,18 +88,57 @@
                                 </div>
                                 <div class="details">
                                     <div class="tc_content">
-                                        <p class="text-thm">Consulting Services</p>
-                                        <h4>(Risk Management)</h4>
+                                        <p class="text-thm">Industrial Health Safety And Environmental Management</p>
+                                        <h4>(Training)</h4>
                                     </div>
                                     <div class="fp_footer">
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Accident Investigation</small>
+                                        <small>Industrial Health And Safety Courses</small>
                                         <hr/>
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Developing OF Safety Policies And Procedures</small>
+                                        <small>Compressed Gases</small>
                                         <hr/>
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Developing & Implementation OF Safety Management Plan(s)</small>
+                                        <small>Confined Space</small>
+                                        <hr/>
+                                        <a href="#">
+                                            <div class="fp_pdate float-right text-thm">
+                                                View All Services <i class="fa fa-angle-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <div class="feat_property home7 style4">
+                                <div class="thumb">
+                                    <div class="fp_single_item_slider">
+                                        <div class="item">
+                                            <img class="img-whp" src="assets/images/property/fp1.jpg" alt="fp1.jpg">
+                                        </div>
+                                        <div class="item">
+                                            <img class="img-whp" src="assets/images/property/fp2.jpg" alt="fp2.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="thmb_cntnt style3">
+                                        <a class="fp_price" href="#"><small>Hover</small></a>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div class="tc_content">
+                                        <p class="text-thm">Risk Assessment</p>
+                                        <h4>(Courses)</h4>
+                                    </div>
+                                    <div class="fp_footer">
+                                        <i class="fa fa-check-square-o"></i>
+                                        <small>Accident And Incident Investigation</small>
+                                        <hr/>
+                                        <i class="fa fa-check-square-o"></i>
+                                        <small>DSE Assessment (Display Screen Equipment)</small>
+                                        <hr/>
+                                        <i class="fa fa-check-square-o"></i>
+                                        <small>Ergonomics</small>
                                         <hr/>
                                         <div class="fp_pdate float-right text-thm">View All Services <i class="fa fa-angle-right"></i></div>
                                     </div>
@@ -162,18 +162,11 @@
                                 </div>
                                 <div class="details">
                                     <div class="tc_content">
-                                        <p class="text-thm">Consulting Services</p>
-                                        <h4>(Risk Management)</h4>
+                                        <p class="text-thm">First Aid</p>
                                     </div>
                                     <div class="fp_footer">
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Accident Investigation</small>
-                                        <hr/>
-                                        <i class="fa fa-check-square-o"></i>
-                                        <small>Developing OF Safety Policies And Procedures</small>
-                                        <hr/>
-                                        <i class="fa fa-check-square-o"></i>
-                                        <small>Developing & Implementation OF Safety Management Plan(s)</small>
+                                        <small>Everyday Basic First Aid Awareness</small>
                                         <hr/>
                                         <div class="fp_pdate float-right text-thm">View All Services <i class="fa fa-angle-right"></i></div>
                                     </div>
@@ -197,18 +190,11 @@
                                 </div>
                                 <div class="details">
                                     <div class="tc_content">
-                                        <p class="text-thm">Consulting Services</p>
-                                        <h4>(Risk Management)</h4>
+                                        <p class="text-thm">Manual Handling</p>
                                     </div>
                                     <div class="fp_footer">
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Accident Investigation</small>
-                                        <hr/>
-                                        <i class="fa fa-check-square-o"></i>
-                                        <small>Developing OF Safety Policies And Procedures</small>
-                                        <hr/>
-                                        <i class="fa fa-check-square-o"></i>
-                                        <small>Developing & Implementation OF Safety Management Plan(s)</small>
+                                        <small>Manual Handling Training</small>
                                         <hr/>
                                         <a href="#">
                                             <div class="fp_pdate float-right text-thm">
@@ -236,18 +222,18 @@
                                 </div>
                                 <div class="details">
                                     <div class="tc_content">
-                                        <p class="text-thm">Consulting Services</p>
-                                        <h4>(Risk Management)</h4>
+                                        <p class="text-thm">COSHH</p>
+                                        <h4>(Control Of Substances Hazardous To Health)</h4>
                                     </div>
                                     <div class="fp_footer">
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Accident Investigation</small>
+                                        <small>COSHH Management</small>
                                         <hr/>
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Developing OF Safety Policies And Procedures</small>
+                                        <small>Suppliers Of Personal Protective Equipment</small>
                                         <hr/>
                                         <i class="fa fa-check-square-o"></i>
-                                        <small>Developing & Implementation OF Safety Management Plan(s)</small>
+                                        <small>Suppliers Of Staff Uniforms, Coveralls, Overalls, etc</small>
                                         <hr/>
                                         <a href="#">
                                             <div class="fp_pdate float-right text-thm">

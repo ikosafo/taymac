@@ -1,3 +1,8 @@
+
+<?php $getcontact = $mysqli->query("select * from taymac_contact LIMIT 1");
+      $rescontact = $getcontact->fetch_assoc();
+
+?>
 <!-- Our Footer -->
 <section class="footer_one home3">
     <div class="container">
@@ -5,9 +10,8 @@
             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 pr0 pl0">
                 <div class="footer_about_widget home3">
                     <h4>Location</h4>
-                    <p>
-                        GROUND FLOOR LE PIERRE, 14 CHOICE CLOSE OFF SENCHI STREET <br/>
-                        AIRPORT RESIDENTIAL AREA, ACCRA
+                    <p style="text-transform: uppercase">
+                        <?php echo $rescontact['address'] ?>
                     </p>
                 </div>
             </div>
@@ -16,9 +20,9 @@
                 <div class="footer_contact_widget home3">
                     <h4>Contact Us</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#"><i class="fa fa-envelope-open-o"></i> P.O. BOX AN 7310, ACCRA - NORTH</a></li>
-                        <li><a href="#"><i class="fa fa-phone"></i> +233 (0) 245-710-614</a></li>
-                        <li><a href="#"><i class="fa fa-envelope"></i> info@taymac.net</a></li>
+                        <li><a href="#"><i class="fa fa-envelope-open-o"></i> <?php echo $rescontact['postbox'] ?></a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i>  <?php echo $rescontact['phone'] ?></a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> <?php echo $rescontact['email'] ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -98,6 +102,7 @@
 <script type="text/javascript" src="assets/js/google-maps.js"></script>
 <!-- Custom script for all pages -->
 <script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript" src="admin/newassets/js/pages/notify.js"></script>
 <script>
     var bsCarouselItems = 1;
     if($('.bs_carousel .carousel-item').length){

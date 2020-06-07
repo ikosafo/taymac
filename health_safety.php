@@ -10,7 +10,7 @@
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Services</li>
                         </ol>
-                        <h3 class="breadcrumb_title">Services</h3>
+                        <h3 class="breadcrumb_title">Health and Safety</h3>
                     </div>
                 </div>
             </div>
@@ -58,6 +58,9 @@
                                         <hr/>
                                         <i class="fa fa-check-square-o"></i>
                                         <small>Developing OF Safety Policies And Procedures</small>
+                                        <hr/>
+                                        <i class="fa fa-check-square-o"></i>
+                                        <small>Developing & Implementation OF Safety Management Plan(s)</small>
                                         <hr/>
                                         <i class="fa fa-check-square-o"></i>
                                         <small>Developing & Implementation OF Safety Management Plan(s)</small>

@@ -20,8 +20,8 @@
     <!-- Title -->
     <title>Taymac</title>
     <!-- Favicon -->
-    <link href="assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
-    <link href="assets/images/favicon.ico" sizes="128x128" rel="shortcut icon" />
+    <link href="assets/img/taymac.jpeg" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/img/taymac.jpeg" sizes="128x128" rel="shortcut icon" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -25,34 +25,39 @@
                 <div class="col-lg-7 col-xl-8">
                     <div class="form_grid">
                         <h4 class="mb5">Get in touch with us</h4>
-                        <form class="contact_form" id="contact_form" name="contact_form" action="#" method="post" novalidate="novalidate">
+                        <form>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_name" name="form_name" class="form-control" required="required" type="text" placeholder="Name">
+                                        <input id="form_name" name="form_name" class="form-control"
+                                               required="required" type="text" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_email" name="form_email" class="form-control required email" required="required" type="email" placeholder="Email">
+                                        <input id="form_email" name="form_email" class="form-control
+                                        required email" required="required" type="email" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_phone" name="form_phone" class="form-control required phone" required="required" type="phone" placeholder="Phone">
+                                        <input id="form_phone" name="form_phone" class="form-control
+                                        required phone" required="required" type="phone" placeholder="Phone">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input id="form_subject" name="form_subject" class="form-control required" required="required" type="text" placeholder="Subject">
+                                        <input id="form_subject" name="form_subject" class="form-control
+                                        required" required="required" type="text" placeholder="Subject">
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <textarea id="form_message" name="form_message" class="form-control required" rows="8" required="required" placeholder="Your Message"></textarea>
+                                        <textarea id="form_message" name="form_message" class="form-control required"
+                                                  rows="8" required="required" placeholder="Your Message"></textarea>
                                     </div>
                                     <div class="form-group mb0">
-                                        <button type="button" class="btn btn-lg btn-thm">Send Message</button>
+                                        <button type="button" class="btn btn-lg btn-thm" id="savemessage">Send Message</button>
                                     </div>
                                 </div>
                             </div>
@@ -120,3 +125,67 @@
     </section>
 
 <?php include "includes/footer.php"; ?>
+
+<script>
+
+    $("#savemessage").click(function () {
+        var form_name = $("#form_name").val();
+        var form_email = $("#form_email").val();
+        var form_phone = $("#form_phone").val();
+        var form_subject = $("#form_subject").val();
+        var form_message = $("#form_message").val();
+
+        var error = '';
+        if (form_name == "") {
+            error += 'Please enter name\n';
+            $("#form_name").focus();
+        }
+        if (form_email == "") {
+            error += 'Please enter email\n';
+            $("#form_email").focus();
+        }
+        if (form_email != "" && !form_email.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+            error += 'Please enter valid email \n';
+            $("#form_email").focus();
+        }
+        if (form_phone == "") {
+            error += 'Please enter phone number\n';
+            $("#form_phone").focus();
+        }
+        if (form_subject == "") {
+            error += 'Please enter subject\n';
+            $("#form_subject").focus();
+        }
+        if (form_message == "") {
+            error += 'Please enter message\n';
+            $("#form_message").focus();
+        }
+
+        if (error == "") {
+            $.ajax({
+                type: "POST",
+                url: "savemessage.php",
+                data: {
+                    form_name: form_name,
+                    form_email: form_email,
+                    form_phone: form_phone,
+                    form_subject: form_subject,
+                    form_message: form_message
+                },
+                success: function (text) {
+                    alert('Message Sent');
+                   location.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status + " " + thrownError);
+                },
+            });
+        }
+        else {
+            $.notify(error, {position: "top center"});
+        }
+        return false;
+
+    });
+
+</script>

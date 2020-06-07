@@ -46,6 +46,13 @@ $rescontact = $getcontact->fetch_assoc();
                        placeholder="Enter URL Address" value="<?php echo $rescontact['website'] ?>">
             </div>
         </div>
+        <div class="form-group row">
+            <div class="col-lg-12 col-md-12">
+                <label for="contact_post">Post Office Box</label>
+                <input type="text" class="form-control" id="contact_post"
+                       placeholder="Enter Post Office Box" value="<?php echo $rescontact['postbox'] ?>">
+            </div>
+        </div>
 
     </div>
     <div class="kt-portlet__foot">
@@ -74,6 +81,7 @@ $rescontact = $getcontact->fetch_assoc();
         var contact_mobile = $("#contact_mobile").val();
         var contact_email = $("#contact_email").val();
         var contact_website = $("#contact_website").val();
+        var contact_post = $("#contact_post").val();
         var id_index = '<?php echo $id_index ?>';
 
         var error = '';
@@ -97,6 +105,10 @@ $rescontact = $getcontact->fetch_assoc();
             error += 'Please enter URL address\n';
             $("#contact_website").focus();
         }
+        if (contact_post == "") {
+            error += 'Please enter post office box\n';
+            $("#contact_post").focus();
+        }
 
         if (error == "") {
             $.ajax({
@@ -116,7 +128,8 @@ $rescontact = $getcontact->fetch_assoc();
                     contact_mobile: contact_mobile,
                     contact_email: contact_email,
                     contact_website: contact_website,
-                    id_index: id_index
+                    id_index: id_index,
+                    contact_post:contact_post
                 },
                 success: function (text) {
                     //alert(text);
