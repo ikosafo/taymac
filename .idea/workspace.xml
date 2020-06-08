@@ -22,187 +22,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="addblog_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addblog_table.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.076923">
-              <caret line="47" column="101" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="101" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#button#2;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1591559357851" expanded="true" signature="62:83" placeholder="select * fro..taymac_slider..." />
-                <marker date="1591559357851" expanded="true" signature="62:104" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591559357851" expanded="true" signature="1635:1693" placeholder="select * fro..taymac_image_blog..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.192308">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <marker date="1591592495647" expanded="true" signature="842:947" placeholder="select amoun..billings..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.346154">
-              <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-              <folding>
-                <marker date="1591565583601" expanded="true" signature="1295:1372" placeholder="select * fro..taymac_blog..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blogdetail.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/blogdetail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30645162">
-              <caret line="392" column="52" selection-start-line="392" selection-start-column="52" selection-end-line="392" selection-end-column="52" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#span#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#span#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#span#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#span#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#span#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#2;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#3;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#1;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#2;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#3;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-                <marker date="1591600627250" expanded="true" signature="1204:1289" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591600627250" expanded="true" signature="1204:1310" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591600627250" expanded="true" signature="3623:3675" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591600627250" expanded="true" signature="4032:4082" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591600627250" expanded="true" signature="4569:4615" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591600627250" expanded="true" signature="9365:9423" placeholder="select * fro..taymac_blog_review..." />
-                <marker date="1591600627250" expanded="true" signature="10024:10108" placeholder="select AVG(r..taymac_blog_rating..." />
-                <marker date="1591600627250" expanded="true" signature="18730:18762" placeholder="select * fro..taymac_blog_review..." />
-                <marker date="1591600627250" expanded="true" signature="18730:18788" placeholder="select * fro..taymac_blog_review..." />
-                <marker date="1591600627250" expanded="true" signature="21089:21248" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591600627250" expanded="true" signature="21089:21275" placeholder="select * fro..taymac_blog..." />
-                <marker date="1591600627250" expanded="true" signature="25436:25478" placeholder="select from ..taymac_blog..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="savereview.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/savereview.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.23077">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-              <folding>
-                <marker date="1591591229367" expanded="true" signature="975:1388" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="savemessage.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/savemessage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-              <folding>
-                <marker date="1591549709550" expanded="true" signature="444:791" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="website_health.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/website_health.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0">
-              <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+            <state vertical-scroll-proportion="-7.8846154">
+              <caret line="354" column="46" selection-start-line="354" selection-start-column="41" selection-end-line="354" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blograting.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blograting.php">
+      <file leaf-file-name="addfarm_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addfarm_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3461537">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state vertical-scroll-proportion="-1.8461539">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding>
-                <element signature="e#838#871#0#HTML" expanded="true" />
-                <element signature="e#994#1027#0#HTML" expanded="true" />
-                <element signature="e#1150#1183#0#HTML" expanded="true" />
-                <element signature="e#1306#1339#0#HTML" expanded="true" />
-                <element signature="e#1462#1495#0#HTML" expanded="true" />
-                <element signature="e#1691#1724#0#HTML" expanded="true" />
-                <element signature="e#1847#1880#0#HTML" expanded="true" />
-                <element signature="e#2003#2036#0#HTML" expanded="true" />
-                <element signature="e#2159#2192#0#HTML" expanded="true" />
-                <element signature="e#2315#2348#0#HTML" expanded="true" />
-                <element signature="e#2551#2584#0#HTML" expanded="true" />
-                <element signature="e#2707#2740#0#HTML" expanded="true" />
-                <element signature="e#2863#2896#0#HTML" expanded="true" />
-                <element signature="e#3019#3052#0#HTML" expanded="true" />
-                <element signature="e#3175#3208#0#HTML" expanded="true" />
-                <element signature="e#3410#3443#0#HTML" expanded="true" />
-                <element signature="e#3566#3599#0#HTML" expanded="true" />
-                <element signature="e#3722#3755#0#HTML" expanded="true" />
-                <element signature="e#3878#3911#0#HTML" expanded="true" />
-                <element signature="e#4034#4067#0#HTML" expanded="true" />
-                <element signature="e#4270#4303#0#HTML" expanded="true" />
-                <element signature="e#4426#4459#0#HTML" expanded="true" />
-                <element signature="e#4582#4615#0#HTML" expanded="true" />
-                <element signature="e#4738#4771#0#HTML" expanded="true" />
-                <element signature="e#4894#4927#0#HTML" expanded="true" />
-                <marker date="1591592130403" expanded="true" signature="5027:5368" placeholder="INSERT INTO ..." />
+                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#button#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1591605776552" expanded="true" signature="62:83" placeholder="select * fro..taymac_health..." />
+                <marker date="1591605776552" expanded="true" signature="62:104" placeholder="select * fro..taymac_farm..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contact.php">
+      <file leaf-file-name="farms.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/farms.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.961538">
-              <caret line="126" column="33" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
+            <state vertical-scroll-proportion="-8.461538">
+              <caret line="13" column="93" selection-start-line="13" selection-start-column="93" selection-end-line="13" selection-end-column="93" />
               <folding>
-                <marker date="1591544001292" expanded="true" signature="3713:3749" placeholder="select * fro..taymac_contact..." />
+                <marker date="1591605886465" expanded="true" signature="3489:3522" placeholder="select * fro..taymac_farm..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page-blog-single.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/old/page-blog-single.html">
+      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state vertical-scroll-proportion="-7.1923075">
+              <caret line="48" column="26" selection-start-line="44" selection-start-column="24" selection-end-line="48" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="website_farms.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/website_farms.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="9.153846">
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.5">
+              <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="website_blogcomments.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/website_blogcomments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.6923075">
+              <caret line="50" column="47" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addcomments_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addcomments_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9390681">
+              <caret line="136" column="9" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
+              <folding>
+                <marker date="1591606059771" expanded="true" signature="62:107" placeholder="select * fro..taymac_message..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addmessages_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addmessages_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.884615">
+              <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="website_messages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/website_messages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.538462">
+              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -213,17 +136,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/about.php" />
-        <option value="$PROJECT_DIR$/team.php" />
-        <option value="$PROJECT_DIR$/admin/website_contact.php" />
-        <option value="$PROJECT_DIR$/admin/website_service.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_service.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/addservice_table.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/delete_service.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/addservice_form.php" />
-        <option value="$PROJECT_DIR$/admin/website_health.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/addslider_form.php" />
-        <option value="$PROJECT_DIR$/admin/website_farms.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/addhealth_form.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_health.php" />
         <option value="$PROJECT_DIR$/admin/ajax/tables/addhealth_table.php" />
@@ -234,9 +147,7 @@
         <option value="$PROJECT_DIR$/property.php" />
         <option value="$PROJECT_DIR$/property2.php" />
         <option value="$PROJECT_DIR$/contact.php" />
-        <option value="$PROJECT_DIR$/services.php" />
         <option value="$PROJECT_DIR$/includes/header.php" />
-        <option value="$PROJECT_DIR$/health_safety.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/addcontact_form.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_contact.php" />
         <option value="$PROJECT_DIR$/admin/ajax/tables/addcontact_table.php" />
@@ -247,7 +158,6 @@
         <option value="$PROJECT_DIR$/savemessage.php" />
         <option value="$PROJECT_DIR$/admin/ajax/tables/addmessages_table.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/delete_message.php" />
-        <option value="$PROJECT_DIR$/admin/includes/header.php" />
         <option value="$PROJECT_DIR$/admin/website_blogcontent.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/addblog_form.php" />
         <option value="$PROJECT_DIR$/admin/ajax/tables/addslider_table.php" />
@@ -259,11 +169,24 @@
         <option value="$PROJECT_DIR$/admin/ajax/queries/unpublish_blog.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/delete_blog.php" />
         <option value="$PROJECT_DIR$/admin/ajax/tables/addblog_table.php" />
-        <option value="$PROJECT_DIR$/blog.php" />
         <option value="$PROJECT_DIR$/savereview.php" />
         <option value="$PROJECT_DIR$/blograting.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/blogdetail.php" />
+        <option value="$PROJECT_DIR$/blog.php" />
+        <option value="$PROJECT_DIR$/taymac/services.php" />
+        <option value="$PROJECT_DIR$/services.php" />
+        <option value="$PROJECT_DIR$/health_safety.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farm.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/forms/addform_form.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/forms/addfarm_formedit.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/editform_farm.php" />
+        <option value="$PROJECT_DIR$/admin/website_farms.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addfarm_table.php" />
+        <option value="$PROJECT_DIR$/farms.php" />
+        <option value="$PROJECT_DIR$/admin/includes/header.php" />
+        <option value="$PROJECT_DIR$/admin/website_blogcomments.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addcomments_table.php" />
       </list>
     </option>
   </component>
@@ -322,6 +245,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="taymac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taymac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taymac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taymac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taymac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taymac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taymac" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -403,6 +380,26 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20574887" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -422,220 +419,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/property.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.653846">
-          <caret line="136" column="30" selection-start-line="136" selection-start-column="30" selection-end-line="136" selection-end-column="30" />
-          <folding>
-            <marker date="1591542455157" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_property..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.346154">
-          <caret line="83" column="36" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addinstall_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.9230769">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addrealtor_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.923077">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addclient_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_pm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_story.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1591490054377" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-166.73077">
-          <caret line="255" column="39" selection-start-line="255" selection-start-column="39" selection-end-line="255" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/health_safety.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.461538">
-          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addcontact_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.153846">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-          <folding>
-            <marker date="1591548934734" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_contact..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addcontact_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.384615">
-          <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addcontact_formedit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
-          <folding>
-            <marker date="1591549119612" expanded="true" signature="-1:-1" placeholder="select * fro..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="75" />
-          <folding>
-            <marker date="1591548820114" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_contact..." />
-            <marker date="1591548820114" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.09434">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <marker date="1591549190924" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_contact..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/website_clients.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addproperty_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.384615">
-          <caret line="65" column="14" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
-          <folding>
-            <marker date="1591529796166" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_property..." />
-            <marker date="1591529796166" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_image_property..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <marker date="1591340898878" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21326165">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding>
             <marker date="1591549881009" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addmessages_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24910395">
-          <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#button#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1591549880977" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_message..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/website_messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6538463">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="86.96154">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.730769">
-          <caret line="374" column="95" selection-start-line="374" selection-start-column="95" selection-end-line="374" selection-end-column="95" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -816,9 +605,9 @@
           <folding>
             <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#button#2;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1591559357851" expanded="true" signature="62:83" placeholder="select * fro..taymac_slider..." />
-            <marker date="1591559357851" expanded="true" signature="62:104" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591559357851" expanded="true" signature="1635:1693" placeholder="select * fro..taymac_image_blog..." />
+            <marker date="1591559357851" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_slider..." />
+            <marker date="1591559357851" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591559357851" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_image_blog..." />
           </folding>
         </state>
       </provider>
@@ -836,7 +625,7 @@
         <state vertical-scroll-proportion="-12.961538">
           <caret line="126" column="33" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
           <folding>
-            <marker date="1591544001292" expanded="true" signature="3713:3749" placeholder="select * fro..taymac_contact..." />
+            <marker date="1591544001292" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_contact..." />
           </folding>
         </state>
       </provider>
@@ -854,7 +643,7 @@
         <state vertical-scroll-proportion="-18.192308">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <marker date="1591592495647" expanded="true" signature="842:947" placeholder="select amoun..billings..." />
+            <marker date="1591592495647" expanded="true" signature="-1:-1" placeholder="select amoun..billings..." />
           </folding>
         </state>
       </provider>
@@ -864,7 +653,7 @@
         <state vertical-scroll-proportion="-3.2692308">
           <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
           <folding>
-            <marker date="1591549709550" expanded="true" signature="444:791" placeholder="INSERT INTO ..." />
+            <marker date="1591549709550" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -874,32 +663,32 @@
         <state vertical-scroll-proportion="-3.3461537">
           <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding>
-            <element signature="e#838#871#0#HTML" expanded="true" />
-            <element signature="e#994#1027#0#HTML" expanded="true" />
-            <element signature="e#1150#1183#0#HTML" expanded="true" />
-            <element signature="e#1306#1339#0#HTML" expanded="true" />
-            <element signature="e#1462#1495#0#HTML" expanded="true" />
-            <element signature="e#1691#1724#0#HTML" expanded="true" />
-            <element signature="e#1847#1880#0#HTML" expanded="true" />
-            <element signature="e#2003#2036#0#HTML" expanded="true" />
-            <element signature="e#2159#2192#0#HTML" expanded="true" />
-            <element signature="e#2315#2348#0#HTML" expanded="true" />
-            <element signature="e#2551#2584#0#HTML" expanded="true" />
-            <element signature="e#2707#2740#0#HTML" expanded="true" />
-            <element signature="e#2863#2896#0#HTML" expanded="true" />
-            <element signature="e#3019#3052#0#HTML" expanded="true" />
-            <element signature="e#3175#3208#0#HTML" expanded="true" />
-            <element signature="e#3410#3443#0#HTML" expanded="true" />
-            <element signature="e#3566#3599#0#HTML" expanded="true" />
-            <element signature="e#3722#3755#0#HTML" expanded="true" />
-            <element signature="e#3878#3911#0#HTML" expanded="true" />
-            <element signature="e#4034#4067#0#HTML" expanded="true" />
-            <element signature="e#4270#4303#0#HTML" expanded="true" />
-            <element signature="e#4426#4459#0#HTML" expanded="true" />
-            <element signature="e#4582#4615#0#HTML" expanded="true" />
-            <element signature="e#4738#4771#0#HTML" expanded="true" />
-            <element signature="e#4894#4927#0#HTML" expanded="true" />
-            <marker date="1591592130403" expanded="true" signature="5027:5368" placeholder="INSERT INTO ..." />
+            <element signature="e#838#871#0#HTML" expanded="false" />
+            <element signature="e#994#1027#0#HTML" expanded="false" />
+            <element signature="e#1150#1183#0#HTML" expanded="false" />
+            <element signature="e#1306#1339#0#HTML" expanded="false" />
+            <element signature="e#1462#1495#0#HTML" expanded="false" />
+            <element signature="e#1691#1724#0#HTML" expanded="false" />
+            <element signature="e#1847#1880#0#HTML" expanded="false" />
+            <element signature="e#2003#2036#0#HTML" expanded="false" />
+            <element signature="e#2159#2192#0#HTML" expanded="false" />
+            <element signature="e#2315#2348#0#HTML" expanded="false" />
+            <element signature="e#2551#2584#0#HTML" expanded="false" />
+            <element signature="e#2707#2740#0#HTML" expanded="false" />
+            <element signature="e#2863#2896#0#HTML" expanded="false" />
+            <element signature="e#3019#3052#0#HTML" expanded="false" />
+            <element signature="e#3175#3208#0#HTML" expanded="false" />
+            <element signature="e#3410#3443#0#HTML" expanded="false" />
+            <element signature="e#3566#3599#0#HTML" expanded="false" />
+            <element signature="e#3722#3755#0#HTML" expanded="false" />
+            <element signature="e#3878#3911#0#HTML" expanded="false" />
+            <element signature="e#4034#4067#0#HTML" expanded="false" />
+            <element signature="e#4270#4303#0#HTML" expanded="false" />
+            <element signature="e#4426#4459#0#HTML" expanded="false" />
+            <element signature="e#4582#4615#0#HTML" expanded="false" />
+            <element signature="e#4738#4771#0#HTML" expanded="false" />
+            <element signature="e#4894#4927#0#HTML" expanded="false" />
+            <marker date="1591592130403" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -909,25 +698,15 @@
         <state vertical-scroll-proportion="-16.23077">
           <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
           <folding>
-            <marker date="1591591229367" expanded="true" signature="975:1388" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.346154">
-          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-          <folding>
-            <marker date="1591565583601" expanded="true" signature="1295:1372" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591591229367" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blogdetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30645162">
-          <caret line="392" column="52" selection-start-line="392" selection-start-column="52" selection-end-line="392" selection-end-column="52" />
+        <state vertical-scroll-proportion="-1.7692307">
+          <caret line="320" column="33" selection-start-line="320" selection-start-column="33" selection-end-line="320" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#span#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#span#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
@@ -959,18 +738,245 @@
             <element signature="n#style#0;n#a#0;n#li#2;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#3;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#4;n#ul#4;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#section#1;n#!!top" expanded="true" />
-            <marker date="1591600627250" expanded="true" signature="1204:1289" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591600627250" expanded="true" signature="1204:1310" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591600627250" expanded="true" signature="3623:3675" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591600627250" expanded="true" signature="4032:4082" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591600627250" expanded="true" signature="4569:4615" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591600627250" expanded="true" signature="9365:9423" placeholder="select * fro..taymac_blog_review..." />
-            <marker date="1591600627250" expanded="true" signature="10024:10108" placeholder="select AVG(r..taymac_blog_rating..." />
-            <marker date="1591600627250" expanded="true" signature="18730:18762" placeholder="select * fro..taymac_blog_review..." />
-            <marker date="1591600627250" expanded="true" signature="18730:18788" placeholder="select * fro..taymac_blog_review..." />
-            <marker date="1591600627250" expanded="true" signature="21089:21248" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591600627250" expanded="true" signature="21089:21275" placeholder="select * fro..taymac_blog..." />
-            <marker date="1591600627250" expanded="true" signature="25436:25478" placeholder="select from ..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog_review..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select AVG(r..taymac_blog_rating..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog_review..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog_review..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select from ..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select DISTI..taymac_blog..." />
+            <marker date="1591601515452" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.807692">
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <marker date="1591602057818" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_blog..." />
+            <marker date="1591602057818" expanded="true" signature="-1:-1" placeholder="select DISTI..taymac_blog..." />
+            <marker date="1591602057818" expanded="true" signature="-1:-1" placeholder="select DISTI..taymac_blog..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taymac/farms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.807692">
+          <caret line="44" column="66" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+          <folding>
+            <element signature="e#770#823#0#HTML" expanded="false" />
+            <element signature="e#1051#1088#0#HTML" expanded="false" />
+            <element signature="e#1606#1659#0#HTML" expanded="false" />
+            <element signature="e#1887#1924#0#HTML" expanded="false" />
+            <element signature="e#2551#2604#0#HTML" expanded="false" />
+            <element signature="e#2832#2869#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taymac/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#section#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#section#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#section#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.038462">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1591605318767" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_aboutus..." />
+            <marker date="1591605318767" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_health..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/health_safety.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.576923">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding>
+            <marker date="1591605318788" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_health..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addhealth_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_health.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <marker date="1591605498545" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_farm..." />
+            <marker date="1591605498545" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addfarm_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="88" column="59" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addhealth_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addhealth_formedit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addfarm_formedit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.730769">
+          <caret line="55" column="52" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="52" />
+          <folding>
+            <marker date="1591605667261" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1591605667261" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_health.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_farm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/website_farms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.153846">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addfarm_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8461539">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#button#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1591605776552" expanded="true" signature="62:83" placeholder="select * fro..taymac_health..." />
+            <marker date="1591605776552" expanded="true" signature="62:104" placeholder="select * fro..taymac_farm..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="48" column="26" selection-start-line="44" selection-start-column="24" selection-end-line="48" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/farms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.461538">
+          <caret line="13" column="93" selection-start-line="13" selection-start-column="93" selection-end-line="13" selection-end-column="93" />
+          <folding>
+            <marker date="1591605886465" expanded="true" signature="3489:3522" placeholder="select * fro..taymac_farm..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8846154">
+          <caret line="354" column="46" selection-start-line="354" selection-start-column="41" selection-end-line="354" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.5">
+          <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/website_messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.538462">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/website_blogcomments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6923075">
+          <caret line="50" column="47" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addmessages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.884615">
+          <caret line="96" column="41" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addcomments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9390681">
+          <caret line="136" column="9" selection-start-line="136" selection-start-column="9" selection-end-line="136" selection-end-column="9" />
+          <folding>
+            <marker date="1591606059771" expanded="true" signature="62:107" placeholder="select * fro..taymac_message..." />
           </folding>
         </state>
       </provider>

@@ -16,23 +16,18 @@
                 <div class="kt-portlet__body">
                     <div class="kt-portlet__body">
 
-
                         <div class="kt-portlet__head kt-portlet__head--lg mb-4">
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Website
-                                    <small>Taymac Farms</small>
+                                    <small>Client Comments</small>
                                 </h3>
                             </div>
                         </div>
 
-
                         <div class="form-group row">
-                            <div class="col-md-5 col-xs-12 col-sm-12">
-                                <div id="farmform_div"></div>
-                            </div>
-                            <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="farmtable_div"></div>
+                            <div class="col-md-12 col-xs-12 col-sm-12">
+                                <div id="commentstable_div"></div>
                             </div>
                         </div>
 
@@ -53,7 +48,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/addfarm_form.php",
+        url: "ajax/tables/addcomments_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -63,7 +58,7 @@
             })
         },
         success: function (text) {
-            $('#farmform_div').html(text);
+            $('#commentstable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -74,28 +69,6 @@
 
     });
 
-
-    $.ajax({
-        url: "ajax/tables/addfarm_table.php",
-        beforeSend: function () {
-            KTApp.blockPage({
-                overlayColor: "#000000",
-                type: "v2",
-                state: "success",
-                message: "Please wait..."
-            })
-        },
-        success: function (text) {
-            $('#farmtable_div').html(text);
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status + " " + thrownError);
-        },
-        complete: function () {
-            KTApp.unblockPage();
-        },
-
-    });
 
 </script>
 

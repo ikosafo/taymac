@@ -130,9 +130,10 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_property.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/website_contact.php" ||
-                                  $_SERVER['PHP_SELF'] == "/admin/website_service.php" ||
-                                  $_SERVER['PHP_SELF'] == "/admin/website_health.php" ||
-                                  $_SERVER['PHP_SELF'] == "/admin/website_messages.php"
+                                $_SERVER['PHP_SELF'] == "/admin/website_service.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_health.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_messages.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -151,8 +152,8 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/website_featuredproperties.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/website_realtors.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/website_clients.php"
+
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
