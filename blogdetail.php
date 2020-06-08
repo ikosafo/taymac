@@ -29,10 +29,11 @@
             </div>
             <div class="row">
 
-<?php
-$imageid = $_GET['bid'];
-$getblog = $mysqli->query("select * from taymac_blog b JOIN taymac_image_blog i ON b.imageid = i.imageid where b.imageid = '$imageid'");
-$resblog = $getblog->fetch_assoc(); ?>
+        <?php
+        $imageid = $_GET['bid'];
+        $getblog = $mysqli->query("select * from taymac_blog b JOIN taymac_image_blog i
+                                      ON b.imageid = i.imageid where b.imageid = '$imageid'");
+        $resblog = $getblog->fetch_assoc(); ?>
                 <div class="col-lg-8">
                     <div class="main_blog_post_content">
                         <div class="mbp_thumb_post">
@@ -66,13 +67,13 @@ $resblog = $getblog->fetch_assoc(); ?>
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="pag_prev">
-                                        <?php $getprevious = $mysqli->query("select * from taymac_blog where imageid = '$imageid'");
+                                        <?php $getprevious = $mysqli->query("select * from taymac_blog where imageid = '$imageid' and status = '1'");
                                         $resprevious = $getprevious->fetch_assoc();
                                         $getid = $resprevious['id'];
                                         $previousid = $getid - 1;
                                         $nextid = $getid + 1;
 
-                                        $getprevblog = $mysqli->query("select * from taymac_blog where id = '$previousid'");
+                                        $getprevblog = $mysqli->query("select * from taymac_blog where id = '$previousid' and status = '1'");
                                         $resprevblog = $getprevblog->fetch_assoc();
                                         $getprevid = $resprevblog['imageid'];
                                         $linkgetprevid = "?bid=$getprevid";
@@ -80,7 +81,7 @@ $resblog = $getblog->fetch_assoc(); ?>
                                             $linkgetprevid = '#.';
                                         }
 
-                                        $getnextblog = $mysqli->query("select * from taymac_blog where id = '$nextid'");
+                                        $getnextblog = $mysqli->query("select * from taymac_blog where id = '$nextid' and status = '1'");
                                         $resnextblog = $getnextblog->fetch_assoc();
                                         $getnextid = $resnextblog['imageid'];
                                         $linkgetnextid = "?bid=$getnextid";
@@ -327,9 +328,11 @@ $resblog = $getblog->fetch_assoc(); ?>
                     <div class="sidebar_search_widget">
                         <div class="blog_search_widget">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search Here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input type="text" class="form-control" placeholder="Search Here"
+                                       aria-label="Recipient's username" aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><span class="flaticon-magnifying-glass"></span></button>
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                        <span class="flaticon-magnifying-glass"></span></button>
                                 </div>
                             </div>
                         </div>
@@ -340,7 +343,7 @@ $resblog = $getblog->fetch_assoc(); ?>
                             <ul class="list_details">
 
                                 <?php
-                                $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog");
+                                $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog where status = '1'");
                                 while ($rescategories = $getcategories->fetch_assoc()) { ?>
                                     <li>
                                         <a href="#"><i class="fa fa-caret-right mr10"></i>
@@ -358,7 +361,7 @@ $resblog = $getblog->fetch_assoc(); ?>
                         <ul class="tag_list">
 
                             <?php
-                            $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog");
+                            $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog  where status = '1'");
                             while ($rescategories = $getcategories->fetch_assoc()) { ?>
                                 <li class="list-inline-item"><a href="#"><?php echo $rescategories['category'] ?></a></li>
                             <?php } ?>
@@ -374,7 +377,8 @@ $resblog = $getblog->fetch_assoc(); ?>
 
                         <?php
                         $getblog = $mysqli->query("select * from taymac_blog b JOIN taymac_image_blog i
-                                                    ON b.imageid = i.imageid where b.imageid != '$imageid' ORDER BY b.id DESC LIMIT 2");
+                                                    ON b.imageid = i.imageid where b.imageid != '$imageid' and b.status = '1'
+                                                    ORDER BY b.id DESC LIMIT 2");
                         while ($resblog = $getblog->fetch_assoc()){ ?>
                             <div class="col-lg-12">
                                 <div class="for_blog feat_property">

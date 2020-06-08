@@ -1,1 +1,0 @@
-[08-Mar-2019 15:48:07 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /home/ahpcgh/public_html/registration.ahpcgh.org/ahpc/mis/config.php on line 20

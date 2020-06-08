@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from taymac_message ORDER BY id DESC");
+$pinq = $mysqli->query("select * from taymac_blog_review ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -26,11 +26,12 @@ $pinq = $mysqli->query("select * from taymac_message ORDER BY id DESC");
                 <thead>
                 <tr>
                     <th>Client Name</th>
-                    <th>Email Address</th>
-                    <th>Phone Number</th>
-                    <th>Subject</th>
-                    <th>Message</th>
-                    <th>Period Sent</th>
+                    <th>Title</th>
+                    <th>Review/Subject</th>
+                    <th>Blog</th>
+                    <th>Date Posted</th>
+                    <th>Mac Address</th>
+                    <th>IP Address</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -40,16 +41,21 @@ $pinq = $mysqli->query("select * from taymac_message ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['formname']; ?></td>
-                        <td><?php echo $fetch['formemail']; ?></td>
-                        <td><?php echo $fetch['formphone']; ?></td>
-                        <td><?php echo $fetch['formsubject']; ?></td>
-                        <td><?php echo $fetch['formmessage']; ?></td>
-                        <td><?php echo $fetch['periodsent']; ?></td>
+                        <td><?php echo $fetch['reviewname']; ?></td>
+                        <td><?php echo $fetch['reviewtitle']; ?></td>
+                        <td><?php echo $fetch['reviewtext']; ?></td>
+                        <td><?php $blogid = $fetch['blogid'];
+                            $getcategory = $mysqli->query("select * from taymac_blog where imageid = '$blogid'");
+                            $rescategory = $getcategory->fetch_assoc();
+                            echo $rescategory['category'];
+                            ?></td>
+                        <td><?php echo $fetch['dateposted']; ?></td>
+                        <td><?php echo $fetch['macaddress']; ?></td>
+                        <td><?php echo $fetch['ipaddress']; ?></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_message"
+                                    class="btn btn-danger delete_comment"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
@@ -73,11 +79,11 @@ $pinq = $mysqli->query("select * from taymac_message ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_message').on('click', '.delete_message', function () {
+    $(document).off('click', '.delete_comment').on('click', '.delete_comment', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Message!',
+            title: 'Delete Comment!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -95,14 +101,14 @@ $pinq = $mysqli->query("select * from taymac_message ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_message.php",
+                            url: "ajax/queries/delete_comment.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/addmessage_table.php",
+                                    url: "ajax/tables/addcomments_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -112,7 +118,7 @@ $pinq = $mysqli->query("select * from taymac_message ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#messagetable_div').html(text);
+                                        $('#commentstable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);

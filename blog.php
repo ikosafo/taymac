@@ -32,7 +32,7 @@
                     <div class="row">
 
                         <?php
-                        $getblog = $mysqli->query("select * from taymac_blog b JOIN taymac_image_blog i ON b.imageid = i.imageid");
+                        $getblog = $mysqli->query("select * from taymac_blog b JOIN taymac_image_blog i ON b.imageid = i.imageid where b.status = '1'");
                         while ($resblog = $getblog->fetch_assoc()){ ?>
                             <div class="col-lg-6">
                                 <div class="for_blog feat_property">
@@ -120,7 +120,7 @@
                             <ul class="list_details">
 
                                 <?php
-                                $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog");
+                                $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog where status = '1'");
                                 while ($rescategories = $getcategories->fetch_assoc()) { ?>
                                     <li>
                                         <a href="#"><i class="fa fa-caret-right mr10"></i>
@@ -138,7 +138,7 @@
                         <ul class="tag_list">
 
                             <?php
-                            $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog");
+                            $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog  where status = '1'");
                             while ($rescategories = $getcategories->fetch_assoc()) { ?>
                                 <li class="list-inline-item"><a href="#"><?php echo $rescategories['category'] ?></a></li>
                             <?php } ?>
