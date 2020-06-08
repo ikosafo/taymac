@@ -23,167 +23,63 @@
             <div class="row">
                 <div class="col-xl-6">
                     <div class="breadcrumb_content style2">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active text-thm" aria-current="page">Simple Listing – Grid View</li>
-                        </ol>
-                        <h2 class="breadcrumb_title">Blog</h2>
+                        <h2 class="breadcrumb_title">Blog Posts</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="for_blog feat_property">
-                                <div class="thumb">
-                                    <img class="img-whp" src="assets/images/blog/1.jpg" alt="1.jpg">
-                                    <div class="blog_tag">Construction</div>
-                                </div>
-                                <div class="details">
-                                    <div class="tc_content">
-                                        <h4>Redfin Ranks the Most Competitive Neighborhoods of 2020</h4>
-                                        <ul class="bpg_meta">
-                                            <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                            <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
+
+                        <?php
+                        $getblog = $mysqli->query("select * from taymac_blog b JOIN taymac_image_blog i ON b.imageid = i.imageid");
+                        while ($resblog = $getblog->fetch_assoc()){ ?>
+                            <div class="col-lg-6">
+                                <div class="for_blog feat_property">
+                                    <div class="thumb">
+                                        <img class="img-whp"
+                                             src="admin/<?php echo $resblog['image_location'] ?>" width="300" height="250"
+                                             alt="Img">
+                                        <div class="blog_tag">
+                                            <?php echo $resblog['category'] ?>
+                                        </div>
                                     </div>
-                                    <div class="fp_footer">
-                                        <ul class="fp_meta float-left mb0">
-                                            <li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                            <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                        </ul>
-                                        <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="for_blog feat_property">
-                                <div class="thumb">
-                                    <img class="img-whp" src="assets/images/blog/2.jpg" alt="2.jpg">
-                                    <div class="blog_tag">Construction</div>
-                                </div>
-                                <div class="details">
-                                    <div class="tc_content">
-                                        <h4>Housing Markets That Changed the Most This Decade</h4>
-                                        <ul class="bpg_meta">
-                                            <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                            <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                    </div>
-                                    <div class="fp_footer">
-                                        <ul class="fp_meta float-left mb0">
-                                            <li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                            <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                        </ul>
-                                        <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="for_blog feat_property">
-                                <div class="thumb">
-                                    <img class="img-whp" src="assets/images/blog/3.jpg" alt="3.jpg">
-                                    <div class="blog_tag">Construction</div>
-                                </div>
-                                <div class="details">
-                                    <div class="tc_content">
-                                        <h4>Redfin Unveils the Best Canadian Cities for Biking</h4>
-                                        <ul class="bpg_meta">
-                                            <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                            <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                    </div>
-                                    <div class="fp_footer">
-                                        <ul class="fp_meta float-left mb0">
-                                            <li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                            <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                        </ul>
-                                        <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
+                                    <div class="details">
+                                        <div class="tc_content">
+                                            <h4> <?php echo $resblog['title'] ?></h4>
+                                            <ul class="bpg_meta">
+                                                <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
+                                                <li class="list-inline-item">
+                                                    <a href="#">
+                                                        <?php echo date('F j, Y',strtotime($resblog['dateuploaded'])) ?>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <p>
+                                                <?php
+                                                $content = $resblog['blog_text'];
+                                                preg_match('/^([^.!?]*[\.!?]+){0,2}/', strip_tags($content), $abstract);
+                                                echo $abstract[0];
+
+                                                ?>
+                                            </p>
+                                        </div>
+                                        <div class="fp_footer">
+                                            <ul class="fp_meta float-left mb0">
+                                                <li class="list-inline-item">
+                                                    <a href="#">
+                                                        <?php echo $resblog['user'] ?>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <a class="fp_pdate float-right text-thm" href="blogdetail?bid=<?php echo $resblog['imageid']; ?>">
+                                                Read More <span class="flaticon-next"></span></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="for_blog feat_property">
-                                <div class="thumb">
-                                    <img class="img-whp" src="assets/images/blog/4.jpg" alt="4.jpg">
-                                    <div class="blog_tag">Construction</div>
-                                </div>
-                                <div class="details">
-                                    <div class="tc_content">
-                                        <h4>You Can Buy The Piano Teacher’s Home from Groundhog Day</h4>
-                                        <ul class="bpg_meta">
-                                            <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                            <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                    </div>
-                                    <div class="fp_footer">
-                                        <ul class="fp_meta float-left mb0">
-                                            <li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                            <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                        </ul>
-                                        <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="for_blog feat_property">
-                                <div class="thumb">
-                                    <img class="img-whp" src="assets/images/blog/5.jpg" alt="5.jpg">
-                                    <div class="blog_tag">Construction</div>
-                                </div>
-                                <div class="details">
-                                    <div class="tc_content">
-                                        <h4>Why We Should All Support Clear Cooperation</h4>
-                                        <ul class="bpg_meta">
-                                            <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                            <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                    </div>
-                                    <div class="fp_footer">
-                                        <ul class="fp_meta float-left mb0">
-                                            <li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                            <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                        </ul>
-                                        <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="for_blog feat_property">
-                                <div class="thumb">
-                                    <img class="img-whp" src="assets/images/blog/6.jpg" alt="6.jpg">
-                                    <div class="blog_tag">Construction</div>
-                                </div>
-                                <div class="details">
-                                    <div class="tc_content">
-                                        <h4>Housing Markets That Changed the Most This Decade</h4>
-                                        <ul class="bpg_meta">
-                                            <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                            <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                        </ul>
-                                        <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                    </div>
-                                    <div class="fp_footer">
-                                        <ul class="fp_meta float-left mb0">
-                                            <li class="list-inline-item"><a href="#"><img src="assets/images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                            <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                        </ul>
-                                        <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       <?php } ?>
+
                     </div>
                     <div class="row">
                         <div class="col-lg-12">

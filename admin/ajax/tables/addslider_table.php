@@ -27,10 +27,7 @@ $pinq = $mysqli->query("select * from taymac_slider ORDER BY id DESC");
                 <tr>
                     <th>Header Text</th>
                     <th>Slider Text</th>
-                    <th>Property Status</th>
-                    <th>Property Type</th>
-                    <th>Location</th>
-                    <th>Period Updated</th>
+                    <th>Description</th>
                     <th>Image</th>
                     <th>Action</th>
                 </tr>
@@ -43,16 +40,18 @@ $pinq = $mysqli->query("select * from taymac_slider ORDER BY id DESC");
                     <tr>
                         <td><?php echo $fetch['header_text']; ?></td>
                         <td><?php echo $fetch['slider_text']; ?></td>
-                        <td><?php echo $fetch['property_status']; ?></td>
-                        <td><?php echo $fetch['property_type']; ?></td>
-                        <td><?php echo $fetch['property_location']; ?></td>
+                        <td>
+                            <b>Status</b>: <?php echo $fetch['property_status']; ?> <br/>
+                            <b>Type</b>: <?php echo $fetch['property_type']; ?> <br/>
+                            <b>Location</b>: <?php echo $fetch['property_location']; ?> <br/>
+                        </td>
                         <td><?php $imageid = $fetch['imageid'];
                             $getid = $mysqli->query("select * from taymac_image_slider where imageid = '$imageid'");
-                            $resid = $getid->fetch_assoc();
-                            echo $resid['dateuploaded'];
+                            $resid = $getid->fetch_assoc();?>
+                            <img src="<?php echo $resid['image_location'] ?>" width="100" height="50"/><br/>
+                           <?php echo $resid['dateuploaded'];
                             ?>
                         </td>
-                        <td><img src="<?php echo $resid['image_location'] ?>" width="100" height="50"/></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"

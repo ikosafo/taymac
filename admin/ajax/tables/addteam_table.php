@@ -25,10 +25,7 @@ $pinq = $mysqli->query("select * from taymac_team ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Member Name</th>
-                    <th>Position</th>
-                    <th>Mobile</th>
-                    <th>Email</th>
+                    <th>Details</th>
                     <th>Description</th>
                     <th>Action</th>
                 </tr>
@@ -39,10 +36,12 @@ $pinq = $mysqli->query("select * from taymac_team ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['member_name']; ?></td>
-                        <td><?php echo $fetch['member_position']; ?></td>
-                        <td><?php echo $fetch['member_mobile']; ?></td>
-                        <td><?php echo $fetch['member_email']; ?></td>
+                        <td>
+                            <b>Name</b> : <?php echo $fetch['member_name']; ?> <br/>
+                            <b>Position</b> : <?php echo $fetch['member_position']; ?> <br/>
+                            <b>Mobile</b> : <?php echo $fetch['member_mobile']; ?> <br/>
+                            <b>Email</b> : <?php echo $fetch['member_email']; ?> <br/>
+                        </td>
                         <td><?php echo $fetch['member_description']; ?></td>
                         <td>
                             <button type="button"

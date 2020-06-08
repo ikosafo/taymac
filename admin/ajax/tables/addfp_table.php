@@ -25,12 +25,9 @@ $pinq = $mysqli->query("select * from taymac_fp ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Property Status</th>
-                    <th>Property Type</th>
-                    <th>Location</th>
-                    <th>Period Updated</th>
                     <th>Description</th>
                     <th>Image</th>
+                    <th>Property Description</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -40,16 +37,17 @@ $pinq = $mysqli->query("select * from taymac_fp ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['property_status']; ?></td>
-                        <td><?php echo $fetch['property_type']; ?></td>
-                        <td><?php echo $fetch['property_location']; ?></td>
+                        <td>
+                            <b>Status</b>: <?php echo $fetch['property_status']; ?> <br/>
+                            <b>Type</b>: <?php echo $fetch['property_type']; ?> <br/>
+                            <b>Location</b>: <?php echo $fetch['property_location']; ?> <br/>
+                        </td>
                         <td><?php $imageid = $fetch['imageid'];
                             $getid = $mysqli->query("select * from taymac_image_fp where imageid = '$imageid'");
-                            $resid = $getid->fetch_assoc();
-                            echo $resid['dateuploaded'];
-                            ?>
+                            $resid = $getid->fetch_assoc(); ?>
+                            <img src="<?php echo $resid['image_location'] ?>" width="100" height="50"/>
+                            <?php echo $resid['dateuploaded']; ?>
                         </td>
-                        <td><img src="<?php echo $resid['image_location'] ?>" width="100" height="50"/></td>
                         <td><?php echo $fetch['fp_description']; ?></td>
                         <td>
                             <button type="button"
