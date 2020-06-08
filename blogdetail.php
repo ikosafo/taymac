@@ -66,92 +66,65 @@ $resblog = $getblog->fetch_assoc(); ?>
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="pag_prev">
-                                        <a href="#"><span class="flaticon-back"></span></a>
-                                        <div class="detls"><h5>Previous Post</h5> <p> Housing Markets That</p></div>
+                                        <?php $getprevious = $mysqli->query("select * from taymac_blog where imageid = '$imageid'");
+                                        $resprevious = $getprevious->fetch_assoc();
+                                        $getid = $resprevious['id'];
+                                        $previousid = $getid - 1;
+                                        $nextid = $getid + 1;
+
+                                        $getprevblog = $mysqli->query("select * from taymac_blog where id = '$previousid'");
+                                        $resprevblog = $getprevblog->fetch_assoc();
+                                        $getprevid = $resprevblog['imageid'];
+                                        $linkgetprevid = "?bid=$getprevid";
+                                        if ($getprevid == "") {
+                                            $linkgetprevid = '#.';
+                                        }
+
+                                        $getnextblog = $mysqli->query("select * from taymac_blog where id = '$nextid'");
+                                        $resnextblog = $getnextblog->fetch_assoc();
+                                        $getnextid = $resnextblog['imageid'];
+                                        $linkgetnextid = "?bid=$getnextid";
+                                        if ($getnextid == "") {
+                                            $linkgetnextid = "#.";
+                                        }
+
+                                        ?>
+
+                                        <a href="<?php echo $linkgetprevid ?>"><span class="flaticon-back"></span></a>
+                                        <div class="detls"><h5>Previous Post</h5>
+                                            <p> <?php echo $resprevblog['title'] ?></p></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="pag_next text-right">
-                                        <a href="#"><span class="flaticon-next"></span></a>
-                                        <div class="detls"><h5>Next Post</h5> <p> Most This Decade</p></div>
+                                        <a href="<?php echo $linkgetnextid ?>"><span class="flaticon-next"></span></a>
+                                        <div class="detls"><h5>Next Post</h5>
+                                            <p> <?php echo $resnextblog['title'] ?></p></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="product_single_content mb30">
-                            <div class="mbp_pagination_comments">
-                                <div class="total_review">
-                                    <h4>896 Reviews</h4>
-                                    <ul class="review_star_list mb0 pl10">
-                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                                    </ul>
-                                    <a class="tr_outoff pl10" href="#">( 4.5 out of 5 )</a>
-                                    <a class="write_review float-right fn-xsd" href="#">Write a Review</a>
-                                </div>
-                                <div class="mbp_first media">
-                                    <img src="assets/images/testimonial/1.png" class="mr-3" alt="1.png">
-                                    <div class="media-body">
-                                        <h4 class="sub_title mt-0">Diana Cooper
-											<span class="sspd_review">
-												<ul class="mb0 pl15">
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"></li>
-                                                </ul>
-											</span>
-                                        </h4>
-                                        <a class="sspd_postdate fz14" href="#">December 28, 2020</a>
-                                        <p class="fz14 mt10">Beautiful home, very picturesque and close to everything in jtree! A little warm for a hot weekend, but would love to come back during the cooler seasons!</p>
-                                    </div>
-                                </div>
-                                <div class="custom_hr"></div>
-                                <div class="mbp_first media">
-                                    <img src="assets/images/testimonial/2.png" class="mr-3" alt="2.png">
-                                    <div class="media-body">
-                                        <h4 class="sub_title mt-0">Ali Tufan
-											<span class="sspd_review">
-												<ul class="mb0 pl15">
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                                    <li class="list-inline-item"></li>
-                                                </ul>
-											</span>
-                                        </h4>
-                                        <a class="sspd_postdate fz14" href="#">December 28, 2020</a>
-                                        <p class="fz14 mt10">Beautiful home, very picturesque and close to everything in jtree! A little warm for a hot weekend, but would love to come back during the cooler seasons!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bsp_reveiw_wrt">
+
+                        <div class="bsp_reveiw_wrt" id="writeareview">
                             <h4>Write a Review</h4>
                             <ul class="review_star">
                                 <li class="list-inline-item">
-									<span class="sspd_review">
+									<span class="sspd_review" id="ratingdiv">
 										<ul>
-                                            <li class="list-inline-item"><a href="#" style="color:#e1e1e1 !important;">
+                                            <li class="list-inline-item"><a href="#." id="1star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i>
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#." id="2star" style="color:#e1e1e1 !important;">
                                                     <i class="fa fa-star"></i></a>
                                             </li>
-                                            <li class="list-inline-item"><a href="#" style="color:#e1e1e1 !important;">
+                                            <li class="list-inline-item"><a href="#." id="3star" style="color:#e1e1e1 !important;">
                                                     <i class="fa fa-star"></i></a>
                                             </li>
-                                            <li class="list-inline-item"><a href="#" style="color:#e1e1e1 !important;">
+                                            <li class="list-inline-item"><a href="#." id="4star" style="color:#e1e1e1 !important;">
                                                     <i class="fa fa-star"></i></a>
                                             </li>
-                                            <li class="list-inline-item"><a href="#" style="color:#e1e1e1 !important;">
-                                                    <i class="fa fa-star"></i></a>
-                                            </li>
-                                            <li class="list-inline-item"><a href="#" style="color:#e1e1e1 !important;">
+                                            <li class="list-inline-item"><a href="#." id="5star" style="color:#e1e1e1 !important;">
                                                     <i class="fa fa-star"></i></a>
                                             </li>
                                         </ul>
@@ -174,6 +147,178 @@ $resblog = $getblog->fetch_assoc(); ?>
                                 </div>
                                 <button type="button" class="btn btn-thm" id="savereview">Submit Review</button>
                             </form>
+                        </div>
+
+                        <div class="product_single_content mb30">
+                            <div class="mbp_pagination_comments">
+                                <div class="total_review">
+                                    <h4>
+                                        <?php
+                                        $getnum = $mysqli->query("select * from taymac_blog_review where blogid = '$imageid'");
+                                        echo $countreviews = mysqli_num_rows($getnum);
+                                        if ($countreviews == '1') {
+                                            echo " Review";
+                                        }
+                                        else {
+                                            echo " Reviews";
+                                        }
+                                        ?>
+                                    </h4>
+
+                                    <?php
+                                    $getavg = $mysqli->query("select AVG(ratenum) AS averaterate from taymac_blog_rating where postid = '$imageid'");
+                                    $resavg = $getavg->fetch_assoc();
+                                    $averagerate =  number_format($resavg['averaterate'],1);
+                                    $round = round($averagerate);
+
+                                    if ($round == '1') {?>
+                                        <ul class="mb0 pl10">
+                                            <li class="list-inline-item"><a href="#" id="1star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="2star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="3star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="4star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="5star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                        </ul>
+                                    <?php }
+                                    else if ($round == '2') {
+                                        ?>
+
+                                        <ul class="mb0 pl10">
+                                            <li class="list-inline-item"><a href="#" id="1star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="2star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="3star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="4star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="5star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                        </ul>
+
+                                    <?php }
+                                    else if ($round == '3') {
+                                        ?>
+                                        <ul class="mb0 pl10">
+                                            <li class="list-inline-item"><a href="#" id="1star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="2star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="3star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="4star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="5star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                        </ul>
+                                    <?php }
+                                    else if ($round == '4') {
+                                        ?>
+
+                                        <ul class="mb0 pl10">
+                                            <li class="list-inline-item"><a href="#" id="1star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="2star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="3star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="4star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="5star" style="color:#e1e1e1 !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                        </ul>
+
+                                    <?php }
+                                    else if ($round == '50') {
+                                        ?>
+
+                                        <ul class="mb0 pl10">
+                                            <li class="list-inline-item"><a href="#" id="1star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="2star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="3star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="4star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                            <li class="list-inline-item"><a href="#" id="5star" style="color:#bcc52a !important;">
+                                                    <i class="fa fa-star"></i></a>
+                                            </li>
+                                        </ul>
+
+                                    <?php } ?>
+
+
+                                    <a class="tr_outoff pl10" href="#">(
+                                        <?php
+                                        echo $averagerate;
+                                        ?>
+                                        out of 5 )</a>
+
+                                    <a class="write_review float-right fn-xsd" href="#writeareview">Write a Review</a>
+                                </div>
+
+
+                                <?php
+                                $getreviews = $mysqli->query("select * from taymac_blog_review where blogid = '$imageid'");
+                                while ($resreviews = $getreviews->fetch_assoc()){ ?>
+                                    <div class="mbp_first media">
+                                        <div class="media-body">
+                                            <h4 class="sub_title mt-0"><?php echo $resreviews['reviewname'] ?>
+                                                <span class="sspd_review">
+												<!--<ul class="mb0 pl15">
+                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                                                    <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
+                                                    <li class="list-inline-item"></li>
+                                                </ul>-->
+											</span>
+                                            </h4>
+                                            <a class="sspd_postdate fz14" href="#">
+                                                <?php echo date('F j, Y',strtotime($resblog['dateuploaded'])) ?>
+                                            </a>
+                                            <p class="fz14 mt10">
+                                                <?php echo $resreviews['reviewtext'] ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="custom_hr"></div>
+                                <?php } ?>
+
+
+
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -245,14 +390,21 @@ $resblog = $getblog->fetch_assoc(); ?>
                         </div>
                     </div>
                     <div class="terms_condition_widget">
-                        <h4 class="title">Categories Property</h4>
+                        <h4 class="title">Categories</h4>
                         <div class="widget_list">
                             <ul class="list_details">
-                                <li><a href="#"><i class="fa fa-caret-right mr10"></i>Apartment <span class="float-right">6 properties</span></a></li>
-                                <li><a href="#"><i class="fa fa-caret-right mr10"></i>Condo <span class="float-right">12 properties</span></a></li>
-                                <li><a href="#"><i class="fa fa-caret-right mr10"></i>Family House <span class="float-right">8 properties</span></a></li>
-                                <li><a href="#"><i class="fa fa-caret-right mr10"></i>Modern Villa <span class="float-right">26 properties</span></a></li>
-                                <li><a href="#"><i class="fa fa-caret-right mr10"></i>Town House <span class="float-right">89 properties</span></a></li>
+
+                                <?php
+                                $getcategories = $mysqli->query("select DISTINCT(category) from taymac_blog");
+                                while ($rescategories = $getcategories->fetch_assoc()) { ?>
+                                    <li>
+                                        <a href="#"><i class="fa fa-caret-right mr10"></i>
+                                           <?php echo $rescategories['category'] ?>
+                                        </a>
+                                    </li>
+                               <?php } ?>
+
+
                             </ul>
                         </div>
                     </div>
@@ -317,6 +469,108 @@ $resblog = $getblog->fetch_assoc(); ?>
 
 <script>
 
+    $("#1star").click(function () {
+        var onestar = 'One Star';
+        var blogid = '<?php echo $imageid; ?>';
+        alert(onestar);
+        $.ajax({
+            type: "POST",
+            url: "blograting.php",
+            data: {
+                star: onestar,
+                blogid:blogid
+            },
+            success: function (text) {
+                $('#ratingdiv').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+        });
+    });
+
+
+    $("#2star").click(function () {
+        var twostars = 'Two Stars';
+        var blogid = '<?php echo $imageid; ?>';
+        //alert(onestar);
+        $.ajax({
+            type: "POST",
+            url: "blograting.php",
+            data: {
+                star: twostars,
+                blogid:blogid
+            },
+            success: function (text) {
+                $('#ratingdiv').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+        });
+    });
+
+    $("#3star").click(function () {
+        var threestars = 'Three Stars';
+        var blogid = '<?php echo $imageid; ?>';
+        //alert(onestar);
+        $.ajax({
+            type: "POST",
+            url: "blograting.php",
+            data: {
+                star: threestars,
+                blogid:blogid
+            },
+            success: function (text) {
+                $('#ratingdiv').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+        });
+    });
+
+    $("#4star").click(function () {
+        var fourstars = 'Four Stars';
+        var blogid = '<?php echo $imageid; ?>';
+        //alert(onestar);
+        $.ajax({
+            type: "POST",
+            url: "blograting.php",
+            data: {
+                star: fourstars,
+                blogid:blogid
+            },
+            success: function (text) {
+                $('#ratingdiv').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+        });
+    });
+
+    $("#5star").click(function () {
+        var fivestars = 'Five Stars';
+        var blogid = '<?php echo $imageid; ?>';
+        //alert(onestar);
+        $.ajax({
+            type: "POST",
+            url: "blograting.php",
+            data: {
+                star: fivestars,
+                blogid:blogid
+            },
+            success: function (text) {
+                $('#ratingdiv').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+        });
+    });
+
+
     $("#savereview").click(function () {
         var reviewname = $("#reviewname").val();
         var reviewtitle = $("#reviewtitle").val();
@@ -337,7 +591,6 @@ $resblog = $getblog->fetch_assoc(); ?>
             $("#reviewtext").focus();
         }
 
-
         if (error == "") {
             $.ajax({
                 type: "POST",
@@ -349,7 +602,7 @@ $resblog = $getblog->fetch_assoc(); ?>
                     blogid:blogid
                 },
                 success: function (text) {
-                    alert('Message Sent');
+                    alert('Review Saved');
                     location.reload();
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
@@ -361,7 +614,6 @@ $resblog = $getblog->fetch_assoc(); ?>
             $.notify(error, {position: "top center"});
         }
         return false;
-
     });
 
 </script>
