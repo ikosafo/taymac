@@ -139,9 +139,7 @@ $resbilling = $getbilling->fetch_assoc();
 <!--end::Form-->
 
 
-
 <script>
-
     $("#billing_type").select2({placeholder: "Select Billing Type"});
     $("#billing_tenant").select2({placeholder: "Select Tenant"});
     $("#billing_currency").select2({placeholder: "Select Currency"});
@@ -171,6 +169,7 @@ $resbilling = $getbilling->fetch_assoc();
         var billing_date = $("#billing_date").val();
         var billing_delivered = $('input[name=billing_delivered]:checked').val();
         var billing_description = $("#billing_description").val();
+        var theindex = '<?php echo $theindex ?>';
 
         var error = '';
         if (billing_type == "") {
@@ -213,11 +212,10 @@ $resbilling = $getbilling->fetch_assoc();
             error += 'Please specify whether bill is generated \n';
         }
 
-
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_adminbilling.php",
+                url: "ajax/queries/editform_adminbilling.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -236,7 +234,8 @@ $resbilling = $getbilling->fetch_assoc();
                     billing_months:billing_months,
                     billing_date:billing_date,
                     billing_delivered:billing_delivered,
-                    billing_description:billing_description
+                    billing_description:billing_description,
+                    theindex:theindex
                 },
                 success: function (text) {
                     //alert(text);

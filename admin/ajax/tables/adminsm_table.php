@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
+$pinq = $mysqli->query("select * from admin_taymac_sm ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,8 +25,8 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Billing Details</th>
-                    <th>Billing Amount(s)</th>
+                    <th>Service Details</th>
+                    <th>Service Cost</th>
                     <th>Description</th>
                     <th>Bill</th>
                     <th>Action</th>
@@ -39,49 +39,45 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
                     ?>
                     <tr>
                         <td>
-                            <b>Billing Type : </b><?php echo $billing_type = $fetch['billing_type'];
-                             if($billing_type == "") {
-                                 echo $fetch['billing_type_other'];
-                             }
+                            <b>Service Type : </b><?php echo $sm_type = $fetch['sm_type'];
+                            if($sm_type == "") {
+                                echo $fetch['sm_type_other'];
+                            }
                             ?> <br/>
-                            <b>Tenant :</b> <?php $tenant =  $fetch['billing_tenant'];
+                            <b>Tenant :</b> <?php $tenant =  $fetch['sm_tenant'];
                             $gettenant = $mysqli->query("select * from admin_taymac_tenant where id = '$tenant'");
                             $restenant = $gettenant->fetch_assoc();
                             echo $restenant['tenant_name'];
                             ?> <br/>
-                            <b>Billing Currency : </b> <?php echo $currency = $fetch['billing_currency']; ?> <br/>
-                            <b>Billed For : </b> <?php echo $fetch['billing_period']; ?> <br/>
-                            <b>Bill Sent : </b> <?php echo $fetch['billing_delivered']; ?> <br/>
+                            <b>Currency : </b> <?php echo $currency = $fetch['sm_currency']; ?> <br/>
                         </td>
                         <td>
-                            <b>Amt Per Month : </b>  <?php echo getCurrency($currency).' '.number_format($fetch['billing_amount'],2); ?> <br/>
-                            <b>Number of Months : </b>  <?php echo $fetch['billing_months']; ?> <br/>
-                            <b>Total Bill : </b>  <?php echo getCurrency($currency).' '.number_format($fetch['billing_total'],2); ?> <br/>
-                            <b>Debt : </b>  <?php echo getCurrency($currency).' '.number_format(($fetch['billing_total'] - $fetch['amt_paid']),2); ?> <br/>
+                            <b>Total Bill : </b>  <?php echo getCurrency($currency).' '.number_format($fetch['sm_amount'],2); ?> <br/>
+                            <b>Debt : </b>  <?php echo getCurrency($currency).' '.number_format(($fetch['sm_amount'] - $fetch['amt_paid']),2); ?> <br/>
 
-                           </td>
-                        <td><?php echo $fetch['billing_description']; ?></td>
+                        </td>
+                        <td><?php echo $fetch['sm_description']; ?></td>
                         <td>
-                               <button type="button"
-                                        data-type="confirm"
-                                        class="btn btn-sm btn-success pay_billing"
-                                        i_index="<?php echo $fetch['id']; ?>"
-                                        title="Pay Bill">
-                                    Pay
-                                </button>
+                            <button type="button"
+                                    data-type="confirm"
+                                    class="btn btn-sm btn-success pay_sm"
+                                    i_index="<?php echo $fetch['id']; ?>"
+                                    title="Pay Bill">
+                                Pay
+                            </button>
                             <p></p>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-warning print_billing"
+                                    class="btn btn-sm btn-warning print_sm"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Print">
                                 <i class="flaticon2-print ml-1" style="color:#fff !important;"></i>
                             </button>
-                            </td>
-                            <td>
+                        </td>
+                        <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-primary edit_billing"
+                                    class="btn btn-sm btn-primary edit_sm"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Edit">
                                 <i class="flaticon2-edit ml-1" style="color:#fff !important;"></i>
@@ -89,7 +85,7 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
                             <p></p>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-danger delete_billing"
+                                    class="btn btn-sm btn-danger delete_sm"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-1" style="color:#fff !important;"></i>
@@ -113,11 +109,11 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_billing').on('click', '.delete_billing', function () {
+    $(document).off('click', '.delete_sm').on('click', '.delete_sm', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Billing!',
+            title: 'Delete sm!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -135,14 +131,14 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_adminbilling.php",
+                            url: "ajax/queries/delete_adminsm.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/adminbilling_table.php",
+                                    url: "ajax/tables/adminsm_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -152,7 +148,7 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#billingtable_div').html(text);
+                                        $('#smtable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
@@ -175,13 +171,13 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
         });
     });
 
-    $(document).off('click', '.edit_billing').on('click', '.edit_billing', function () {
+    $(document).off('click', '.edit_sm').on('click', '.edit_sm', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex);
 
         $.ajax({
             type: "POST",
-            url: "ajax/forms/adminbilling_formedit.php",
+            url: "ajax/forms/adminsm_formedit.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -194,7 +190,7 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
                 theindex:theindex
             },
             success: function (text) {
-                $('#billingform_div').html(text);
+                $('#smform_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);
@@ -205,13 +201,13 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
         });
     });
 
-    $(document).off('click', '.pay_billing').on('click', '.pay_billing', function () {
+    $(document).off('click', '.pay_sm').on('click', '.pay_sm', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex);
 
         $.ajax({
             type: "POST",
-            url: "ajax/forms/adminbillingpay_form.php",
+            url: "ajax/forms/adminsmpay_form.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -224,7 +220,7 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
                 theindex:theindex
             },
             success: function (text) {
-                $('#billingform_div').html(text);
+                $('#smform_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);
@@ -236,13 +232,13 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
     });
 
 
-    $(document).off('click', '.print_billing').on('click', '.print_billing', function () {
+    $(document).off('click', '.print_sm').on('click', '.print_sm', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex);
 
         $.ajax({
             type: "POST",
-            url: "ajax/forms/adminbillingprint_form.php",
+            url: "ajax/forms/adminsmprint_form.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -255,7 +251,7 @@ $pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
                 theindex:theindex
             },
             success: function (text) {
-                $('#billingform_div').html(text);
+                $('#smform_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);

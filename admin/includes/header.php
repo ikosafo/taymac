@@ -51,6 +51,7 @@ if (!isset($_SESSION['username'])) {
             document.body.innerHTML = printcontent;
             window.print();
             document.body.innerHTML = restorepage;
+            location.reload();
         }
     </script>
 
@@ -400,7 +401,10 @@ background-size: 100% 350px;"
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                     $_SERVER['PHP_SELF'] == "/admin/admin_property.php" ||
                                     $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_billing.php"
+                                    $_SERVER['PHP_SELF'] == "/admin/admin_billing.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/admin_billingpay.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/admin_sm.php"
+
                                     ? "kt-menu__item--here" : ""); ?>"
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
@@ -429,40 +433,22 @@ background-size: 100% 350px;"
                                                             class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                             class="kt-menu__link-text">Tenant</span></a>
                                                 </li>
-                                                <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/admin_billing.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/admin_billingpay.php"
-
-                                                    ? "kt-menu__item--here" : ""); ?>"
-                                                    data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                                        href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                                        <span class="kt-menu__link-text">Billing</span><i
-                                                            class="kt-menu__hor-arrow la la-angle-right"></i><i
-                                                            class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                                    <div
-                                                        class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                        <ul class="kt-menu__subnav">
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/admin_billing.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="admin_billing"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Add Bill</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item   <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_pm.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="admin_billingpay"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Pay Bills</span></a>
-                                                            </li>
-
-                                                        </ul>
-                                                    </div>
+                                                <li class="kt-menu__item   <?php echo(
+                                                $_SERVER['PHP_SELF'] == "/admin/admin_billing.php"
+                                                    ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                        href="admin_billing"
+                                                        class="kt-menu__link "><i
+                                                            class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                            class="kt-menu__link-text">Billing</span></a>
                                                 </li>
-
+                                                <li class="kt-menu__item   <?php echo(
+                                                $_SERVER['PHP_SELF'] == "/admin/admin_sm.php"
+                                                    ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                        href="admin_sm"
+                                                        class="kt-menu__link "><i
+                                                            class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                            class="kt-menu__link-text">Service & Maintenance</span></a>
+                                                </li>
 
                                             </ul>
                                         </div>
