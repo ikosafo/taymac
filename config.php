@@ -8,6 +8,7 @@ define('APPROOT', dirname(dirname( __FILE__ )));
 
 date_default_timezone_set('UTC');
 
+//$mysqli= new mysqli('localhost','u349494272_root','Is0205737464','u349494272_taymac');
 $mysqli= new mysqli('localhost:3308','root','root','taymac');
 
 /*$reg_root = 'https://registration.ahpcgh.org';
@@ -38,6 +39,23 @@ function getBill($professionid,$registrationtype){
 }
 
 
+function getCurrency ($currency) {
+    if ($currency == 'US Dollars') {
+        return '&#36;';
+    }
+    else if ($currency == 'GH Cedis') {
+        return 'GHS';
+    }
+    else if ($currency == 'GB Pounds') {
+        return '&#163;';
+    }
+    else if ($currency == 'Euros') {
+        return '&#8364;';
+    }
+    else {
+        return '';
+    }
+}
 
 
 ?>

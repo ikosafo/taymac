@@ -47,7 +47,7 @@ $pinq = $mysqli->query("select * from admin_taymac_tenant ORDER BY id DESC");
                             $resname = $getname->fetch_assoc();
                             echo $resname['property_name']
                             ?></td>
-                        <td><?php echo $fetch['date_started'].' to '.$fetch['date_completed'] ?></td>
+                        <td><?php echo $fetch['date_started'].' <b>to</b><br/> '.$fetch['date_completed'] ?></td>
                         <td><?php echo $fetch['payment_rate'] ?></td>
                         <td><?php echo $fetch['tenant_telephone'] ?></td>
                         <td><?php echo $fetch['tenant_email'] ?></td>
@@ -55,17 +55,18 @@ $pinq = $mysqli->query("select * from admin_taymac_tenant ORDER BY id DESC");
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-primary edit_tenant"
+                                    class="btn btn-sm btn-primary edit_tenant"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Edit">
-                                <i class="flaticon2-edit ml-2" style="color:#fff !important;"></i>
+                                <i class="flaticon2-edit ml-1" style="color:#fff !important;"></i>
                             </button>
+                            <p></p>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-danger delete_tenant"
+                                    class="btn btn-sm btn-danger delete_tenant"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
-                                <i class="flaticon2-trash ml-2" style="color:#fff !important;"></i>
+                                <i class="flaticon2-trash ml-1" style="color:#fff !important;"></i>
                             </button>
                         </td>
                     </tr>
@@ -145,6 +146,35 @@ $pinq = $mysqli->query("select * from admin_taymac_tenant ORDER BY id DESC");
                     }
                 }
             }
+        });
+    });
+
+    $(document).off('click', '.edit_tenant').on('click', '.edit_tenant', function () {
+        var theindex = $(this).attr('i_index');
+        //alert(theindex)
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/admintenant_formedit.php",
+            beforeSend: function () {
+                KTApp.blockPage({
+                    overlayColor: "#000000",
+                    type: "v2",
+                    state: "success",
+                    message: "Please wait..."
+                })
+            },
+            data:{
+                theindex:theindex
+            },
+            success: function (text) {
+                $('#tenantform_div').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+            complete: function () {
+                KTApp.unblockPage();
+            },
         });
     });
 </script>

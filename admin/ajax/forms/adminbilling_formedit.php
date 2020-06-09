@@ -1,5 +1,9 @@
 <?php include ('../../../config.php');
 $random = rand(1,10000).date("Ymd");
+$theindex = $_POST['theindex'];
+
+$getbilling = $mysqli->query("select * from admin_taymac_billing where id = '$theindex'");
+$resbilling = $getbilling->fetch_assoc();
 ?>
 
 <script>
@@ -33,27 +37,29 @@ $random = rand(1,10000).date("Ymd");
                 <label for="billing_type">Billing Type *</label>
                 <select id="billing_type" style="width: 100%">
                     <option value="">Select Billing Type</option>
-                    <option value="Rent">Rent</option>
-                    <option value="CAM Fees">CAM Fees</option>
-                    <option value="Reimburse Bills">Reimburse Bills</option>
-                    <option value="Other">Other</option>
+                    <option <?php if (@$resbilling['billing_type'] == "Rent") echo "Selected" ?>>Rent</option>
+                    <option <?php if (@$resbilling['billing_type'] == "CAM Fees") echo "Selected" ?>>CAM Fees</option>
+                    <option <?php if (@$resbilling['billing_type'] == "Reimburse Bills") echo "Selected" ?>>Reimburse Bills</option>
+                    <option <?php if (@$resbilling['billing_type'] == "Other") echo "Selected" ?>>Other</option>
                 </select>
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="billing_type_other">If Billing Type is 'Other', Specify</label>
                 <input type="text" class="form-control" id="billing_type_other"
-                       placeholder="If Other, Specify">
+                       placeholder="If Other, Specify" value="<?php echo $resbilling['billing_type_other'] ?>">
             </div>
-         </div>
+        </div>
 
         <div class="form-group row">
             <div class="col-lg-6 col-md-6">
                 <label for="billing_tenant">Select Tenant *</label>
                 <select id="billing_tenant" style="width: 100%">
                     <option value="">Select Tenant</option>
-                    <?php $gettenant = $mysqli->query("select * from admin_taymac_tenant");
+                    <?php
+                    $billing_tenant = $resbilling['billing_tenant'];
+                    $gettenant = $mysqli->query("select * from admin_taymac_tenant");
                     while ($restenant = $gettenant->fetch_assoc()) { ?>
-                        <option value="<?php echo $restenant['id'] ?>"><?php echo $restenant['tenant_name'] ?></option>
+                        <option <?php if (@$billing_tenant == $restenant['id']) echo "Selected" ?>><?php echo $restenant['tenant_name'] ?></option>
                     <?php  } ?>
                 </select>
             </div>
@@ -61,11 +67,11 @@ $random = rand(1,10000).date("Ymd");
                 <label for="billing_currency">Currency *</label>
                 <select id="billing_currency" style="width: 100%">
                     <option value="">Select Currency</option>
-                    <option value="US Dollars">US Dollars</option>
-                    <option value="GH Cedis">GH Cedis</option>
-                    <option value="GB Pounds">GB Pounds</option>
-                    <option value="Euros">Euros</option>
-                    <option value="Other">Other</option>
+                    <option <?php if (@$resbilling['billing_currency'] == "US Dollars") echo "Selected" ?>>US Dollars</option>
+                    <option <?php if (@$resbilling['billing_currency'] == "GH Cedis") echo "Selected" ?>>GH Cedis</option>
+                    <option <?php if (@$resbilling['billing_currency'] == "GB Pounds") echo "Selected" ?>>GB Pounds</option>
+                    <option <?php if (@$resbilling['billing_currency'] == "Euros") echo "Selected" ?>>Euros</option>
+                    <option <?php if (@$resbilling['billing_currency'] == "Other") echo "Selected" ?>>Other</option>
                 </select>
             </div>
         </div>
@@ -74,12 +80,13 @@ $random = rand(1,10000).date("Ymd");
             <div class="col-lg-6 col-md-6">
                 <label for="billing_period">Billing For *</label>
                 <input type="text" class="form-control" id="billing_period"
-                       placeholder="Select Date Billed For">
+                       placeholder="Select Date Billed For" value="<?php echo $resbilling['billing_period'] ?>">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="billing_amount">Amount Per Month *</label>
                 <input type="text" class="form-control" id="billing_amount"
-                       placeholder="Enter Billing Amount" onkeypress="return isNumberKey(event)">
+                       placeholder="Enter Billing Amount" onkeypress="return isNumberKey(event)"
+                       value="<?php echo $resbilling['billing_amount'] ?>">
             </div>
         </div>
 
@@ -87,12 +94,13 @@ $random = rand(1,10000).date("Ymd");
             <div class="col-lg-6 col-md-6">
                 <label for="billing_months">Number of Months *</label>
                 <input type="text" class="form-control" id="billing_months"
-                       placeholder="Enter Number of Months" onkeypress="return isNumber(event)">
+                       placeholder="Enter Number of Months" onkeypress="return isNumber(event)"
+                       value="<?php echo $resbilling['billing_months'] ?>">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="billing_date">Date Billed *</label>
                 <input type="text" class="form-control" id="billing_date"
-                       placeholder="Select Date Billed For">
+                       placeholder="Select Date Billed For" value="<?php echo $resbilling['billing_date'] ?>">
             </div>
         </div>
 
@@ -101,19 +109,21 @@ $random = rand(1,10000).date("Ymd");
                 <label>Bill Delivered *</label> <br/>
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" id="billing_delivered1"
-                           name="billing_delivered" value="Yes" class="custom-control-input">
+                           name="billing_delivered" value="Yes" class="custom-control-input"
+                        <?php if (@$resbilling['billing_delivered'] == "Yes") echo "checked" ?>>
                     <label class="custom-control-label" for="billing_delivered1">Yes</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
                     <input type="radio" id="billing_delivered2"
-                           name="billing_delivered" value="No" class="custom-control-input">
+                           name="billing_delivered" value="No" class="custom-control-input"
+                        <?php if (@$resbilling['billing_delivered'] == "No") echo "checked" ?>>
                     <label class="custom-control-label" for="billing_delivered2">No</label>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="billing_description">Description</label>
                 <textarea class="form-control" id="billing_description"
-                          placeholder="Enter Description"></textarea>
+                          placeholder="Enter Description"><?php echo $resbilling['billing_description'] ?></textarea>
             </div>
         </div>
 
@@ -217,16 +227,16 @@ $random = rand(1,10000).date("Ymd");
                     })
                 },
                 data: {
-                        billing_type: billing_type,
-                        billing_type_other: billing_type_other,
-                        billing_tenant: billing_tenant,
-                        billing_currency:billing_currency,
-                        billing_period:billing_period,
-                        billing_amount:billing_amount,
-                        billing_months:billing_months,
-                        billing_date:billing_date,
-                        billing_delivered:billing_delivered,
-                        billing_description:billing_description
+                    billing_type: billing_type,
+                    billing_type_other: billing_type_other,
+                    billing_tenant: billing_tenant,
+                    billing_currency:billing_currency,
+                    billing_period:billing_period,
+                    billing_amount:billing_amount,
+                    billing_months:billing_months,
+                    billing_date:billing_date,
+                    billing_delivered:billing_delivered,
+                    billing_description:billing_description
                 },
                 success: function (text) {
                     //alert(text);

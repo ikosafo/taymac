@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
+$pinq = $mysqli->query("select * from admin_taymac_billing ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,10 +25,10 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Property Name</th>
-                    <th>Property Type</th>
-                    <th>Location</th>
-                    <th>Address</th>
+                    <th>Billing Details</th>
+                    <th>Amount</th>
+                    <th>Number of Months</th>
+                    <th>Total Amount to Pay</th>
                     <th>Description</th>
                     <th>Action</th>
                 </tr>
@@ -39,16 +39,30 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['property_name']; ?></td>
-                        <td><?php echo $fetch['property_type']; ?></td>
-                        <td><?php echo $fetch['property_location']; ?></td>
-                        <td><?php echo $fetch['property_address']; ?></td>
-                        <td><?php echo $fetch['property_description']; ?></td>
+                        <td>
+                            <b>Billing Type : </b><?php echo $billing_type = $fetch['billing_type'];
+                             if($billing_type == "") {
+                                 echo $fetch['billing_type_other'];
+                             }
+                            ?> <br/>
+                            <b>Tenant :</b> <?php $tenant =  $fetch['billing_tenant'];
+                            $gettenant = $mysqli->query("select * from admin_taymac_tenant where id = '$tenant'");
+                            $restenant = $gettenant->fetch_assoc();
+                            echo $restenant['tenant_name']
+                            ?> <br/>
+                            <b>Billing Currency : </b> <?php echo $currency = $fetch['billing_currency']; ?> <br/>
+                            <b>Billed For : </b> <?php echo $fetch['billing_period']; ?> <br/>
+                            <b>Bill Sent : </b> <?php echo $fetch['billing_delivered']; ?> <br/>
+                        </td>
+                        <td><?php echo getCurrency($currency).' '.number_format($fetch['billing_amount'],2); ?></td>
+                        <td><?php echo $fetch['billing_months']; ?></td>
+                        <td><?php echo getCurrency($currency).' '.number_format($fetch['billing_total'],2); ?></td>
+                        <td><?php echo $fetch['billing_description']; ?></td>
 
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-primary edit_property"
+                                    class="btn btn-sm btn-primary edit_billing"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Edit">
                                 <i class="flaticon2-edit ml-1" style="color:#fff !important;"></i>
@@ -56,7 +70,7 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
                             <p></p>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-danger delete_property"
+                                    class="btn btn-sm btn-danger delete_billing"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-1" style="color:#fff !important;"></i>
@@ -80,11 +94,11 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_property').on('click', '.delete_property', function () {
+    $(document).off('click', '.delete_billing').on('click', '.delete_billing', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Property!',
+            title: 'Delete Billing!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -102,14 +116,14 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_adminproperty.php",
+                            url: "ajax/queries/delete_adminbilling.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/adminproperty_table.php",
+                                    url: "ajax/tables/adminbilling_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -119,7 +133,7 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#propertytable_div').html(text);
+                                        $('#billingtable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
@@ -142,13 +156,13 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
         });
     });
 
-    $(document).off('click', '.edit_property').on('click', '.edit_property', function () {
+    $(document).off('click', '.edit_billing').on('click', '.edit_billing', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex);
 
         $.ajax({
             type: "POST",
-            url: "ajax/forms/adminproperty_formedit.php",
+            url: "ajax/forms/adminbilling_formedit.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -161,7 +175,7 @@ $pinq = $mysqli->query("select * from admin_taymac_property ORDER BY id DESC");
                 theindex:theindex
             },
             success: function (text) {
-                $('#propertyform_div').html(text);
+                $('#billingform_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);
