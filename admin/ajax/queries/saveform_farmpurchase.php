@@ -13,7 +13,7 @@ $mysqli->query("INSERT INTO `farm_purchases`
              `item_name`,
              `input_kg`,
              `input_g`,
-             `input_cost_f`,
+             `input_cost`,
              `input_type`,
              `date_pf`)
 VALUES (
