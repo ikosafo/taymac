@@ -21,27 +21,27 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Property Management
-                                    <small>Search Bill by Date Range</small>
+                                    <small>Search Service and Maintenance by Date Range</small>
                                 </h3>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                                <div class="col-lg-4 col-md-4">
-                                    <label for="date_started">Start Date</label>
-                                    <input type="text" class="form-control" id="start_date"
-                                           placeholder="Select Start Date">
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <label for="date_completed">End Date</label>
-                                    <input type="text" class="form-control" id="end_date"
-                                           placeholder="Select End Date">
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <label for="date_completed">Search</label> <br/>
-                                    <button type="button" class="btn btn-primary" id="search">Search</button>
-                                </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="date_started">Start Date</label>
+                                <input type="text" class="form-control" id="start_date"
+                                       placeholder="Select Start Date">
                             </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="date_completed">End Date</label>
+                                <input type="text" class="form-control" id="end_date"
+                                       placeholder="Select End Date">
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <label for="date_completed">Search</label> <br/>
+                                <button type="button" class="btn btn-primary" id="search">Search</button>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <div class="col-md-12 col-xs-12 col-sm-12">
@@ -96,7 +96,7 @@
         if (error == "") {
             $.ajax({
                 method: "post",
-                url: "ajax/tables/searchbilldaterange_table.php",
+                url: "ajax/tables/searchservicedaterange_table.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",

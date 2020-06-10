@@ -399,7 +399,9 @@ background-size: 100% 350px;"
                                     $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
                                     $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
                                     $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php"
+                                    $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -452,7 +454,8 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
