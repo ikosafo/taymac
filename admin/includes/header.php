@@ -518,12 +518,11 @@ background-size: 100% 350px;"
 
 
 
-
-
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/admin/farm_inputs.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/farm_products.php" ||
-                                $_SERVER['PHP_SELF'] == "/admin/farm_purchases.php"
+                                $_SERVER['PHP_SELF'] == "/admin/farm_purchases.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_sales.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
