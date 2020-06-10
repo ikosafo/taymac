@@ -152,7 +152,7 @@ $random = rand(1,10000).date("Ymd");
             $("#billing_type_other").focus();
         }
         if (billing_type != "Other" && billing_type_other != "") {
-            error += 'Please do specify other type \n';
+            error += 'Please do not specify other type \n';
             $("#billing_type_other").focus();
         }
         if (billing_tenant == "") {
