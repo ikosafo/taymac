@@ -14,7 +14,6 @@ $random = rand(1,10000).date("Ymd");
             </div>
         </div>
 
-
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
@@ -24,7 +23,6 @@ $random = rand(1,10000).date("Ymd");
     </div>
 </form>
 <!--end::Form-->
-
 
 
 <script>

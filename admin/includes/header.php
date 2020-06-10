@@ -403,7 +403,11 @@ background-size: 100% 350px;"
                                     $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php" ||
                                     $_SERVER['PHP_SELF'] == "/admin/admin_billing.php" ||
                                     $_SERVER['PHP_SELF'] == "/admin/admin_billingpay.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_sm.php"
+                                    $_SERVER['PHP_SELF'] == "/admin/admin_sm.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/search_billsent.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -448,6 +452,63 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link "><i
                                                             class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                             class="kt-menu__link-text">Service & Maintenance</span></a>
+                                                </li>
+                                                <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
+                                                $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/search_billsent.php"
+
+                                                    ? "kt-menu__item--here" : ""); ?>"
+                                                    data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                        href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                                        <span class="kt-menu__link-text">Search</span><i
+                                                            class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                            class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                                    <div
+                                                        class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                        <ul class="kt-menu__subnav">
+
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/search_property.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="search_property"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Property</span></a>
+                                                            </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/search_tenant.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="search_tenant"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Tenant</span></a>
+                                                            </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/search_billtype.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="search_billtype"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Bill Type</span></a>
+                                                            </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/search_billsent.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="search_billsent"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Bills Delivered</span></a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+
                                                 </li>
 
                                             </ul>

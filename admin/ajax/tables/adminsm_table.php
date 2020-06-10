@@ -113,7 +113,7 @@ $pinq = $mysqli->query("select * from admin_taymac_sm ORDER BY id DESC");
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete sm!',
+            title: 'Delete Service and Maintenance!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {

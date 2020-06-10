@@ -13,9 +13,8 @@ $random = rand(1,10000).date("Ymd");
                           placeholder="Enter Project Methodology Text"></textarea>
             </div>
         </div>
-
-
     </div>
+
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
             <button type="button" class="btn btn-primary" id="savepm">Submit</button>

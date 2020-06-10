@@ -45,7 +45,7 @@ $pinq = $mysqli->query("select * from admin_taymac_tenant ORDER BY id DESC");
                         <td><?php $propertyid = $fetch['tenant_property'];
                             $getname = $mysqli->query("select * from admin_taymac_property where id = '$propertyid'");
                             $resname = $getname->fetch_assoc();
-                            echo $resname['property_name']
+                            echo $resname['property_name'];
                             ?></td>
                         <td><?php echo $fetch['date_started'].' <b>to</b><br/> '.$fetch['date_completed'] ?></td>
                         <td><?php echo $fetch['payment_rate'] ?></td>

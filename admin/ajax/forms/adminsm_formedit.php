@@ -1,5 +1,9 @@
 <?php include ('../../../config.php');
 $random = rand(1,10000).date("Ymd");
+$theindex = $_POST['theindex'];
+
+$getsm = $mysqli->query("select * from admin_taymac_sm where id = '$theindex'");
+$ressm = $getsm->fetch_assoc();
 ?>
 
 <script>
@@ -32,18 +36,18 @@ $random = rand(1,10000).date("Ymd");
                 <label for="sm_type">Service Type *</label>
                 <select id="sm_type" style="width: 100%">
                     <option value="">Select Service Type</option>
-                    <option value="Cleaning">Cleaning</option>
-                    <option value="Air Conditioning">Air Conditioning</option>
-                    <option value="Generators">Generators</option>
-                    <option value="Electrical">Electrical</option>
-                    <option value="Swimming Pool">Swimming Pool</option>
-                    <option value="Other">Other</option>
+                    <option <?php if (@$ressm['sm_type'] == "Cleaning") echo "Selected" ?>>Cleaning</option>
+                    <option <?php if (@$ressm['sm_type'] == "Air Conditioning") echo "Selected" ?>>Air Conditioning</option>
+                    <option <?php if (@$ressm['sm_type'] == "Generators") echo "Selected" ?>>Generators</option>
+                    <option <?php if (@$ressm['sm_type'] == "Electrical") echo "Selected" ?>>Electrical</option>
+                    <option <?php if (@$ressm['sm_type'] == "Swimming Pool") echo "Selected" ?>>Swimming Pool</option>
+                    <option <?php if (@$ressm['sm_type'] == "Other") echo "Selected" ?>>Other</option>
                 </select>
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="sm_type_other">If Service Type is 'Other', Specify</label>
                 <input type="text" class="form-control" id="sm_type_other"
-                       placeholder="If Other, Specify">
+                       placeholder="If Other, Specify" value="<?php echo $ressm['sm_type_other'] ?>">
             </div>
         </div>
 
@@ -52,9 +56,11 @@ $random = rand(1,10000).date("Ymd");
                 <label for="sm_tenant">Select Tenant *</label>
                 <select id="sm_tenant" style="width: 100%">
                     <option value="">Select Tenant</option>
-                    <?php $gettenant = $mysqli->query("select * from admin_taymac_tenant");
+                    <?php
+                    $sm_tenant = $ressm['sm_tenant'];
+                    $gettenant = $mysqli->query("select * from admin_taymac_tenant");
                     while ($restenant = $gettenant->fetch_assoc()) { ?>
-                        <option value="<?php echo $restenant['id'] ?>"><?php echo $restenant['tenant_name'] ?></option>
+                        <option <?php if (@$sm_tenant == $restenant['id']) echo "Selected" ?>><?php echo $restenant['tenant_name'] ?></option>
                     <?php  } ?>
                 </select>
             </div>
@@ -62,11 +68,11 @@ $random = rand(1,10000).date("Ymd");
                 <label for="sm_currency">Currency *</label>
                 <select id="sm_currency" style="width: 100%">
                     <option value="">Select Currency</option>
-                    <option value="US Dollars">US Dollars</option>
-                    <option value="GH Cedis">GH Cedis</option>
-                    <option value="GB Pounds">GB Pounds</option>
-                    <option value="Euros">Euros</option>
-                    <option value="Other">Other</option>
+                    <option <?php if (@$ressm['sm_currency'] == "US Dollars") echo "Selected" ?>>US Dollars</option>
+                    <option <?php if (@$ressm['sm_currency'] == "GH Cedis") echo "Selected" ?>>GH Cedis</option>
+                    <option <?php if (@$ressm['sm_currency'] == "GB Pounds") echo "Selected" ?>>GB Pounds</option>
+                    <option <?php if (@$ressm['sm_currency'] == "Euros") echo "Selected" ?>>Euros</option>
+                    <option <?php if (@$ressm['sm_currency'] == "Other") echo "Selected" ?>>Other</option>
                 </select>
             </div>
         </div>
@@ -75,13 +81,13 @@ $random = rand(1,10000).date("Ymd");
 
             <div class="col-lg-6 col-md-6">
                 <label for="sm_amount">Cost *</label>
-                <input type="text" class="form-control" id="sm_amount"
+                <input type="text" class="form-control" id="sm_amount" value="<?php echo $ressm['sm_amount'] ?>"
                        placeholder="Enter Service Cost" onkeypress="return isNumberKey(event)">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="sm_date">Date Billed *</label>
                 <input type="text" class="form-control" id="sm_date"
-                       placeholder="Select Date Billed For">
+                       placeholder="Select Date Billed For" value="<?php echo $ressm['sm_date'] ?>">
             </div>
         </div>
 
@@ -89,7 +95,7 @@ $random = rand(1,10000).date("Ymd");
             <div class="col-lg-12 col-md-12">
                 <label for="sm_description">Description</label>
                 <textarea class="form-control" id="sm_description"
-                          placeholder="Enter Description"></textarea>
+                          placeholder="Enter Description"><?php echo $ressm['sm_description'] ?></textarea>
             </div>
         </div>
 
@@ -126,6 +132,7 @@ $random = rand(1,10000).date("Ymd");
         var sm_amount = $("#sm_amount").val();
         var sm_date = $("#sm_date").val();
         var sm_description = $("#sm_description").val();
+        var theindex = '<?php echo $theindex; ?>';
 
         var error = '';
         if (sm_type == "") {
@@ -160,7 +167,7 @@ $random = rand(1,10000).date("Ymd");
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_adminsm.php",
+                url: "ajax/queries/editform_adminsm.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -176,7 +183,8 @@ $random = rand(1,10000).date("Ymd");
                     sm_currency:sm_currency,
                     sm_amount:sm_amount,
                     sm_date:sm_date,
-                    sm_description:sm_description
+                    sm_description:sm_description,
+                    theindex:theindex
                 },
                 success: function (text) {
                     //alert(text);
