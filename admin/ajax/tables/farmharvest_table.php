@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
+$pinq = $mysqli->query("select * from farm_harvest ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,10 +25,9 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Product Name</th>
-                    <th>Date of Sale</th>
+                    <th>Product</th>
+                    <th>Date of Harvest</th>
                     <th>Weight</th>
-                    <th>Cost</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -39,13 +38,12 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
                     ?>
                     <tr>
                         <td><?php echo $fetch['product']; ?></td>
-                        <td><?php echo $fetch['date_sale']; ?></td>
+                        <td><?php echo $fetch['date_harvest']; ?></td>
                         <td><?php echo $fetch['input_kg']." kg"; ?></td>
-                        <td><?php echo $fetch['input_price']; ?></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-danger delete_sale"
+                                    class="btn btn-sm btn-danger delete_harvest"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-1" style="color:#fff !important;"></i>
@@ -69,11 +67,11 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_sale').on('click', '.delete_sale', function () {
+    $(document).off('click', '.delete_harvest').on('click', '.delete_harvest', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Sale!',
+            title: 'Delete Harvest!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -91,14 +89,14 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_farmsale.php",
+                            url: "ajax/queries/delete_farmharvest.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/farmsale_table.php",
+                                    url: "ajax/tables/farmharvest_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -108,7 +106,7 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#farmsaletable_div').html(text);
+                                        $('#farmharvesttable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);

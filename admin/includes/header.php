@@ -109,7 +109,6 @@ background-size: 100% 350px;"
                         <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
                             <ul class="kt-menu__nav">
 
-
                                 <li class="kt-menu__item kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/admin/index.php"
                                     ? "kt-menu__item--here" : ""); ?>">
@@ -334,10 +333,8 @@ background-size: 100% 350px;"
                                                                         <span></span></i><span
                                                                         class="kt-menu__link-text">Taymac Farms</span></a>
                                                             </li>
-
                                                         </ul>
                                                     </div>
-
                                                 </li>
 
 
@@ -349,9 +346,6 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                         class="kt-menu__link-text">Clients Messages</span></a>
                                             </li>
-
-
-
                                         </ul>
                                     </div>
                                 </li>
@@ -390,12 +384,9 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
                                                         class="kt-menu__link-text">View Comments</span></a>
                                             </li>
-
                                         </ul>
                                     </div>
                                 </li>
-
-
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
@@ -505,24 +496,22 @@ background-size: 100% 350px;"
                                                                         <span></span></i><span
                                                                         class="kt-menu__link-text">Bills Delivered</span></a>
                                                             </li>
-
                                                         </ul>
                                                     </div>
-
                                                 </li>
-
                                             </ul>
                                         </div>
                                     </li>
-
-
-
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/admin/farm_inputs.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/farm_products.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/farm_purchases.php" ||
-                                $_SERVER['PHP_SELF'] == "/admin/farm_sales.php"
+                                $_SERVER['PHP_SELF'] == "/admin/farm_sales.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_harvest.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_tunnel.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_activity.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_report.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -569,9 +558,7 @@ background-size: 100% 350px;"
                                                         </li>
                                                     </ul>
                                                 </div>
-
                                             </li>
-
 
                                             <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
                                             $_SERVER['PHP_SELF'] == "/admin/farm_purchases.php" ||
@@ -605,10 +592,127 @@ background-size: 100% 350px;"
                                                                     <span></span></i><span
                                                                     class="kt-menu__link-text">Sales</span></a>
                                                         </li>
-
                                                     </ul>
                                                 </div>
+                                            </li>
 
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_harvest.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_harvest"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Harvest</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_tunnel.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_tunnel"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Tunnels</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_activity.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_activity"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Activity</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_report.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_report"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Report</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_search.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_search"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Search</span></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/admin/admin_staff.php"
+
+                                    ? "kt-menu__item--here" : ""); ?>"
+                                    data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                        <span class="kt-menu__link-text">Staff Mgt.
+                                            <i class="fa fa-caret-down ml-2"></i> </span>
+                                        <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                    </a>
+
+                                    <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                        <ul class="kt-menu__subnav">
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_staff.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_staff"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Staff</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_tunnel.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_tunnel"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Tunnels</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_activity.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_activity"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Activity</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_report.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_report"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Report</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/farm_search.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="farm_search"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Search</span></a>
                                             </li>
 
                                         </ul>

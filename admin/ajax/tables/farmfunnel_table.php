@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
+$pinq = $mysqli->query("select * from farm_funnel ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,10 +25,8 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Product Name</th>
-                    <th>Date of Sale</th>
-                    <th>Weight</th>
-                    <th>Cost</th>
+                    <th>Tunnel Name</th>
+                    <th>Tunnel Description</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -38,14 +36,12 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['product']; ?></td>
-                        <td><?php echo $fetch['date_sale']; ?></td>
-                        <td><?php echo $fetch['input_kg']." kg"; ?></td>
-                        <td><?php echo $fetch['input_price']; ?></td>
+                        <td><?php echo $fetch['funnel_name']; ?></td>
+                        <td><?php echo $fetch['funnel_description']; ?></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-danger delete_sale"
+                                    class="btn btn-sm btn-danger delete_funnel"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-1" style="color:#fff !important;"></i>
@@ -69,11 +65,11 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_sale').on('click', '.delete_sale', function () {
+    $(document).off('click', '.delete_funnel').on('click', '.delete_funnel', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Sale!',
+            title: 'Delete Tunnel!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -91,14 +87,14 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_farmsale.php",
+                            url: "ajax/queries/delete_farmfunnel.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/farmsale_table.php",
+                                    url: "ajax/tables/farmfunnel_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -108,7 +104,7 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#farmsaletable_div').html(text);
+                                        $('#farmfunneltable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
