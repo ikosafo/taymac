@@ -12,7 +12,7 @@ $currency = $resbilling['billing_currency'];
         <div class="invoice-header">
             <div class="row">
                 <div class="col-md-3" align="center">
-                    <img src="../../../assets/img/taymac.jpeg"
+                    <img src="../../../assets/img/taymac.PNG"
                          style="border: 0 !important; width: 90%"/>
                 </div>
                 <div class="col-md-8" align="center">
@@ -137,7 +137,7 @@ $currency = $resbilling['billing_currency'];
         <div class="invoice-header">
             <div class="row">
                 <div class="col-md-3" align="center">
-                    <img src="../../../assets/img/taymac.jpeg"
+                    <img src="../../../assets/img/taymac.PNG"
                          style="border: 0 !important; width: 90%"/>
                 </div>
                 <div class="col-md-8" align="center">

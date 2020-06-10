@@ -20,8 +20,8 @@
     <!-- Title -->
     <title>Taymac</title>
     <!-- Favicon -->
-    <link href="assets/img/taymac.jpeg" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
-    <link href="assets/img/taymac.jpeg" sizes="128x128" rel="shortcut icon" />
+    <link href="assets/img/taymac.PNG" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/img/taymac.PNG" sizes="128x128" rel="shortcut icon" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -318,7 +318,7 @@
             <nav>
                 <!-- Menu Toggle btn-->
                 <div class="menu-toggle">
-                    <img class="nav_logo_img img-fluid" src="assets/img/taymac.jpeg" alt="logo.jpeg" style="width: 40%">
+                    <img class="nav_logo_img img-fluid" src="assets/img/taymac.PNG" alt="logo.jpeg" style="width: 50%">
                     <button type="button" id="menu-btn">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -326,8 +326,8 @@
                     </button>
                 </div>
                 <a href="#" class="navbar_brand float-left dn-smd">
-                    <img class="logo1 img-fluid" src="assets/img/taymac.jpeg" alt="Taymac Logo" style="width: 40%">
-                    <img class="logo2 img-fluid" src="assets/img/taymac.jpeg" alt="Taymac Logo" style="width: 40%">
+                    <img class="logo1 img-fluid" src="assets/img/taymac.PNG" alt="Taymac Logo" style="width: 50%">
+                    <img class="logo2 img-fluid" src="assets/img/taymac.PNG" alt="Taymac Logo" style="width: 50%">
                     <span></span>
                 </a>
                 <!-- Responsive Menu Structure-->
@@ -375,7 +375,7 @@
         <div class="mobile-menu">
             <div class="header stylehome1">
                 <div class="main_logo_home2 text-center">
-                    <img class="nav_logo_img img-fluid mt20" src="assets/img/taymac.jpeg" alt="header-logo2.png" style="width:50%">
+                    <img class="nav_logo_img img-fluid mt20" src="assets/img/taymac.PNG" alt="header-logo2.png" style="width:70%">
                 </div>
                 <ul class="menu_bar_home2">
                     <li class="list-inline-item list_s"><a href="#"><span class="flaticon-home"></span></a></li>

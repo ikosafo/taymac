@@ -25,7 +25,7 @@ session_destroy();
     <link href="newassets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
     <!--end::Global Theme Styles -->
 
-    <link rel="shortcut icon" href="../assets/img/taymac.jpeg"/>
+    <link rel="shortcut icon" href="../assets/img/taymac.PNG"/>
 
 </head>
 <!-- end::Head -->
@@ -50,7 +50,7 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
                         <div class="kt-login__body">
                             <div class="kt-login__logo">
                                 <a href="#">
-                                    <img src="../assets/img/logo.jpeg" style="width:60%;">
+                                    <img src="../assets/img/taymac.PNG" style="width:60%;">
                                 </a>
                             </div>
 

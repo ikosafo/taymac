@@ -50,6 +50,14 @@ $pinq = $mysqli->query("select * from admin_staff ORDER BY id DESC");
                         <td>
                             <button type="button"
                                     data-type="confirm"
+                                    class="btn btn-sm btn-success pay_salary"
+                                    i_index="<?php echo $fetch['id']; ?>"
+                                    title="Pay">
+                               Payment
+                            </button>
+                            <p></p>
+                            <button type="button"
+                                    data-type="confirm"
                                     class="btn btn-sm btn-primary edit_staff"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Edit">
@@ -150,6 +158,35 @@ $pinq = $mysqli->query("select * from admin_staff ORDER BY id DESC");
         $.ajax({
             type: "POST",
             url: "ajax/forms/adminstaff_formedit.php",
+            beforeSend: function () {
+                KTApp.blockPage({
+                    overlayColor: "#000000",
+                    type: "v2",
+                    state: "success",
+                    message: "Please wait..."
+                })
+            },
+            data:{
+                theindex:theindex
+            },
+            success: function (text) {
+                $('#staffform_div').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+            complete: function () {
+                KTApp.unblockPage();
+            },
+        });
+    });
+
+    $(document).off('click', '.pay_salary').on('click', '.pay_salary', function () {
+        var theindex = $(this).attr('i_index');
+        //alert(theindex)
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/adminstaffpay_form.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",

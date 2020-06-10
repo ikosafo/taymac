@@ -37,7 +37,7 @@ if (!isset($_SESSION['username'])) {
 
     <!--end::Global Theme Styles -->
 
-    <link rel="shortcut icon" href="../assets/img/taymac.jpeg"/>
+    <link rel="shortcut icon" href="../assets/img/taymac.PNG"/>
     <script src="newassets/js/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -75,7 +75,7 @@ background-size: 100% 350px;"
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
         <a href="/">
-            <img alt="Logo" src="../assets/img/taymac.jpeg" style="width: 30%"/>
+            <img alt="Logo" src="../assets/img/taymac.PNG" style="width: 30%"/>
         </a>
     </div>
     <div class="kt-header-mobile__toolbar">
@@ -94,9 +94,9 @@ background-size: 100% 350px;"
                     <!-- begin:: Brand -->
                     <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
                         <a class="kt-header__brand-logo" href="/">
-                            <img alt="Logo" src="../assets/img/taymac.jpeg" class="kt-header__brand-logo-default"
+                            <img alt="Logo" src="../assets/img/taymac.PNG" class="kt-header__brand-logo-default"
                                  style="width:60%;background-color: #ffffff"/>
-                            <img alt="Logo" src="../assets/img/taymac.jpeg" style="width:50%"
+                            <img alt="Logo" src="../assets/img/taymac.PNG" style="width:50%"
                                  class="kt-header__brand-logo-sticky"/>
                         </a>
                     </div>
@@ -398,7 +398,8 @@ background-size: 100% 350px;"
                                     $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
                                     $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
                                     $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_billsent.php"
+                                    $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
+                                    $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                         data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -448,7 +449,10 @@ background-size: 100% 350px;"
                                                 $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
                                                 $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_billsent.php"
+                                                $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php" ||
+                                                $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php"
 
                                                     ? "kt-menu__item--here" : ""); ?>"
                                                     data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
@@ -495,6 +499,33 @@ background-size: 100% 350px;"
                                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                                         <span></span></i><span
                                                                         class="kt-menu__link-text">Bills Delivered</span></a>
+                                                            </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="search_billdaterange"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Bill By Date Range</span></a>
+                                                            </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="search_servicetype"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Service & Maintenance Type</span></a>
+                                                            </li>
+                                                            <li class="kt-menu__item  <?php echo(
+                                                            $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php"
+                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                    href="search_servicedaterange"
+                                                                    class="kt-menu__link "><i
+                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                        <span></span></i><span
+                                                                        class="kt-menu__link-text">Service By Date Range</span></a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -676,43 +707,90 @@ background-size: 100% 350px;"
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/admin/farm_tunnel.php"
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_staffpayroll.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="farm_tunnel"
+                                                    href="admin_staffpayroll"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
-                                                        class="kt-menu__link-text">Tunnels</span></a>
+                                                        class="kt-menu__link-text">Payroll</span></a>
                                             </li>
 
                                             <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/admin/farm_activity.php"
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_staffsearch.php"
                                                 ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="farm_activity"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Activity</span></a>
-                                            </li>
-
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/admin/farm_report.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="farm_report"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Report</span></a>
-                                            </li>
-
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/admin/farm_search.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="farm_search"
+                                                    href="admin_staffsearch"
                                                     class="kt-menu__link "><i
                                                         class="kt-menu__link-bullet kt-menu__link-bullet--dot">
                                                         <span></span></i><span
                                                         class="kt-menu__link-text">Search</span></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
+                                $_SERVER['PHP_SELF'] == "/admin/admin_payments.php"
+
+                                    ? "kt-menu__item--here" : ""); ?>"
+                                    data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                        <span class="kt-menu__link-text">Accounts Mgt.
+                                            <i class="fa fa-caret-down ml-2"></i> </span>
+                                        <i class="kt-menu__ver-arrow la la-angle-right"></i>
+                                    </a>
+
+                                    <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                        <ul class="kt-menu__subnav">
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_payments.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_payments"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Payments</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_accentry.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_accentry"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Account Entry</span></a>
+                                            </li>
+
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_cashbook.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_cashbook"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Cash Book</span></a>
+                                            </li>
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_accsearch.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_accsearch"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Search</span></a>
+                                            </li>
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_accstatement.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_accstatement"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Account Statement</span></a>
                                             </li>
 
                                         </ul>
