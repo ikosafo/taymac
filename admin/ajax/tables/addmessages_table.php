@@ -66,7 +66,7 @@ $pinq = $mysqli->query("select * from taymac_message ORDER BY id DESC");
 
 <script>
     oTable = $('#data-table').DataTable({
-        "bLengthChange": false
+        "bLengthChange": false,"order": []
     });
 
     $('#data_search').keyup(function () {

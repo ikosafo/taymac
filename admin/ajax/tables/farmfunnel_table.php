@@ -41,6 +41,14 @@ $pinq = $mysqli->query("select * from farm_funnel ORDER BY id DESC");
                         <td>
                             <button type="button"
                                     data-type="confirm"
+                                    class="btn btn-sm btn-primary edit_funnel"
+                                    i_index="<?php echo $fetch['id']; ?>"
+                                    title="Edit">
+                                <i class="flaticon2-edit ml-1" style="color:#fff !important;"></i>
+                            </button>
+                            <p></p>
+                            <button type="button"
+                                    data-type="confirm"
                                     class="btn btn-sm btn-danger delete_funnel"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
@@ -58,7 +66,7 @@ $pinq = $mysqli->query("select * from farm_funnel ORDER BY id DESC");
 
 <script>
     oTable = $('#data-table').DataTable({
-        "bLengthChange": false
+        "bLengthChange": false,"order": []
     });
 
     $('#data_search').keyup(function () {
@@ -125,6 +133,38 @@ $pinq = $mysqli->query("select * from farm_funnel ORDER BY id DESC");
                 }
             }
         });
+    });
+
+
+    $(document).off('click', '.edit_funnel').on('click', '.edit_funnel', function () {
+        var theindex = $(this).attr('i_index');
+        //alert(theindex)
+
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/farmfunnel_formedit.php",
+            beforeSend: function () {
+                KTApp.blockPage({
+                    overlayColor: "#000000",
+                    type: "v2",
+                    state: "success",
+                    message: "Please wait..."
+                })
+            },
+            data:{
+                theindex:theindex
+            },
+            success: function (text) {
+                $('#farmfunnelform_div').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+            complete: function () {
+                KTApp.unblockPage();
+            },
+        });
+
     });
 
 </script>

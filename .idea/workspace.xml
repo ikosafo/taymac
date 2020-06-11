@@ -22,117 +22,126 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="search_servicetype.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/search_servicetype.php">
+      <file leaf-file-name="farmfunnel_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmfunnel_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+            <state vertical-scroll-proportion="-9.038462">
+              <caret line="144" column="52" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="52" />
               <folding>
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#2774#5355#0#HTML" expanded="false" />
+                <marker date="1591848843995" expanded="true" signature="62:104" placeholder="select * fro..farm_funnel..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchservice_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/searchservice_table.php">
+      <file leaf-file-name="farmfunnel_formedit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmfunnel_formedit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1153846">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state vertical-scroll-proportion="-8.384615">
+              <caret line="57" column="58" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="58" />
               <folding>
-                <marker date="1591801530536" expanded="true" signature="95:151" placeholder="select * fro..admin_taymac_sm..." />
-                <marker date="1591801530536" expanded="true" signature="1343:1397" placeholder="select * fro..admin_taymac_tenant..." />
+                <marker date="1591849046972" expanded="true" signature="138:186" placeholder="select * fro..farm_funnel..." />
+                <marker date="1591849046972" expanded="true" signature="1407:1653" placeholder="..." />
+                <marker date="1591849046972" expanded="true" signature="1434:1653" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addservice_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addservice_table.php">
+      <file leaf-file-name="editform_farmfunnel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_farmfunnel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.807693">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
-                <marker date="1591490241181" expanded="true" signature="62:107" placeholder="select * fro..taymac_service..." />
+                <marker date="1591849084651" expanded="true" signature="286:417" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminsm_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminsm_table.php">
+      <file leaf-file-name="farmfertilizer_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmfertilizer_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.538462">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="23.653847">
+              <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
               <folding>
-                <marker date="1591719836376" expanded="true" signature="62:108" placeholder="select * fro..admin_taymac_sm..." />
-                <marker date="1591719836376" expanded="true" signature="1728:1782" placeholder="select * fro..admin_taymac_tenant..." />
+                <marker date="1591849837227" expanded="true" signature="1481:1506" placeholder="select * fro..farm_funnel..." />
+                <marker date="1591849837227" expanded="true" signature="2085:2105" placeholder="select * fro..farm_purchases..." />
+                <marker date="1591849837227" expanded="true" signature="2085:2112" placeholder="select * fro..farm_products..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
+      <file leaf-file-name="saveform_farmfertilizer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmfertilizer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5430108">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+              <folding>
+                <marker date="1591849969444" expanded="true" signature="689:1222" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveform_farmharvest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmharvest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+              <folding>
+                <marker date="1591780126721" expanded="true" signature="406:781" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveform_farmfunnel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmfunnel.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-11.115385">
-              <caret line="405" column="70" selection-start-line="405" selection-start-column="70" selection-end-line="405" selection-end-column="70" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="farm_activity.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/farm_activity.php">
+      <file leaf-file-name="farmfunnel_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmfunnel_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_servicedaterange.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/search_servicedaterange.php">
+      <file leaf-file-name="admintenant_formedit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/admintenant_formedit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.615385">
-              <caret line="98" column="66" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchservicedaterange_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/searchservicedaterange_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.192307">
-              <caret line="54" column="114" selection-start-line="54" selection-start-column="114" selection-end-line="54" selection-end-column="114" />
+            <state vertical-scroll-proportion="-5.230769">
+              <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
               <folding>
-                <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1591803944657" expanded="true" signature="408:435" placeholder="select * fro..admin_taymac_billing..." />
-                <marker date="1591803944657" expanded="true" signature="408:517" placeholder="select * fro..admin_taymac_sm..." />
-                <marker date="1591803944657" expanded="true" signature="1377:1431" placeholder="select * fro..admin_taymac_tenant..." />
+                <marker date="1591676460666" expanded="true" signature="138:194" placeholder="select * fro..admin_taymac_tenant..." />
+                <marker date="1591676460666" expanded="true" signature="1130:1165" placeholder="select * fro..admin_taymac_property..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchbilldaterange_table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/searchbilldaterange_table.php">
+      <file leaf-file-name="adminbilling_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminbilling_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.653846">
-              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_billdaterange.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/search_billdaterange.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.0">
-              <caret line="122" column="9" selection-start-line="122" selection-start-column="9" selection-end-line="122" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="-8.884615">
+              <caret line="181" column="16" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="16" />
+              <folding>
+                <element signature="e#5391#7974#0#HTML" expanded="false" />
+                <marker date="1591848622939" expanded="true" signature="62:113" placeholder="select * fro..admin_taymac_billing..." />
+                <marker date="1591848622939" expanded="true" signature="1766:1820" placeholder="select * fro..admin_taymac_tenant..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,43 +151,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farminput.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/delete_farminput.php" />
-        <option value="$PROJECT_DIR$/admin/farm_products.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farmproduct.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/farmproduct_table.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/delete_farmproduct.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/farminput_form.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/farmproduct_form.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/farminput_table.php" />
-        <option value="$PROJECT_DIR$/admin/farm_inputs.php" />
-        <option value="$PROJECT_DIR$/admin/farm_purchases.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/delete_farmpurchase.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farmpurchase.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/farmpurchase_table.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/farmpurchase_form.php" />
-        <option value="$PROJECT_DIR$/admin/farm_sales.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/farmsale_form.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farmsale.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/delete_farmsale.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/farmsale_table.php" />
-        <option value="$PROJECT_DIR$/admin/farm_harvest.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/farmharvest_form.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farmharvest.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/farmharvest_table.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/delete_farmharvest.php" />
-        <option value="$PROJECT_DIR$/admin/farm_tunnel.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farmfunnel.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/delete_farmfunnel.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/farmfunnel_table.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/farmfunnel_form.php" />
-        <option value="$PROJECT_DIR$/admin/admin_staff.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/adminstaff_form.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_adminstaff.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/delete_adminstaff.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/adminstaff_formedit.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/editform_adminstaff.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/tables/adminstaff_table.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/adminstaffpay_form.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/adminbillingprint_form.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/adminsmprint_form.php" />
@@ -193,6 +168,40 @@
         <option value="$PROJECT_DIR$/admin/search_servicedaterange.php" />
         <option value="$PROJECT_DIR$/admin/ajax/tables/searchservicedaterange_table.php" />
         <option value="$PROJECT_DIR$/admin/includes/header.php" />
+        <option value="$PROJECT_DIR$/admin/farm_fertilizer.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addaboutus_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addblog_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addclient_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addcomments_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addcontact_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addfarm_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addfp_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addhealth_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addinstall_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addmessages_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addpm_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addppclient_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addproperty_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addrealtor_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addservice_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addslider_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addstory_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/addteam_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/adminbilling_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/adminproperty_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/adminsm_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/adminstaff_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/admintenant_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/farmharvest_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/farminput_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/farmproduct_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/farmpurchase_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/farmsale_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/farmfunnel_table.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/forms/farmfunnel_formedit.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/editform_farmfunnel.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/forms/farmfertilizer_form.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_farmfertilizer.php" />
       </list>
     </option>
   </component>
@@ -327,7 +336,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22692889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2322239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -385,365 +394,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmsale_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-          <folding>
-            <marker date="1591778480834" expanded="true" signature="-1:-1" placeholder="select * fro..farm_sales..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmpurchase_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <marker date="1591777202282" expanded="true" signature="-1:-1" placeholder="select * fro..farm_purchases..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_farmsale.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/farm_harvest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="73" column="7" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmharvest_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.653846">
-          <caret line="149" column="37" selection-start-line="149" selection-start-column="37" selection-end-line="149" selection-end-column="37" />
-          <folding>
-            <marker date="1591780126834" expanded="true" signature="-1:-1" placeholder="select * fro..farm_purchases..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmharvest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_farmharvest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmharvest_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8846154">
-          <caret line="110" column="46" selection-start-line="110" selection-start-column="43" selection-end-line="110" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmfunnel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <marker date="1591780744916" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/farm_tunnel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmfunnel_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-36.653847">
-          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1591781093315" expanded="true" signature="-1:-1" placeholder="select * fro..farm_harvest..." />
-            <marker date="1591781093315" expanded="true" signature="-1:-1" placeholder="select * fro..farm_funnel..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmfunnel_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.923077">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin_tenant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin_staff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.73077">
-          <caret line="78" column="42" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_admintenant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <marker date="1591417807543" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_farmfunnel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <marker date="1591780971376" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_adminstaff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding>
-            <marker date="1591786321280" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_adminstaff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding>
-            <marker date="1591786204592" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/admintenant_formedit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.769231">
-          <caret line="48" column="71" selection-start-line="48" selection-start-column="71" selection-end-line="48" selection-end-column="71" />
-          <folding>
-            <marker date="1591676460666" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-            <marker date="1591676460666" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_property..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminsmpay_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <marker date="1591737236007" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_sm..." />
-            <marker date="1591737236007" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminstaff_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#div#0;n#form#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_adminstaff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.192308">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <marker date="1591787180637" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminstaff_formedit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-83.03846">
-          <caret line="136" column="54" selection-start-line="136" selection-start-column="35" selection-end-line="136" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <marker date="1591787020451" expanded="true" signature="-1:-1" placeholder="select * fro..admin_staff..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminstaff_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#1;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#button#2;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1591788123334" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-            <marker date="1591788123334" expanded="true" signature="-1:-1" placeholder="select * fro..admin_staff..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminstaffpay_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.384615">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#form#0;n#!!top" expanded="true" />
-            <marker date="1591788376608" expanded="true" signature="-1:-1" placeholder="select * fro..admin_staff..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminbillingprint_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminsmprint_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding>
-            <marker date="1591791265676" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_sm..." />
-            <marker date="1591791265676" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-            <marker date="1591791265676" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="171.96153">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#a#0;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1591795997690" expanded="true" signature="-1:-1" placeholder="select amoun..billings..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/search_billsent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/admintenant_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding>
-            <marker date="1591676805363" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_property..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/searchbillsent_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding>
-            <marker date="1591766172732" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_billing..." />
-            <marker date="1591766172732" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/search_billtype.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminbilling_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.038462">
-          <caret line="15" column="20" selection-start-line="13" selection-start-column="16" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="e#7762#11033#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminsm_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <marker date="1591721472868" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/forms/addservice_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -760,56 +410,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminbilling_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <marker date="1591705652103" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_billing..." />
-            <marker date="1591705652103" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/admintenant_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding>
-            <marker date="1591764784314" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-            <marker date="1591764784314" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_property..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/search_servicetype.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
           <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addservice_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.807693">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1591490241181" expanded="true" signature="62:107" placeholder="select * fro..taymac_service..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminsm_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.538462">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1591719836376" expanded="true" signature="62:108" placeholder="select * fro..admin_taymac_sm..." />
-            <marker date="1591719836376" expanded="true" signature="1728:1782" placeholder="select * fro..admin_taymac_tenant..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -818,8 +423,8 @@
         <state vertical-scroll-proportion="-5.1153846">
           <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
-            <marker date="1591801530536" expanded="true" signature="95:151" placeholder="select * fro..admin_taymac_sm..." />
-            <marker date="1591801530536" expanded="true" signature="1343:1397" placeholder="select * fro..admin_taymac_tenant..." />
+            <marker date="1591801530536" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_sm..." />
+            <marker date="1591801530536" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
           </folding>
         </state>
       </provider>
@@ -854,26 +459,393 @@
           <caret line="54" column="114" selection-start-line="54" selection-start-column="114" selection-end-line="54" selection-end-column="114" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1591803944657" expanded="true" signature="408:435" placeholder="select * fro..admin_taymac_billing..." />
-            <marker date="1591803944657" expanded="true" signature="408:517" placeholder="select * fro..admin_taymac_sm..." />
-            <marker date="1591803944657" expanded="true" signature="1377:1431" placeholder="select * fro..admin_taymac_tenant..." />
+            <marker date="1591803944657" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_billing..." />
+            <marker date="1591803944657" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_sm..." />
+            <marker date="1591803944657" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.653846">
+          <caret line="675" column="85" selection-start-line="675" selection-start-column="70" selection-end-line="675" selection-end-column="85" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/farm_inputs.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385">
-          <caret line="405" column="70" selection-start-line="405" selection-start-column="70" selection-end-line="405" selection-end-column="70" />
+          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/farm_activity.php">
+    <entry file="file://$PROJECT_DIR$/admin/farm_fertilizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.692307">
+          <caret line="53" column="48" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farminput_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmharvest_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1591780126834" expanded="true" signature="-1:-1" placeholder="select * fro..farm_purchases..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addaboutus_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addblog_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addclient_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addcomments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addcontact_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="69" column="8" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addfarm_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addfp_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addhealth_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addinstall_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addmessages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addpm_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addppclient_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addproperty_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addrealtor_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addservice_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addslider_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addstory_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addteam_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminproperty_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminsm_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminstaff_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/admintenant_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154">
+          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmsale_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60394263">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <element signature="e#2480#5053#0#HTML" expanded="false" />
+            <marker date="1591848622863" expanded="true" signature="-1:-1" placeholder="select * fro..farm_sales..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmpurchase_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22759856">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+          <folding>
+            <marker date="1591848622242" expanded="true" signature="-1:-1" placeholder="select * fro..farm_purchases..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmproduct_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22759856">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+          <folding>
+            <marker date="1591848622003" expanded="true" signature="-1:-1" placeholder="select * fro..farm_products..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farminput_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22759856">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+          <folding>
+            <marker date="1591848622750" expanded="true" signature="-1:-1" placeholder="select * fro..farm_inputs..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmharvest_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22759856">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+          <folding>
+            <marker date="1591848621888" expanded="true" signature="-1:-1" placeholder="select * fro..farm_harvest..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminproperty_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminbilling_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.884615">
+          <caret line="181" column="16" selection-start-line="181" selection-start-column="16" selection-end-line="181" selection-end-column="16" />
+          <folding>
+            <element signature="e#5391#7974#0#HTML" expanded="false" />
+            <marker date="1591848622939" expanded="true" signature="62:113" placeholder="select * fro..admin_taymac_billing..." />
+            <marker date="1591848622939" expanded="true" signature="1766:1820" placeholder="select * fro..admin_taymac_tenant..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/farmfunnel_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.038462">
+          <caret line="144" column="52" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="52" />
+          <folding>
+            <element signature="e#2774#5355#0#HTML" expanded="false" />
+            <marker date="1591848843995" expanded="true" signature="62:104" placeholder="select * fro..farm_funnel..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmfunnel_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/admintenant_formedit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+          <folding>
+            <marker date="1591676460666" expanded="true" signature="138:194" placeholder="select * fro..admin_taymac_tenant..." />
+            <marker date="1591676460666" expanded="true" signature="1130:1165" placeholder="select * fro..admin_taymac_property..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmfunnel_formedit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.384615">
+          <caret line="57" column="58" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="58" />
+          <folding>
+            <marker date="1591849046972" expanded="true" signature="138:186" placeholder="select * fro..farm_funnel..." />
+            <marker date="1591849046972" expanded="true" signature="1407:1653" placeholder="..." />
+            <marker date="1591849046972" expanded="true" signature="1434:1653" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmfunnel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/editform_farmfunnel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1591849084651" expanded="true" signature="286:417" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmharvest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <marker date="1591780126721" expanded="true" signature="406:781" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/farmfertilizer_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="23.653847">
+          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding>
+            <marker date="1591849837227" expanded="true" signature="1481:1506" placeholder="select * fro..farm_funnel..." />
+            <marker date="1591849837227" expanded="true" signature="2085:2105" placeholder="select * fro..farm_purchases..." />
+            <marker date="1591849837227" expanded="true" signature="2085:2112" placeholder="select * fro..farm_products..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_farmfertilizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5430108">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <marker date="1591849969444" expanded="true" signature="689:1222" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>

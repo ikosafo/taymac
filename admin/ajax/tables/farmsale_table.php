@@ -62,7 +62,7 @@ $pinq = $mysqli->query("select * from farm_sales ORDER BY id DESC");
 
 <script>
     oTable = $('#data-table').DataTable({
-        "bLengthChange": false
+        "bLengthChange": false,"order": []
     });
 
     $('#data_search').keyup(function () {
