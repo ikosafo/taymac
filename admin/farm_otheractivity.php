@@ -20,17 +20,17 @@
                             <div class="kt-portlet__head-label">
                                 <h3 class="kt-portlet__head-title">
                                     Farm Management
-                                    <small>Watering Application</small>
+                                    <small>Other Farm Activities</small>
                                 </h3>
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-md-5 col-xs-12 col-sm-12">
-                                <div id="farmwateringform_div"></div>
+                                <div id="farmotheractivityform_div"></div>
                             </div>
                             <div class="col-md-7 col-xs-12 col-sm-12">
-                                <div id="farmwateringtable_div"></div>
+                                <div id="farmotheractivitytable_div"></div>
                             </div>
                         </div>
 
@@ -51,7 +51,7 @@
 <script>
 
     $.ajax({
-        url: "ajax/forms/farmwatering_form.php",
+        url: "ajax/forms/farmotheractivity_form.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -61,7 +61,7 @@
             })
         },
         success: function (text) {
-            $('#farmwateringform_div').html(text);
+            $('#farmotheractivityform_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);
@@ -73,7 +73,7 @@
     });
 
     $.ajax({
-        url: "ajax/tables/farmwatering_table.php",
+        url: "ajax/tables/farmotheractivity_table.php",
         beforeSend: function () {
             KTApp.blockPage({
                 overlayColor: "#000000",
@@ -83,7 +83,7 @@
             })
         },
         success: function (text) {
-            $('#farmwateringtable_div').html(text);
+            $('#farmotheractivitytable_div').html(text);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + " " + thrownError);

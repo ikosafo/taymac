@@ -2,7 +2,7 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 8.0.18 : Database - taymac
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -189,9 +189,11 @@ CREATE TABLE `farm_fertilizer` (
   `activity_description` varchar(255) DEFAULT NULL,
   `dateperiod` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `farm_fertilizer` */
+
+insert  into `farm_fertilizer`(`id`,`fertilizer_name`,`application_area`,`tunnel`,`product`,`input_kg`,`input_g`,`date_activity`,`activity_description`,`dateperiod`) values (1,'Fertilizer Name','Foliar',8,2,10,10000,'2020-06-23','description here','2020-06-11 15:52:01');
 
 /*Table structure for table `farm_funnel` */
 
@@ -241,6 +243,27 @@ CREATE TABLE `farm_inputs` (
 
 insert  into `farm_inputs`(`id`,`input_name`,`input_type`,`input_type_other`) values (3,'asdas','Pesticide',''),(4,'Input 2','Pesticide','');
 
+/*Table structure for table `farm_pesticide` */
+
+DROP TABLE IF EXISTS `farm_pesticide`;
+
+CREATE TABLE `farm_pesticide` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `pesticide_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `tunnel` int(12) DEFAULT NULL,
+  `product` int(12) DEFAULT NULL,
+  `input_kg` decimal(20,0) DEFAULT NULL,
+  `input_g` decimal(20,0) DEFAULT NULL,
+  `date_activity` date DEFAULT NULL,
+  `activity_description` varchar(255) DEFAULT NULL,
+  `dateperiod` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `farm_pesticide` */
+
+insert  into `farm_pesticide`(`id`,`pesticide_name`,`tunnel`,`product`,`input_kg`,`input_g`,`date_activity`,`activity_description`,`dateperiod`) values (2,'Name of Pesticide',7,3,12,12000,'2020-06-15','','2020-06-11 16:16:45');
+
 /*Table structure for table `farm_products` */
 
 DROP TABLE IF EXISTS `farm_products`;
@@ -251,11 +274,11 @@ CREATE TABLE `farm_products` (
   `product_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `product_type_other` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `farm_products` */
 
-insert  into `farm_products`(`id`,`product_name`,`product_type`,`product_type_other`) values (2,'asdas','Fruit','');
+insert  into `farm_products`(`id`,`product_name`,`product_type`,`product_type_other`) values (3,'Product Name','Vegetable',''),(2,'asdas','Fruit','');
 
 /*Table structure for table `farm_purchases` */
 
@@ -293,6 +316,29 @@ CREATE TABLE `farm_sales` (
 /*Data for the table `farm_sales` */
 
 insert  into `farm_sales`(`id`,`product`,`input_kg`,`input_g`,`input_price`,`date_sale`) values (2,'adsasad',12,12000,123.00,'2020-06-10');
+
+/*Table structure for table `farm_watering` */
+
+DROP TABLE IF EXISTS `farm_watering`;
+
+CREATE TABLE `farm_watering` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `starttime` datetime DEFAULT NULL,
+  `endtime` datetime DEFAULT NULL,
+  `cycle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `tunnel` int(12) DEFAULT NULL,
+  `product` int(12) DEFAULT NULL,
+  `input_kg` varchar(250) DEFAULT NULL,
+  `input_g` varchar(250) DEFAULT NULL,
+  `date_activity` date DEFAULT NULL,
+  `activity_description` varchar(255) DEFAULT NULL,
+  `dateperiod` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `farm_watering` */
+
+insert  into `farm_watering`(`id`,`starttime`,`endtime`,`cycle`,`tunnel`,`product`,`input_kg`,`input_g`,`date_activity`,`activity_description`,`dateperiod`) values (2,'2020-06-01 05:30:00','2020-06-11 06:30:00','Second',7,2,'12','12000','2020-06-17','','2020-06-11 17:29:11');
 
 /*Table structure for table `taymac_aboutus` */
 
@@ -557,11 +603,11 @@ CREATE TABLE `taymac_logs_mis` (
   `ip_address` varchar(255) DEFAULT NULL,
   `username` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`logid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `taymac_logs_mis` */
 
-insert  into `taymac_logs_mis`(`logid`,`message`,`userid`,`applicantid`,`logdate`,`action`,`mac_address`,`ip_address`,`username`) values (1,'Logged in Successfully',NULL,NULL,'2020-06-04 08:37:54','Successful','Host Name . . . .','::1','ikosafo'),(2,'Logged in Successfully',NULL,NULL,'2020-06-06 06:34:16','Successful','Host Name . . . .','::1','ikosafo');
+insert  into `taymac_logs_mis`(`logid`,`message`,`userid`,`applicantid`,`logdate`,`action`,`mac_address`,`ip_address`,`username`) values (1,'Logged in Successfully',NULL,NULL,'2020-06-04 08:37:54','Successful','Host Name . . . .','::1','ikosafo'),(2,'Logged in Successfully',NULL,NULL,'2020-06-06 06:34:16','Successful','Host Name . . . .','::1','ikosafo'),(3,'Log In Error (Wrong Username or Password)',NULL,NULL,'2020-06-11 04:39:43','Failed','Host Name . . . .','::1','adas'),(4,'Logged in Successfully',NULL,NULL,'2020-06-11 04:39:54','Successful','Host Name . . . .','::1','ikosafo'),(5,'Logged in Successfully',NULL,NULL,'2020-06-11 12:02:14','Successful','Host Name . . . .','::1','ikosafo');
 
 /*Table structure for table `taymac_message` */
 
