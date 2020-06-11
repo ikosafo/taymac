@@ -41,7 +41,7 @@ if (!isset($_SESSION['username'])) {
     <script src="newassets/js/jquery.min.js"></script>
 
     <script type="text/javascript">
-        $(window).load(function() {
+        $(window).load(function () {
             $(".loader").fadeOut("slow");
         });
 
@@ -146,196 +146,198 @@ background-size: 100% 350px;"
                                     <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                         <ul class="kt-menu__subnav">
 
-                                                <li class="kt-menu__item  kt-menu__item--submenu <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/website_slider.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_officeinstallations.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_featuredproperties.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_realtors.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_clients.php"
+                                            <li class="kt-menu__item  kt-menu__item--submenu <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/website_slider.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_officeinstallations.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_featuredproperties.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_clients.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_realtors.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_clients.php"
 
 
-                                                    ? "kt-menu__item--here" : ""); ?>"
-                                                    data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                                        href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
-                                                            class="kt-menu__link-text">HomePage</span><i
-                                                            class="kt-menu__hor-arrow la la-angle-right"></i><i
-                                                            class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle"><span
+                                                        class="kt-menu__link-text">HomePage</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
-                                                    <div
-                                                        class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                        <ul class="kt-menu__subnav">
-                                                            <li class="kt-menu__item <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_slider.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_slider"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Slider</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_officeinstallations.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_officeinstallations"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Office Installations</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_featuredproperties.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_featuredproperties"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Featured Properties</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_realtors.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_realtors"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Realtors</span></a>
-                                                            </li>
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+                                                        <li class="kt-menu__item <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_slider.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_slider"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Slider</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_officeinstallations.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_officeinstallations"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Office Installations</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_featuredproperties.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_featuredproperties"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Featured Properties</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_realtors.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_realtors"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Realtors</span></a>
+                                                        </li>
 
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_clients.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_clients"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Clients Feedback</span></a>
-                                                            </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_clients.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_clients"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Clients Feedback</span></a>
+                                                        </li>
 
-                                                        </ul>
-                                                    </div>
-                                                </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
 
-                                                <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_pm.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_story.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_contact.php"
+                                            <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_pm.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_story.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_team.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_contact.php"
 
-                                                    ? "kt-menu__item--here" : ""); ?>"
-                                                    data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                                        href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                                        <span class="kt-menu__link-text">About Us</span><i
-                                                            class="kt-menu__hor-arrow la la-angle-right"></i><i
-                                                            class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                                    <div
-                                                        class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                        <ul class="kt-menu__subnav">
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_aboutus"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">About Taymac</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item   <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_pm.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_pm"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Project Methodology</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_story.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_story"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Our Story</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_ppclients"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Present and Past Clients</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_team.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_team"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Team</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_contact.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_contact"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                                        class="kt-menu__link-text">Contact</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                                    <span class="kt-menu__link-text">About Us</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_aboutus.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_aboutus"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">About Taymac</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_pm.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_pm"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Project Methodology</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_story.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_story"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Our Story</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_ppclients.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_ppclients"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Present and Past Clients</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_team.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_team"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Team</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_contact.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_contact"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                                    class="kt-menu__link-text">Contact</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
 
 
-                                                <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/website_property.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_health.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_farms.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/website_service.php"
+                                            <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/website_property.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_health.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_farms.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/website_service.php"
 
-                                                    ? "kt-menu__item--here" : ""); ?>"
-                                                    data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                                        href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                                        <span class="kt-menu__link-text">What we do</span><i
-                                                            class="kt-menu__hor-arrow la la-angle-right"></i><i
-                                                            class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                                    <div
-                                                        class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                        <ul class="kt-menu__subnav">
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                                    <span class="kt-menu__link-text">What we do</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_property.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_property"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Property Management</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_service.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_service"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Add Service</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_health.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_health"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Health and Safety</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item   <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="website_farms"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Taymac Farms</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_property.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_property"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Property Management</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_service.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_service"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Add Service</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_health.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_health"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Health and Safety</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item   <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/website_farms.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="website_farms"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Taymac Farms</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
 
 
                                             <li class="kt-menu__item  <?php echo(
@@ -349,7 +351,6 @@ background-size: 100% 350px;"
                                         </ul>
                                     </div>
                                 </li>
-
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
@@ -390,152 +391,153 @@ background-size: 100% 350px;"
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_property.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_billing.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_billingpay.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/admin_sm.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php" ||
-                                    $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
+                                $_SERVER['PHP_SELF'] == "/admin/admin_property.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/admin_billing.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/admin_billingpay.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/admin_sm.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
-                                        data-ktmenu-submenu-toggle="click" aria-haspopup="true">
+                                    data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-text">Property Mgt.
                                             <i class="fa fa-caret-down ml-2"></i> </span>
                                         <i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
 
-                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                            <ul class="kt-menu__subnav">
+                                    <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                        <ul class="kt-menu__subnav">
 
-                                                <li class="kt-menu__item  <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/admin_property.php"
-                                                    ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                        href="admin_property"
-                                                        class="kt-menu__link "><i
-                                                            class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                            <span></span></i><span
-                                                            class="kt-menu__link-text">Property</span></a>
-                                                </li>
-                                                <li class="kt-menu__item   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php"
-                                                    ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                        href="admin_tenant"
-                                                        class="kt-menu__link "><i
-                                                            class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                            class="kt-menu__link-text">Tenant</span></a>
-                                                </li>
-                                                <li class="kt-menu__item   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/admin_billing.php"
-                                                    ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                        href="admin_billing"
-                                                        class="kt-menu__link "><i
-                                                            class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                            class="kt-menu__link-text">Billing</span></a>
-                                                </li>
-                                                <li class="kt-menu__item   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/admin_sm.php"
-                                                    ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                        href="admin_sm"
-                                                        class="kt-menu__link "><i
-                                                            class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
-                                                            class="kt-menu__link-text">Service & Maintenance</span></a>
-                                                </li>
-                                                <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
-                                                $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php" ||
-                                                $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
+                                            <li class="kt-menu__item  <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_property.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_property"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                        <span></span></i><span
+                                                        class="kt-menu__link-text">Property</span></a>
+                                            </li>
+                                            <li class="kt-menu__item   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_tenant.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_tenant"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                        class="kt-menu__link-text">Tenant</span></a>
+                                            </li>
+                                            <li class="kt-menu__item   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_billing.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_billing"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                        class="kt-menu__link-text">Billing</span></a>
+                                            </li>
+                                            <li class="kt-menu__item   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_sm.php"
+                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                    href="admin_sm"
+                                                    class="kt-menu__link "><i
+                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span
+                                                        class="kt-menu__link-text">Service & Maintenance</span></a>
+                                            </li>
+                                            <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/search_property.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_tenant.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_billtype.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_billsent.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
 
-                                                    ? "kt-menu__item--here" : ""); ?>"
-                                                    data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
-                                                        href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                                        <span class="kt-menu__link-text">Search</span><i
-                                                            class="kt-menu__hor-arrow la la-angle-right"></i><i
-                                                            class="kt-menu__ver-arrow la la-angle-right"></i></a>
-                                                    <div
-                                                        class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
-                                                        <ul class="kt-menu__subnav">
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                                    <span class="kt-menu__link-text">Search</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/search_property.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="search_property"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Property</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/search_tenant.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="search_tenant"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Tenant</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/search_billtype.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="search_billtype"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Bill Type</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/search_billsent.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="search_billsent"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Bills Delivered</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="search_billdaterange"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Bill By Date Range</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="search_servicetype"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Service & Maintenance Type</span></a>
-                                                            </li>
-                                                            <li class="kt-menu__item  <?php echo(
-                                                            $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php"
-                                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                                    href="search_servicedaterange"
-                                                                    class="kt-menu__link "><i
-                                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                                        <span></span></i><span
-                                                                        class="kt-menu__link-text">Service By Date Range</span></a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_property.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_property"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Property</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_tenant.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_tenant"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Tenant</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_billtype.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_billtype"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Bill Type</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_billsent.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_billsent"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Bills Delivered</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_billdaterange.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_billdaterange"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Bill By Date Range</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_servicetype.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_servicetype"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Service & Maintenance Type</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_servicedaterange.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_servicedaterange"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Service By Date Range</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/admin/farm_inputs.php" ||
@@ -546,12 +548,12 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/admin/farm_tunnel.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/farm_activity.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/farm_report.php" ||
-                                 $_SERVER['PHP_SELF'] == "/admin/farm_fertilizer.php" ||
-                                 $_SERVER['PHP_SELF'] == "/admin/farm_pesticide.php" ||
-                                 $_SERVER['PHP_SELF'] == "/admin/farm_watering.php" ||
-                                 $_SERVER['PHP_SELF'] == "/admin/farm_otheractivity.php"
+                                $_SERVER['PHP_SELF'] == "/admin/farm_fertilizer.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_pesticide.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_watering.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/farm_otheractivity.php"
 
-                                     ? "kt-menu__item--here" : ""); ?>"
+                                    ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                     <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-text">Farm Mgt.
@@ -572,6 +574,7 @@ background-size: 100% 350px;"
                                                     <span class="kt-menu__link-text">Categories</span><i
                                                         class="kt-menu__hor-arrow la la-angle-right"></i><i
                                                         class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
                                                 <div
                                                     class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                                     <ul class="kt-menu__subnav">
@@ -608,6 +611,7 @@ background-size: 100% 350px;"
                                                     <span class="kt-menu__link-text">Finance</span><i
                                                         class="kt-menu__hor-arrow la la-angle-right"></i><i
                                                         class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
                                                 <div
                                                     class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                                     <ul class="kt-menu__subnav">
@@ -666,6 +670,7 @@ background-size: 100% 350px;"
                                                     <span class="kt-menu__link-text">Farm Activities</span><i
                                                         class="kt-menu__hor-arrow la la-angle-right"></i><i
                                                         class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
                                                 <div
                                                     class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
                                                     <ul class="kt-menu__subnav">
@@ -857,15 +862,14 @@ background-size: 100% 350px;"
 
                     <!-- end: Header Menu -->        <!-- begin:: Header Topbar -->
                     <div class="kt-header__topbar kt-grid__item">
-
                         <!--begin: Search -->
                         <div class="kt-header__topbar-item">
                             <div class="kt-header__topbar-wrapper mt-2" data-offset="10px,0px">
-				<span class="kt-header__topbar-icon">
-					<a href="messages">
-                        <i class="fa fa-envelope"></i>
-                    </a> 				<!--<i class="flaticon2-search-1"></i>-->
-				</span>
+                                <span class="kt-header__topbar-icon">
+                                    <a href="../../">
+                                        <i class="fa fa-globe"></i>
+                                    </a> 				<!--<i class="flaticon2-search-1"></i>-->
+                                </span>
                             </div>
                         </div>
                         <!--end: Search -->
@@ -874,10 +878,10 @@ background-size: 100% 350px;"
                         <div class="kt-header__topbar-item kt-header__topbar-item--search dropdown"
                              id="kt_quick_search_toggle">
                             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
-				<span class="kt-header__topbar-icon">
-					<i class="flaticon2-search-1
-					"></i>				<!--<i class="flaticon2-search-1"></i>-->
-				</span>
+                                <span class="kt-header__topbar-icon">
+                                    <i class="flaticon2-search-1
+                                    "></i>				<!--<i class="flaticon2-search-1"></i>-->
+                                </span>
                             </div>
                             <div
                                 class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-lg">
@@ -904,18 +908,18 @@ background-size: 100% 350px;"
                         <!--end: Search -->
 
                         <?php
-/*                        //IT SECTION
-                        $query = $mysqli->query("select * from permission where user_id = '$user_id'
-                                            AND (permission = 'IT Section' OR permission = 'All Permissions')");
-                        $count = mysqli_num_rows($query);
-                        if ($count == '1') {
-                        */?>
+                        /*                        //IT SECTION
+                                                $query = $mysqli->query("select * from permission where user_id = '$user_id'
+                                                                    AND (permission = 'IT Section' OR permission = 'All Permissions')");
+                                                $count = mysqli_num_rows($query);
+                                                if ($count == '1') {
+                                                */ ?>
 
                         <!--begin: Quick actions -->
                         <div class="kt-header__topbar-item dropdown">
                             <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
 			<span class="kt-header__topbar-icon">
-				<i class="flaticon2-gear"></i>
+				<i class="flaticon2-user-1"></i>
 							</span>
                             </div>
                             <div
@@ -925,19 +929,19 @@ background-size: 100% 350px;"
                                     <!--begin: Grid Nav -->
                                     <div class="kt-grid-nav kt-grid-nav--skin-light">
                                         <div class="kt-grid-nav__row">
-                                            <a href="dateconfig" class="kt-grid-nav__item">
+                                            <a href="adduser" class="kt-grid-nav__item">
             <span class="kt-grid-nav__icon">
-                <i class="flaticon2-calendar-2"></i>
+                <i class="flaticon2-user"></i>
             </span>
-                                                <span class="kt-grid-nav__title">Date</span>
-                                                <span class="kt-grid-nav__desc">Configuration</span>
+                                                <span class="kt-grid-nav__title">Add User</span>
+                                               <!-- <span class="kt-grid-nav__desc">User</span>-->
                                             </a>
-                                            <a href="#" class="kt-grid-nav__item">
+                                            <a href="changepassword" class="kt-grid-nav__item">
            <span class="kt-grid-nav__icon">
-                <i class="flaticon2-user-outline-symbol"></i>
+                <i class="flaticon2-lock"></i>
             </span>
-                                                <span class="kt-grid-nav__title">Pin</span>
-                                                <span class="kt-grid-nav__desc">Configuration</span>
+                                                <span class="kt-grid-nav__title">Change Password</span>
+                                                <!--<span class="kt-grid-nav__desc">Password</span>-->
                                             </a>
                                         </div>
                                     </div>
@@ -947,7 +951,7 @@ background-size: 100% 350px;"
                         </div>
                         <!--end: Quick actions -->
 
-                      <!--  --><?php /*} */?>
+                        <!--  --><?php /*} */ ?>
 
 
                         <!--begin: User bar -->
