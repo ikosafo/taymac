@@ -34,9 +34,37 @@ $random = rand(1,10000).date("Ymd");
         <div id="show_income" style="display: none">
             <div class="form-group row">
                 <div class="col-lg-12 col-md-12">
-                    <label for="source_name">Source</label>
-                    <input type="text" class="form-control" id="source_name"
-                           placeholder="Enter Source">
+                    <label for="income_source">Source</label>
+                    <input type="text" class="form-control" id="income_source"
+                           placeholder="Enter Income Source">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="income_date">Date</label>
+                    <input type="text" class="form-control" id="income_date"
+                           placeholder="Select Date">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="income_amount">Amount</label>
+                    <input type="text" class="form-control" id="income_amount"
+                           onkeypress="return isNumberKey(event)"
+                           placeholder="Enter Amount">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="income_description">Description</label>
+                <textarea class="form-control" id="income_description"
+                          placeholder="Enter Description"></textarea>
+                </div>
+            </div>
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <button type="button" class="btn btn-primary" id="saveincome">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
                 </div>
             </div>
         </div>
@@ -44,9 +72,37 @@ $random = rand(1,10000).date("Ymd");
         <div id="show_expenditure" style="display: none">
             <div class="form-group row">
                 <div class="col-lg-12 col-md-12">
-                    <label for="expense">Expense</label>
-                    <input type="text" class="form-control" id="expense"
-                           placeholder="Enter Source">
+                    <label for="expense_source">Expense</label>
+                    <input type="text" class="form-control" id="expense_source"
+                           placeholder="Enter Expenditure">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="expense_date">Date</label>
+                    <input type="text" class="form-control" id="expense_date"
+                           placeholder="Select Date">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="expense_amount">Amount</label>
+                    <input type="text" class="form-control" id="expense_amount"
+                           onkeypress="return isNumberKey(event)"
+                           placeholder="Enter Amount">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="expense_description">Description</label>
+                <textarea class="form-control" id="expense_description"
+                          placeholder="Enter Description"></textarea>
+                </div>
+            </div>
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <button type="button" class="btn btn-primary" id="saveexpense">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
                 </div>
             </div>
         </div>
@@ -54,43 +110,40 @@ $random = rand(1,10000).date("Ymd");
         <div id="show_other" style="display: none">
             <div class="form-group row">
                 <div class="col-lg-12 col-md-12">
-                    <label for="acc_type">Account Type</label>
-                    <input type="text" class="form-control" id="acc_type"
-                           placeholder="Enter Source">
+                    <label for="other_source">Specify Account</label>
+                    <input type="text" class="form-control" id="other_source"
+                           placeholder="Enter Account">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="other_date">Date</label>
+                    <input type="text" class="form-control" id="other_date"
+                           placeholder="Select Date">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="other_amount">Amount</label>
+                    <input type="text" class="form-control" id="other_amount"
+                           onkeypress="return isNumberKey(event)"
+                           placeholder="Enter Amount">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12 col-md-12">
+                    <label for="other_description">Description</label>
+                <textarea class="form-control" id="other_description"
+                          placeholder="Enter Description"></textarea>
+                </div>
+            </div>
+            <div class="kt-portlet__foot">
+                <div class="kt-form__actions">
+                    <button type="button" class="btn btn-primary" id="saveother">Submit</button>
+                    <button type="reset" class="btn btn-secondary">Cancel</button>
                 </div>
             </div>
         </div>
-
-        <div class="form-group row">
-            <div class="col-lg-12 col-md-12">
-                <label for="date_account">Date</label>
-                <input type="text" class="form-control" id="date_account"
-                       placeholder="Select Date">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-lg-12 col-md-12">
-                <label for="amount">Amount</label>
-                <input type="text" class="form-control" id="amount"
-                       onkeypress="return isNumberKey(event)"
-                       placeholder="Enter Amount">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-lg-12 col-md-12">
-                <label for="payment_description">Description</label>
-                <textarea class="form-control" id="payment_description"
-                          placeholder="Enter Description"></textarea>
-            </div>
-        </div>
-
-        <div class="kt-portlet__foot">
-            <div class="kt-form__actions">
-                <button type="button" class="btn btn-primary" id="saveincome">Submit</button>
-                <button type="reset" class="btn btn-secondary">Cancel</button>
-            </div>
-        </div>
-
 
     </div>
 
@@ -124,72 +177,48 @@ $random = rand(1,10000).date("Ymd");
 
 <script>
 
-    $("#account_type").select2({placeholder: "Select Input Type"});
+    $("#account_type").select2({placeholder: "Select Account Type"});
 
-    $('#date_account').datepicker({
+    $('#income_date').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
         orientation: "bottom"
     });
 
-    $('#date_pp').datepicker({
+    $('#expense_date').datepicker({
         format: 'yyyy-mm-dd',
         autoclose: true,
         orientation: "bottom"
-    });
-
-    $('#date_po').datepicker({
-        format: 'yyyy-mm-dd',
-        autoclose: true,
-        orientation: "bottom"
-    });
-
-    $("#account_kg").keyup(function () {
-        var account_kg = $(this).val();
-        $("#account_g").val(account_kg * 1000);
-    });
-    $("#account_g").keyup(function () {
-        var account_g = $(this).val();
-        $("#account_kg").val(account_g / 1000);
-    });
-    $("#account_l").keyup(function () {
-        var account_l = $(this).val();
-        $("#account_ml").val(account_l * 1000);
-    });
-    $("#account_ml").keyup(function () {
-        var account_ml = $(this).val();
-        $("#account_l").val(account_ml / 1000);
     });
 
     $('#saveincome').click(function () {
-        var source_name = $('#source_name').val();
-        var account_kg = $('#account_kg').val();
-        var account_g = $('#account_g').val();
-        var amount = $('#amount').val();
-        var date_account = $('#date_account').val();
-        var account_type='Fertilizer';
+        var account_type = $('#account_type').val();
+        var income_source = $('#income_source').val();
+        var income_date = $('#income_date').val();
+        var income_amount = $('#income_amount').val();
+        var income_description = $('#income_description').val();
 
         var error = '';
-        if (source_name == "") {
-            error += 'Please enter fertilizer name \n';
-            $("#source_name").focus();
+        if (account_type == "") {
+            error += 'Please specify account type \n';
         }
-        if (date_account == "") {
-            error += 'Please enter date purchased \n';
+        if (income_source == "") {
+            error += 'Please make input \n';
+            $("#income_source").focus();
         }
-        if (account_kg == "" && account_g=="") {
-            error += 'Please select fertilizer quantity in kg or g\n';
-            $("#account_kg").focus();
+        if (income_date == "") {
+            error += 'Please select date \n';
+            $("#income_date").focus();
         }
-        if (amount  == "") {
-            error += 'Please enter cost of item \n';
-            $("#amount").focus();
+        if (income_amount == "") {
+            error += 'Please enter amount \n';
+            $("#income_amount").focus();
         }
 
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_farmpurchase.php",
+                url: "ajax/queries/saveform_accentry.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -199,18 +228,17 @@ $random = rand(1,10000).date("Ymd");
                     })
                 },
                 data: {
-                    source_name: source_name,
-                    account_kg: account_kg,
-                    account_g: account_g,
-                    amount:amount,
-                    account_type:account_type,
-                    date_account:date_account
+                    account_type: account_type,
+                    source: income_source,
+                    date: income_date,
+                    amount:income_amount,
+                    description:income_description
                 },
                 success: function (text) {
 
                     $.ajax({
                         type: "POST",
-                        url: "ajax/forms/farmpurchase_form.php",
+                        url: "ajax/forms/accentry_form.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -220,7 +248,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#farmpurchaseform_div').html(text);
+                            $('#accentryform_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
@@ -232,7 +260,7 @@ $random = rand(1,10000).date("Ymd");
 
                     $.ajax({
                         type: "POST",
-                        url: "ajax/tables/farmpurchase_table.php",
+                        url: "ajax/tables/accentry_table.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -242,7 +270,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#farmpurchasetable_div').html(text);
+                            $('#accentrytable_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
@@ -268,35 +296,34 @@ $random = rand(1,10000).date("Ymd");
     });
 
 
-    $('#save_purchase_p').click(function () {
-        var pesticide_name = $('#pesticide_name').val();
-        var account_l = $('#account_l').val();
-        var account_ml = $('#account_ml').val();
-        var account_cost_p = $('#account_cost_p').val();
-        var date_pp = $('#date_pp').val();
-        var account_type='Pesticide';
+    $('#saveexpense').click(function () {
+        var account_type = $('#account_type').val();
+        var expense_source = $('#expense_source').val();
+        var expense_date = $('#expense_date').val();
+        var expense_amount = $('#expense_amount').val();
+        var expense_description = $('#expense_description').val();
 
         var error = '';
-        if (pesticide_name == "") {
-            error += 'Please enter pesticide name \n';
-            $("#pesticide_name").focus();
+        if (account_type == "") {
+            error += 'Please specify account type \n';
         }
-        if (date_pp == "") {
-            error += 'Please enter date purchased \n';
+        if (expense_source == "") {
+            error += 'Please make input \n';
+            $("#expense_source").focus();
         }
-        if (account_l == "" && account_ml=="") {
-            error += 'Please select pesticide quantity in l or ml\n';
-            $("#account_l").focus();
+        if (expense_date == "") {
+            error += 'Please select date \n';
+            $("#expense_date").focus();
         }
-        if (account_cost_p  == "") {
-            error += 'Please enter cost of item \n';
-            $("#account_cost_p").focus();
+        if (expense_amount == "") {
+            error += 'Please enter amount \n';
+            $("#expense_amount").focus();
         }
 
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_farmpurchase.php",
+                url: "ajax/queries/saveform_accentry.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -306,18 +333,17 @@ $random = rand(1,10000).date("Ymd");
                     })
                 },
                 data: {
-                    source_name: pesticide_name,
-                    account_kg: account_l,
-                    account_g: account_ml,
-                    amount:account_cost_p,
-                    account_type:account_type,
-                    date_account:date_pp
+                    account_type: account_type,
+                    source: expense_source,
+                    date: expense_date,
+                    amount:expense_amount,
+                    description:expense_description
                 },
                 success: function (text) {
 
                     $.ajax({
                         type: "POST",
-                        url: "ajax/forms/farmpurchase_form.php",
+                        url: "ajax/forms/accentry_form.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -327,7 +353,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#farmpurchaseform_div').html(text);
+                            $('#accentryform_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
@@ -339,7 +365,7 @@ $random = rand(1,10000).date("Ymd");
 
                     $.ajax({
                         type: "POST",
-                        url: "ajax/tables/farmpurchase_table.php",
+                        url: "ajax/tables/accentry_table.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -349,7 +375,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#farmpurchasetable_div').html(text);
+                            $('#accentrytable_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
@@ -375,34 +401,34 @@ $random = rand(1,10000).date("Ymd");
     });
 
 
-    $('#save_purchase_o').click(function () {
-        var product_name = $('#product_name').val();
-        var account_qty = $('#account_qty').val();
-        var account_cost = $('#account_cost').val();
-        var date_po = $('#date_po').val();
-        var account_type='Other';
+    $('#saveother').click(function () {
+        var account_type = $('#account_type').val();
+        var other_source = $('#other_source').val();
+        var other_date = $('#other_date').val();
+        var other_amount = $('#other_amount').val();
+        var other_description = $('#other_description').val();
 
         var error = '';
-        if (product_name == "") {
-            error += 'Please enter product name \n';
-            $("#product_name").focus();
+        if (account_type == "") {
+            error += 'Please specify account type \n';
         }
-        if (date_po == "") {
-            error += 'Please enter date purchased \n';
+        if (other_source == "") {
+            error += 'Please make input \n';
+            $("#other_source").focus();
         }
-        if (account_qty == "") {
-            error += 'Please select quantity\n';
-            $("#account_l").focus();
+        if (other_date == "") {
+            error += 'Please select date \n';
+            $("#expense_date").focus();
         }
-        if (account_cost  == "") {
-            error += 'Please enter cost of item \n';
-            $("#account_cost_p").focus();
+        if (other_amount == "") {
+            error += 'Please enter amount \n';
+            $("#expense_amount").focus();
         }
 
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_farmpurchase.php",
+                url: "ajax/queries/saveform_accentry.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -412,18 +438,17 @@ $random = rand(1,10000).date("Ymd");
                     })
                 },
                 data: {
-                    source_name: product_name,
-                    account_kg: account_qty,
-                    account_g: '',
-                    amount:account_cost,
-                    account_type:account_type,
-                    date_account:date_po
+                    account_type: account_type,
+                    source: other_source,
+                    date: other_date,
+                    amount:other_amount,
+                    description:other_description
                 },
                 success: function (text) {
 
                     $.ajax({
                         type: "POST",
-                        url: "ajax/forms/farmpurchase_form.php",
+                        url: "ajax/forms/accentry_form.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -433,7 +458,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#farmpurchaseform_div').html(text);
+                            $('#accentryform_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
@@ -445,7 +470,7 @@ $random = rand(1,10000).date("Ymd");
 
                     $.ajax({
                         type: "POST",
-                        url: "ajax/tables/farmpurchase_table.php",
+                        url: "ajax/tables/accentry_table.php",
                         beforeSend: function () {
                             KTApp.blockPage({
                                 overlayColor: "#000000",
@@ -455,7 +480,7 @@ $random = rand(1,10000).date("Ymd");
                             })
                         },
                         success: function (text) {
-                            $('#farmpurchasetable_div').html(text);
+                            $('#accentrytable_div').html(text);
                         },
                         error: function (xhr, ajaxOptions, thrownError) {
                             alert(xhr.status + " " + thrownError);
@@ -479,5 +504,6 @@ $random = rand(1,10000).date("Ymd");
         }
         return false;
     });
+
 
 </script>

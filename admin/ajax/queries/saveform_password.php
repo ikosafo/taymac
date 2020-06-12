@@ -12,7 +12,7 @@ $respassword = $getpassword->fetch_assoc();
 $compassword2 = $respassword['password'];
 
 if ($compassword == $compassword2) {
-    
+
     $mysqli->query("UPDATE `taymac_mis_users`
 SET `password` = '$password'
 

@@ -22,120 +22,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="adminuser_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/adminuser_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changepassword.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/changepassword.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="changepassword_form.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/ajax/forms/changepassword_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.076923">
-              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
+            <state vertical-scroll-proportion="-3.7692308">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveform_password.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_password.php">
+      <file leaf-file-name="admin_accentry.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/admin_accentry.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4265233">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state vertical-scroll-proportion="-5.230769">
+              <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accentry_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/forms/accentry_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.769231">
+              <caret line="262" column="60" selection-start-line="262" selection-start-column="42" selection-end-line="262" selection-end-column="60" />
               <folding>
-                <marker date="1591973315592" expanded="true" signature="328:384" placeholder="select * fro..taymac_mis_users..." />
+                <element signature="n#div#1;n#div#0;n#form#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#form#0;n#!!top" expanded="false" />
+                <element signature="e#11306#15165#0#HTML" expanded="false" />
+                <element signature="e#15208#19035#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveform_health.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_health.php">
+      <file leaf-file-name="accentry_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/accentry_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.5896057">
+              <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
               <folding>
-                <marker date="1591524330977" expanded="true" signature="140:175" placeholder="select * fro..taymac_health..." />
-                <marker date="1591524330977" expanded="true" signature="313:392" placeholder="INSERT INTO ..." />
+                <element signature="n#style#0;n#i#0;n#button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1591979464560" expanded="true" signature="62:106" placeholder="select * fro..account_entry..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveform_realtor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_realtor.php">
+      <file leaf-file-name="addppclient_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addppclient_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="11.115385">
+              <caret line="10" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="126" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addrealtor_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addrealtor_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.076923">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+              <folding>
+                <marker date="1591848621926" expanded="true" signature="62:107" placeholder="select * fro..taymac_realtor..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveform_accentry.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_accentry.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding>
+                <marker date="1591979275269" expanded="true" signature="395:673" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveform_adminbilling.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_adminbilling.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.5">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding>
+                <marker date="1591678125525" expanded="true" signature="961:1723" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveform_client.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_client.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-9.153846">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <marker date="1591340222103" expanded="true" signature="201:330" placeholder="INSERT INTO ..." />
+                <marker date="1591340979582" expanded="true" signature="205:345" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adduser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/adduser.php">
+      <file leaf-file-name="publish_blog.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/publish_blog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.423077">
-              <caret line="27" column="65" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="65" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.03846">
-              <caret line="64" column="104" selection-start-line="64" selection-start-column="104" selection-end-line="64" selection-end-column="104" />
-              <folding>
-                <marker date="1591971308431" expanded="true" signature="2564:2601" placeholder="select * fro..." />
-                <marker date="1591971308431" expanded="true" signature="3469:3504" placeholder="select * fro..." />
-                <marker date="1591971308431" expanded="true" signature="4371:4398" placeholder="select * fro..." />
-                <marker date="1591971308431" expanded="true" signature="5267:5303" placeholder="select * fro..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginaction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/loginscripts/loginaction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="20" />
-              <folding>
-                <marker date="1591971530930" expanded="true" signature="147:276" placeholder="SELECT * FRO..taymac_mis_users..." />
-                <marker date="1591971530930" expanded="true" signature="1372:1705" placeholder="INSERT INTO ..." />
-                <marker date="1591971530930" expanded="true" signature="1781:2099" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="saveform_user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.538462">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <marker date="1591971141135" expanded="true" signature="390:700" placeholder="INSERT INTO ..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -145,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin/ajax/forms/addaboutus_formedit.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/addfarm_formedit.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/addhealth_formedit.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/addpm_formedit.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/adminbilling_formedit.php" />
@@ -185,7 +181,6 @@
         <option value="$PROJECT_DIR$/admin/ajax/tables/adminpayment_table.php" />
         <option value="$PROJECT_DIR$/admin/admin_accentry.php" />
         <option value="$PROJECT_DIR$/admin/includes/header.php" />
-        <option value="$PROJECT_DIR$/admin/ajax/forms/accentry_form.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/delete_user.php" />
         <option value="$PROJECT_DIR$/admin/ajax/tables/adminuser_table.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_user.php" />
@@ -196,6 +191,9 @@
         <option value="$PROJECT_DIR$/admin/changepassword.php" />
         <option value="$PROJECT_DIR$/admin/ajax/forms/changepassword_form.php" />
         <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_password.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/forms/accentry_form.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/queries/saveform_accentry.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/tables/accentry_table.php" />
       </list>
     </option>
   </component>
@@ -288,6 +286,10 @@
               <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -304,10 +306,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ajax" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="queries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,7 +368,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23600605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -435,40 +433,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/searchbill_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1591765451340" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_billing..." />
-            <marker date="1591765451340" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_billing..." />
-            <marker date="1591765451340" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/searchtenant_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <marker date="1591764784374" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_tenant..." />
-            <marker date="1591764784374" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_property..." />
-            <marker date="1591764784374" expanded="true" signature="-1:-1" placeholder="select * fro..admin_taymac_billing..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminstaff_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.26923">
-          <caret line="74" column="6" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
-          <folding>
-            <marker date="1591942207454" expanded="true" signature="-1:-1" placeholder="select * fro..admin_staff..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_slider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -520,16 +484,6 @@
             <element signature="n#div#2;n#div#0;n#form#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#!!top" expanded="true" />
             <marker date="1591944048672" expanded="true" signature="-1:-1" placeholder="select * fro..admin_staff..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addppclient_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="64" column="0" selection-start-line="57" selection-start-column="3" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <marker date="1591848622281" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_ppclient..." />
           </folding>
         </state>
       </provider>
@@ -669,14 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_adminbilling.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_adminpayment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6153846">
@@ -758,14 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin_accentry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/includes/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154">
@@ -800,14 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addrealtor_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/delete_team.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
@@ -836,24 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/accentry_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1591340979582" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/tables/adminuser_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
@@ -870,7 +782,7 @@
         <state vertical-scroll-proportion="-17.538462">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <marker date="1591971141135" expanded="true" signature="390:700" placeholder="INSERT INTO ..." />
+            <marker date="1591971141135" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -880,10 +792,10 @@
         <state vertical-scroll-proportion="-32.03846">
           <caret line="64" column="104" selection-start-line="64" selection-start-column="104" selection-end-line="64" selection-end-column="104" />
           <folding>
-            <marker date="1591971308431" expanded="true" signature="2564:2601" placeholder="select * fro..." />
-            <marker date="1591971308431" expanded="true" signature="3469:3504" placeholder="select * fro..." />
-            <marker date="1591971308431" expanded="true" signature="4371:4398" placeholder="select * fro..." />
-            <marker date="1591971308431" expanded="true" signature="5267:5303" placeholder="select * fro..." />
+            <marker date="1591971308431" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1591971308431" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1591971308431" expanded="true" signature="-1:-1" placeholder="select * fro..." />
+            <marker date="1591971308431" expanded="true" signature="-1:-1" placeholder="select * fro..." />
           </folding>
         </state>
       </provider>
@@ -909,8 +821,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1591524330977" expanded="true" signature="140:175" placeholder="select * fro..taymac_health..." />
-            <marker date="1591524330977" expanded="true" signature="313:392" placeholder="INSERT INTO ..." />
+            <marker date="1591524330977" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_health..." />
+            <marker date="1591524330977" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -920,7 +832,7 @@
         <state vertical-scroll-proportion="-9.153846">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <marker date="1591340222103" expanded="true" signature="201:330" placeholder="INSERT INTO ..." />
+            <marker date="1591340222103" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -938,27 +850,115 @@
         <state vertical-scroll-proportion="-13.076923">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="20" />
           <folding>
-            <marker date="1591971530930" expanded="true" signature="147:276" placeholder="SELECT * FRO..taymac_mis_users..." />
-            <marker date="1591971530930" expanded="true" signature="1372:1705" placeholder="INSERT INTO ..." />
-            <marker date="1591971530930" expanded="true" signature="1781:2099" placeholder="INSERT INTO ..." />
+            <marker date="1591971530930" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..taymac_mis_users..." />
+            <marker date="1591971530930" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1591971530930" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/changepassword_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.076923">
-          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_password.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4265233">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
-            <marker date="1591973315592" expanded="true" signature="328:384" placeholder="select * fro..taymac_mis_users..." />
+            <marker date="1591975663823" expanded="true" signature="-1:-1" placeholder="select * fro..taymac_mis_users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin_accentry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="62" column="14" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/changepassword_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.7692308">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/publish_blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_adminbilling.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <marker date="1591678125525" expanded="true" signature="961:1723" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1591340979582" expanded="true" signature="205:345" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/queries/saveform_accentry.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <marker date="1591979275269" expanded="true" signature="395:673" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/forms/accentry_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.769231">
+          <caret line="262" column="60" selection-start-line="262" selection-start-column="42" selection-end-line="262" selection-end-column="60" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#form#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#form#0;n#!!top" expanded="false" />
+            <element signature="e#11306#15165#0#HTML" expanded="false" />
+            <element signature="e#15208#19035#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addppclient_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="11.115385">
+          <caret line="10" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="126" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/addrealtor_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <marker date="1591848621926" expanded="true" signature="62:107" placeholder="select * fro..taymac_realtor..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/tables/accentry_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5896057">
+          <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#button#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1591979464560" expanded="true" signature="62:106" placeholder="select * fro..account_entry..." />
           </folding>
         </state>
       </provider>
