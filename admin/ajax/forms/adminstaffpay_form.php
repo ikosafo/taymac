@@ -304,7 +304,7 @@ $resstaff = $getstaff->fetch_assoc();
                 },
                 success: function (text) {
                     //alert(text);
-                    window.location.href = "/admin_staffpaydetails";
+                    window.location.href = "/admin/admin_staffpaydetails";
                 },
 
                 error: function (xhr, ajaxOptions, thrownError) {
