@@ -118,6 +118,14 @@ if ($payment_type == "IOU") {
                     <td>
                         <button type="button"
                                 data-type="confirm"
+                                class="btn btn-sm btn-warning print_staffpaysalary"
+                                i_index="<?php echo $fetch['id']; ?>"
+                                title="Print">
+                            <i class="flaticon2-print ml-1" style="color:#fff !important;"></i>
+                        </button>
+                        <p></p>
+                        <button type="button"
+                                data-type="confirm"
                                 class="btn btn-sm btn-danger delete_staffpaysalary"
                                 i_index="<?php echo $fetch['id']; ?>"
                                 title="Delete">
@@ -230,6 +238,68 @@ if ($payment_type == "IOU") {
                     }
                 }
             }
+        });
+    });
+
+
+    $(document).off('click', '.print_staffpayiou').on('click', '.print_staffpayiou', function () {
+        var theindex = $(this).attr('i_index');
+        //alert(theindex);
+
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/staffpayiouprint_form.php",
+            beforeSend: function () {
+                KTApp.blockPage({
+                    overlayColor: "#000000",
+                    type: "v2",
+                    state: "success",
+                    message: "Please wait..."
+                })
+            },
+            data:{
+                theindex:theindex
+            },
+            success: function (text) {
+                $('#searchptable_div').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+            complete: function () {
+                KTApp.unblockPage();
+            },
+        });
+    });
+
+
+    $(document).off('click', '.print_staffpaysalary').on('click', '.print_staffpaysalary', function () {
+        var theindex = $(this).attr('i_index');
+        //alert(theindex);
+
+        $.ajax({
+            type: "POST",
+            url: "ajax/forms/staffpaysalaryprint_form.php",
+            beforeSend: function () {
+                KTApp.blockPage({
+                    overlayColor: "#000000",
+                    type: "v2",
+                    state: "success",
+                    message: "Please wait..."
+                })
+            },
+            data:{
+                theindex:theindex
+            },
+            success: function (text) {
+                $('#searchptable_div').html(text);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status + " " + thrownError);
+            },
+            complete: function () {
+                KTApp.unblockPage();
+            },
         });
     });
 

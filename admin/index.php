@@ -62,7 +62,7 @@
                                                         <span class="kt-widget__title">Staff</span>
                                                         <span class="kt-widget__value"><span><i class="la la-users"></i> </span>
                                                         <?php
-                                                        $getperm = $mysqli->query("select * from `admin_taymac_staff`");
+                                                        $getperm = $mysqli->query("select * from `admin_staff`");
                                                         echo mysqli_num_rows($getperm);
                                                         ?>
                                                         </span>

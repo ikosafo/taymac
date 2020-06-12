@@ -43,7 +43,8 @@ $ip_add = getRealIpAddr();
 $full_name = $getdetails['full_name'];
 $password = $getdetails['password'];
 $user_id = $getdetails['user_id'];
-$user_type = $getdetails['approval'];
+$user_type = $getdetails['usertype'];
+
 
 $_SESSION['full_name'] = $full_name;
 $_SESSION['password'] = $password;
