@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from account_entry ORDER BY id DESC");
+$pinq = $mysqli->query("select * from account_entry ORDER BY date DESC,id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -39,10 +39,10 @@ $pinq = $mysqli->query("select * from account_entry ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['date']; ?></td>
+                        <td><?php echo date('l, F j, Y',strtotime($fetch['date'])); ?></td>
                         <td><?php echo $fetch['account_type']; ?></td>
                         <td><?php echo $fetch['source']; ?></td>
-                        <td><?php echo $fetch['amount']; ?></td>
+                        <td><?php echo number_format($fetch['amount'],2); ?></td>
                         <td><?php echo $fetch['description']; ?></td>
                         <td>
                             <button type="button"
@@ -100,7 +100,7 @@ $pinq = $mysqli->query("select * from account_entry ORDER BY id DESC");
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/addaccentry_table.php",
+                                    url: "ajax/tables/accentry_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",

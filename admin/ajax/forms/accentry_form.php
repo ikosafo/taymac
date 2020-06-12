@@ -191,6 +191,12 @@ $random = rand(1,10000).date("Ymd");
         orientation: "bottom"
     });
 
+    $('#other_date').datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+        orientation: "bottom"
+    });
+
     $('#saveincome').click(function () {
         var account_type = $('#account_type').val();
         var income_source = $('#income_source').val();

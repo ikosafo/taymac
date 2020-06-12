@@ -851,7 +851,8 @@ background-size: 100% 350px;"
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
                                 $_SERVER['PHP_SELF'] == "/admin/admin_payments.php" ||
-                                $_SERVER['PHP_SELF'] == "/admin/admin_accentry.php"
+                                $_SERVER['PHP_SELF'] == "/admin/admin_accentry.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/admin_cashbook.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">

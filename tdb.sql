@@ -2,7 +2,7 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 8.0.18 : Database - taymac
 *********************************************************************
-*/
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -15,6 +15,24 @@ MySQL - 8.0.18 : Database - taymac
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`taymac` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 
 USE `taymac`;
+
+/*Table structure for table `account_entry` */
+
+DROP TABLE IF EXISTS `account_entry`;
+
+CREATE TABLE `account_entry` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `account_type` varchar(255) DEFAULT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `amount` decimal(20,2) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `account_entry` */
+
+insert  into `account_entry`(`id`,`account_type`,`source`,`date`,`amount`,`description`) values (2,'Expenditure','adasas','2020-06-09',333.00,'sdasd'),(3,'Other','asda','2020-06-08',322.00,''),(5,'Income','dsfsd','2020-06-09',2312.00,'adsadas');
 
 /*Table structure for table `admin_bill_payments` */
 
@@ -70,6 +88,51 @@ CREATE TABLE `admin_staff` (
 
 insert  into `admin_staff`(`id`,`staff_name`,`employment_type`,`staff_id`,`staff_position`,`staff_telephone`,`staff_email`,`staff_qualification`,`staff_department`,`date_started`) values (2,'Isaac Osafo','Full Time','T1230','Software Engineer','0202378273','ikosafo@gmail.com','BSc Computer Science','MIS','2020-05-31');
 
+/*Table structure for table `admin_staff_iou` */
+
+DROP TABLE IF EXISTS `admin_staff_iou`;
+
+CREATE TABLE `admin_staff_iou` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `staff_id` int(12) DEFAULT NULL,
+  `payment_period` varchar(255) DEFAULT NULL,
+  `payment_date` date DEFAULT NULL,
+  `payment_amount` decimal(20,2) DEFAULT NULL,
+  `dateupdated` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `admin_staff_iou` */
+
+insert  into `admin_staff_iou`(`id`,`staff_id`,`payment_period`,`payment_date`,`payment_amount`,`dateupdated`) values (1,2,'2020-05','2020-06-12',450.00,'2020-06-12 02:17:24'),(2,2,'2020-05','2020-06-09',300.00,'2020-06-12 06:13:00'),(3,2,'2020-06','2020-06-08',223.00,'2020-06-12 06:13:11');
+
+/*Table structure for table `admin_staff_salary` */
+
+DROP TABLE IF EXISTS `admin_staff_salary`;
+
+CREATE TABLE `admin_staff_salary` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `staff_id` int(12) DEFAULT NULL,
+  `payment_period` varchar(255) DEFAULT NULL,
+  `payment_date` date DEFAULT NULL,
+  `payment_amount` decimal(20,2) DEFAULT NULL,
+  `dateupdated` datetime DEFAULT NULL,
+  `gross_salary` decimal(20,2) DEFAULT NULL,
+  `allowance` decimal(20,2) DEFAULT NULL,
+  `overtime` decimal(20,2) DEFAULT NULL,
+  `compensation` decimal(20,2) DEFAULT NULL,
+  `iou_salary` decimal(20,2) DEFAULT NULL,
+  `income_tax` decimal(20,2) DEFAULT NULL,
+  `ssnit` decimal(20,2) DEFAULT NULL,
+  `welfare` decimal(20,2) DEFAULT NULL,
+  `total` decimal(20,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `admin_staff_salary` */
+
+insert  into `admin_staff_salary`(`id`,`staff_id`,`payment_period`,`payment_date`,`payment_amount`,`dateupdated`,`gross_salary`,`allowance`,`overtime`,`compensation`,`iou_salary`,`income_tax`,`ssnit`,`welfare`,`total`) values (1,2,'2020-06','2020-06-16',NULL,'2020-06-12 06:10:46',4000.00,0.00,0.00,300.00,800.00,224.00,322.00,50.00,2904.00),(2,2,'2020-05','2020-06-09',NULL,'2020-06-12 06:39:50',5000.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,5000.00);
+
 /*Table structure for table `admin_taymac_billing` */
 
 DROP TABLE IF EXISTS `admin_taymac_billing`;
@@ -95,6 +158,25 @@ CREATE TABLE `admin_taymac_billing` (
 /*Data for the table `admin_taymac_billing` */
 
 insert  into `admin_taymac_billing`(`id`,`billing_type`,`billing_type_other`,`billing_tenant`,`billing_currency`,`billing_period`,`billing_amount`,`billing_months`,`billing_date`,`billing_delivered`,`billing_description`,`billing_total`,`dateupdated`,`amt_paid`) values (1,'CAM Fees','','5','US Dollars','2020-06',910.00,12,'2020-06-17','Yes','Desc',10920.00,'2020-06-09 04:54:38',1300.00),(2,'Reimburse Bills','','3','GB Pounds','2020-06',350.00,12,'2020-06-09','No','Description here',4200.00,'2020-06-09 06:53:51',2000.00),(4,'Other','Other Bill','5','Euros','2020-08',123.00,12,'2020-06-17','Yes','',1476.00,'2020-06-09 07:29:50',750.00),(5,'Reimburse Bills','','3','Euros','2020-06',300.00,15,'2020-06-23','Yes','',4500.00,'2020-06-09 10:20:11',4500.00);
+
+/*Table structure for table `admin_taymac_payment` */
+
+DROP TABLE IF EXISTS `admin_taymac_payment`;
+
+CREATE TABLE `admin_taymac_payment` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `receiver_name` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `payment_amount` decimal(20,2) DEFAULT '0.00',
+  `payment_date` date DEFAULT NULL,
+  `payment_purpose` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `payment_description` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `dateupdated` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `admin_taymac_payment` */
+
+insert  into `admin_taymac_payment`(`id`,`receiver_name`,`payment_amount`,`payment_date`,`payment_purpose`,`payment_description`,`dateupdated`) values (2,'Samuel Nti',2333.43,'2020-06-08','For development','Received amount','2020-06-12 09:07:59');
 
 /*Table structure for table `admin_taymac_property` */
 
@@ -242,6 +324,23 @@ CREATE TABLE `farm_inputs` (
 /*Data for the table `farm_inputs` */
 
 insert  into `farm_inputs`(`id`,`input_name`,`input_type`,`input_type_other`) values (3,'asdas','Pesticide',''),(4,'Input 2','Pesticide','');
+
+/*Table structure for table `farm_otheractivity` */
+
+DROP TABLE IF EXISTS `farm_otheractivity`;
+
+CREATE TABLE `farm_otheractivity` (
+  `id` int(12) NOT NULL AUTO_INCREMENT,
+  `activity` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `date_activity` date DEFAULT NULL,
+  `activity_description` varchar(255) DEFAULT NULL,
+  `dateperiod` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+/*Data for the table `farm_otheractivity` */
+
+insert  into `farm_otheractivity`(`id`,`activity`,`date_activity`,`activity_description`,`dateperiod`) values (2,'Another Activity Name here','2020-06-17','The description','2020-06-11 22:28:23');
 
 /*Table structure for table `farm_pesticide` */
 
@@ -603,11 +702,11 @@ CREATE TABLE `taymac_logs_mis` (
   `ip_address` varchar(255) DEFAULT NULL,
   `username` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`logid`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `taymac_logs_mis` */
 
-insert  into `taymac_logs_mis`(`logid`,`message`,`userid`,`applicantid`,`logdate`,`action`,`mac_address`,`ip_address`,`username`) values (1,'Logged in Successfully',NULL,NULL,'2020-06-04 08:37:54','Successful','Host Name . . . .','::1','ikosafo'),(2,'Logged in Successfully',NULL,NULL,'2020-06-06 06:34:16','Successful','Host Name . . . .','::1','ikosafo'),(3,'Log In Error (Wrong Username or Password)',NULL,NULL,'2020-06-11 04:39:43','Failed','Host Name . . . .','::1','adas'),(4,'Logged in Successfully',NULL,NULL,'2020-06-11 04:39:54','Successful','Host Name . . . .','::1','ikosafo'),(5,'Logged in Successfully',NULL,NULL,'2020-06-11 12:02:14','Successful','Host Name . . . .','::1','ikosafo');
+insert  into `taymac_logs_mis`(`logid`,`message`,`userid`,`applicantid`,`logdate`,`action`,`mac_address`,`ip_address`,`username`) values (1,'Logged in Successfully',NULL,NULL,'2020-06-04 08:37:54','Successful','Host Name . . . .','::1','ikosafo'),(2,'Logged in Successfully',NULL,NULL,'2020-06-06 06:34:16','Successful','Host Name . . . .','::1','ikosafo'),(3,'Log In Error (Wrong Username or Password)',NULL,NULL,'2020-06-11 04:39:43','Failed','Host Name . . . .','::1','adas'),(4,'Logged in Successfully',NULL,NULL,'2020-06-11 04:39:54','Successful','Host Name . . . .','::1','ikosafo'),(5,'Logged in Successfully',NULL,NULL,'2020-06-11 12:02:14','Successful','Host Name . . . .','::1','ikosafo'),(6,'Logged in Successfully',NULL,NULL,'2020-06-12 14:14:03','Successful','Host Name . . . .','::1','taymac'),(7,'Log In Error (Wrong Username or Password)',NULL,NULL,'2020-06-12 14:15:36','Failed','Host Name . . . .','::1','ikosafo'),(8,'Logged in Successfully',NULL,NULL,'2020-06-12 14:15:44','Successful','Host Name . . . .','::1','taymac'),(9,'Logged in Successfully',NULL,NULL,'2020-06-12 14:19:22','Successful','Host Name . . . .','::1','test'),(10,'Logged in Successfully',NULL,NULL,'2020-06-12 14:20:48','Successful','Host Name . . . .','::1','taymac'),(11,'Logged in Successfully',NULL,NULL,'2020-06-12 14:49:19','Successful','Host Name . . . .','::1','taymac'),(12,'Log In Error (Wrong Username or Password)',NULL,NULL,'2020-06-12 14:49:27','Failed','Host Name . . . .','::1','taymac'),(13,'Log In Error (Wrong Username or Password)',NULL,NULL,'2020-06-12 14:49:32','Failed','Host Name . . . .','::1','taymac'),(14,'Logged in Successfully',NULL,NULL,'2020-06-12 14:49:36','Successful','Host Name . . . .','::1','taymac');
 
 /*Table structure for table `taymac_message` */
 
@@ -640,12 +739,13 @@ CREATE TABLE `taymac_mis_users` (
   `user_id` varchar(256) DEFAULT NULL,
   `approval` varchar(256) DEFAULT NULL,
   `see` int(12) DEFAULT '1',
+  `usertype` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `taymac_mis_users` */
 
-insert  into `taymac_mis_users`(`id`,`full_name`,`username`,`password`,`user_id`,`approval`,`see`) values (2,'Isaac Osafo','ikosafo','e10adc3949ba59abbe56e057f20f883e','83412018','Super Admin',1),(3,'Kofi Amoah','kofi','25d55ad283aa400af464c76d713c07ad','1632018','MIS Admin',1),(4,'Marion O.k','marion','e10adc3949ba59abbe56e057f20f883e','97002019','MIS Admin',1),(6,'Ike Levels','levels','25d55ad283aa400af464c76d713c07ad','31472020','Super Admin',1);
+insert  into `taymac_mis_users`(`id`,`full_name`,`username`,`password`,`user_id`,`approval`,`see`,`usertype`) values (1,'Mr Mawusi Kpakpah','taymac','25d55ad283aa400af464c76d713c07ad','893920200612',NULL,1,'Admin'),(2,'Isaac Osafo','ikosafo','e10adc3949ba59abbe56e057f20f883e','315920200612',NULL,0,'Admin'),(3,'Test','test','e10adc3949ba59abbe56e057f20f883e','242320200612',NULL,1,'Normal'),(6,'Ike Levels','levels','25d55ad283aa400af464c76d713c07ad','31472020','Super Admin',0,NULL);
 
 /*Table structure for table `taymac_pm` */
 
