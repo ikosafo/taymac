@@ -770,7 +770,10 @@ background-size: 100% 350px;"
 
 
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel <?php echo(
-                                $_SERVER['PHP_SELF'] == "/admin/admin_staff.php"
+                                $_SERVER['PHP_SELF'] == "/admin/admin_staff.php" ||
+                                 $_SERVER['PHP_SELF'] == "/admin/admin_staffpaydetails.php" ||
+                                 $_SERVER['PHP_SELF'] == "/admin/admin_staffpaysearch.php" ||
+                                 $_SERVER['PHP_SELF'] == "/admin/admin_staffpay.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -793,24 +796,52 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link-text">Staff</span></a>
                                             </li>
 
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/admin/admin_staffpayroll.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staffpayroll"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Payroll</span></a>
-                                            </li>
+                                            <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_staffpaydetails.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_staffpaysearch.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/admin_staffpay.php"
 
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/admin/admin_staffsearch.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="admin_staffsearch"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Search</span></a>
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                                    <span class="kt-menu__link-text">Payroll</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+
+
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/admin_staffpay.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="admin_staffpay"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Make Payment</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/admin_staffpaydetails.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="admin_staffpaydetails"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Details/Pay Slip</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/admin_staffpaysearch.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="admin_staffpaysearch"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Search</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </li>
 
                                         </ul>

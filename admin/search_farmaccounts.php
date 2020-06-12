@@ -26,16 +26,13 @@
 
                         <div class="form-group row">
                             <div class="col-lg-6 col-md-6">
-                                <label for="select_funnel">Select Tunnel</label>
-                                <select id="select_funnel" style="width: 100%">
-                                    <option value="">Select Tunnel</option>
-                                    <?php $getfunnel = $mysqli->query("select * from farm_funnel ORDER BY funnel_name");
-                                    while ($resfunnel = $getfunnel->fetch_assoc()) { ?>
-                                        <option value="<?php echo $resfunnel['id'] ?>"><?php echo $resfunnel['funnel_name'] ?></option>
-                                    <?php  } ?>
+                                <label for="finance_type">Select Finance Type</label>
+                                <select id="finance_type" style="width: 100%">
+                                    <option value="">Select</option>
+                                    <option value="Sales">Sales</option>
+                                    <option value="Purchase">Purchase</option>
                                 </select>
                             </div>
-
                         </div>
 
                         <div class="form-group row">
@@ -58,15 +55,15 @@
 <?php require('includes/footer.php') ?>
 
 <script>
-    $("#select_funnel").select2({placeholder: "Select Tunnel"});
+    $("#finance_type").select2({placeholder: "Select Tunnel"});
 
-    $("#select_funnel").change(function(){
-        var select_funnel = $("#select_funnel").val();
-        //alert(select_funnel);
+    $("#finance_type").change(function(){
+        var finance_type = $("#finance_type").val();
+        //alert(finance_type);
 
         $.ajax({
             method:"post",
-            url: "ajax/tables/searchfunnel_table.php",
+            url: "ajax/tables/searchfinance_table.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -76,7 +73,7 @@
                 })
             },
             data:{
-                select_funnel:select_funnel
+                finance_type:finance_type
             },
             success: function (text) {
                 $('#searchptable_div').html(text);

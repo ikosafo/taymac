@@ -4,7 +4,7 @@ $random = rand(1,10000).date("Ymd");
 <!--begin::Form-->
 
 <script>
-            function isNumberKey(evt)
+    function isNumberKey(evt)
             {
                 var charCode = (evt.which) ? evt.which : evt.keyCode;
                 if (charCode != 46 && charCode > 31
@@ -13,7 +13,6 @@ $random = rand(1,10000).date("Ymd");
 
                 return true;
             }
-
 </script>
 
 

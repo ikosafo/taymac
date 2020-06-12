@@ -48,14 +48,7 @@ $pinq = $mysqli->query("select * from admin_staff ORDER BY id DESC");
 
                         </td>
                         <td>
-                            <button type="button"
-                                    data-type="confirm"
-                                    class="btn btn-sm btn-success pay_salary"
-                                    i_index="<?php echo $fetch['id']; ?>"
-                                    title="Pay">
-                               Payment
-                            </button>
-                            <p></p>
+
                             <button type="button"
                                     data-type="confirm"
                                     class="btn btn-sm btn-primary edit_staff"
@@ -180,7 +173,7 @@ $pinq = $mysqli->query("select * from admin_staff ORDER BY id DESC");
             },
         });
     });
-
+/*
     $(document).off('click', '.pay_salary').on('click', '.pay_salary', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
@@ -208,5 +201,5 @@ $pinq = $mysqli->query("select * from admin_staff ORDER BY id DESC");
                 KTApp.unblockPage();
             },
         });
-    });
+    });*/
 </script>
