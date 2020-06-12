@@ -551,7 +551,9 @@ background-size: 100% 350px;"
                                 $_SERVER['PHP_SELF'] == "/admin/farm_fertilizer.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/farm_pesticide.php" ||
                                 $_SERVER['PHP_SELF'] == "/admin/farm_watering.php" ||
-                                $_SERVER['PHP_SELF'] == "/admin/farm_otheractivity.php"
+                                $_SERVER['PHP_SELF'] == "/admin/farm_otheractivity.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_tunnelactivity.php" ||
+                                $_SERVER['PHP_SELF'] == "/admin/search_farmaccounts.php"
 
                                     ? "kt-menu__item--here" : ""); ?>"
                                     data-ktmenu-submenu-toggle="click" aria-haspopup="true">
@@ -725,14 +727,41 @@ background-size: 100% 350px;"
                                                         class="kt-menu__link-text">Report</span></a>
                                             </li>
 
-                                            <li class="kt-menu__item  <?php echo(
-                                            $_SERVER['PHP_SELF'] == "/admin/farm_search.php"
-                                                ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
-                                                    href="farm_search"
-                                                    class="kt-menu__link "><i
-                                                        class="kt-menu__link-bullet kt-menu__link-bullet--dot">
-                                                        <span></span></i><span
-                                                        class="kt-menu__link-text">Search</span></a>
+                                            <li class="kt-menu__item  kt-menu__item--submenu   <?php echo(
+                                            $_SERVER['PHP_SELF'] == "/admin/search_tunnelactivity.php" ||
+                                            $_SERVER['PHP_SELF'] == "/admin/search_farmaccounts.php"
+
+                                                ? "kt-menu__item--here" : ""); ?>"
+                                                data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a
+                                                    href="javascript:;" class="kt-menu__link kt-menu__toggle">
+                                                    <span class="kt-menu__link-text">Search</span><i
+                                                        class="kt-menu__hor-arrow la la-angle-right"></i><i
+                                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+                                                <div
+                                                    class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--right">
+                                                    <ul class="kt-menu__subnav">
+
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_tunnelactivity.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_tunnelactivity"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Tunnel Activity</span></a>
+                                                        </li>
+                                                        <li class="kt-menu__item  <?php echo(
+                                                        $_SERVER['PHP_SELF'] == "/admin/search_farmaccounts.php"
+                                                            ? "kt-menu__item--active" : ""); ?>" aria-haspopup="true"><a
+                                                                href="search_farmaccounts"
+                                                                class="kt-menu__link "><i
+                                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                                                                    <span></span></i><span
+                                                                    class="kt-menu__link-text">Farm Accounts</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </li>
 
                                         </ul>

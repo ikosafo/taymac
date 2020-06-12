@@ -23,7 +23,7 @@ $resabout = $getabout->fetch_assoc();
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
-            <button type="button" class="btn btn-primary" id="editpm">Submit</button>
+            <button type="button" class="btn btn-primary" id="editpm">Edit</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
     </div>

@@ -103,7 +103,7 @@ $ressm = $getsm->fetch_assoc();
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
-            <button type="button" class="btn btn-primary" id="savesm">Submit</button>
+            <button type="button" class="btn btn-primary" id="savesm">Edit</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
     </div>

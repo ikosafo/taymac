@@ -54,7 +54,7 @@ $resproperty = $getproperty->fetch_assoc();
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
-            <button type="button" class="btn btn-primary" id="editproperty">Submit</button>
+            <button type="button" class="btn btn-primary" id="editproperty">Edit</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
     </div>

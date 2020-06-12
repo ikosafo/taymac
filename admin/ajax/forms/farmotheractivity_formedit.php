@@ -1,5 +1,9 @@
 <?php include('../../../config.php');
 $random = rand(1, 10000) . date("Ymd");
+$theindex = $_POST['theindex'];
+
+$getactivity = $mysqli->query("select * from farm_otheractivity where id = '$theindex'");
+$resactivity = $getactivity->fetch_assoc();
 ?>
 <!--begin::Form-->
 
@@ -23,30 +27,29 @@ $random = rand(1, 10000) . date("Ymd");
             <div class="col-lg-12 col-md-12">
                 <label for="otheractivity_name">Name of Activity</label>
                 <input type="text" class="form-control" id="otheractivity_name"
-                       placeholder="Enter Name of Activity">
+                       placeholder="Enter Name of Activity" value="<?php echo $resactivity['activity'] ?>">
             </div>
 
         </div>
-       
+
         <div class="form-group row">
             <div class="col-lg-6 col-md-6">
                 <label for="date_activity">Date of Activity</label>
                 <input type="text" class="form-control" id="date_activity"
-                       placeholder="Enter Date of Activity">
+                       placeholder="Enter Date of Activity"  value="<?php echo $resactivity['date_activity'] ?>">
             </div>
             <div class="col-lg-6 col-md-6">
                 <label for="activity_description">Description</label>
                 <textarea class="form-control" id="activity_description"
-                          placeholder="Enter Description"></textarea>
+                          placeholder="Enter Description"><?php echo $resactivity['activity_description'] ?></textarea>
             </div>
         </div>
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
-                <button type="button" class="btn btn-primary" id="saveactivity">Submit</button>
+                <button type="button" class="btn btn-primary" id="editactivity">Edit</button>
                 <button type="reset" class="btn btn-secondary">Cancel</button>
             </div>
         </div>
-
 
     </div>
 
@@ -62,10 +65,11 @@ $random = rand(1, 10000) . date("Ymd");
         orientation: "bottom"
     });
 
-    $('#saveactivity').click(function () {
+    $('#editactivity').click(function () {
         var otheractivity_name = $('#otheractivity_name').val();
         var date_activity = $('#date_activity').val();
         var activity_description = $('#activity_description').val();
+        var theindex = '<?php echo $theindex; ?>'
 
         var error = '';
         if (otheractivity_name == "") {
@@ -80,7 +84,7 @@ $random = rand(1, 10000) . date("Ymd");
         if (error == "") {
             $.ajax({
                 type: "POST",
-                url: "ajax/queries/saveform_farmotheractivity.php",
+                url: "ajax/queries/editform_farmotheractivity.php",
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: "#000000",
@@ -92,7 +96,8 @@ $random = rand(1, 10000) . date("Ymd");
                 data: {
                     otheractivity_name:otheractivity_name,
                     date_activity:date_activity,
-                    activity_description:activity_description
+                    activity_description:activity_description,
+                    theindex:theindex
                 },
                 success: function (text) {
                     $.ajax({

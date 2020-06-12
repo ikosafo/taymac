@@ -13,7 +13,6 @@ $reswatering= $getwatering->fetch_assoc();
         if (charCode != 46 && charCode > 31
             && (charCode < 48 || charCode > 57))
             return false;
-
         return true;
     }
 </script>
@@ -34,7 +33,6 @@ $reswatering= $getwatering->fetch_assoc();
                 </select>
             </div>
         </div>
-
         <div class="form-group row">
             <div class="col-lg-6 col-md-6">
                 <label for="tunnel">Select Tunnel</label>
@@ -106,8 +104,6 @@ $reswatering= $getwatering->fetch_assoc();
                 <button type="reset" class="btn btn-secondary">Cancel</button>
             </div>
         </div>
-
-
     </div>
 
 </form>
@@ -263,7 +259,6 @@ $reswatering= $getwatering->fetch_assoc();
                     KTApp.unblockPage();
                 },
             });
-
         }
         else {
             $.notify(error, {position: "top center"});

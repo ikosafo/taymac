@@ -9,8 +9,6 @@ $restunnel = $gettunnel->fetch_assoc();
 
 <form class="" autocomplete="off">
     <div class="kt-portlet__body">
-
-
         <div class="form-group row">
             <div class="col-lg-12 col-md-12">
                 <label for="funnel_name">Name of Tunnel</label>
@@ -27,7 +25,7 @@ $restunnel = $gettunnel->fetch_assoc();
         </div>
         <div class="kt-portlet__foot">
             <div class="kt-form__actions">
-                <button type="button" class="btn btn-primary" id="editfunnel">Submit</button>
+                <button type="button" class="btn btn-primary" id="editfunnel">Edit</button>
                 <button type="reset" class="btn btn-secondary">Cancel</button>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php include('../../../config.php');
-$pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
+$pinq = $mysqli->query("select * from farm_otheractivity ORDER BY id DESC");
 ?>
 <style>
     .dataTables_filter {
@@ -25,8 +25,7 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
             <table id="data-table" class="table" style="margin-top: 3% !important;">
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Details</th>
+                    <th>Name of Activity</th>
                     <th>Date of Activity</th>
                     <th>Description</th>
                     <th>Action</th>
@@ -38,25 +37,13 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
                 while ($fetch = $pinq->fetch_assoc()) {
                     ?>
                     <tr>
-                        <td><?php echo $fetch['pesticide_name']; ?></td>
-                        <td><b>Tunnel :</b> <?php $tunnel = $fetch['tunnel'];
-                            $gettunnelname = $mysqli->query("select * from farm_funnel where id = '$tunnel'");
-                            $restunnelname = $gettunnelname->fetch_assoc();
-                            echo $restunnelname['funnel_name'];
-                            ?> <br/>
-                            <b>Product :</b> <?php $product = $fetch['product'];
-                            $getproductname = $mysqli->query("select * from farm_products where id = '$product'");
-                            $resproductname = $getproductname->fetch_assoc();
-                            echo $resproductname['product_name'];
-                            ?> <br/>
-                            <b>Weight :</b> <?php echo $fetch['input_kg']." litres"; ?>
-                        </td>
+                        <td><?php echo $fetch['activity']; ?></td>
                         <td><?php echo $fetch['date_activity']; ?></td>
                         <td><?php echo $fetch['activity_description']; ?></td>
                         <td>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-primary edit_pesticide"
+                                    class="btn btn-sm btn-primary edit_otheractivity"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Edit">
                                 <i class="flaticon2-edit ml-1" style="color:#fff !important;"></i>
@@ -64,7 +51,7 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
                             <p></p>
                             <button type="button"
                                     data-type="confirm"
-                                    class="btn btn-sm btn-danger delete_pesticide"
+                                    class="btn btn-sm btn-danger delete_otheractivity"
                                     i_index="<?php echo $fetch['id']; ?>"
                                     title="Delete">
                                 <i class="flaticon2-trash ml-1" style="color:#fff !important;"></i>
@@ -76,7 +63,6 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
 
             </table>
         </div>
-
     </div>
 </div>
 
@@ -89,11 +75,11 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
         oTable.search($(this).val()).draw();
     });
 
-    $(document).off('click', '.delete_pesticide').on('click', '.delete_pesticide', function () {
+    $(document).off('click', '.delete_otheractivity').on('click', '.delete_otheractivity', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.confirm({
-            title: 'Delete Pesticide Application Activity!',
+            title: 'Delete Other Activity!',
             content: 'Are you sure to continue?',
             buttons: {
                 no: {
@@ -111,14 +97,14 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
                     action: function () {
                         $.ajax({
                             type: "POST",
-                            url: "ajax/queries/delete_farmpesticide.php",
+                            url: "ajax/queries/delete_farmotheractivity.php",
                             data: {
                                 i_index: theindex
                             },
                             dataType: "html",
                             success: function (text) {
                                 $.ajax({
-                                    url: "ajax/tables/farmpesticide_table.php",
+                                    url: "ajax/tables/farmotheractivity_table.php",
                                     beforeSend: function () {
                                         KTApp.blockPage({
                                             overlayColor: "#000000",
@@ -128,7 +114,7 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
                                         })
                                     },
                                     success: function (text) {
-                                        $('#farmpesticidetable_div').html(text);
+                                        $('#farmotheractivitytable_div').html(text);
                                     },
                                     error: function (xhr, ajaxOptions, thrownError) {
                                         alert(xhr.status + " " + thrownError);
@@ -151,12 +137,12 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
         });
     });
 
-    $(document).off('click', '.edit_pesticide').on('click', '.edit_pesticide', function () {
+    $(document).off('click', '.edit_otheractivity').on('click', '.edit_otheractivity', function () {
         var theindex = $(this).attr('i_index');
         //alert(theindex)
         $.ajax({
             type: "POST",
-            url: "ajax/forms/farmpesticide_formedit.php",
+            url: "ajax/forms/farmotheractivity_formedit.php",
             beforeSend: function () {
                 KTApp.blockPage({
                     overlayColor: "#000000",
@@ -169,7 +155,7 @@ $pinq = $mysqli->query("select * from farm_pesticide ORDER BY id DESC");
                 theindex:theindex
             },
             success: function (text) {
-                $('#farmpesticideform_div').html(text);
+                $('#farmotheractivityform_div').html(text);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status + " " + thrownError);

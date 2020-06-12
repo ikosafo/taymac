@@ -78,13 +78,12 @@ $resstaff = $getstaff->fetch_assoc();
     </div>
     <div class="kt-portlet__foot">
         <div class="kt-form__actions">
-            <button type="button" class="btn btn-primary" id="editstaff">Submit</button>
+            <button type="button" class="btn btn-primary" id="editstaff">Edit</button>
             <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
     </div>
 </form>
 <!--end::Form-->
-
 
 
 <script>
@@ -179,7 +178,6 @@ $resstaff = $getstaff->fetch_assoc();
                         },
                     });
 
-
                     $.ajax({
                         type: "POST",
                         url: "ajax/tables/adminstaff_table.php",
@@ -202,7 +200,6 @@ $resstaff = $getstaff->fetch_assoc();
                         },
                     });
                 },
-
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(xhr.status + " " + thrownError);
                 },
@@ -215,7 +212,6 @@ $resstaff = $getstaff->fetch_assoc();
             $.notify(error, {position: "top center"});
         }
         return false;
-
     });
 
 </script>
