@@ -375,7 +375,7 @@
         <div class="mobile-menu">
             <div class="header stylehome1">
                 <div class="main_logo_home2 text-center">
-                    <img class="nav_logo_img img-fluid mt20" src="assets/img/taymac.PNG" alt="header-logo2.png" style="width:70%">
+                    <img class="nav_logo_img img-fluid mt20" src="assets/img/taymac.PNG" alt="header-logo2.png" style="width:20%">
                 </div>
                 <ul class="menu_bar_home2">
                     <li class="list-inline-item list_s"><a href="#"><span class="flaticon-home"></span></a></li>

@@ -32,7 +32,7 @@
                                                 <div class="main_title">
                                                     <?php echo $resslider['header_text'] ?>
                                                 </div>
-                                                <?php echo $resslider['slider_text'];?>
+                                                <?php echo $resslider['slider_text'];?>?
                                             </div>
                                             <div class="col-md-5 col-lg-4">
                                                 <div class="feat_property home8">
