@@ -1,6 +1,42 @@
 <?php
 include("../../../config.php");
 
+// Function to get IP address
+function getIpAddress() {
+    $ip_address = '';
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+        $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    } else {
+        $ip_address = $_SERVER['REMOTE_ADDR'];
+    }
+    return $ip_address;
+}
+
+// Function to get MAC address (Linux-based servers)
+function getMacAddress($ip_address) {
+    $mac_address = 'Unknown';
+    try {
+        // Execute arp command to get MAC address
+        $output = shell_exec("arp -a " . escapeshellarg($ip_address));
+        if ($output) {
+            preg_match('/([a-fA-F0-9:]{17})/', $output, $matches);
+            if (!empty($matches[1])) {
+                $mac_address = $matches[1];
+            }
+        }
+    } catch (Exception $e) {
+        // Handle errors silently
+        $mac_address = 'Unknown';
+    }
+    return $mac_address;
+}
+
+// Get IP and MAC address
+$ip_add = getIpAddress();
+$mac_address = getMacAddress($ip_add);
+
 $username = $_POST['username'];
 $pass = $_POST['password'];
 $password = md5($pass);
@@ -12,39 +48,10 @@ $rowcount = mysqli_num_rows($res);
 
 $today = date("Y-m-d H:i:s");
 
-ob_start();
-system('ipconfig /all');
-$mycom=ob_get_contents();
-ob_clean();
-$findme = 'physique';
-$pmac = strpos($mycom, $findme);
-$mac_address = substr($mycom,($pmac+33),17);
-
-function getRealIpAddr()
-{
-    if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
-    {
-        $ip_address=$_SERVER['HTTP_CLIENT_IP'];
-    }
-    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
-    {
-        $ip_address=$_SERVER['HTTP_X_FORWARDED_FOR'];
-    }
-    else
-    {
-        $ip_address=$_SERVER['REMOTE_ADDR'];
-    }
-    return $ip_address;
-
-}
-
-$ip_add = getRealIpAddr();
-
 $full_name = $getdetails['full_name'];
 $password = $getdetails['password'];
 $user_id = $getdetails['user_id'];
 $user_type = $getdetails['usertype'];
-
 
 $_SESSION['full_name'] = $full_name;
 $_SESSION['password'] = $password;
@@ -60,14 +67,13 @@ if ($rowcount == "0") {
              `mac_address`,
              `ip_address`,
              `action`)
-VALUES ('Log In Error (Wrong Username or Password)',
-        '$today',
-        '$username',
-        '$mac_address',
-        '$ip_add',
-        'Failed')") or die(mysqli_error($mysqli));
+    VALUES ('Log In Error (Wrong Username or Password)',
+            '$today',
+            '$username',
+            '$mac_address',
+            '$ip_add',
+            'Failed')") or die(mysqli_error($mysqli));
     echo 2;
-
 } else {
     $mysqli->query("INSERT INTO `taymac_logs_mis`
             (`message`,
@@ -76,14 +82,12 @@ VALUES ('Log In Error (Wrong Username or Password)',
              `mac_address`,
              `ip_address`,
              `action`)
-VALUES ('Logged in Successfully',
-        '$today',
-        '$username',
-        '$mac_address',
-        '$ip_add',
-        'Successful')") or die(mysqli_error($mysqli));
+    VALUES ('Logged in Successfully',
+            '$today',
+            '$username',
+            '$mac_address',
+            '$ip_add',
+            'Successful')") or die(mysqli_error($mysqli));
     echo 1;
-
 }
-
 ?>

@@ -1,5 +1,6 @@
 <?php include ('../config.php');
-session_destroy();
+//session_destroy();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +8,7 @@ session_destroy();
 <head>
     <meta charset="utf-8"/>
 
-    <title>Login | MIS</title>
+    <title>Login | Taymac MIS</title>
     <meta name="description" content="Login page example">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,7 +26,7 @@ session_destroy();
     <link href="newassets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
     <!--end::Global Theme Styles -->
 
-    <link rel="shortcut icon" href="../assets/img/taymac.PNG"/>
+    <link rel="shortcut icon" href="taymac.jpg"/>
 
 </head>
 <!-- end::Head -->
@@ -50,13 +51,13 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
                         <div class="kt-login__body">
                             <div class="kt-login__logo">
                                 <a href="#">
-                                    <img src="../assets/img/taymac.PNG" style="width:60%;">
+                                    <img src="taymac.jpg" style="width:20%;">
                                 </a>
                             </div>
 
                             <div class="kt-login__signin">
                                 <div class="kt-login__head">
-                                    <h3 class="kt-login__title">Sign In To Taymac Portal</h3>
+                                    <h3 class="kt-login__title">Sign In To Taymac MIS Portal</h3>
                                 </div>
                                 <div class="kt-login__form">
                                     <form class="kt-form" action="">
@@ -71,7 +72,7 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
                                         </div>
 
                                         <div class="kt-login__actions">
-                                            <button id="login_btn"
+                                            <button id="login_btn" type="button"
                                                     class="btn btn-brand btn-pill btn-elevate">Sign In
                                             </button>
                                         </div>
@@ -82,7 +83,7 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
 
                         </div>
                     </div>
-
+                   
                 </div>
             </div>
 
@@ -144,7 +145,9 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
         }, e = function () {}, n = function () {};
         return {
             init: function () {
-                n(), $("#login_btn").click(function (i) {
+                n(),
+
+                    $("#login_btn").click(function (i) {
                     var username = $('#username').val();
                     var password = $('#password').val();
                     i.preventDefault();
@@ -173,7 +176,6 @@ kt-subheader--enabled kt-subheader--transparent kt-page--loading">
                                         t(n, "danger", "Incorrect username or password. Please try again.")
                                 }, 2e3)
                             }
-
                         }
                     }))
                 })

@@ -1,155 +1,110 @@
+<?php 
+require_once 'config.php';
 
-<?php $getcontact = $mysqli->query("select * from taymac_contact LIMIT 1");
-      $rescontact = $getcontact->fetch_assoc();
 
+// Fetch footer data from ws_contact
+$query = "SELECT logo, phone1, email, address FROM ws_contact WHERE id = 1";
+$result = $mysqli->query($query);
+if (!$result) {
+    error_log('Fetch footer query failed: ' . $mysqli->error);
+    $footer = [
+        'logo' => 'assets/images/taymac.png',
+        'phone1' => '+233 (0) 245-710-614',
+        'email' => 'info@taymac.net',
+        'address' => '3rd Floor Le Pierre, 51 Choice Close off Senchi Street, Airport Residential Area, Accra'
+    ];
+} else {
+    $footer = $result->fetch_assoc();
+    if (!$footer) {
+        $footer = [
+            'logo' => 'assets/images/taymac.png',
+            'phone1' => '+233 (0) 245-710-614',
+            'email' => 'info@taymac.net',
+            'address' => '3rd Floor Le Pierre, 51 Choice Close off Senchi Street, Airport Residential Area, Accra'
+        ];
+    }
+}
+error_log('Fetched footer data: ' . print_r($footer, true));
 ?>
-<!-- Our Footer -->
-<section class="footer_one home3">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 pr0 pl0">
-                <div class="footer_about_widget home3">
-                    <h4>Location</h4>
-                    <p style="text-transform: uppercase">
-                        <?php echo $rescontact['address'] ?>
-                    </p>
-                </div>
-            </div>
 
-            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <div class="footer_contact_widget home3">
-                    <h4>Contact Us</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#"><i class="fa fa-envelope-open-o"></i> <?php echo $rescontact['postbox'] ?></a></li>
-                        <li><a href="#"><i class="fa fa-phone"></i>  <?php echo $rescontact['phone'] ?></a></li>
-                        <li><a href="#"><i class="fa fa-envelope"></i> <?php echo $rescontact['email'] ?></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <div class="footer_social_widget home3">
-                    <h4>Follow us</h4>
-                    <ul class="mb30">
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-google"></i></a></li>
-                    </ul>
-                    <p>
-                        Follow us on our social media links
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <div class="footer_social_widget home3">
-                    <h4>Subscribe</h4>
-                    <form class="footer_mailchimp_form home3">
-                        <div class="form-row align-items-center">
-                            <div class="col-auto">
-                                <input type="email" class="form-control mb-2" id="inlineFormInput" placeholder="Your email">
-                            </div>
-                            <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-angle-right"></i></button>
-                            </div>
+<!-- Start Footer -->
+<footer class="main-footer">
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 py-3 py-md-5 pe-xl-5">
+                    <div class="footer-about">
+                        <div class="mb-3 d-inline-block">
+                            <img src="<?php echo URLROOT . htmlspecialchars($footer['logo']); ?>" alt="Taymac Logo" height="60">
                         </div>
-                    </form>
-                    <p>
-                        Get the most recent updates from our site
-                    </p>
+                        <a class="d-block fw-medium mb-1" href="tel:<?php echo htmlspecialchars($footer['phone1']); ?>">
+                            <i class="fa-solid fa-phone me-2"></i>
+                            <span><?php echo htmlspecialchars($footer['phone1']); ?></span>
+                        </a>
+                        <a class="email-link d-block mb-1 fw-medium" href="mailto:<?php echo htmlspecialchars($footer['email']); ?>">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            <span><?php echo htmlspecialchars($footer['email']); ?></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 py-3 py-md-5 pe-xl-5">
+                    <div class="footer-about">
+                        <a class="d-block fw-medium mt-4">
+                            <i class="fa-solid fa-map-marker"></i>
+                            <span><?php echo nl2br(htmlspecialchars($footer['address'])); ?></span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-sm-4 col-md-4 col-lg col-xl-4 py-3 py-md-5">
+                    <h3 class="fs-20 fw-semibold link-title mb-3 position-relative">Connect with us</h3>
+                    <!-- Start Social Icon -->
+                    <ul class="list-unstyled social-icon">
+                        <li>
+                            <a href="#" class="align-items-center d-flex">
+                                <div class="align-items-center bg-primary d-flex d-inline-block fs-19 icon-wrap justify-content-center me-3 rounded-2 text-center text-white inst"><i class="fab fa-instagram"></i></div>Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="align-items-center d-flex">
+                                <div class="align-items-center bg-primary d-flex d-inline-block fs-19 icon-wrap justify-content-center me-3 rounded-2 text-center text-white twi"><i class="fab fa-twitter"></i></div>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="align-items-center d-flex">
+                                <div class="align-items-center bg-primary d-flex d-inline-block fs-19 icon-wrap justify-content-center me-3 rounded-2 text-center text-white fb"><i class="fab fa-facebook-f"></i></div>Facebook
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.End Social Icon -->
+                </div>
+            </div>
+            <hr class="mb-0 mt-4">
+            <div class="py-4">
+                <div class="align-items-center row mb-2">
+                    <!-- Start Copy Rights Text -->
+                    <div class="col-sm-auto copy">&copy; <?= date('Y'); ?> Taymac</div>
+                    <!-- /.End Copy Rights Text -->
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Our Footer Bottom Area -->
-<section class="footer_middle_area home3 pt30 pb30">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-xl-6">
-                <div class="copyright-widget home3 text-right">
-                    <p>&copy; 2020 Taymac</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<a class="scrollToHome home8" href="#"><i class="flaticon-arrows"></i></a>
-</div>
-<!-- Wrapper End -->
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-3.0.0.min.js"></script>
-<script type="text/javascript" src="assets/js/popper.min.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.mmenu.all.js"></script>
-<script type="text/javascript" src="assets/js/ace-responsive-menu.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="assets/js/isotop.js"></script>
-<script type="text/javascript" src="assets/js/snackbar.min.js"></script>
-<script type="text/javascript" src="assets/js/simplebar.js"></script>
-<script type="text/javascript" src="assets/js/parallax.js"></script>
-<script type="text/javascript" src="assets/js/scrollto.js"></script>
-<script type="text/javascript" src="assets/js/jquery-scrolltofixed-min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
-<script type="text/javascript" src="assets/js/wow.min.js"></script>
-<script type="text/javascript" src="assets/js/progressbar.js"></script>
-<script type="text/javascript" src="assets/js/slider.js"></script>
-<script type="text/javascript" src="assets/js/timepicker.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCmkDpS9DDEV73V2YT1OeOK4tA-HcSxDQ"type="text/javascript"></script>
-<script type="text/javascript" src="assets/js/google-maps.js"></script>
-<!-- Custom script for all pages -->
-<script type="text/javascript" src="assets/js/script.js"></script>
-<script type="text/javascript" src="admin/newassets/js/pages/notify.js"></script>
-<script>
-    var bsCarouselItems = 1;
-    if($('.bs_carousel .carousel-item').length){
-        $('.bs_carousel .carousel-item').each(function(index, element) {
-            if (index == 0) {
-                $('.bs_carousel_prices').addClass('pprty-price-active pprty-first-time');
-            }
-            $('.bs_carousel_prices .property-carousel-ticker-counter').append('<span>0' + bsCarouselItems + '</span>');
-            bsCarouselItems += 1;
-        });
-    }
-
-    $('.bs_carousel_prices .property-carousel-ticker-total').append('<span>0' + $('.bs_carousel .carousel-item').length + '</span>');
-
-    if($('.bs_carousel').length){
-        $('.bs_carousel').on('slide.bs.carousel', function(carousel) {
-            $('.bs_carousel_prices').removeClass('pprty-first-time');
-            $('.bs_carousel_prices').carousel(carousel.to);
-        });
-    }
-
-    if($('.bs_carousel').length){
-        $('.bs_carousel').on('slid.bs.carousel', function(carousel) {
-            var tickerPos = (carousel.to) * 25;
-            $('.bs_carousel_prices .property-carousel-ticker-counter > span').css('transform', 'translateY(-' + tickerPos + 'px)');
-        });
-    }
-
-    if($('.bs_carousel .property-carousel-control-next').length){
-        $('.bs_carousel .property-carousel-control-next').on('click',function(e) {
-            $('.bs_carousel').carousel('next');
-        });
-    }
-
-    if($('.bs_carousel .property-carousel-control-prev').length){
-        $('.bs_carousel .property-carousel-control-prev').on('click',function(e) {
-            $('.bs_carousel').carousel('prev');
-        });
-    }
-    if($('.bs_carousel').length){
-        $('.bs_carousel').carousel({
-            interval: 6000,
-            pause: "true"
-        });
-    }
-</script>
+    </footer>
+    <!-- /.End Footer -->
+    <!-- Optional JavaScript -->
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?php echo URLROOT ?>assets/plugins/jquery/jquery.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/smartmenus/jquery.smartmenus.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/smartmenus/jquery.smartmenus.bootstrap-4.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/select2/select2.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/theia-sticky-sidebar/ResizeSensor.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/OwlCarousel2/owl.carousel.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/counter-up/jquery.counterup.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/simple-parallax/simpleParallax.min.js"></script>
+    <script src="<?php echo URLROOT ?>assets/plugins/aos/aos.min.js"></script>
+    <!-- Custom Script For This Template -->
+    <script src="<?php echo URLROOT ?>assets/js/script.js"></script>
 </body>
-
-
 </html>

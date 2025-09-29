@@ -1,426 +1,175 @@
-<?php include('config.php'); ?>
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-
+<?php
+$currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+include ('./config.php');
+?>
+<!doctype html>
+<html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="Taymac">
-    <meta name="description" content="Taymac">
-    <meta name="keywords" content="taymac,consulting,farm,properties,real estate,services,farm,blog,safety,">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="<?php echo URLROOT ?>assets/images/taymac.png">
+    <title>Taymac - REALTORS you can trust</title>
+    <link href="<?php echo URLROOT ?>assets/plugins/aos/aos.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/smartmenus/jquery.smartmenus.bootstrap-4.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/select2-bootstrap-5/select2-bootstrap-5-theme.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/OwlCarousel2/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/OwlCarousel2/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="<?php echo URLROOT ?>assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Custom Style For This Template -->
+    <link href="<?php echo URLROOT ?>assets/css/style.css" rel="stylesheet">
 
-    <!-- css file -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <!-- Responsive stylesheet -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <!-- Title -->
-    <title>Taymac</title>
-    <!-- Favicon -->
-    <link href="assets/img/taymac.PNG" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
-    <link href="assets/img/taymac.PNG" sizes="128x128" rel="shortcut icon" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="assets/js/html5shiv.min.js"></script>
-    <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-    <style>
-        /** Home 8 Carousel */
-        .bs_carousel_bg {
-            -webkit-background-size: cover;
-            background-size: cover;
-            bottom: 0;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-        .bs_carousel .bs_carousel_bg:after {
-            background-color: rgba(29, 41, 62,0.6);
-            bottom: 0;
-            content: " ";
-            display: block;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 1;
-        }
-        .bs_carousel,
-        .bs_carousel .carousel-inner,
-        .bs_carousel .carousel-item {
-            height: 100%;
-        }
-        .bs_carousel_prices {
-            position: absolute;
-            width: 50%;
-            bottom: 15px;
-            left: 0;
-            height: 90px;
-            z-index: 2;
-            transform: scale(0, 1);
-            -webkit-transition: transform .6s ease-in-out;
-            -o-transition: transform .6s ease-in-out;
-            transition: transform .6s ease-in-out;
-            transform-origin: top right;
-        }
-        .bs_carousel_prices.pprty-price-active {
-            transform: scale(1, 1);
-        }
-        .bs_carousel_prices .carousel-item {
-            background-color: #000000;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-        .bs_carousel_prices .carousel-item .pprty-price {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #ffffff;
-            font-size: 28px;
-            line-height: 28px;
-            height: 28px;
-            overflow: hidden;
-            left: calc((100% * 2 - 1140px) / 2 + 15px);
-        }
-        .bs_carousel_prices .carousel-item .pprty-price > span {
-            display: block;
-            transform: translateY(100%);
-            -webkit-transition: all .2s ease-in-out;
-            -o-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-        }
-        .bs_carousel_prices.pprty-price-active .carousel-item.active .pprty-price > span {
-            transform: translateY(0);
-        }
-        .bs_carousel_prices.pprty-price-active.pprty-first-time .carousel-item.active .pprty-price > span {
-            -webkit-transition-delay: .6s;
-            transition-delay: .6s;
-        }
-        .bs_carousel_prices .property-carousel-ticker {
-            position: absolute;
-            left: 210px;
-            top: 50%;
-            color: #ffffff;
-            white-space: nowrap;
-            font-weight: 700;
-            opacity: 0;
-            -webkit-transition: opacity .2s ease-in-out;
-            -o-transition: opacity .2s ease-in-out;
-            transition: opacity .2s ease-in-out;
-        }
-        .bs_carousel_prices.pprty-price-active .property-carousel-ticker {
-            opacity: 1;
-        }
-        .bs_carousel_prices.pprty-price-active.pprty-first-time .property-carousel-ticker {
-            -webkit-transition-delay: .6s;
-            transition-delay: .6s;
-        }
-        .bs_carousel_prices .property-carousel-ticker > div {
-            display: inline-block;
-            line-height: 25px;
-            vertical-align: bottom;
-        }
-        .bs_carousel_prices .property-carousel-ticker .property-carousel-ticker-counter {
-            overflow: hidden;
-            height: 24px;
-        }
-        .bs_carousel_prices .property-carousel-ticker .property-carousel-ticker-counter > span {
-            display: block;
-            font-size: 24px;
-            -webkit-transition: all .4s ease-in-out;
-            -o-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out;
-        }
-        .bs_carousel_prices .carousel-item:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: rgba(255,255,255,0.1);
-            transform: scale(0, 1);
-            transform-origin: 0% 50%;
-            -webkit-transition: all 6.4s linear;
-            -o-transition: all 6.4s linear;
-            transition: all 6.4s linear;
-        }
-        .bs_carousel_prices.pprty-price-active .carousel-item.active:after {
-            transform: scale(1, 1);
-        }
-        .bs_carousel_prices.pprty-price-active.pprty-first-time .carousel-item.active:after {
-            -webkit-transition-delay: .6s;
-            transition-delay: .6s;
-        }
-        .bs_carousel .property-carousel-controls {
-            background-color: #ffffff;
-            border-radius: 0 8px 0 0;
-            bottom: 0;
-            height: 90px;
-            left: 0;
-            line-height: 90px;
-            overflow: hidden;
-            position: absolute;
-            text-align: center;
-            width: 180px;
-            z-index: 99;
-        }
-        .bs_carousel .property-carousel-controls a {
-            background-color: #ffffff;
-            color: #006c70;
-            cursor: pointer;
-            display: block;
-            height: 90px;
-            position: absolute;
-            width: 90px;
-        }
-        .bs_carousel .property-carousel-controls a:hover{
-            color: #ff5a5f;
-        }
-        .bs_carousel .property-carousel-controls a span{
-            font-size: 23px;
-        }
-        .bs_carousel .property-carousel-controls a.property-carousel-control-prev {
-            top: 0;
-            left: 0;
-        }
-        .bs_carousel .property-carousel-controls a.property-carousel-control-next {
-            top: 0;
-            right: 0;
-        }
-        @keyframes arrowPCLeft {
-            0% {
-                -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-            }
-            25% {
-                opacity: 0;
-                -webkit-transform: translate(-30%, -50%);
-                transform: translate(-30%, -50%);
-            }
-            50% {
-                opacity: 0;
-                -webkit-transform: translate(20%, -50%);
-                transform: translate(20%, -50%);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-            }
-        }
-        @keyframes arrowPCRight {
-            0% {
-                -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-            }
-            25% {
-                opacity: 0;
-                -webkit-transform: translate(30%, -50%);
-                transform: translate(30%, -50%);
-            }
-            50% {
-                opacity: 0;
-                -webkit-transform: translate(-30%, -50%);
-                transform: translate(-30%, -50%);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-            }
-        }
-        .bs_carousel .property-carousel-controls a.property-carousel-control-prev:hover svg {
-            -webkit-animation: arrowPCLeft 0.4s ease-in-out;
-            -moz-animation: arrowPCLeft 0.4s ease-in-out;
-            animation: arrowPCLeft 0.4s ease-in-out;
-        }
-        .bs_carousel .property-carousel-controls a.property-carousel-control-next:hover svg {
-            -webkit-animation: arrowPCRight 0.4s ease-in-out;
-            -moz-animation: arrowPCRight 0.4s ease-in-out;
-            animation: arrowPCRight 0.4s ease-in-out;
-        }
-        .bs_carousel .carousel-item .bs-caption {
-            color: #ffffff;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 54%;
-            transform: translateY(calc(-50% - 70px));
-            z-index: 2;
-        }
-        .bs_carousel .main_title {
-            color: #ffffff;
-            font-family: "Nunito";
-            font-size: 55px;
-            font-weight: bold;
-            line-height: 1.2;
-            margin-bottom: 15px;
-            margin-top: 120px;
-            opacity: 0;
-            -webkit-transform: translateY(20px);
-            -moz-transform: translateY(20px);
-            -o-transform: translateY(20px);
-            transform: translateY(20px);
-            -webkit-transition: all .6s ease-in-out;
-            -moz-transition: all .6s ease-in-out;
-            -o-transition: all .6s ease-in-out;
-            transition: all .6s ease-in-out;
-        }
-        .bs_carousel .carousel-item.active .main_title {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .bs_carousel .parag {
-            font-size: 18px;
-            font-family: "Nunito";
-            color: #ffffff;
-            line-height: 1.2;
-            margin-bottom: 0;
-            opacity: 0;
-            -webkit-transform: translateY(20px);
-            -moz-transform: translateY(20px);
-            -o-transform: translateY(20px);
-            transform: translateY(20px);
-            -webkit-transition: all .9s ease-in-out;
-            -moz-transition: all .9s ease-in-out;
-            -o-transition: all .9s ease-in-out;
-            transition: all .9s ease-in-out;
-        }
-        .bs_carousel .carousel-item.active .parag {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .active {
-            font-weight: bold !important;
-            color:#0000ff !important;
-        }
-    </style>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "objp4gq1h0");
+    </script>
 </head>
-<body>
-<div class="wrapper">
-    <div class="preloader"></div>
 
-    <!-- Main Header Nav -->
-    <header class="header-nav menu_style_home_one style2 navbar-scrolltofixed stricky main-menu">
-        <div class="container-fluid p0">
-            <!-- Ace Responsive Menu -->
-            <nav>
-                <!-- Menu Toggle btn-->
-                <div class="menu-toggle">
-                    <img class="nav_logo_img img-fluid" src="assets/img/taymac.PNG" alt="logo.jpeg" style="width: 50%">
-                    <button type="button" id="menu-btn">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper flex-column align-items-center justify-content-center">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="fs-12 fw-semibold mb-0 mt-3 text-uppercase">Please wait...</p>
+        </div>
+    </div>
+    <!-- /.Page Loader -->
+   <!-- Start Topbar -->
+	<div class="topbar d-none d-lg-block bg-light text-dark">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-4 col-lg-3 col-xl-3">
+					<a href="/" class="headerLogo">
+						<img src="<?php echo URLROOT ?>assets/images/taymac.png" alt="" height="60">
+					</a>
+				</div>
+				<div class="col-md-8 col-lg-9 col-xl-9 d-none d-md-block">
+					<div class="d-flex justify-content-end">
+						<div class="d-flex align-items-center help-info">
+							<div class="flex-shrink-0 icon">
+								<i class="fa-clock fa-solid fs-30 text-dark"></i>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<h6 class="fs-15 fw-semibold help-info__title mb-0 text-dark">MON - FRI: 08:00AM - 17:00PM</h6>
+								<p class="sub-text mb-0 fs-14 text-dark">Saturday and Sunday - <span class="fw-semibold text-warning">CLOSED</span></p>
+							</div>
+						</div>
+						<div class="d-flex align-items-center help-info ms-4">
+							<div class="flex-shrink-0 icon">
+								<i class="fa-solid fa-mobile-button fs-30 text-dark"></i>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<h6 class="fs-15 fw-semibold help-info__title mb-0 text-dark">233 (0) 245-710-614</h6>
+								<p class="sub-text mb-0 fs-14 text-dark">Contact Us For Help</p>
+							</div>
+						</div>
+						<div class="d-flex align-items-center help-info ms-4">
+							<div class="flex-shrink-0 icon">
+								<i class="fa-solid fa-street-view fs-30 text-dark"></i>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<h6 class="fs-15 fw-semibold help-info__title mb-0 text-dark">51 Choice Close off Senchi Street</h6>
+								<p class="sub-text mb-0 fs-14 text-dark">Airport Residential Area, Accra</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.End Topbar -->
+
+    <div class="navbar-wrap sticky-top no-logo">
+        <div class="container-lg nav-container position-relative">
+            <nav class="custom-navbar navbar navbar-expand-lg">
+                <a class="border-end navbar-brand pe-3 pe-sm-4 py-0" href="/">
+                    <img class="logo-dark" src="<?php echo URLROOT ?>assets/images/taymac.png" alt="">
+                    <img class="logo-white" src="<?php echo URLROOT ?>assets/images/taymac.png" alt="">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="align-items-center border-bottom d-flex d-lg-none justify-content-between mb-3 navbar-collapse__header pb-3">
+                        <div class="collapse-brand flex-shrink-0">
+                            <a href="#"><img src="<?php echo URLROOT ?>assets/images/taymac.png" alt=""></a>
+                        </div>
+                        <div class="flex-grow-1 ms-3 text-end">
+                            <button type="button" class="bg-transparent border-0 collapse-close p-0 position-relative"><span></span> <span></span></button>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == '/') echo 'active'; ?>" href="/">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle <?php if (strpos($_SERVER['REQUEST_URI'], 'about') !== false || strpos($_SERVER['REQUEST_URI'], 'team') !== false || strpos($_SERVER['REQUEST_URI'], 'story') !== false) echo 'active'; ?>" href="#">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/about') echo 'active'; ?>" href="about">Who we are</a></li>
+                                <li><a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/team') echo 'active'; ?>" href="team">Team</a></li>
+                                <li><a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/story') echo 'active'; ?>" href="story">Our Story</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle <?php if (strpos($_SERVER['REQUEST_URI'], 'property-management') !== false || strpos($_SERVER['REQUEST_URI'], 'health-safety') !== false || strpos($_SERVER['REQUEST_URI'], 'taymac-farms') !== false) echo 'active'; ?>" href="#">
+                                What We Do
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/property-management') echo 'active'; ?>" href="property-management">Property Management</a></li>
+                                <li><a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/health-safety') echo 'active'; ?>" href="health-safety">Health and Safety</a></li>
+                                <li><a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/taymac-farms') echo 'active'; ?>" href="taymac-farms">Taymac Farms</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle <?php if (strpos($_SERVER['REQUEST_URI'], 'risk-management') !== false || strpos($_SERVER['REQUEST_URI'], 'training') !== false || strpos($_SERVER['REQUEST_URI'], 'courses') !== false || strpos($_SERVER['REQUEST_URI'], 'first-aid') !== false || strpos($_SERVER['REQUEST_URI'], 'manual-handling') !== false || strpos($_SERVER['REQUEST_URI'], 'coshh') !== false) echo 'active'; ?>" href="#">
+                                Other Services
+                            </a>
+                            <ul class="dropdown-menu mega-menu">
+                                <li>
+                                    <span class="row">
+                                        <span class="col-6">
+                                            <a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/risk-management') echo 'active'; ?>" href="risk-management">Risk Management</a>
+                                            <a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/training') echo 'active'; ?>" href="training">Trainings</a>
+                                            <a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/courses') echo 'active'; ?>" href="courses">Risk Assessment Courses</a>
+                                        </span>
+                                        <span class="col-6">
+                                            <a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/first-aid') echo 'active'; ?>" href="first-aid">First Aid</a>
+                                            <a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/manual-handling') echo 'active'; ?>" href="manual-handling">Manual Handling</a>
+                                            <a class="dropdown-item <?php if ($_SERVER['REQUEST_URI'] == '/coshh') echo 'active'; ?>" href="coshh">COSHH</a>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == '/blog') echo 'active'; ?>" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == '/contact') echo 'active'; ?>" href="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="d-flex gap-1 ms-lg-5">
+                    <a href="/admin/" target="_blank" class="btn btn-primary btn-login hstack gap-2">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <div class="vr d-none d-sm-inline-block"></div>
+                        <span class="d-none d-sm-inline-block">Taymac Online</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <a href="#" class="navbar_brand float-left dn-smd">
-                    <img class="logo1 img-fluid" src="assets/img/taymac.PNG" alt="Taymac Logo" style="width: 50%">
-                    <img class="logo2 img-fluid" src="assets/img/taymac.PNG" alt="Taymac Logo" style="width: 50%">
-                    <span></span>
-                </a>
-                <!-- Responsive Menu Structure-->
-                <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
-                <ul id="respMenu" class="ace-responsive-menu text-left" data-menu-style="horizontal">
-                    <li  class="active">
-                        <a href="../"><span class="title">Home</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="title">About</span></a>
-                        <ul>
-                            <li><a href="about">Who we are</a></li>
-                            <li><a href="team">Team</a></li>
-                            <li><a href="contact">Contact</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="services"><span class="title">Services</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="title">What we do</span></a>
-                        <ul>
-                            <li><a href="property">Property Management</a></li>
-                            <li><a href="health_safety">Health & Safety</a></li>
-                            <li><a href="farms">Taymac Farms</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blog"><span class="title">Blog</span></a>
-                    </li>
-                    <li class="last">
-                        <a href="contact"><span class="title">Contact</span></a>
-                    </li>
-                    <li class="list-inline-item add_listing home2 float-right">
-                        <a href="admin/"><span class="flaticon-plus"></span><span class="dn-lg"> Taymac Online</span>
-                        </a>
-                    </li>
-                </ul>
             </nav>
         </div>
-    </header>
-
-    <!-- Main Header Nav For Mobile -->
-    <div id="page" class="stylehome1 h0">
-        <div class="mobile-menu">
-            <div class="header stylehome1">
-                <div class="main_logo_home2 text-center">
-                    <img class="nav_logo_img img-fluid mt20" src="assets/img/taymac.PNG" alt="header-logo2.png" style="width:20%">
-                </div>
-                <ul class="menu_bar_home2">
-                    <li class="list-inline-item list_s"><a href="#"><span class="flaticon-home"></span></a></li>
-                    <li class="list-inline-item"><a href="#menu"><span></span></a></li>
-                </ul>
-            </div>
-        </div><!-- /.mobile-menu -->
-        <nav id="menu" class="stylehome1">
-            <ul>
-                <li>
-                    <a href="../"><span class="title">Home</span></a>
-                </li>
-                <li>
-                    <a href="#"><span class="title">About</span></a>
-                    <ul>
-                        <li><a href="about">Who we are</a></li>
-                        <li><a href="team">Team</a></li>
-                        <li><a href="contact">Contact</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="services"><span class="title">Services</span></a>
-                </li>
-                <li>
-                    <a href="#"><span class="title">What we do</span></a>
-                    <ul>
-                        <li><a href="property">Property Management</a></li>
-                        <li><a href="health_safety">Health & Safety</a></li>
-                        <li><a href="farms">Taymac Farms</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="blog"><span class="title">Blog</span></a>
-                </li>
-                <li>
-                    <a href="contact"><span class="title">Contact</span></a>
-                </li>
-                <li class="last">
-                    <a href="admin"><span class="title">
-                            <button class="btn btn-primary">
-                                Taymac Online
-                            </button>
-                        </span></a>
-                </li>
-
-            </ul>
-        </nav>
     </div>

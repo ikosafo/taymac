@@ -1,263 +1,374 @@
-<?php include "includes/header.php"; ?>
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Include database configuration
+require_once 'config.php';
 
 
-    <!-- 4th Home Slider -->
-    <section class="p0">
-        <div class="container-fluid p0">
-            <div class="home8-slider vh-100">
-                <div id="bs_carousel" class="carousel slide bs_carousel" data-ride="carousel" data-pause="false" data-interval="7000">
-                    <div class="carousel-inner">
+// Fetch hero data
+$query = "SELECT * FROM ws_hero WHERE id = 1";
+$result = $mysqli->query($query);
+if (!$result) {
+    error_log('Fetch hero query failed: ' . $mysqli->error);
+    $hero = [
+        'title' => 'Expert Solutions for Property Management, Health and Safety, and Farming.',
+        'subtitle' => 'REALTORS YOU CAN TRUST',
+        'hero_image' => URLROOT . '/assets/images/hero.webp' // Default image
+    ];
+} else {
+    $hero = $result->fetch_assoc();
+    if (!$hero) {
+        $hero = [
+            'title' => 'Expert Solutions for Property Management, Health and Safety, and Farming.',
+            'subtitle' => 'REALTORS YOU CAN TRUST',
+            'hero_image' => URLROOT . '/assets/images/hero.webp' // Default image
+        ];
+    }
+}
+error_log('Fetched hero data for index: ' . print_r($hero, true));
 
-                        <?php
-                        $dataslide = 0;
-                        $getslider = $mysqli->query("select * from taymac_slider");
-                        while ($resslider = $getslider->fetch_assoc()) {
-                            $imageid = $resslider['imageid'];
-                            ?>
 
-                            <div class="carousel-item <?php if ($dataslide == '0'){
-                                echo "active";
-                            } ?>" data-slide="<?php echo $dataslide ?>" data-interval="false">
-                                <div class="bs_carousel_bg" style="background-image: url(<?php
-                                $getimage = $mysqli->query("select * from taymac_image_slider where imageid = '$imageid'");
-                                $resimage = $getimage->fetch_assoc();
-                                echo 'admin/'.$resimage['image_location'];
-                                ?>);">
 
-                                </div>
-                                <div class="bs-caption">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-7 col-lg-8">
-                                                <div class="main_title">
-                                                    <?php echo $resslider['header_text'] ?>
-                                                </div>
-                                                <?php echo $resslider['slider_text'];?>?
-                                            </div>
-                                            <div class="col-md-5 col-lg-4">
-                                                <div class="feat_property home8">
-                                                    <div class="details">
-                                                        <div class="tc_content">
-                                                            <ul class="tag">
-                                                                <li class="list-inline-item">
-                                                                    <a href="#">
-                                                                        <?php echo $resslider['property_status']  ?>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                            <h4>
-                                                                <?php echo $resslider['property_type'] ?>
-                                                            </h4>
-                                                            <p><span class="flaticon-placeholder"></span>
-                                                                <?php echo $resslider['property_location'] ?>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+// Fetch approach data
+$query = "SELECT * FROM ws_approach WHERE id = 1";
+$result = $mysqli->query($query);
+if (!$result) {
+    error_log('Fetch approach query failed: ' . $mysqli->error);
+    $approach = [
+        'title' => 'We embrace a proactive CAN DO mindset, tackling challenges head-on.',
+        'subtitle' => 'Our Approach',
+        'step1_title' => 'Find Your Ideal Property in Prime Locations.',
+        'step1_description' => 'Discover your perfect property in highly sought-after areas, where convenience, comfort, and community align to provide the best living and investment opportunities.',
+        'step1_icon' => 'fa-map-location',
+        'step2_title' => 'Schedule a Visit with Our Expert Agents.',
+        'step2_description' => 'Arrange an appointment at your convenience with one of our dedicated agents. We\'re prepared to offer personalized insights and tailored solutions to help you make informed decisions.',
+        'step2_icon' => 'fa-calendar-alt',
+        'step3_title' => 'Experience Tailored Real Estate Solutions.',
+        'step3_description' => 'Partner with our experienced team to receive customized real estate solutions designed to meet your specific goals, ensuring a seamless and successful property search or transaction.',
+        'step3_icon' => 'fa-igloo'
+    ];
+} else {
+    $approach = $result->fetch_assoc();
+    if (!$approach) {
+        $approach = [
+            'title' => 'We embrace a proactive CAN DO mindset, tackling challenges head-on.',
+            'subtitle' => 'Our Approach',
+            'step1_title' => 'Find Your Ideal Property in Prime Locations.',
+            'step1_description' => 'Discover your perfect property in highly sought-after areas, where convenience, comfort, and community align to provide the best living and investment opportunities.',
+            'step1_icon' => 'fa-map-location',
+            'step2_title' => 'Schedule a Visit with Our Expert Agents.',
+            'step2_description' => 'Arrange an appointment at your convenience with one of our dedicated agents. We\'re prepared to offer personalized insights and tailored solutions to help you make informed decisions.',
+            'step2_icon' => 'fa-calendar-alt',
+            'step3_title' => 'Experience Tailored Real Estate Solutions.',
+            'step3_description' => 'Partner with our experienced team to receive customized real estate solutions designed to meet your specific goals, ensuring a seamless and successful property search or transaction.',
+            'step3_icon' => 'fa-igloo'
+        ];
+    }
+}
+error_log('Fetched approach data: ' . print_r($approach, true));
 
-                        <?php
-                            $dataslide++;
-                        } ?>
 
+// Fetch why choose data
+$query = "SELECT * FROM ws_why_choose WHERE id = 1";
+$result = $mysqli->query($query);
+if (!$result) {
+    error_log('Fetch why choose query failed: ' . $mysqli->error);
+    $why_choose = [
+        'title' => 'Why Choose TAYMAC',
+        'reason1_title' => 'No Hidden Fees',
+        'reason1_description' => 'We believe in complete transparency. With us, you can rest assured that there are no surprise costs or hidden charges. Every fee is clearly outlined upfront, so you know exactly what to expect. Our goal is to provide a seamless and trustworthy experience, ensuring you get the best value for your investment without any financial surprises.',
+        'reason2_title' => 'Property Appraisal',
+        'reason2_description' => 'Our expert property appraisal services help you make informed decisions, whether you\'re buying, selling, or renting. We provide accurate, up-to-date valuations based on local market trends and property conditions, ensuring you get the best possible insight into the true worth of any property. Trust our experienced team to guide you in making smart property investments.',
+        'reason3_title' => 'Large Coverage',
+        'reason3_description' => 'With an extensive portfolio that spans across multiple cities and regions, we offer unparalleled access to a wide range of properties. Whether you’re looking for a home in the heart of the city, a peaceful suburban retreat, or a prime investment opportunity in a growing market, our large coverage ensures we have options to meet every need and lifestyle across various locations.'
+    ];
+} else {
+    $why_choose = $result->fetch_assoc();
+    if (!$why_choose) {
+        $why_choose = [
+            'title' => 'Why Choose TAYMAC',
+            'reason1_title' => 'No Hidden Fees',
+            'reason1_description' => 'We believe in complete transparency. With us, you can rest assured that there are no surprise costs or hidden charges. Every fee is clearly outlined upfront, so you know exactly what to expect. Our goal is to provide a seamless and trustworthy experience, ensuring you get the best value for your investment without any financial surprises.',
+            'reason2_title' => 'Property Appraisal',
+            'reason2_description' => 'Our expert property appraisal services help you make informed decisions, whether you\'re buying, selling, or renting. We provide accurate, up-to-date valuations based on local market trends and property conditions, ensuring you get the best possible insight into the true worth of any property. Trust our experienced team to guide you in making smart property investments.',
+            'reason3_title' => 'Large Coverage',
+            'reason3_description' => 'With an extensive portfolio that spans across multiple cities and regions, we offer unparalleled access to a wide range of properties. Whether you’re looking for a home in the heart of the city, a peaceful suburban retreat, or a prime investment opportunity in a growing market, our large coverage ensures we have options to meet every need and lifestyle across various locations.'
+        ];
+    }
+}
+error_log('Fetched why choose data: ' . print_r($why_choose, true));
+
+
+
+include ('includes/header.php');
+?>
+
+    <div class="blog-header background-image position-relative text-white background-no-repeat background-size-cover background-center" data-image-src="<?php echo htmlspecialchars($hero['hero_image']); ?>" style="background-image: url('<?php echo htmlspecialchars($hero['hero_image']); ?>');">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 0;"></div>
+        
+        <div class="container position-relative z-1">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8 text-center">
+                    <div class="bg-soft-primary d-inline-block fw-medium mb-3 rounded-pill section-header__subtitle text-capitalize text-white">
+                        <?php echo htmlspecialchars($hero['subtitle']); ?>
                     </div>
-                    <div class="property-carousel-controls">
-                        <a class="property-carousel-control-prev" role="button" data-slide="prev">
-                            <span class="flaticon-left-arrow-1"></span>
-                        </a>
-                        <a class="property-carousel-control-next" role="button" data-slide="next">
-                            <span class="flaticon-right-arrow"></span>
-                        </a>
+                    <h3 class="fw-semibold display-5 text-white">
+                        <span class="underline position-relative text-primary"><?php echo htmlspecialchars(implode(' ', array_slice(explode(' ', $hero['title']), 0, 2))); ?></span> <?php echo htmlspecialchars(implode(' ', array_slice(explode(' ', $hero['title']), 2))); ?>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our Approach Section -->
+    <div class="bg-white py-5 angled lower-start wrapper">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="section-header text-center mb-5 aos-init aos-animate" data-aos="fade-down">
+                        <div class="bg-soft-primary d-inline-block fw-medium mb-3 rounded-pill section-header__subtitle text-capitalize text-primary">
+                            Our Approach
+                        </div>
+                        <h4 class="h4 fw-semibold mb-3 section-header__title text-capitalize">
+                            <?php echo htmlspecialchars($approach['title']); ?>
+                        </h4>
+                        <div class="sub-title fs-16"><?php echo htmlspecialchars($approach['subtitle']); ?></div>
                     </div>
                 </div>
-                <div class="carousel slide bs_carousel_prices" data-ride="carousel" data-pause="false" data-interval="false">
-                    <div class="carousel-inner"></div>
-                    <div class="property-carousel-ticker">
-                        <div class="property-carousel-ticker-counter"></div>
-                        <div class="property-carousel-ticker-divider">&nbsp;&nbsp;/&nbsp;&nbsp;</div>
-                        <div class="property-carousel-ticker-total"></div>
+            </div>
+            <div class="row g-4 g-md-5 justify-content-center work-process">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="work-process position-relative p-3 px-xl-5 aos-init aos-animate" data-aos="fade" data-aos-delay="300">
+                        <div class="step-box position-relative d-inline-block mb-4 d-flex gap-3">
+                            <div class="fs-5 text-dark fw-semibold">01/</div>
+                            <i class="fs-50 fa-solid <?php echo htmlspecialchars($approach['step1_icon']); ?> text-primary"></i>
+                        </div>
+                        <div class="step-desc">
+                            <h4 class="fs-20 fw-semibold"><?php echo htmlspecialchars($approach['step1_title']); ?></h4>
+                            <p><?php echo htmlspecialchars($approach['step1_description']); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="work-process position-relative p-3 px-xl-5 aos-init aos-animate" data-aos="fade" data-aos-delay="400">
+                        <div class="step-box position-relative d-inline-block mb-4 d-flex gap-3">
+                            <div class="fs-5 text-dark fw-semibold">02/</div>
+                            <i class="fs-50 fa-solid <?php echo htmlspecialchars($approach['step2_icon']); ?> text-primary"></i>
+                        </div>
+                        <div class="step-desc">
+                            <h4 class="fs-20 fw-semibold"><?php echo htmlspecialchars($approach['step2_title']); ?></h4>
+                            <p><?php echo htmlspecialchars($approach['step2_description']); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="work-process position-relative p-3 px-xl-5 aos-init aos-animate" data-aos="fade" data-aos-delay="500">
+                        <div class="step-box position-relative d-inline-block mb-4 d-flex gap-3">
+                            <div class="fs-5 text-dark fw-semibold">03/</div>
+                            <i class="fs-50 fa-solid <?php echo htmlspecialchars($approach['step3_icon']); ?> text-primary"></i>
+                        </div>
+                        <div class="step-desc">
+                            <h4 class="fs-20 fw-semibold"><?php echo htmlspecialchars($approach['step3_title']); ?></h4>
+                            <p><?php echo htmlspecialchars($approach['step3_description']); ?></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
 
-    <!-- Feature Properties -->
-    <section id="feature-property" class="feature-property mt80 pb50">
-        <div class="container-fluid ovh">
+    <div class="py-5 bg-gradient-primary">
+        <div class="container pt-5">
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="main-title text-center mb40">
-                        <h2>Office Installations</h2>
-                        <p>We offer installations for offices</p>
+                <div class="col-md-10 offset-md-1">
+                    <div class="section-header text-center mb-5" data-aos="fade-down">
+                        <div class="bg-soft-primary d-inline-block fw-medium mb-3 rounded-pill section-header__subtitle text-capitalize text-primary">Featured Properties</div>
+                        <h4 class="h4 fw-semibold mb-3 section-header__title text-capitalize">Discover Our Handpicked Selection of Premier Properties.</h4>
+                       </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-sm-6 col-lg-4 col-xl-3 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                    <div class="border-0 card card-property rounded-3 shadow w-100 flex-fill overflow-hidden">
+                        <a href="#" class="card-link"></a>
+                        <div class="property-img card-image-hover overflow-hidden">
+                            <img src="<?php echo URLROOT ?>/assets/images/hero.webp" alt="" class="img-fluid">
+                            <div class="bg-white card-property-badge d-inline-block end-1 fs-13 fw-semibold position-absolute property-tags px-2 py-1 rounded-3 text-dark top-1">
+                                For Rent
+                            </div>
+                        </div>
+                        <div class="card-property-content-wrap d-flex flex-column h-100 position-relative p-4">
+                           <h4 class="property-card-title mb-3">Accra, Ghana</h4>
+                            <div class="card-property-description mb-3">Mix of town houses and apartments</div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <div class="feature_property_home3_slider">
+                <div class="col-sm-6 col-lg-4 col-xl-3 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+                    <div class="border-0 card card-property rounded-3 shadow w-100 flex-fill overflow-hidden">
+                        <a href="#" class="card-link"></a>
+                        <div class="property-img card-image-hover overflow-hidden">
+                            <img src="<?php echo URLROOT ?>/assets/images/pr1.webp" alt="" class="img-fluid">
+                            <div class="bg-white card-property-badge d-inline-block end-1 fs-13 fw-semibold position-absolute property-tags px-2 py-1 rounded-3 text-dark top-1">
+                                For Rent
+                            </div>
+                        </div>
+                        <div class="card-property-content-wrap d-flex flex-column h-100 position-relative p-4">
+                            <h4 class="property-card-title mb-3">Airport - Accra, Ghana</h4>
+                            <div class="card-property-description mb-3">Office Space</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+                    <div class="border-0 card card-property rounded-3 shadow w-100 flex-fill overflow-hidden">
+                        <a href="#" class="card-link"></a>
+                        <div class="property-img card-image-hover overflow-hidden">
+                            <img src="<?php echo URLROOT ?>/assets/images/pr2.webp" alt="" class="img-fluid">
+                            <div class="bg-white card-property-badge d-inline-block end-1 fs-13 fw-semibold position-absolute property-tags px-2 py-1 rounded-3 text-dark top-1">
+                                For Rent
+                            </div>
+                        </div>
+                        <div class="card-property-content-wrap d-flex flex-column h-100 position-relative p-4">
+                            <h4 class="property-card-title mb-3">East Legon - Accra, Ghana</h4>
+                            <div class="card-property-description mb-3">Apartments</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+                    <div class="border-0 card card-property rounded-3 shadow w-100 flex-fill overflow-hidden">
+                        <a href="#" class="card-link"></a>
+                        <div class="property-img card-image-hover overflow-hidden">
+                            <img src="<?php echo URLROOT ?>/assets/images/pr3.webp" alt="" class="img-fluid">
+                            <div class="bg-white card-property-badge d-inline-block end-1 fs-13 fw-semibold position-absolute property-tags px-2 py-1 rounded-3 text-dark top-1">
+                                For Rent
+                            </div>
+                        </div>
+                        <div class="card-property-content-wrap d-flex flex-column h-100 position-relative p-4">
+                            <h4 class="property-card-title mb-3">Accra, Ghana</h4>
+                            <div class="card-property-description mb-3">Office Installations</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
 
-                        <?php $getinstallation = $mysqli->query("select * from taymac_image_install");
-                        while ($resinstall = $getinstallation->fetch_assoc()){ ?>
+            <a href="property-management">
+                <button type="button" class="btn btn-primary btn-lg hstack mx-auto mt-5 gap-2" data-aos="fade-up">
+                    <span>Browse More Properties</span>
+                    <span class="vr"></span>
+                    <i class="fa-arrow-right fa-solid fs-14"></i>
+                </button>
+            </a>
+           
+        </div>
+    </div>
 
-                            <div class="item">
-                                <div class="feat_property home3">
-                                    <div class="thumb">
-                                        <img class="img-whp" src="<?php echo 'admin/'.$resinstall['image_location']; ?>"
-                                             alt="fp1.jpg" width="60" height="260">
-                                        <div class="thmb_cntnt">
-                                            <ul class="icon mb0">
-                                                <li class="list-inline-item"><a href="#"><span class="flaticon-back"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+    <!-- Why Choose Section -->
+    <div class="py-5 bg-grey">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <div class="section-header text-center mb-5 aos-init aos-animate" data-aos="fade-down">
+                        <h2 class="h1 fw-semibold mb-3 section-header__title text-capitalize">
+                            <span class="underline position-relative text-primary"><?php echo htmlspecialchars(explode(' ', $why_choose['title'])[0]); ?></span> <?php echo htmlspecialchars(implode(' ', array_slice(explode(' ', $why_choose['title']), 1))); ?>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item border-0 mb-3 rounded-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fs-5 p-4 text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <?php echo htmlspecialchars($why_choose['reason1_title']); ?>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-4 pt-0">
+                                    <?php echo htmlspecialchars($why_choose['reason1_description']); ?>
                                 </div>
                             </div>
-                       <?php } ?>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Feature Properties -->
-    <section id="feature-property" class="feature-property bgc-f7">
-        <div class="container ovh">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="main-title text-center mb40">
-                        <h2>Featured Properties</h2>
-                        <p>Find the latest properties of Taymac</p>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="feature_property_slider">
-
-                        <?php $getproperty = $mysqli->query("select * from taymac_fp p join taymac_image_fp i ON
-                                                               p.imageid = i.imageid");
-                        while ($resproperty = $getproperty->fetch_assoc()) { ?>
-
-                            <div class="item">
-                                <div class="feat_property">
-                                    <div class="thumb">
-                                        <img class="img-whp"
-                                             src="<?php echo 'admin/'.$resproperty['image_location']; ?>"
-                                             width="70" height="300"
-                                             alt="FP Image">
-                                        <div class="thmb_cntnt">
-                                            <ul class="tag mb0">
-                                                <li class="list-inline-item"><a href="#">
-                                                        <?php echo $resproperty['property_status'] ?>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <ul class="icon mb0">
-                                                <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="details">
-                                        <div class="tc_content">
-                                            <h4><?php echo $resproperty['property_type'] ?></h4>
-                                            <p><span class="flaticon-placeholder"></span>
-                                                <?php echo $resproperty['property_location'] ?>
-                                            </p>
-                                            <p>
-                                                <?php echo $resproperty['fp_description'] ?>
-                                            </p>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 rounded-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fs-5 p-4 text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <?php echo htmlspecialchars($why_choose['reason2_title']); ?>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-4 pt-0">
+                                    <?php echo htmlspecialchars($why_choose['reason2_description']); ?>
                                 </div>
                             </div>
-
-                        <?php } ?>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Find Comfort Place -->
-    <section id="comfort-place" class="comfort-place pb30 bb1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="main-title text-center">
-                        <h2>REALTORS you can trust</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-
-                <?php
-                $getrealtor = $mysqli->query("select * from taymac_realtor");
-                while ($resrealtor = $getrealtor->fetch_assoc()) { ?>
-
-                    <div class="col-md-6 col-lg-4 col-xl-4">
-                        <div class="why_chose_us">
-                            <div class="icon">
-                                <span class="<?php echo $resrealtor['flat_icon'] ?>"></span>
-                            </div>
-                            <div class="details">
-                                <h4>
-                                    <?php echo $resrealtor['realtor_text'] ?>
-                                </h4>
+                        </div>
+                        <div class="accordion-item border-0 mb-3 rounded-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fs-5 p-4 text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <?php echo htmlspecialchars($why_choose['reason3_title']); ?>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body p-4 pt-0">
+                                    <?php echo htmlspecialchars($why_choose['reason3_description']); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                <?php } ?>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Testimonials -->
-    <section id="our-testimonials" class="our-testimonial">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="main-title text-center">
-                        <h2 class="color-white">What our Clients think</h2>
-                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <!-- Start Newslatter -->
+    <div class="bg-primary newslatter position-relative py-5 mx-3 mx-xl-5 rounded-4 position-relative overflow-hidden">
+        <div class="container p-4 position-relative z-1">
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="testimonial_grid_slider">
-
-                        <?php
-                        $getfeedback = $mysqli->query("select * from taymac_client_feedback");
-                        while ($resfeedback = $getfeedback->fetch_assoc()) { ?>
-                            <div class="item">
-                                <div class="testimonial_grid">
-                                    <div class="details">
-                                        <h4><?php echo $resfeedback['client_name'] ?></h4>
-
-                                        <p class="mt25">
-                                            <?php echo $resfeedback['client_text'] ?>
-                                        </p>
-                                    </div>
-                                </div>
+                <div class="col-md-10 offset-md-1">
+               
+                    <div class="section-header text-center mb-5" data-aos="fade-down"> 
+                        <div class="bg-white d-inline-block fw-medium mb-3 rounded-pill section-header__subtitle text-capitalize text-primary">Our Latest Articles</div>             
+                        <h4 class="h4 fw-semibold mb-3 section-header__title text-capitalize text-white">Subscribe to get most recent updates and periodic newsletters</h4>
+                     </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <div class="row g-4 align-items-end newslatter-form">
+                        <div class="col-sm">
+                            <!-- Start Form Group -->
+                            <div class="form-group">
+                                <label class="text-white bg-primary fw-semibold">Full Name</label>
+                                <input type="text" class="form-control bg-transparent">
                             </div>
-                        <?php } ?>
-
-
+                            <!-- /. End Form Group -->
+                        </div>
+                        <div class="col-sm">
+                            <!-- Start Form Group -->
+                            <div class="form-group">
+                                <label class="text-white bg-primary">Enter Email</label>
+                                <input type="email" class="form-control bg-transparent">
+                            </div>
+                            <!-- /. End Form Group -->
+                        </div>
+                        <div class="col-sm-auto">
+                            <!-- Start Button -->
+                            <button type="button" class="btn btn-lg btn-light w-100">Subscribe</button>
+                            <!-- /. End Button -->
+                        </div>
                     </div>
+                   
                 </div>
             </div>
         </div>
-    </section>
+        <div class="card-sketch">
+            <img src="<?php echo URLROOT ?>/assets/img/png-img/house-sketch.png" alt="" class="card-sketch-image">
+        </div>
+    </div>
+    <!-- /.End Newslatter -->
 
-
-<?php include "includes/footer.php"; ?>
+<?php include ('includes/footer.php'); ?>

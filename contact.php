@@ -1,191 +1,123 @@
-<?php include "includes/header.php"; ?>
-
-    <!-- Inner Page Breadcrumb -->
-    <section class="inner_page_breadcrumb" style="height: 10% !important;">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="breadcrumb_content">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
-                        </ol>
-                        <h3 class="breadcrumb_title">Contact</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
 
-    <!-- Our Contact -->
-    <section class="our-contact pb0 bgc-f7">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-xl-8">
-                    <div class="form_grid">
-                        <h4 class="mb5">Get in touch with us</h4>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_name" name="form_name" class="form-control"
-                                               required="required" type="text" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_email" name="form_email" class="form-control
-                                        required email" required="required" type="email" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_phone" name="form_phone" class="form-control
-                                        required phone" required="required" type="phone" placeholder="Phone">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="form_subject" name="form_subject" class="form-control
-                                        required" required="required" type="text" placeholder="Subject">
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <textarea id="form_message" name="form_message" class="form-control required"
-                                                  rows="8" required="required" placeholder="Your Message"></textarea>
-                                    </div>
-                                    <div class="form-group mb0">
-                                        <button type="button" class="btn btn-lg btn-thm" id="savemessage">Send Message</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-xl-4">
-                    <div class="contact_localtion">
-                        <h4>Contact Us</h4>
+require_once 'config.php';
 
-                        <?php $getcontact = $mysqli->query("select * from taymac_contact LIMIT 1");
-                              $rescontact = $getcontact->fetch_assoc();
-                        ?>
 
-                        <div class="content_list">
-                            <h5><i class="fa fa-map-marker"></i> Address</h5>
-                            <p>
-                                <?php echo $rescontact['address'] ?>
-                            </p>
-                        </div>
-                        <div class="content_list">
-                            <h5><i class="fa fa-phone"></i> Phone</h5>
-                            <p>
-                                <?php echo $rescontact['phone'] ?>
-                            </p>
-                        </div>
-                        <div class="content_list">
-                            <h5><i class="fa fa-mobile-phone"></i> Mobile</h5>
-                            <p>
-                                <?php echo $rescontact['mobile'] ?>
-                            </p>
-                        </div>
-                        <div class="content_list">
-                            <h5><i class="fa fa-envelope-open-o"></i> Mail</h5>
-                            <p><a href="#">
-                                    <?php echo $rescontact['email'] ?>
-                                </a>
-                            </p>
-                        </div>
-                        <div class="content_list">
-                            <h5><i class="fa fa-globe"></i> Website</h5>
-                            <p>www.taymac.net</p>
-                        </div>
-                       <!-- <h5>Follow Us</h5>
-                        <ul class="contact_form_social_area">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-google"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid p0 mt50">
-            <div class="row">
-                <div class="col-lg-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3217.8372837019488!2d-0.17655346556275306!3d5.6133319779001845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfee557f23e5c8842!2sFidelity%20Bank%20ATM%20-%20Airport!5e0!3m2!1sen!2sgh!4v1591198622359!5m2!1sen!2sgh"
-                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+// Fetch contact data
+$query = "SELECT * FROM ws_contact WHERE id = 1";
+$result = $mysqli->query($query);
+if (!$result) {
+    error_log('Fetch contact query failed: ' . $mysqli->error);
+    $contact = [
+        'map_iframe_src' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.41412345!2d-0.1770726!3d5.6128054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb123456789!2sSenchi+St,+Accra!5e0!3m2!1sen!2sus!4v1633012345678!5m2!1sen!2sus&maptype=satellite',
+        'phone1' => '+233 (0) 245-710-614',
+        'phone2' => '+233 (0) 302-789-025',
+        'email' => 'info@taymac.net',
+        'address' => 'Ground Floor Le Pierre, 14 Choice Close off Senchi Street, Airport Residential Area, Accra'
+    ];
+} else {
+    $contact = $result->fetch_assoc();
+    if (!$contact) {
+        $contact = [
+            'map_iframe_src' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.41412345!2d-0.1770726!3d5.6128054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb123456789!2sSenchi+St,+Accra!5e0!3m2!1sen!2sus!4v1633012345678!5m2!1sen!2sus&maptype=satellite',
+            'phone1' => '+233 (0) 245-710-614',
+            'phone2' => '+233 (0) 302-789-025',
+            'email' => 'info@taymac.net',
+            'address' => 'Ground Floor Le Pierre, 14 Choice Close off Senchi Street, Airport Residential Area, Accra'
+        ];
+    }
+}
+error_log('Fetched contact data: ' . print_r($contact, true));
 
-<?php include "includes/footer.php"; ?>
 
-<script>
+include ('includes/header.php');?>
 
-    $("#savemessage").click(function () {
-        var form_name = $("#form_name").val();
-        var form_email = $("#form_email").val();
-        var form_phone = $("#form_phone").val();
-        var form_subject = $("#form_subject").val();
-        var form_message = $("#form_message").val();
+    <div class="main-content">
+		<div class="border-bottom py-3">
+			<div class="container">
+				<div class="row gy-2 gx-4 gx-md-5">
+					<h4 class="col-auto fs-18 fw-semibold mb-0 page-title text-capitalize">Contact Us</h4>
+					<div class="border-start col-auto">
+						<ol class="align-items-center breadcrumb fw-medium mb-0">
+							<li class="breadcrumb-item d-flex align-items-center">
+								<a href="/" class="text-decoration-none"> <i class="fa-solid fa-house-chimney-crack fs-18"></i> </a>
+							</li>
+							<li class="breadcrumb-item d-flex align-items-center active" aria-current="page">Contact</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Start Map Content -->
+		<div class="map-content">
+			<!-- Start Map -->
+			<iframe
+				src="<?php echo htmlspecialchars($contact['map_iframe_src']); ?>"
+				width="100%"
+				height="450"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy">
+			</iframe>
+			<!-- /.End Map -->
+		</div>
+		<div class="contact-info">
+			<div class="container">
+				<div class="row g-4 justify-content-center">
+					<div class="col-sm-6 col-lg-4 d-flex">
+						<div class="border-0 card flex-fill rounded-3 shadow" data-aos="fade" data-aos-delay="300">
+							<div class="card-body p-4 text-center">
+								<div class="box-icon">
+									<i class="fa-headset fa-solid fs-40 mb-4 text-primary"></i>
+								</div>
+								<h4>Call us</h4>
+								<p class="fs-15">WE WILL LOVE TO HEAR FROM YOU</p>
+								<div class="d-grid gap-2 d-xl-block">
+									<div class="border d-inline-block fw-medium px-3 py-1 rounded text-primary">
+										<i class="fa-solid fa-phone me-2"></i><?php echo htmlspecialchars($contact['phone1']); ?>
+									</div>
+									<div class="border d-inline-block fw-medium px-3 py-1 rounded text-primary mt-2">
+										<i class="fa-solid fa-phone me-2"></i><?php echo htmlspecialchars($contact['phone2']); ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4 d-flex">
+						<div class="border-0 card flex-fill rounded-3 shadow" data-aos="fade" data-aos-delay="400">
+							<div class="card-body p-4 text-center">
+								<div class="box-icon">
+									<i class="fa-envelope-circle-check fa-solid fs-40 mb-4 text-danger"></i>
+								</div>
+								<h4>Email us</h4>
+								<p class="fs-15">WE'D LOVE TO HEAR FROM YOU! FEEL FREE TO DROP US AN EMAIL.</p>
+								<a href="mailto:<?php echo htmlspecialchars($contact['email']); ?>" class="fw-medium">
+									<i class="fa-solid fa-envelope me-2"></i><?php echo htmlspecialchars($contact['email']); ?>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4 d-flex">
+						<div class="border-0 card flex-fill rounded-3 shadow" data-aos="fade" data-aos-delay="500">
+							<div class="card-body p-4 text-center">
+								<div class="box-icon">
+									<i class="fa-map-marker fa-solid fs-40 mb-4 text-warning"></i>
+								</div>
+								<h4>Location</h4>
+								<p class="fs-15">COME VISIT US - WE'D BE THRILLED TO MEET YOU IN PERSON!</p>
+								<p><?php echo nl2br(htmlspecialchars($contact['address'])); ?></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.End Contact Section -->
+	</div>
 
-        var error = '';
-        if (form_name == "") {
-            error += 'Please enter name\n';
-            $("#form_name").focus();
-        }
-        if (form_email == "") {
-            error += 'Please enter email\n';
-            $("#form_email").focus();
-        }
-        if (form_email != "" && !form_email.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-            error += 'Please enter valid email \n';
-            $("#form_email").focus();
-        }
-        if (form_phone == "") {
-            error += 'Please enter phone number\n';
-            $("#form_phone").focus();
-        }
-        if (form_subject == "") {
-            error += 'Please enter subject\n';
-            $("#form_subject").focus();
-        }
-        if (form_message == "") {
-            error += 'Please enter message\n';
-            $("#form_message").focus();
-        }
 
-        if (error == "") {
-            $.ajax({
-                type: "POST",
-                url: "savemessage.php",
-                data: {
-                    form_name: form_name,
-                    form_email: form_email,
-                    form_phone: form_phone,
-                    form_subject: form_subject,
-                    form_message: form_message
-                },
-                success: function (text) {
-                    alert('Message Sent');
-                   location.reload();
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                    alert(xhr.status + " " + thrownError);
-                },
-            });
-        }
-        else {
-            $.notify(error, {position: "top center"});
-        }
-        return false;
-
-    });
-
-</script>
+<?php include ('includes/footer.php'); ?>
